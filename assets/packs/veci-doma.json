@@ -2,6 +2,7 @@
   "id": "veci-doma",
   "name": "Věci doma",
   "emoji": "🏠",
+  "audience": "family",
   "words": [
     {
       "word": "Gauč",

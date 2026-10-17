@@ -1,0 +1,323 @@
+{
+  "id": "trapne-situace",
+  "name": "Trapné situace",
+  "emoji": "😳",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Rozepnutý poklopec",
+      "hint": "Zip",
+      "similar": "Díra v ponožce"
+    },
+    {
+      "word": "Díra v ponožce",
+      "hint": "Pata",
+      "similar": "Rozepnutý poklopec"
+    },
+    {
+      "word": "Špenát v zubech",
+      "hint": "Úsměv",
+      "similar": "Papír na botě"
+    },
+    {
+      "word": "Papír na botě",
+      "hint": "Podrážka",
+      "similar": "Špenát v zubech"
+    },
+    {
+      "word": "Zakopnutí",
+      "hint": "Schody",
+      "similar": "Uklouznutí"
+    },
+    {
+      "word": "Uklouznutí",
+      "hint": "Náledí",
+      "similar": "Zakopnutí"
+    },
+    {
+      "word": "Mávnutí cizímu",
+      "hint": "Omyl",
+      "similar": "Špatné jméno"
+    },
+    {
+      "word": "Špatné jméno",
+      "hint": "Pozdrav",
+      "similar": "Mávnutí cizímu"
+    },
+    {
+      "word": "Zapomenuté jméno",
+      "hint": "Paměť",
+      "similar": "Špatné jméno"
+    },
+    {
+      "word": "Kručení v břiše",
+      "hint": "Ticho",
+      "similar": "Škytavka"
+    },
+    {
+      "word": "Škytavka",
+      "hint": "Zadržení",
+      "similar": "Kručení v břiše"
+    },
+    {
+      "word": "Prdnutí",
+      "hint": "Výtah",
+      "similar": "Říhnutí"
+    },
+    {
+      "word": "Říhnutí",
+      "hint": "Bublinky",
+      "similar": "Prdnutí"
+    },
+    {
+      "word": "Zpráva špatnému člověku",
+      "hint": "Překlik",
+      "similar": "Hlasovka omylem"
+    },
+    {
+      "word": "Hlasovka omylem",
+      "hint": "Kapsa",
+      "similar": "Zpráva špatnému člověku"
+    },
+    {
+      "word": "Zapnutý mikrofon",
+      "hint": "Hovor",
+      "similar": "Zapnutá kamera"
+    },
+    {
+      "word": "Zapnutá kamera",
+      "hint": "Schůzka",
+      "similar": "Zapnutý mikrofon"
+    },
+    {
+      "word": "Lajk omylem",
+      "hint": "Prst",
+      "similar": "Stalkování profilu"
+    },
+    {
+      "word": "Stalkování profilu",
+      "hint": "Scrollování",
+      "similar": "Lajk omylem"
+    },
+    {
+      "word": "Zabouchnuté klíče",
+      "hint": "Dveře",
+      "similar": "Ztracené klíče"
+    },
+    {
+      "word": "Ztracené klíče",
+      "hint": "Kapsy",
+      "similar": "Zabouchnuté klíče"
+    },
+    {
+      "word": "Mluvení ze spaní",
+      "hint": "Noc",
+      "similar": "Chrápání"
+    },
+    {
+      "word": "Chrápání",
+      "hint": "Spolubydlící",
+      "similar": "Mluvení ze spaní"
+    },
+    {
+      "word": "Slintání ve spaní",
+      "hint": "Polštář",
+      "similar": "Chrápání"
+    },
+    {
+      "word": "Usnutí ve vlaku",
+      "hint": "Konečná",
+      "similar": "Přejetá zastávka"
+    },
+    {
+      "word": "Přejetá zastávka",
+      "hint": "Sluchátka",
+      "similar": "Usnutí ve vlaku"
+    },
+    {
+      "word": "Falešné zpívání",
+      "hint": "Sprcha",
+      "similar": "Karaoke"
+    },
+    {
+      "word": "Smích na pohřbu",
+      "hint": "Nevhodnost",
+      "similar": "Smích ve škole"
+    },
+    {
+      "word": "Smích ve škole",
+      "hint": "Záchvat",
+      "similar": "Smích na pohřbu"
+    },
+    {
+      "word": "Táhnout místo tlačit",
+      "hint": "Cedulka",
+      "similar": "Skleněné dveře"
+    },
+    {
+      "word": "Skleněné dveře",
+      "hint": "Náraz",
+      "similar": "Táhnout místo tlačit"
+    },
+    {
+      "word": "Roztržené kalhoty",
+      "hint": "Dřep",
+      "similar": "Rozepnutý poklopec"
+    },
+    {
+      "word": "Pot v podpaží",
+      "hint": "Fleky",
+      "similar": "Smradlavé ponožky"
+    },
+    {
+      "word": "Smradlavé ponožky",
+      "hint": "Boty",
+      "similar": "Pot v podpaží"
+    },
+    {
+      "word": "Výmluva",
+      "hint": "Pes",
+      "similar": "Omluvenka"
+    },
+    {
+      "word": "Omluvenka",
+      "hint": "Podpis",
+      "similar": "Výmluva"
+    },
+    {
+      "word": "Přistižení rodiči",
+      "hint": "Dveře",
+      "similar": "Přistižení učitelem"
+    },
+    {
+      "word": "Přistižení učitelem",
+      "hint": "Tahák",
+      "similar": "Přistižení rodiči"
+    },
+    {
+      "word": "Máma na Facebooku",
+      "hint": "Komentáře",
+      "similar": "Táta na TikToku"
+    },
+    {
+      "word": "Táta na TikToku",
+      "hint": "Tanec",
+      "similar": "Máma na Facebooku"
+    },
+    {
+      "word": "Táta vtipálek",
+      "hint": "Vtipy",
+      "similar": "Máma na Facebooku"
+    },
+    {
+      "word": "Rodinná fotka",
+      "hint": "Úsměv",
+      "similar": "Fotka z dětství"
+    },
+    {
+      "word": "Fotka z dětství",
+      "hint": "Album",
+      "similar": "Rodinná fotka"
+    },
+    {
+      "word": "Odmítnutí",
+      "hint": "Taneční",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Pusa na tvář",
+      "hint": "Pozdrav",
+      "similar": "Trapné objetí"
+    },
+    {
+      "word": "Trapné objetí",
+      "hint": "Ruce",
+      "similar": "Pusa na tvář"
+    },
+    {
+      "word": "Přeslechnutí",
+      "hint": "Ehm",
+      "similar": "Kývnutí na nic"
+    },
+    {
+      "word": "Kývnutí na nic",
+      "hint": "Hluk",
+      "similar": "Přeslechnutí"
+    },
+    {
+      "word": "Rozlité pití",
+      "hint": "Ubrus",
+      "similar": "Upuštěný talíř"
+    },
+    {
+      "word": "Upuštěný talíř",
+      "hint": "Střepy",
+      "similar": "Rozlité pití"
+    },
+    {
+      "word": "Pípnutí v obchodě",
+      "hint": "Brána",
+      "similar": "Zastavení ochrankou"
+    },
+    {
+      "word": "Zastavení ochrankou",
+      "hint": "Taška",
+      "similar": "Pípnutí v obchodě"
+    },
+    {
+      "word": "Kino s rodiči",
+      "hint": "Scéna",
+      "similar": "Přistižení rodiči"
+    },
+    {
+      "word": "Mutace",
+      "hint": "Puberta",
+      "similar": "Škytavka"
+    },
+    {
+      "word": "Pupínek na nose",
+      "hint": "Zrcadlo",
+      "similar": "Opar"
+    },
+    {
+      "word": "Opar",
+      "hint": "Ret",
+      "similar": "Pupínek na nose"
+    },
+    {
+      "word": "Špatný účes",
+      "hint": "Kadeřník",
+      "similar": "Ofina"
+    },
+    {
+      "word": "Ofina",
+      "hint": "Nůžky",
+      "similar": "Špatný účes"
+    },
+    {
+      "word": "Vybitý mobil",
+      "hint": "Procenta",
+      "similar": "Zapomenutá nabíječka"
+    },
+    {
+      "word": "Zapomenutá nabíječka",
+      "hint": "Kabel",
+      "similar": "Vybitý mobil"
+    },
+    {
+      "word": "Mobil na obličej",
+      "hint": "Ležení",
+      "similar": "Upuštěný talíř"
+    },
+    {
+      "word": "Došlý papír",
+      "hint": "Záchod",
+      "similar": "Zaseklý zámek"
+    },
+    {
+      "word": "Zaseklý zámek",
+      "hint": "Kabinka",
+      "similar": "Došlý papír"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "id": "ceske-kultovky",
+  "name": "České kultovky",
+  "emoji": "🎞️",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Kulový blesk",
+      "hint": "Stěhování",
+      "similar": "Vrchní, prchni!"
+    },
+    {
+      "word": "Vrchní, prchni!",
+      "hint": "Restaurace",
+      "similar": "Kulový blesk"
+    },
+    {
+      "word": "Dívka na koštěti",
+      "hint": "Škola",
+      "similar": "Ať žijí duchové"
+    },
+    {
+      "word": "Postřižiny",
+      "hint": "Pivovar",
+      "similar": "Slavnosti sněženek"
+    },
+    {
+      "word": "Rozmarné léto",
+      "hint": "Koupaliště",
+      "similar": "Postřižiny"
+    },
+    {
+      "word": "Světáci",
+      "hint": "Elegán",
+      "similar": "Vrchní, prchni!"
+    },
+    {
+      "word": "Ecce homo Homolka",
+      "hint": "Rodina",
+      "similar": "Hogo Fogo Homolka"
+    },
+    {
+      "word": "Hogo Fogo Homolka",
+      "hint": "Oslava",
+      "similar": "Ecce homo Homolka"
+    },
+    {
+      "word": "Kameňák",
+      "hint": "Vtipy",
+      "similar": "Snowboarďáci"
+    },
+    {
+      "word": "Snowboarďáci",
+      "hint": "Hory",
+      "similar": "Rafťáci"
+    },
+    {
+      "word": "Rafťáci",
+      "hint": "Řeka",
+      "similar": "Snowboarďáci"
+    },
+    {
+      "word": "Gympl",
+      "hint": "Graffiti",
+      "similar": "Snowboarďáci"
+    },
+    {
+      "word": "Bobule",
+      "hint": "Víno",
+      "similar": "Román pro muže"
+    },
+    {
+      "word": "Román pro muže",
+      "hint": "Kamarádi",
+      "similar": "Bobule"
+    },
+    {
+      "word": "Líbáš jako bůh",
+      "hint": "Svatba",
+      "similar": "Muži v naději"
+    },
+    {
+      "word": "Muži v naději",
+      "hint": "Nevěra",
+      "similar": "Líbáš jako bůh"
+    },
+    {
+      "word": "Ženy v pokušení",
+      "hint": "Psycholožka",
+      "similar": "Muži v naději"
+    },
+    {
+      "word": "Tři bratři",
+      "hint": "Pohádky",
+      "similar": "Tři veteráni"
+    },
+    {
+      "word": "Babovřesky",
+      "hint": "Vesnice",
+      "similar": "Bobule"
+    },
+    {
+      "word": "Rok ďábla",
+      "hint": "Nohavica",
+      "similar": "Kráska v nesnázích"
+    },
+    {
+      "word": "Knoflíkáři",
+      "hint": "Povídky",
+      "similar": "Samotáři"
+    },
+    {
+      "word": "Horem pádem",
+      "hint": "Adopce",
+      "similar": "Knoflíkáři"
+    },
+    {
+      "word": "Alois Nebel",
+      "hint": "Nádraží",
+      "similar": "Ostře sledované vlaky"
+    },
+    {
+      "word": "Občanský průkaz",
+      "hint": "Normalizace",
+      "similar": "Pelíšky"
+    },
+    {
+      "word": "Šarlatán",
+      "hint": "Bylinky",
+      "similar": "Masaryk"
+    },
+    {
+      "word": "Masaryk",
+      "hint": "Diplomat",
+      "similar": "Šarlatán"
+    },
+    {
+      "word": "Vlastníci",
+      "hint": "Schůze",
+      "similar": "Bobule"
+    },
+    {
+      "word": "Po strništi bos",
+      "hint": "Venkov",
+      "similar": "Obecná škola"
+    },
+    {
+      "word": "Tajemství staré bambitky",
+      "hint": "Loupežníci",
+      "similar": "Princezna ze mlejna"
+    },
+    {
+      "word": "Princezna ze mlejna",
+      "hint": "Mlýn",
+      "similar": "Tajemství staré bambitky"
+    },
+    {
+      "word": "Čertí brko",
+      "hint": "Peří",
+      "similar": "Princezna ze mlejna"
+    },
+    {
+      "word": "Rumburak",
+      "hint": "Plášť",
+      "similar": "Ježibaba"
+    },
+    {
+      "word": "Trautenberk",
+      "hint": "Lakomec",
+      "similar": "Krakonoš"
+    },
+    {
+      "word": "Krakonoš",
+      "hint": "Hory",
+      "similar": "Trautenberk"
+    },
+    {
+      "word": "Slunce, seno, jahody",
+      "hint": "Statek",
+      "similar": "Slunce, seno, erotika"
+    },
+    {
+      "word": "Slunce, seno, erotika",
+      "hint": "Pokračování",
+      "similar": "Slunce, seno, jahody"
+    },
+    {
+      "word": "Černí baroni",
+      "hint": "Kasárna",
+      "similar": "Tankový prapor"
+    },
+    {
+      "word": "Tankový prapor",
+      "hint": "Armáda",
+      "similar": "Černí baroni"
+    },
+    {
+      "word": "Revival",
+      "hint": "Kapela",
+      "similar": "Šakalí léta"
+    },
+    {
+      "word": "Jedna ruka netleská",
+      "hint": "Gangsteři",
+      "similar": "Samotáři"
+    },
+    {
+      "word": "Honzíkova cesta",
+      "hint": "Vlak",
+      "similar": "Po strništi bos"
+    },
+    {
+      "word": "Tři veteráni",
+      "hint": "Dary",
+      "similar": "Tři bratři"
+    },
+    {
+      "word": "Lotrando a Zubejda",
+      "hint": "Loupežník",
+      "similar": "Tři veteráni"
+    },
+    {
+      "word": "Kytice",
+      "hint": "Balady",
+      "similar": "Želary"
+    },
+    {
+      "word": "Želary",
+      "hint": "Hory",
+      "similar": "Kytice"
+    },
+    {
+      "word": "Divoké včely",
+      "hint": "Vesnice",
+      "similar": "Knoflíkáři"
+    },
+    {
+      "word": "Návrat idiota",
+      "hint": "Vlak",
+      "similar": "Samotáři"
+    },
+    {
+      "word": "Kráska v nesnázích",
+      "hint": "Sad",
+      "similar": "Rok ďábla"
+    },
+    {
+      "word": "Nuda v Brně",
+      "hint": "Rande",
+      "similar": "Bobule"
+    },
+    {
+      "word": "Jízda",
+      "hint": "Výlet",
+      "similar": "Návrat idiota"
+    },
+    {
+      "word": "Dobrý voják Švejk",
+      "hint": "Válka",
+      "similar": "Poslušně hlásím"
+    },
+    {
+      "word": "Poslušně hlásím",
+      "hint": "Vojna",
+      "similar": "Dobrý voják Švejk"
+    },
+    {
+      "word": "Vynález zkázy",
+      "hint": "Ponorka",
+      "similar": "Baron Prášil"
+    },
+    {
+      "word": "Baron Prášil",
+      "hint": "Měsíc",
+      "similar": "Vynález zkázy"
+    },
+    {
+      "word": "Starci na chmelu",
+      "hint": "Brigáda",
+      "similar": "Rebelové"
+    },
+    {
+      "word": "Saturnin",
+      "hint": "Sluha",
+      "similar": "Dobrý voják Švejk"
+    },
+    {
+      "word": "Lucie, postrach ulice",
+      "hint": "Holčička",
+      "similar": "Pan Tau"
+    },
+    {
+      "word": "Kobry a užovky",
+      "hint": "Bratři",
+      "similar": "Samotáři"
+    },
+    {
+      "word": "Teorie tygra",
+      "hint": "Útěk",
+      "similar": "Vratné lahve"
+    },
+    {
+      "word": "Samotáři",
+      "hint": "Praha",
+      "similar": "Knoflíkáři"
+    },
+    {
+      "word": "Hoří, má panenko",
+      "hint": "Hasiči",
+      "similar": "Lásky jedné plavovlásky"
+    },
+    {
+      "word": "Lásky jedné plavovlásky",
+      "hint": "Továrna",
+      "similar": "Hoří, má panenko"
+    },
+    {
+      "word": "Ženy v běhu",
+      "hint": "Pochod",
+      "similar": "Ženy v pokušení"
+    }
+  ]
+}

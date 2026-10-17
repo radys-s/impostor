@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "pack-pohadky-a-disney",
+      "type": "pack",
+      "name": "Pohádky a Disney",
+      "emoji": "🧚",
+      "description": "Klasické české pohádky, večerníčky a disneyovky pro celou rodinu.",
+      "audience": "family",
+      "path": "store/packs/pohadky-a-disney.json",
+      "words": 63
+    },
+    {
+      "id": "pack-ceske-kultovky",
+      "type": "pack",
+      "name": "České kultovky",
+      "emoji": "🎞️",
+      "description": "Kultovní české filmy a postavy, které zná každý, kdo vyrostl u televize.",
+      "audience": "friends",
+      "path": "store/packs/ceske-kultovky.json",
+      "words": 63
+    },
+    {
+      "id": "pack-cesky-rap-a-influenceri",
+      "type": "pack",
+      "name": "Český rap a influenceři",
+      "emoji": "🎤",
+      "description": "Česká a slovenská rapová scéna, youtubeři a celý influencerský svět.",
+      "audience": "friends",
+      "path": "store/packs/cesky-rap-a-influenceri.json",
+      "words": 66
+    },
+    {
+      "id": "pack-after-party",
+      "type": "pack",
+      "name": "After party",
+      "emoji": "🌙",
+      "description": "Pikantní balíček na pozdní noc, kdy párty pokračuje u někoho doma.",
+      "audience": "adult",
+      "path": "store/packs/after-party.json",
+      "words": 61
+    }
+  ]
+}

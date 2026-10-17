@@ -1,0 +1,323 @@
+{
+  "id": "pohadky-a-disney",
+  "name": "Pohádky a Disney",
+  "emoji": "🧚",
+  "audience": "family",
+  "words": [
+    {
+      "word": "Popelka",
+      "hint": "Střevíček",
+      "similar": "Sněhurka"
+    },
+    {
+      "word": "Sněhurka",
+      "hint": "Trpaslíci",
+      "similar": "Šípková Růženka"
+    },
+    {
+      "word": "Šípková Růženka",
+      "hint": "Spánek",
+      "similar": "Sněhurka"
+    },
+    {
+      "word": "Červená Karkulka",
+      "hint": "Vlk",
+      "similar": "Perníková chaloupka"
+    },
+    {
+      "word": "Perníková chaloupka",
+      "hint": "Ježibaba",
+      "similar": "Červená Karkulka"
+    },
+    {
+      "word": "Ježibaba",
+      "hint": "Koště",
+      "similar": "Čarodějnice"
+    },
+    {
+      "word": "Vodník",
+      "hint": "Hrníčky",
+      "similar": "Rusalka"
+    },
+    {
+      "word": "Rusalka",
+      "hint": "Měsíček",
+      "similar": "Malá mořská víla"
+    },
+    {
+      "word": "Malá mořská víla",
+      "hint": "Hlas",
+      "similar": "Rusalka"
+    },
+    {
+      "word": "Kocour v botách",
+      "hint": "Markýz",
+      "similar": "Shrek"
+    },
+    {
+      "word": "Shrek",
+      "hint": "Bažina",
+      "similar": "Kocour v botách"
+    },
+    {
+      "word": "Ledové království",
+      "hint": "Sníh",
+      "similar": "Na vlásku"
+    },
+    {
+      "word": "Elsa",
+      "hint": "Led",
+      "similar": "Anna"
+    },
+    {
+      "word": "Anna",
+      "hint": "Sestra",
+      "similar": "Elsa"
+    },
+    {
+      "word": "Olaf",
+      "hint": "Mrkev",
+      "similar": "Sněhulák"
+    },
+    {
+      "word": "Na vlásku",
+      "hint": "Věž",
+      "similar": "Ledové království"
+    },
+    {
+      "word": "Lví král",
+      "hint": "Savana",
+      "similar": "Kniha džunglí"
+    },
+    {
+      "word": "Simba",
+      "hint": "Lvíče",
+      "similar": "Mufasa"
+    },
+    {
+      "word": "Timon a Pumbaa",
+      "hint": "Bezstarostnost",
+      "similar": "Simba"
+    },
+    {
+      "word": "Kráska a zvíře",
+      "hint": "Růže",
+      "similar": "Popelka"
+    },
+    {
+      "word": "Aladin",
+      "hint": "Lampa",
+      "similar": "Džin"
+    },
+    {
+      "word": "Džin",
+      "hint": "Přání",
+      "similar": "Aladin"
+    },
+    {
+      "word": "Pinocchio",
+      "hint": "Nos",
+      "similar": "Petr Pan"
+    },
+    {
+      "word": "Petr Pan",
+      "hint": "Létání",
+      "similar": "Pinocchio"
+    },
+    {
+      "word": "Kapitán Hook",
+      "hint": "Krokodýl",
+      "similar": "Petr Pan"
+    },
+    {
+      "word": "Mulan",
+      "hint": "Čína",
+      "similar": "Pocahontas"
+    },
+    {
+      "word": "Pocahontas",
+      "hint": "Indiáni",
+      "similar": "Mulan"
+    },
+    {
+      "word": "Medvídek Pú",
+      "hint": "Hrnec",
+      "similar": "Prasátko"
+    },
+    {
+      "word": "Prasátko",
+      "hint": "Strach",
+      "similar": "Medvídek Pú"
+    },
+    {
+      "word": "Bambi",
+      "hint": "Les",
+      "similar": "Lví král"
+    },
+    {
+      "word": "Dumbo",
+      "hint": "Uši",
+      "similar": "Bambi"
+    },
+    {
+      "word": "101 dalmatinů",
+      "hint": "Skvrny",
+      "similar": "Lady a Tramp"
+    },
+    {
+      "word": "Mickey Mouse",
+      "hint": "Rukavičky",
+      "similar": "Minnie"
+    },
+    {
+      "word": "Kačer Donald",
+      "hint": "Námořník",
+      "similar": "Mickey Mouse"
+    },
+    {
+      "word": "Toy Story",
+      "hint": "Hračky",
+      "similar": "Auta"
+    },
+    {
+      "word": "Woody",
+      "hint": "Šerif",
+      "similar": "Buzz Rakeťák"
+    },
+    {
+      "word": "Buzz Rakeťák",
+      "hint": "Vesmír",
+      "similar": "Woody"
+    },
+    {
+      "word": "Hledá se Nemo",
+      "hint": "Oceán",
+      "similar": "Dory"
+    },
+    {
+      "word": "Dory",
+      "hint": "Zapomínání",
+      "similar": "Hledá se Nemo"
+    },
+    {
+      "word": "Úžasňákovi",
+      "hint": "Superhrdinové",
+      "similar": "Toy Story"
+    },
+    {
+      "word": "Zlatovláska",
+      "hint": "Vlasy",
+      "similar": "Princezna se zlatou hvězdou"
+    },
+    {
+      "word": "Pyšná princezna",
+      "hint": "Zahrada",
+      "similar": "Princ Bajaja"
+    },
+    {
+      "word": "Princ Bajaja",
+      "hint": "Kůň",
+      "similar": "Pyšná princezna"
+    },
+    {
+      "word": "Hloupý Honza",
+      "hint": "Buchty",
+      "similar": "Kocour v botách"
+    },
+    {
+      "word": "Krakonoš",
+      "hint": "Hory",
+      "similar": "Vodník"
+    },
+    {
+      "word": "Rumcajs",
+      "hint": "Les",
+      "similar": "Manka"
+    },
+    {
+      "word": "Manka",
+      "hint": "Jičín",
+      "similar": "Rumcajs"
+    },
+    {
+      "word": "Křemílek a Vochomůrka",
+      "hint": "Pařez",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Pat a Mat",
+      "hint": "Kutilové",
+      "similar": "Křemílek a Vochomůrka"
+    },
+    {
+      "word": "Krteček",
+      "hint": "Kalhotky",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Bob a Bobek",
+      "hint": "Klobouk",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Spejbl a Hurvínek",
+      "hint": "Loutky",
+      "similar": "Bob a Bobek"
+    },
+    {
+      "word": "Mach a Šebestová",
+      "hint": "Sluchátko",
+      "similar": "Spejbl a Hurvínek"
+    },
+    {
+      "word": "Večerníček",
+      "hint": "Postel",
+      "similar": "Krteček"
+    },
+    {
+      "word": "Ferda Mravenec",
+      "hint": "Práce",
+      "similar": "Brouk Pytlík"
+    },
+    {
+      "word": "Brouk Pytlík",
+      "hint": "Chytrost",
+      "similar": "Ferda Mravenec"
+    },
+    {
+      "word": "Maková panenka",
+      "hint": "Motýl",
+      "similar": "Ferda Mravenec"
+    },
+    {
+      "word": "Káťa a Škubánek",
+      "hint": "Medvěd",
+      "similar": "Maková panenka"
+    },
+    {
+      "word": "Mašinka Tomáš",
+      "hint": "Koleje",
+      "similar": "Bořek stavitel"
+    },
+    {
+      "word": "Bořek stavitel",
+      "hint": "Helma",
+      "similar": "Mašinka Tomáš"
+    },
+    {
+      "word": "Prasátko Peppa",
+      "hint": "Bláto",
+      "similar": "Bořek stavitel"
+    },
+    {
+      "word": "Tlapková patrola",
+      "hint": "Psi",
+      "similar": "Prasátko Peppa"
+    },
+    {
+      "word": "Máša a medvěd",
+      "hint": "Holčička",
+      "similar": "Tlapková patrola"
+    }
+  ]
+}

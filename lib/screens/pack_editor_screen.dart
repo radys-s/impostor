@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../models/word_pack.dart';
+import '../store/store.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import '../util/text.dart';
 import 'ai_screen.dart';
 
@@ -24,7 +26,7 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
   late bool _fromAi = widget.pack?.fromAi ?? false;
   bool _dirty = false;
 
-  bool get _readOnly => widget.pack?.builtin ?? false;
+  bool get _readOnly => widget.pack?.readOnly ?? false;
 
   static const _emojis = ['🎲', '🍕', '🐶', '🎬', '⚽', '🎵', '🌍', '🏠', '💼', '🚗', '🎮', '🎉', '🌲', '🧪', '📚', '❤️'];
 
@@ -33,7 +35,7 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
     super.initState();
     // An unsaved copy of a built-in pack counts as a pending change.
     final pack = widget.pack;
-    _dirty = pack != null && !pack.builtin && !AppScope.read(context).customPacks.any((p) => p.id == pack.id);
+    _dirty = pack != null && !pack.readOnly && !AppScope.read(context).customPacks.any((p) => p.id == pack.id);
   }
 
   @override
@@ -65,6 +67,7 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
       emoji: _emoji,
       words: words,
       fromAi: _fromAi,
+      audience: widget.pack?.audience ?? state.playContext.defaultAudience,
     ));
     _dirty = false;
     return true;
@@ -101,7 +104,13 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
     final pack = widget.pack!;
     Navigator.of(context).pushReplacement(MaterialPageRoute(
       builder: (_) => PackEditorScreen(
-        pack: WordPack(id: AppScope.read(context).newPackId(), name: '${pack.name} (kopie)', emoji: pack.emoji, words: pack.words),
+        pack: WordPack(
+          id: AppScope.read(context).newPackId(),
+          name: '${pack.name} (kopie)',
+          emoji: pack.emoji,
+          words: pack.words,
+          audience: pack.audience,
+        ),
       ),
     ));
   }
@@ -141,7 +150,8 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final exists = widget.pack != null && AppScope.of(context).customPacks.any((p) => p.id == widget.pack!.id);
+    final state = AppScope.of(context);
+    final exists = widget.pack != null && state.customPacks.any((p) => p.id == widget.pack!.id);
 
     return PopScope(
       canPop: !_dirty,
@@ -173,7 +183,8 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
                 icon: const Icon(Icons.add),
                 label: const Text('Slovo'),
               ),
-        body: ListView(
+        body: AmbientBackground(
+          child: ListView(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 96),
           children: [
             if (!_readOnly) ...[
@@ -201,19 +212,23 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 12),
-              OutlinedButton.icon(
-                onPressed: _fillWithAi,
-                icon: const Icon(Icons.auto_awesome),
-                label: const Text('Doplnit slova pomocí AI'),
-              ),
+              if (state.has(FeaturePlugin.ai)) ...[
+                const SizedBox(height: 12),
+                OutlinedButton.icon(
+                  onPressed: _fillWithAi,
+                  icon: const Icon(Icons.auto_awesome),
+                  label: const Text('Doplnit slova pomocí AI'),
+                ),
+              ],
             ],
             SectionLabel('${_words.length} slov'),
             if (_words.isEmpty)
               Padding(
                 padding: const EdgeInsets.all(24),
                 child: Text(
-                  'Zatím žádná slova. Přidej je ručně, nebo nech AI, ať je doplní.',
+                  state.has(FeaturePlugin.ai)
+                      ? 'Zatím žádná slova. Přidej je ručně, nebo nech AI, ať je doplní.'
+                      : 'Zatím žádná slova. Přidej je tlačítkem Slovo.',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: scheme.onSurfaceVariant),
                 ),
@@ -241,6 +256,7 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
                 ),
               ),
           ],
+        ),
         ),
       ),
     );

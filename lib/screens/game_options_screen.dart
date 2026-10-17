@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../models/settings.dart';
+import '../ui/motion.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 
 class GameOptionsScreen extends StatelessWidget {
   const GameOptionsScreen({super.key});
@@ -19,7 +21,8 @@ class GameOptionsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Možnosti hry')),
-      body: PageBody(
+      body: AmbientBackground(
+        child: PageBody(
         children: [
           const SectionLabel('Impostoři'),
           Card(
@@ -107,6 +110,7 @@ class GameOptionsScreen extends StatelessWidget {
               ),
             ),
         ],
+        ),
       ),
     );
   }
@@ -133,8 +137,17 @@ class _Stepper extends StatelessWidget {
             icon: const Icon(Icons.remove),
           ),
           SizedBox(
-            width: 40,
-            child: Text('$value', textAlign: TextAlign.center, style: Theme.of(context).textTheme.titleLarge),
+            width: 44,
+            child: AnimatedSwitcher(
+              duration: Motion.quick,
+              transitionBuilder: (child, a) => ScaleTransition(scale: a, child: FadeTransition(opacity: a, child: child)),
+              child: Text(
+                '$value',
+                key: ValueKey(value),
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            ),
           ),
           IconButton.filledTonal(
             onPressed: value < max ? () => onChanged(value + 1) : null,

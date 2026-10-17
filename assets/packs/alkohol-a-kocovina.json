@@ -1,0 +1,328 @@
+{
+  "id": "alkohol-a-kocovina",
+  "name": "Alkohol a kocovina",
+  "emoji": "🍻",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Pivo",
+      "hint": "Pěna",
+      "similar": "Radler"
+    },
+    {
+      "word": "Radler",
+      "hint": "Citron",
+      "similar": "Pivo"
+    },
+    {
+      "word": "Nealko pivo",
+      "hint": "Řidič",
+      "similar": "Radler"
+    },
+    {
+      "word": "Víno",
+      "hint": "Sklípek",
+      "similar": "Šampaňské"
+    },
+    {
+      "word": "Šampaňské",
+      "hint": "Bublinky",
+      "similar": "Prosecco"
+    },
+    {
+      "word": "Prosecco",
+      "hint": "Itálie",
+      "similar": "Šampaňské"
+    },
+    {
+      "word": "Svařák",
+      "hint": "Trhy",
+      "similar": "Grog"
+    },
+    {
+      "word": "Slivovice",
+      "hint": "Švestky",
+      "similar": "Hruškovice"
+    },
+    {
+      "word": "Becherovka",
+      "hint": "Bylinky",
+      "similar": "Fernet"
+    },
+    {
+      "word": "Fernet",
+      "hint": "Tonik",
+      "similar": "Becherovka"
+    },
+    {
+      "word": "Tuzemák",
+      "hint": "Čaj",
+      "similar": "Slivovice"
+    },
+    {
+      "word": "Absint",
+      "hint": "Zelená",
+      "similar": "Fernet"
+    },
+    {
+      "word": "Vodka",
+      "hint": "Led",
+      "similar": "Gin"
+    },
+    {
+      "word": "Gin",
+      "hint": "Jalovec",
+      "similar": "Vodka"
+    },
+    {
+      "word": "Whisky",
+      "hint": "Sudy",
+      "similar": "Rum"
+    },
+    {
+      "word": "Tequila",
+      "hint": "Sůl",
+      "similar": "Vodka"
+    },
+    {
+      "word": "Jägermeister",
+      "hint": "Jelen",
+      "similar": "Becherovka"
+    },
+    {
+      "word": "Medovina",
+      "hint": "Vikingové",
+      "similar": "Burčák"
+    },
+    {
+      "word": "Burčák",
+      "hint": "Září",
+      "similar": "Medovina"
+    },
+    {
+      "word": "Domácí pálenka",
+      "hint": "Sklep",
+      "similar": "Slivovice"
+    },
+    {
+      "word": "Panák",
+      "hint": "Přípitek",
+      "similar": "Pivo"
+    },
+    {
+      "word": "Přípitek",
+      "hint": "Zdraví",
+      "similar": "Panák"
+    },
+    {
+      "word": "Pivní tácek",
+      "hint": "Podložka",
+      "similar": "Účet"
+    },
+    {
+      "word": "Čárky na tácku",
+      "hint": "Propiska",
+      "similar": "Pivní tácek"
+    },
+    {
+      "word": "Štamgast",
+      "hint": "Pult",
+      "similar": "Hospodská"
+    },
+    {
+      "word": "Hospodská",
+      "hint": "Výčep",
+      "similar": "Štamgast"
+    },
+    {
+      "word": "Pivní pong",
+      "hint": "Kelímky",
+      "similar": "Pivní štafeta"
+    },
+    {
+      "word": "Pivní štafeta",
+      "hint": "Týmy",
+      "similar": "Pivní pong"
+    },
+    {
+      "word": "Pití na ex",
+      "hint": "Rychlost",
+      "similar": "Pivní štafeta"
+    },
+    {
+      "word": "Hra na pití",
+      "hint": "Pravidla",
+      "similar": "Pivní pong"
+    },
+    {
+      "word": "Plechovka",
+      "hint": "Cvaknutí",
+      "similar": "Lahev"
+    },
+    {
+      "word": "Sud",
+      "hint": "Kohout",
+      "similar": "Plechovka"
+    },
+    {
+      "word": "Otvírání zapalovačem",
+      "hint": "Trik",
+      "similar": "Otvírák"
+    },
+    {
+      "word": "Kocovina",
+      "hint": "Hlava",
+      "similar": "Opice"
+    },
+    {
+      "word": "Opice",
+      "hint": "Veselí",
+      "similar": "Kocovina"
+    },
+    {
+      "word": "Okno",
+      "hint": "Paměť",
+      "similar": "Kocovina"
+    },
+    {
+      "word": "Okurkový lák",
+      "hint": "Sklenice",
+      "similar": "Rajčatový džus"
+    },
+    {
+      "word": "Ibalgin",
+      "hint": "Prášek",
+      "similar": "Paralen"
+    },
+    {
+      "word": "Paralen",
+      "hint": "Lékárna",
+      "similar": "Ibalgin"
+    },
+    {
+      "word": "Hydratace",
+      "hint": "Voda",
+      "similar": "Pivo na spravení"
+    },
+    {
+      "word": "Pivo na spravení",
+      "hint": "Ráno",
+      "similar": "Okurkový lák"
+    },
+    {
+      "word": "Česnečka",
+      "hint": "Polévka",
+      "similar": "Gulášovka"
+    },
+    {
+      "word": "Mastná snídaně",
+      "hint": "Slanina",
+      "similar": "Kebab"
+    },
+    {
+      "word": "Hlava v záchodě",
+      "hint": "Mísa",
+      "similar": "Kbelík u postele"
+    },
+    {
+      "word": "Kbelík u postele",
+      "hint": "Noc",
+      "similar": "Hlava v záchodě"
+    },
+    {
+      "word": "Kolotoč v posteli",
+      "hint": "Strop",
+      "similar": "Hlava v záchodě"
+    },
+    {
+      "word": "Ranní lítost",
+      "hint": "Výčitky",
+      "similar": "Okno"
+    },
+    {
+      "word": "Kocovinový den",
+      "hint": "Gauč",
+      "similar": "Ranní lítost"
+    },
+    {
+      "word": "Ztráta hlasu",
+      "hint": "Zpívání",
+      "similar": "Ranní lítost"
+    },
+    {
+      "word": "Zpráva bývalé",
+      "hint": "Lítost",
+      "similar": "Opilecký telefonát"
+    },
+    {
+      "word": "Řidič večera",
+      "hint": "Klíčky",
+      "similar": "Nealko pivo"
+    },
+    {
+      "word": "Abstinent",
+      "hint": "Džus",
+      "similar": "Řidič večera"
+    },
+    {
+      "word": "Suchý únor",
+      "hint": "Pauza",
+      "similar": "Abstinent"
+    },
+    {
+      "word": "Detox",
+      "hint": "Smoothie",
+      "similar": "Suchý únor"
+    },
+    {
+      "word": "Dechová zkouška",
+      "hint": "Trubička",
+      "similar": "Policejní kontrola"
+    },
+    {
+      "word": "Pivní břicho",
+      "hint": "Pupek",
+      "similar": "Pivní brýle"
+    },
+    {
+      "word": "Pivní brýle",
+      "hint": "Krása",
+      "similar": "Pivní břicho"
+    },
+    {
+      "word": "Pivní festival",
+      "hint": "Stany",
+      "similar": "Vinobraní"
+    },
+    {
+      "word": "Vinobraní",
+      "hint": "Hrozny",
+      "similar": "Pivní festival"
+    },
+    {
+      "word": "Degustace",
+      "hint": "Plivátko",
+      "similar": "Vinobraní"
+    },
+    {
+      "word": "Sommeliér",
+      "hint": "Vůně",
+      "similar": "Degustace"
+    },
+    {
+      "word": "Domácí bar",
+      "hint": "Skříňka",
+      "similar": "Minibar"
+    },
+    {
+      "word": "Minibar",
+      "hint": "Hotel",
+      "similar": "Domácí bar"
+    },
+    {
+      "word": "Kalíšek",
+      "hint": "Plast",
+      "similar": "Štamprle"
+    }
+  ]
+}

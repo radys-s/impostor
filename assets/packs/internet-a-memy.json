@@ -1,0 +1,353 @@
+{
+  "id": "internet-a-memy",
+  "name": "Internet a memy",
+  "emoji": "😂",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Meme",
+      "hint": "Vtip",
+      "similar": "GIF"
+    },
+    {
+      "word": "Rickroll",
+      "hint": "Past",
+      "similar": "Clickbait"
+    },
+    {
+      "word": "Clickbait",
+      "hint": "Titulek",
+      "similar": "Spam"
+    },
+    {
+      "word": "Troll",
+      "hint": "Provokace",
+      "similar": "Hater"
+    },
+    {
+      "word": "Hater",
+      "hint": "Komentáře",
+      "similar": "Troll"
+    },
+    {
+      "word": "Youtuber",
+      "hint": "Kamera",
+      "similar": "Streamer"
+    },
+    {
+      "word": "Streamer",
+      "hint": "Živě",
+      "similar": "Youtuber"
+    },
+    {
+      "word": "Fake news",
+      "hint": "Lež",
+      "similar": "Hoax"
+    },
+    {
+      "word": "Hoax",
+      "hint": "Řetězák",
+      "similar": "Fake news"
+    },
+    {
+      "word": "Captcha",
+      "hint": "Semafory",
+      "similar": "Cookies"
+    },
+    {
+      "word": "Cookies",
+      "hint": "Souhlas",
+      "similar": "Captcha"
+    },
+    {
+      "word": "Wi-Fi heslo",
+      "hint": "Návštěva",
+      "similar": "Hotspot"
+    },
+    {
+      "word": "Hotspot",
+      "hint": "Data",
+      "similar": "Wi-Fi heslo"
+    },
+    {
+      "word": "Photoshop",
+      "hint": "Úpravy",
+      "similar": "Filtr"
+    },
+    {
+      "word": "Sigma",
+      "hint": "Samotář",
+      "similar": "Alfa samec"
+    },
+    {
+      "word": "Skibidi toilet",
+      "hint": "Nesmysl",
+      "similar": "Brainrot"
+    },
+    {
+      "word": "Brainrot",
+      "hint": "Scrollování",
+      "similar": "Skibidi toilet"
+    },
+    {
+      "word": "Rizz",
+      "hint": "Balení",
+      "similar": "Aura"
+    },
+    {
+      "word": "Aura",
+      "hint": "Body",
+      "similar": "Rizz"
+    },
+    {
+      "word": "Cringe",
+      "hint": "Trapnost",
+      "similar": "Facepalm"
+    },
+    {
+      "word": "Facepalm",
+      "hint": "Dlaň",
+      "similar": "Cringe"
+    },
+    {
+      "word": "Boomer",
+      "hint": "Generace",
+      "similar": "Zoomer"
+    },
+    {
+      "word": "Zoomer",
+      "hint": "Telefon",
+      "similar": "Boomer"
+    },
+    {
+      "word": "NPC",
+      "hint": "Postava",
+      "similar": "Bot"
+    },
+    {
+      "word": "Bot",
+      "hint": "Automat",
+      "similar": "NPC"
+    },
+    {
+      "word": "Unboxing",
+      "hint": "Krabice",
+      "similar": "Haul"
+    },
+    {
+      "word": "Haul",
+      "hint": "Nákupy",
+      "similar": "Unboxing"
+    },
+    {
+      "word": "ASMR",
+      "hint": "Šeptání",
+      "similar": "Mukbang"
+    },
+    {
+      "word": "Mukbang",
+      "hint": "Jídlo",
+      "similar": "ASMR"
+    },
+    {
+      "word": "Prank",
+      "hint": "Kamera",
+      "similar": "Rickroll"
+    },
+    {
+      "word": "Spoiler",
+      "hint": "Konec",
+      "similar": "Trailer"
+    },
+    {
+      "word": "Trailer",
+      "hint": "Ukázka",
+      "similar": "Spoiler"
+    },
+    {
+      "word": "Dark mode",
+      "hint": "Oči",
+      "similar": "Light mode"
+    },
+    {
+      "word": "Zapomenuté heslo",
+      "hint": "Reset",
+      "similar": "Dvoufázové ověření"
+    },
+    {
+      "word": "Phishing",
+      "hint": "Odkaz",
+      "similar": "Hoax"
+    },
+    {
+      "word": "Lagování",
+      "hint": "Zasekávání",
+      "similar": "Výpadek internetu"
+    },
+    {
+      "word": "Výpadek internetu",
+      "hint": "Panika",
+      "similar": "Lagování"
+    },
+    {
+      "word": "Autocorrect",
+      "hint": "Překlep",
+      "similar": "Hlasovka"
+    },
+    {
+      "word": "Hlasovka",
+      "hint": "Dlouhá",
+      "similar": "SMS"
+    },
+    {
+      "word": "Skupinový chat",
+      "hint": "Notifikace",
+      "similar": "Rodinný chat"
+    },
+    {
+      "word": "Rodinný chat",
+      "hint": "Babička",
+      "similar": "Skupinový chat"
+    },
+    {
+      "word": "Reddit",
+      "hint": "Fórum",
+      "similar": "Discord"
+    },
+    {
+      "word": "Discord",
+      "hint": "Server",
+      "similar": "Reddit"
+    },
+    {
+      "word": "Twitch",
+      "hint": "Fialová",
+      "similar": "YouTube"
+    },
+    {
+      "word": "Doge",
+      "hint": "Shiba",
+      "similar": "Grumpy Cat"
+    },
+    {
+      "word": "Grumpy Cat",
+      "hint": "Zamračení",
+      "similar": "Doge"
+    },
+    {
+      "word": "Nyan Cat",
+      "hint": "Duha",
+      "similar": "Grumpy Cat"
+    },
+    {
+      "word": "Copypasta",
+      "hint": "Kopírování",
+      "similar": "Meme"
+    },
+    {
+      "word": "Deepfake",
+      "hint": "Obličej",
+      "similar": "Photoshop"
+    },
+    {
+      "word": "Chatbot",
+      "hint": "Odpovědi",
+      "similar": "Siri"
+    },
+    {
+      "word": "Podcast",
+      "hint": "Mikrofon",
+      "similar": "Livestream"
+    },
+    {
+      "word": "Stonks",
+      "hint": "Graf",
+      "similar": "This is fine"
+    },
+    {
+      "word": "This is fine",
+      "hint": "Oheň",
+      "similar": "Stonks"
+    },
+    {
+      "word": "Pepe",
+      "hint": "Žába",
+      "similar": "Doge"
+    },
+    {
+      "word": "Chad",
+      "hint": "Čelist",
+      "similar": "Sigma"
+    },
+    {
+      "word": "Karen",
+      "hint": "Manažer",
+      "similar": "Boomer"
+    },
+    {
+      "word": "Copium",
+      "hint": "Popírání",
+      "similar": "Cringe"
+    },
+    {
+      "word": "Ohio",
+      "hint": "Divnost",
+      "similar": "Skibidi toilet"
+    },
+    {
+      "word": "Mewing",
+      "hint": "Čelist",
+      "similar": "Looksmaxxing"
+    },
+    {
+      "word": "Looksmaxxing",
+      "hint": "Vzhled",
+      "similar": "Mewing"
+    },
+    {
+      "word": "Gangnam Style",
+      "hint": "Tanec",
+      "similar": "Harlem Shake"
+    },
+    {
+      "word": "Harlem Shake",
+      "hint": "Masky",
+      "similar": "Gangnam Style"
+    },
+    {
+      "word": "Ice Bucket Challenge",
+      "hint": "Kýbl",
+      "similar": "Harlem Shake"
+    },
+    {
+      "word": "Hacker v kapuci",
+      "hint": "Klávesnice",
+      "similar": "Anonymous"
+    },
+    {
+      "word": "Anonymous",
+      "hint": "Maska",
+      "similar": "Hacker v kapuci"
+    },
+    {
+      "word": "Chyba 404",
+      "hint": "Nenalezeno",
+      "similar": "Modrá smrt"
+    },
+    {
+      "word": "Modrá smrt",
+      "hint": "Windows",
+      "similar": "Chyba 404"
+    },
+    {
+      "word": "Inkognito",
+      "hint": "Tajnost",
+      "similar": "Historie prohlížeče"
+    },
+    {
+      "word": "Historie prohlížeče",
+      "hint": "Mazání",
+      "similar": "Inkognito"
+    }
+  ]
+}

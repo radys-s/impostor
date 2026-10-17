@@ -1,4 +1,5 @@
 import '../util/text.dart';
+import 'play_context.dart';
 
 class WordEntry {
   const WordEntry({required this.word, this.hint = '', this.similar = ''});
@@ -38,6 +39,8 @@ class WordPack {
     required this.words,
     this.builtin = false,
     this.fromAi = false,
+    this.fromStore = false,
+    this.audience = Audience.family,
   });
 
   final String id;
@@ -47,7 +50,13 @@ class WordPack {
   final bool builtin;
   final bool fromAi;
 
-  factory WordPack.fromJson(Map<String, dynamic> json, {bool builtin = false}) => WordPack(
+  /// Downloaded from the plugin store; read-only like built-in packs.
+  final bool fromStore;
+  final Audience audience;
+
+  bool get readOnly => builtin || fromStore;
+
+  factory WordPack.fromJson(Map<String, dynamic> json, {bool builtin = false, bool fromStore = false}) => WordPack(
         id: json['id'] as String,
         name: json['name'] as String? ?? 'Bez názvu',
         emoji: json['emoji'] as String? ?? '🎲',
@@ -57,6 +66,8 @@ class WordPack {
         ].where((w) => w.word.isNotEmpty).toList(),
         builtin: builtin,
         fromAi: json['fromAi'] as bool? ?? false,
+        fromStore: fromStore,
+        audience: Audience.parse(json['audience']),
       );
 
   Map<String, dynamic> toJson() => {
@@ -64,10 +75,20 @@ class WordPack {
         'name': name,
         'emoji': emoji,
         'fromAi': fromAi,
+        'audience': audience.name,
         'words': [for (final w in words) w.toJson()],
       };
 
-  WordPack copyWith({String? id, String? name, String? emoji, List<WordEntry>? words, bool? builtin, bool? fromAi}) =>
+  WordPack copyWith({
+    String? id,
+    String? name,
+    String? emoji,
+    List<WordEntry>? words,
+    bool? builtin,
+    bool? fromAi,
+    bool? fromStore,
+    Audience? audience,
+  }) =>
       WordPack(
         id: id ?? this.id,
         name: name ?? this.name,
@@ -75,6 +96,8 @@ class WordPack {
         words: words ?? this.words,
         builtin: builtin ?? this.builtin,
         fromAi: fromAi ?? this.fromAi,
+        fromStore: fromStore ?? this.fromStore,
+        audience: audience ?? this.audience,
       );
 }
 

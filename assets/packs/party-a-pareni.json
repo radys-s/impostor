@@ -1,0 +1,318 @@
+{
+  "id": "party-a-pareni",
+  "name": "Párty a paření",
+  "emoji": "🎉",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Domácí párty",
+      "hint": "Rodiče",
+      "similar": "Chatovka"
+    },
+    {
+      "word": "Chatovka",
+      "hint": "Víkend",
+      "similar": "Domácí párty"
+    },
+    {
+      "word": "Afterparty",
+      "hint": "Ráno",
+      "similar": "Domácí párty"
+    },
+    {
+      "word": "Diskotéka",
+      "hint": "Koule",
+      "similar": "Klub"
+    },
+    {
+      "word": "Klub",
+      "hint": "Fronta",
+      "similar": "Diskotéka"
+    },
+    {
+      "word": "Vyhazovač",
+      "hint": "Dveře",
+      "similar": "Šatna"
+    },
+    {
+      "word": "Šatna",
+      "hint": "Lísteček",
+      "similar": "Vyhazovač"
+    },
+    {
+      "word": "Playlist",
+      "hint": "Repráky",
+      "similar": "DJ"
+    },
+    {
+      "word": "DJ",
+      "hint": "Pult",
+      "similar": "Playlist"
+    },
+    {
+      "word": "Bluetooth repro",
+      "hint": "Baterie",
+      "similar": "Playlist"
+    },
+    {
+      "word": "Taneční parket",
+      "hint": "Světla",
+      "similar": "Bar"
+    },
+    {
+      "word": "Limbo",
+      "hint": "Tyč",
+      "similar": "Twister"
+    },
+    {
+      "word": "Twister",
+      "hint": "Ohýbání",
+      "similar": "Limbo"
+    },
+    {
+      "word": "Flaška",
+      "hint": "Točení",
+      "similar": "Pravda nebo úkol"
+    },
+    {
+      "word": "Pravda nebo úkol",
+      "hint": "Odvaha",
+      "similar": "Flaška"
+    },
+    {
+      "word": "Nikdy jsem nikdy",
+      "hint": "Prsty",
+      "similar": "Pravda nebo úkol"
+    },
+    {
+      "word": "Karaoke",
+      "hint": "Falešně",
+      "similar": "Just Dance"
+    },
+    {
+      "word": "Just Dance",
+      "hint": "Konzole",
+      "similar": "Karaoke"
+    },
+    {
+      "word": "Pizza o půlnoci",
+      "hint": "Krabice",
+      "similar": "Noční kebab"
+    },
+    {
+      "word": "Noční kebab",
+      "hint": "Hlad",
+      "similar": "Pizza o půlnoci"
+    },
+    {
+      "word": "Energeťák",
+      "hint": "Bdění",
+      "similar": "Kafe"
+    },
+    {
+      "word": "Chipsy",
+      "hint": "Miska",
+      "similar": "Popcorn"
+    },
+    {
+      "word": "Spacák",
+      "hint": "Zip",
+      "similar": "Karimatka"
+    },
+    {
+      "word": "Táborák",
+      "hint": "Kytara",
+      "similar": "Grilovačka"
+    },
+    {
+      "word": "Grilovačka",
+      "hint": "Uhlí",
+      "similar": "Táborák"
+    },
+    {
+      "word": "Špekáčky",
+      "hint": "Klacek",
+      "similar": "Marshmallow"
+    },
+    {
+      "word": "Marshmallow",
+      "hint": "Sladké",
+      "similar": "Špekáčky"
+    },
+    {
+      "word": "Stan",
+      "hint": "Kolíky",
+      "similar": "Hamaka"
+    },
+    {
+      "word": "Festival",
+      "hint": "Bláto",
+      "similar": "Koncert"
+    },
+    {
+      "word": "Festivalový náramek",
+      "hint": "Vstup",
+      "similar": "Vstupenka"
+    },
+    {
+      "word": "Tancovačka",
+      "hint": "Vesnice",
+      "similar": "Diskotéka"
+    },
+    {
+      "word": "Maturák",
+      "hint": "Šerpa",
+      "similar": "Ples"
+    },
+    {
+      "word": "Ples",
+      "hint": "Šaty",
+      "similar": "Maturák"
+    },
+    {
+      "word": "Taneční",
+      "hint": "Lekce",
+      "similar": "Ples"
+    },
+    {
+      "word": "Narozeninová párty",
+      "hint": "Dort",
+      "similar": "Oslava překvapení"
+    },
+    {
+      "word": "Oslava překvapení",
+      "hint": "Schovávání",
+      "similar": "Narozeninová párty"
+    },
+    {
+      "word": "Kostýmová párty",
+      "hint": "Převleky",
+      "similar": "Halloween"
+    },
+    {
+      "word": "Halloween",
+      "hint": "Dýně",
+      "similar": "Kostýmová párty"
+    },
+    {
+      "word": "Pyžamová párty",
+      "hint": "Polštáře",
+      "similar": "Přespávačka"
+    },
+    {
+      "word": "Přespávačka",
+      "hint": "Kamarádka",
+      "similar": "Pyžamová párty"
+    },
+    {
+      "word": "Silvestr",
+      "hint": "Odpočet",
+      "similar": "Nový rok"
+    },
+    {
+      "word": "Fotokoutek",
+      "hint": "Rekvizity",
+      "similar": "Polaroid"
+    },
+    {
+      "word": "Polaroid",
+      "hint": "Fotka",
+      "similar": "Fotokoutek"
+    },
+    {
+      "word": "Svítící tyčinky",
+      "hint": "Tma",
+      "similar": "Prskavky"
+    },
+    {
+      "word": "Konfety",
+      "hint": "Úklid",
+      "similar": "Balónky"
+    },
+    {
+      "word": "Balónky",
+      "hint": "Helium",
+      "similar": "Konfety"
+    },
+    {
+      "word": "Sousedi",
+      "hint": "Zeď",
+      "similar": "Domovník"
+    },
+    {
+      "word": "Policie u dveří",
+      "hint": "Hluk",
+      "similar": "Sousedi"
+    },
+    {
+      "word": "Ztracený mobil",
+      "hint": "Hledání",
+      "similar": "Vybitý mobil"
+    },
+    {
+      "word": "Poslední tramvaj",
+      "hint": "Útěk",
+      "similar": "Noční rozjezd"
+    },
+    {
+      "word": "Noční rozjezd",
+      "hint": "Čekání",
+      "similar": "Poslední tramvaj"
+    },
+    {
+      "word": "Bolt",
+      "hint": "Aplikace",
+      "similar": "Uber"
+    },
+    {
+      "word": "Tanec na stole",
+      "hint": "Odvaha",
+      "similar": "Karaoke"
+    },
+    {
+      "word": "Fixa na obličeji",
+      "hint": "Spánek",
+      "similar": "Prank"
+    },
+    {
+      "word": "Prank",
+      "hint": "Smích",
+      "similar": "Fixa na obličeji"
+    },
+    {
+      "word": "Slackline",
+      "hint": "Balanc",
+      "similar": "Hamaka"
+    },
+    {
+      "word": "Vodní bitva",
+      "hint": "Pistolky",
+      "similar": "Koulovačka"
+    },
+    {
+      "word": "Koulovačka",
+      "hint": "Sníh",
+      "similar": "Vodní bitva"
+    },
+    {
+      "word": "Bazénová párty",
+      "hint": "Plavky",
+      "similar": "Pěnová párty"
+    },
+    {
+      "word": "Pěnová párty",
+      "hint": "Bublinky",
+      "similar": "Bazénová párty"
+    },
+    {
+      "word": "Hádání písniček",
+      "hint": "Melodie",
+      "similar": "Karaoke"
+    },
+    {
+      "word": "Kvíz v hospodě",
+      "hint": "Týmy",
+      "similar": "Hádání písniček"
+    }
+  ]
+}

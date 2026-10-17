@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../models/word_pack.dart';
+import '../store/store.dart';
+import '../ui/motion.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import 'ai_screen.dart';
 import 'pack_editor_screen.dart';
+import 'store_screen.dart';
 
 class PacksScreen extends StatelessWidget {
   const PacksScreen({super.key});
@@ -12,79 +16,91 @@ class PacksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state = AppScope.of(context);
+    final ctx = state.playContext;
+    final scheme = Theme.of(context).colorScheme;
     final selected = state.gameSettings.packIds;
+    final offered = state.contextPacks;
+    final store = [for (final p in offered) if (p.fromStore) p];
+    final builtin = [for (final p in offered) if (p.builtin) p];
+    final aiOn = state.has(FeaturePlugin.ai);
 
-    void toggle(WordPack pack, bool on) {
-      final ids = {...selected};
-      on ? ids.add(pack.id) : ids.remove(pack.id);
-      state.updateGameSettings(state.gameSettings.copyWith(packIds: ids));
-    }
-
-    Widget tile(WordPack pack) => Padding(
-          padding: const EdgeInsets.only(bottom: 8),
-          child: Card(
-            clipBehavior: Clip.antiAlias,
-            child: ListTile(
-              leading: Text(pack.emoji, style: const TextStyle(fontSize: 28)),
-              title: Text(pack.name, style: const TextStyle(fontWeight: FontWeight.w600)),
-              subtitle: Text('${pack.words.length} slov${pack.fromAi ? ' · AI' : ''}'),
-              onTap: () => _open(context, PackEditorScreen(pack: pack)),
-              trailing: Checkbox(
-                value: selected.contains(pack.id),
-                onChanged: pack.words.isEmpty ? null : (v) => toggle(pack, v ?? false),
-              ),
-            ),
+    Widget tile(WordPack pack) {
+      final on = selected.contains(pack.id);
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: PartyTile(
+          leading: EmojiBadge(pack.emoji, size: 44),
+          title: pack.name,
+          subtitle: '${pack.words.length} slov${pack.fromAi ? ' · AI' : ''}${pack.fromStore ? ' · obchod' : ''}',
+          onTap: () => _open(context, PackEditorScreen(pack: pack)),
+          trailing: _SelectDot(
+            on: on,
+            enabled: pack.words.isNotEmpty,
+            onChanged: (v) {
+              tick(state.appSettings.haptics);
+              state.togglePack(pack.id, v);
+            },
           ),
-        );
+        ),
+      );
+    }
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Témata'),
         actions: [
-          if (selected.isNotEmpty)
-            TextButton(
-              onPressed: () => state.updateGameSettings(state.gameSettings.copyWith(packIds: {})),
-              child: const Text('Zrušit výběr'),
-            ),
+          if (state.hasManualSelection)
+            TextButton(onPressed: state.clearPackSelection, child: const Text('Zrušit výběr')),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => _create(context),
+        onPressed: () => aiOn ? _create(context) : _open(context, const PackEditorScreen()),
         icon: const Icon(Icons.add),
         label: const Text('Nové téma'),
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 96),
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
-            child: Text(
-              selected.isEmpty
-                  ? 'Nic nevybráno = hraje se se všemi vestavěnými tématy.'
-                  : 'Hraje se jen s vybranými tématy.',
-              style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 12),
-            child: Card(
-              color: Theme.of(context).colorScheme.primaryContainer,
-              clipBehavior: Clip.antiAlias,
-              child: ListTile(
-                leading: const Icon(Icons.auto_awesome),
-                title: const Text('Vygeneruj téma s AI', style: TextStyle(fontWeight: FontWeight.w600)),
-                subtitle: const Text('Napiš cokoliv, třeba „filmy od Pixaru“'),
-                onTap: () => _open(context, const AiScreen()),
+      body: AmbientBackground(
+        child: PageBody(
+          stagger: false,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 4, 12),
+              child: Text(
+                state.hasManualSelection
+                    ? 'Hraje se jen s označenými tématy.'
+                    : 'Nic neoznačeno = hraje se se všemi tématy pro ${ctx.label.toLowerCase()}.',
+                style: TextStyle(color: scheme.onSurfaceVariant),
               ),
             ),
-          ),
-          if (state.customPacks.isNotEmpty) ...[
-            const SectionLabel('Moje témata'),
-            for (final p in state.customPacks) tile(p),
+            if (aiOn)
+              PartyTile(
+                highlight: true,
+                gradient: ctx.gradient,
+                leading: const EmojiBadge('✨', size: 44, gradient: LinearGradient(colors: [Colors.white24, Colors.white10])),
+                title: 'Vygeneruj téma s AI',
+                subtitle: 'Napiš cokoliv, třeba „filmy od Pixaru“',
+                onTap: () => _open(context, const AiScreen()),
+              )
+            else
+              PartyTile(
+                leading: const EmojiBadge('🧩', size: 44),
+                title: 'Víc témat v obchodě',
+                subtitle: 'Balíčky slov a AI generátor zdarma',
+                trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
+                onTap: () => _open(context, const StoreScreen()),
+              ),
+            if (state.customPacks.isNotEmpty) ...[
+              const SectionLabel('Moje témata'),
+              for (final p in state.customPacks) tile(p),
+            ],
+            if (store.isNotEmpty) ...[
+              const SectionLabel('Z obchodu'),
+              for (final p in store) tile(p),
+            ],
+            SectionLabel('Vestavěná · ${ctx.label}'),
+            for (final p in builtin) tile(p),
+            const SizedBox(height: 72),
           ],
-          const SectionLabel('Vestavěná'),
-          for (final p in state.builtinPacks) tile(p),
-        ],
+        ),
       ),
     );
   }
@@ -97,29 +113,74 @@ class PacksScreen extends StatelessWidget {
       context: context,
       showDragHandle: true,
       builder: (sheet) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.edit_outlined),
-              title: const Text('Vytvořit ručně'),
-              subtitle: const Text('Napíšeš si vlastní slova'),
-              onTap: () {
-                Navigator.pop(sheet);
-                _open(context, const PackEditorScreen());
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.auto_awesome),
-              title: const Text('Vygenerovat s AI'),
-              subtitle: const Text('Zadáš téma, AI doplní slova'),
-              onTap: () {
-                Navigator.pop(sheet);
-                _open(context, const AiScreen());
-              },
-            ),
-            const SizedBox(height: 8),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              PartyTile(
+                leading: const EmojiBadge('✍️', size: 44),
+                title: 'Vytvořit ručně',
+                subtitle: 'Napíšeš si vlastní slova',
+                onTap: () {
+                  Navigator.pop(sheet);
+                  _open(context, const PackEditorScreen());
+                },
+              ),
+              const SizedBox(height: 10),
+              PartyTile(
+                leading: const EmojiBadge('✨', size: 44),
+                title: 'Vygenerovat s AI',
+                subtitle: 'Zadáš téma, AI doplní slova',
+                onTap: () {
+                  Navigator.pop(sheet);
+                  _open(context, const AiScreen());
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Round animated check used for pack selection.
+class _SelectDot extends StatelessWidget {
+  const _SelectDot({required this.on, required this.enabled, required this.onChanged});
+
+  final bool on;
+  final bool enabled;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final g = AppScope.of(context).playContext.gradient;
+    return Semantics(
+      checked: on,
+      enabled: enabled,
+      label: 'Hrát s tímto tématem',
+      child: Pressable(
+        onTap: enabled ? () => onChanged(!on) : null,
+        scale: 0.85,
+        child: AnimatedContainer(
+          duration: Motion.quick,
+          curve: Motion.pop,
+          width: 34,
+          height: 34,
+          margin: const EdgeInsets.only(left: 8),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: on ? g : null,
+            border: on ? null : Border.all(color: scheme.outline, width: 2),
+          ),
+          child: AnimatedScale(
+            scale: on ? 1 : 0,
+            duration: Motion.quick,
+            curve: Motion.pop,
+            child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
+          ),
         ),
       ),
     );

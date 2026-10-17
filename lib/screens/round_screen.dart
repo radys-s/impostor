@@ -1,10 +1,13 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../logic/game_engine.dart';
+import '../ui/motion.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import 'result_screen.dart';
 import 'vote_screen.dart';
 
@@ -20,13 +23,15 @@ class RoundScreen extends StatefulWidget {
 
 class _RoundScreenState extends State<RoundScreen> {
   Timer? _timer;
+  late final int _total;
   late int _remaining;
   bool _running = false;
 
   @override
   void initState() {
     super.initState();
-    _remaining = AppScope.read(context).gameSettings.timerSeconds;
+    _total = AppScope.read(context).gameSettings.timerSeconds;
+    _remaining = _total;
   }
 
   @override
@@ -36,12 +41,16 @@ class _RoundScreenState extends State<RoundScreen> {
   }
 
   void _toggleTimer() {
+    tick(AppScope.read(context).appSettings.haptics);
     if (_running) {
       _timer?.cancel();
       setState(() => _running = false);
       return;
     }
-    if (_remaining <= 0) return;
+    if (_remaining <= 0) {
+      setState(() => _remaining = _total);
+      return;
+    }
     setState(() => _running = true);
     _timer = Timer.periodic(const Duration(seconds: 1), (t) {
       if (!mounted) return;
@@ -57,102 +66,179 @@ class _RoundScreenState extends State<RoundScreen> {
   void _finish() {
     _timer?.cancel();
     final state = AppScope.read(context);
-    final page = state.appSettings.inAppVoting
-        ? VoteScreen(round: widget.round)
-        : ResultScreen(round: widget.round);
+    final page = state.votingOn ? VoteScreen(round: widget.round) : ResultScreen(round: widget.round);
     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => page));
   }
 
   @override
   Widget build(BuildContext context) {
     final state = AppScope.of(context);
-    final scheme = Theme.of(context).colorScheme;
+    final ctx = state.playContext;
     final round = widget.round;
-    final hasTimer = state.gameSettings.timerSeconds > 0;
-    final minutes = (_remaining ~/ 60).toString();
-    final seconds = (_remaining % 60).toString().padLeft(2, '0');
+    final hasTimer = _total > 0;
 
     return PopScope(
       canPop: false,
       child: Scaffold(
         appBar: AppBar(title: const Text('Kolo'), automaticallyImplyLeading: false),
-        body: PageBody(
-          bottom: FilledButton.icon(
-            onPressed: _finish,
-            icon: Icon(state.appSettings.inAppVoting ? Icons.how_to_vote_outlined : Icons.visibility_outlined),
-            label: Text(state.appSettings.inAppVoting ? 'Hlasovat' : 'Odhalit impostora'),
-          ),
-          children: [
-            Card(
-              color: scheme.primaryContainer,
-              child: Padding(
-                padding: const EdgeInsets.all(20),
+        body: AmbientBackground(
+          child: PageBody(
+            bottom: GradientButton(
+              onPressed: _finish,
+              icon: state.votingOn ? Icons.how_to_vote_rounded : Icons.visibility_rounded,
+              label: state.votingOn ? 'Hlasovat' : 'Odhalit impostora',
+            ),
+            children: [
+              Container(
+                padding: const EdgeInsets.all(22),
+                decoration: BoxDecoration(
+                  gradient: ctx.gradient,
+                  borderRadius: BorderRadius.circular(28),
+                  boxShadow: [BoxShadow(color: ctx.accent.withValues(alpha: 0.3), blurRadius: 28, offset: const Offset(0, 12))],
+                ),
                 child: Column(
                   children: [
-                    Text('Začíná', style: TextStyle(color: scheme.onPrimaryContainer)),
+                    const Text('ZAČÍNÁ', style: TextStyle(color: Colors.white, letterSpacing: 2, fontWeight: FontWeight.w800)),
                     const SizedBox(height: 4),
                     Text(
                       round.startingPlayer,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                            fontWeight: FontWeight.w800,
-                            color: scheme.onPrimaryContainer,
-                          ),
+                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white),
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Každý řekne jedno slovo, které souvisí s tajným slovem. Pak diskutujte a hlasujte.',
+                      'Každý řekne jedno slovo k tajnému slovu. Pak diskutujte a nahlas hlasujte.',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: scheme.onPrimaryContainer),
+                      style: TextStyle(color: Colors.white.withValues(alpha: 0.9)),
+                    ),
+                  ],
+                ),
+              ),
+              if (hasTimer) ...[
+                const SizedBox(height: 16),
+                Center(
+                  child: _TimerRing(
+                    total: _total,
+                    remaining: _remaining,
+                    running: _running,
+                    onTap: _toggleTimer,
+                  ),
+                ),
+              ],
+              const SectionLabel('Pořadí'),
+              Card(
+                child: Column(
+                  children: [
+                    for (final (i, seat) in round.order.indexed)
+                      ListTile(
+                        dense: true,
+                        leading: EmojiBadge('${i + 1}', size: 30),
+                        title: Text(round.roles[seat].player, style: const TextStyle(fontWeight: FontWeight.w600)),
+                      ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Circular countdown painted with the context gradient.
+class _TimerRing extends StatelessWidget {
+  const _TimerRing({required this.total, required this.remaining, required this.running, required this.onTap});
+
+  final int total;
+  final int remaining;
+  final bool running;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final ctx = AppScope.of(context).playContext;
+    final urgent = remaining <= 10 && remaining > 0;
+    final minutes = (remaining ~/ 60).toString();
+    final seconds = (remaining % 60).toString().padLeft(2, '0');
+    final colors = urgent ? const [Party.red, Party.orange] : ctx.colors;
+    return Semantics(
+      button: true,
+      label: 'Časovač $minutes:$seconds',
+      child: Pressable(
+        onTap: onTap,
+        child: SizedBox(
+          width: 220,
+          height: 220,
+          child: TweenAnimationBuilder<double>(
+            tween: Tween(end: total == 0 ? 0 : remaining / total),
+            duration: Motion.of(context, const Duration(milliseconds: 950)),
+            curve: Curves.linear,
+            builder: (context, v, _) => CustomPaint(
+              painter: _RingPainter(value: v, colors: colors, track: scheme.surfaceContainerHighest),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '$minutes:$seconds',
+                      style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                            fontWeight: FontWeight.w900,
+                            fontFeatures: const [FontFeature.tabularFigures()],
+                            color: urgent ? Party.red : null,
+                          ),
+                    ),
+                    Text(
+                      remaining <= 0 ? 'Čas! Klepni znovu' : (running ? 'Klepni pro pauzu' : 'Klepni a spusť'),
+                      style: TextStyle(color: scheme.onSurfaceVariant),
                     ),
                   ],
                 ),
               ),
             ),
-            if (hasTimer) ...[
-              const SizedBox(height: 16),
-              Card(
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20),
-                  onTap: _toggleTimer,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      children: [
-                        Text(
-                          '$minutes:$seconds',
-                          style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                                fontWeight: FontWeight.w700,
-                                fontFeatures: const [FontFeature.tabularFigures()],
-                                color: _remaining <= 10 && _remaining > 0 ? impostorColor : null,
-                              ),
-                        ),
-                        Text(
-                          _remaining <= 0 ? 'Čas vypršel' : (_running ? 'Klepni pro pauzu' : 'Klepni a spusť časovač'),
-                          style: TextStyle(color: scheme.onSurfaceVariant),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-            const SectionLabel('Pořadí'),
-            Card(
-              child: Column(
-                children: [
-                  for (final (i, seat) in round.order.indexed)
-                    ListTile(
-                      dense: true,
-                      leading: CircleAvatar(radius: 14, child: Text('${i + 1}', style: const TextStyle(fontSize: 13))),
-                      title: Text(round.roles[seat].player),
-                    ),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
+}
+
+class _RingPainter extends CustomPainter {
+  _RingPainter({required this.value, required this.colors, required this.track});
+
+  final double value;
+  final List<Color> colors;
+  final Color track;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    const stroke = 14.0;
+    final rect = Offset.zero & size;
+    final arc = rect.deflate(stroke / 2);
+    canvas.drawArc(arc, 0, 2 * pi, false, Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = stroke
+      ..color = track);
+    if (value <= 0) return;
+    canvas.drawArc(
+      arc,
+      -pi / 2,
+      2 * pi * value,
+      false,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = stroke
+        ..strokeCap = StrokeCap.round
+        ..shader = SweepGradient(
+          startAngle: 0,
+          endAngle: 2 * pi,
+          colors: [colors.first, colors.last, colors.first],
+          transform: const GradientRotation(-pi / 2),
+        ).createShader(rect),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_RingPainter old) => old.value != value || old.colors != colors || old.track != track;
 }

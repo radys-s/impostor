@@ -2,6 +2,7 @@
   "id": "sport",
   "name": "Sport",
   "emoji": "⚽",
+  "audience": "family",
   "words": [
     {
       "word": "Fotbal",

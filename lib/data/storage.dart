@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../models/play_context.dart';
 import '../models/settings.dart';
 import '../models/word_pack.dart';
 
@@ -22,6 +23,10 @@ class Storage {
   static const _scores = 'scores';
   static const _recent = 'recentWords';
   static const _installId = 'installId';
+  static const _context = 'playContext';
+  static const _features = 'features';
+  static const _storePacks = 'storePacks';
+  static const _adultOk = 'adultConfirmed';
 
   List<String> loadPlayers() => _prefs.getStringList(_players) ?? const [];
   Future<void> savePlayers(List<String> players) => _prefs.setStringList(_players, players);
@@ -33,13 +38,15 @@ class Storage {
   AppSettings loadAppSettings() => _decode(_appSettings, AppSettings.fromJson) ?? const AppSettings();
   Future<void> saveAppSettings(AppSettings s) => _prefs.setString(_appSettings, jsonEncode(s.toJson()));
 
-  List<WordPack> loadCustomPacks() {
-    final raw = _prefs.getString(_customPacks);
+  List<WordPack> loadCustomPacks() => _loadPacks(_customPacks);
+
+  List<WordPack> _loadPacks(String key, {bool fromStore = false}) {
+    final raw = _prefs.getString(key);
     if (raw == null) return const [];
     try {
       return [
         for (final p in jsonDecode(raw) as List)
-          if (p is Map<String, dynamic>) WordPack.fromJson(p),
+          if (p is Map<String, dynamic>) WordPack.fromJson(p, fromStore: fromStore),
       ];
     } catch (_) {
       return const [];
@@ -60,6 +67,23 @@ class Storage {
   }
 
   Future<void> saveScores(Map<String, int> scores) => _prefs.setString(_scores, jsonEncode(scores));
+
+  PlayContext? loadContext() {
+    final raw = _prefs.getString(_context);
+    return raw == null ? null : PlayContext.parse(raw);
+  }
+
+  Future<void> saveContext(PlayContext c) => _prefs.setString(_context, c.name);
+
+  bool loadAdultConfirmed() => _prefs.getBool(_adultOk) ?? false;
+  Future<void> saveAdultConfirmed() => _prefs.setBool(_adultOk, true);
+
+  Set<String> loadFeatures() => (_prefs.getStringList(_features) ?? const []).toSet();
+  Future<void> saveFeatures(Set<String> ids) => _prefs.setStringList(_features, ids.toList());
+
+  List<WordPack> loadStorePacks() => _loadPacks(_storePacks, fromStore: true);
+  Future<void> saveStorePacks(List<WordPack> packs) =>
+      _prefs.setString(_storePacks, jsonEncode([for (final p in packs) p.toJson()]));
 
   List<String> loadRecent() => _prefs.getStringList(_recent) ?? const [];
   Future<void> saveRecent(List<String> recent) => _prefs.setStringList(_recent, recent);

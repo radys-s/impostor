@@ -1,0 +1,333 @@
+{
+  "id": "rande-a-vztahy",
+  "name": "Rande a vztahy",
+  "emoji": "💘",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "První rande",
+      "hint": "Nervozita",
+      "similar": "Rande naslepo"
+    },
+    {
+      "word": "Rande naslepo",
+      "hint": "Překvapení",
+      "similar": "První rande"
+    },
+    {
+      "word": "Tinder",
+      "hint": "Swipování",
+      "similar": "Bumble"
+    },
+    {
+      "word": "Bumble",
+      "hint": "Žlutá",
+      "similar": "Tinder"
+    },
+    {
+      "word": "Match",
+      "hint": "Shoda",
+      "similar": "Super like"
+    },
+    {
+      "word": "Super like",
+      "hint": "Hvězdička",
+      "similar": "Match"
+    },
+    {
+      "word": "Seznamka",
+      "hint": "Profil",
+      "similar": "Tinder"
+    },
+    {
+      "word": "Flirt",
+      "hint": "Mrkání",
+      "similar": "Svádění"
+    },
+    {
+      "word": "Balicí hláška",
+      "hint": "Věta",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Svádění",
+      "hint": "Pohled",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Večeře při svíčkách",
+      "hint": "Romantika",
+      "similar": "Piknik"
+    },
+    {
+      "word": "Piknik",
+      "hint": "Deka",
+      "similar": "Večeře při svíčkách"
+    },
+    {
+      "word": "Zadní řada",
+      "hint": "Kino",
+      "similar": "Lóže"
+    },
+    {
+      "word": "První pusa",
+      "hint": "Motýlci",
+      "similar": "Francouzák"
+    },
+    {
+      "word": "Francouzák",
+      "hint": "Jazyk",
+      "similar": "První pusa"
+    },
+    {
+      "word": "Držení za ruce",
+      "hint": "Prsty",
+      "similar": "Objímání"
+    },
+    {
+      "word": "Objímání",
+      "hint": "Teplo",
+      "similar": "Mazlení"
+    },
+    {
+      "word": "Mazlení",
+      "hint": "Gauč",
+      "similar": "Objímání"
+    },
+    {
+      "word": "Zamilovanost",
+      "hint": "Opojení",
+      "similar": "Láska"
+    },
+    {
+      "word": "Žárlivost",
+      "hint": "Mobil",
+      "similar": "Podezíravost"
+    },
+    {
+      "word": "Podezíravost",
+      "hint": "Kontrola",
+      "similar": "Žárlivost"
+    },
+    {
+      "word": "Kontrolování mobilu",
+      "hint": "Heslo",
+      "similar": "Žárlivost"
+    },
+    {
+      "word": "Friendzóna",
+      "hint": "Kamarád",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Ghosting",
+      "hint": "Ticho",
+      "similar": "Friendzóna"
+    },
+    {
+      "word": "Situationship",
+      "hint": "Nejasnost",
+      "similar": "Kamarádi s výhodami"
+    },
+    {
+      "word": "Kamarádi s výhodami",
+      "hint": "Domluva",
+      "similar": "Situationship"
+    },
+    {
+      "word": "Vztah na dálku",
+      "hint": "Videohovory",
+      "similar": "Situationship"
+    },
+    {
+      "word": "Výročí",
+      "hint": "Datum",
+      "similar": "Valentýn"
+    },
+    {
+      "word": "Valentýn",
+      "hint": "Srdíčka",
+      "similar": "Výročí"
+    },
+    {
+      "word": "Zásnuby",
+      "hint": "Prsten",
+      "similar": "Svatba"
+    },
+    {
+      "word": "Svatba",
+      "hint": "Slib",
+      "similar": "Zásnuby"
+    },
+    {
+      "word": "Společný pes",
+      "hint": "Venčení",
+      "similar": "Společné bydlení"
+    },
+    {
+      "word": "Seznámení s rodiči",
+      "hint": "Nervozita",
+      "similar": "Rodinný oběd"
+    },
+    {
+      "word": "Tchyně",
+      "hint": "Rady",
+      "similar": "Tchán"
+    },
+    {
+      "word": "Tchán",
+      "hint": "Pivo",
+      "similar": "Tchyně"
+    },
+    {
+      "word": "Hádka",
+      "hint": "Křik",
+      "similar": "Usmiřování"
+    },
+    {
+      "word": "Usmiřování",
+      "hint": "Květiny",
+      "similar": "Hádka"
+    },
+    {
+      "word": "Pauza ve vztahu",
+      "hint": "Odstup",
+      "similar": "Rozchod"
+    },
+    {
+      "word": "Rozchod",
+      "hint": "Slzy",
+      "similar": "Pauza ve vztahu"
+    },
+    {
+      "word": "Romantický víkend",
+      "hint": "Wellness",
+      "similar": "Večeře při svíčkách"
+    },
+    {
+      "word": "Wellness",
+      "hint": "Vířivka",
+      "similar": "Romantický víkend"
+    },
+    {
+      "word": "Kytice",
+      "hint": "Omluva",
+      "similar": "Bonboniéra"
+    },
+    {
+      "word": "Bonboniéra",
+      "hint": "Čokoláda",
+      "similar": "Kytice"
+    },
+    {
+      "word": "Dárek k výročí",
+      "hint": "Překvapení",
+      "similar": "Kytice"
+    },
+    {
+      "word": "Přezdívky",
+      "hint": "Něžnost",
+      "similar": "Pusinky"
+    },
+    {
+      "word": "Pusinky",
+      "hint": "Rty",
+      "similar": "Mazlení"
+    },
+    {
+      "word": "Love bombing",
+      "hint": "Dárky",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Red flag",
+      "hint": "Varování",
+      "similar": "Green flag"
+    },
+    {
+      "word": "Green flag",
+      "hint": "Pohoda",
+      "similar": "Red flag"
+    },
+    {
+      "word": "Typ",
+      "hint": "Ideál",
+      "similar": "Red flag"
+    },
+    {
+      "word": "Sugar daddy",
+      "hint": "Peníze",
+      "similar": "Sugar mommy"
+    },
+    {
+      "word": "Zadaný",
+      "hint": "Nedostupnost",
+      "similar": "Single"
+    },
+    {
+      "word": "Single",
+      "hint": "Svoboda",
+      "similar": "Zadaný"
+    },
+    {
+      "word": "Svatební noc",
+      "hint": "Šampaňské",
+      "similar": "Líbánky"
+    },
+    {
+      "word": "Líbánky",
+      "hint": "Ostrov",
+      "similar": "Svatební noc"
+    },
+    {
+      "word": "Nevěra",
+      "hint": "Lež",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Milenec",
+      "hint": "Tajemství",
+      "similar": "Nevěra"
+    },
+    {
+      "word": "Ranní pusa",
+      "hint": "Polštář",
+      "similar": "Snídaně do postele"
+    },
+    {
+      "word": "Snídaně do postele",
+      "hint": "Tác",
+      "similar": "Ranní pusa"
+    },
+    {
+      "word": "Netflix and chill",
+      "hint": "Gauč",
+      "similar": "Romantický film"
+    },
+    {
+      "word": "Romantický film",
+      "hint": "Kapesníky",
+      "similar": "Netflix and chill"
+    },
+    {
+      "word": "Sdílená poloha",
+      "hint": "Mapa",
+      "similar": "Kontrolování mobilu"
+    },
+    {
+      "word": "Společný účet",
+      "hint": "Peníze",
+      "similar": "Společné bydlení"
+    },
+    {
+      "word": "Selfie ve dvou",
+      "hint": "Paže",
+      "similar": "Párová trička"
+    },
+    {
+      "word": "Párová trička",
+      "hint": "Stejnost",
+      "similar": "Selfie ve dvou"
+    }
+  ]
+}

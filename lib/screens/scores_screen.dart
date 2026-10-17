@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
-import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import '../util/text.dart';
 
 class ScoresScreen extends StatelessWidget {
@@ -36,7 +36,8 @@ class ScoresScreen extends StatelessWidget {
             ),
         ],
       ),
-      body: PageBody(
+      body: AmbientBackground(
+        child: PageBody(
         children: [
           if (names.isEmpty || state.scores.isEmpty)
             Padding(
@@ -53,7 +54,7 @@ class ScoresScreen extends StatelessWidget {
                 children: [
                   for (final (i, name) in names.indexed)
                     ListTile(
-                      leading: CircleAvatar(child: Text(i < 3 ? ['🥇', '🥈', '🥉'][i] : '${i + 1}')),
+                      leading: EmojiBadge(i < 3 ? ['🥇', '🥈', '🥉'][i] : '${i + 1}', size: 40),
                       title: Text(name),
                       trailing: Text(
                         '${state.scores[name] ?? 0} ${plural(state.scores[name] ?? 0, 'bod', 'body', 'bodů')}',
@@ -64,6 +65,7 @@ class ScoresScreen extends StatelessWidget {
               ),
             ),
         ],
+        ),
       ),
     );
   }

@@ -1,0 +1,318 @@
+{
+  "id": "zlozvyky",
+  "name": "Zlozvyky",
+  "emoji": "🙃",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Kousání nehtů",
+      "hint": "Prsty",
+      "similar": "Okusování tužky"
+    },
+    {
+      "word": "Okusování tužky",
+      "hint": "Psaní",
+      "similar": "Kousání nehtů"
+    },
+    {
+      "word": "Chrupání prstů",
+      "hint": "Klouby",
+      "similar": "Kousání nehtů"
+    },
+    {
+      "word": "Šťourání v nose",
+      "hint": "Prst",
+      "similar": "Šťourání v uchu"
+    },
+    {
+      "word": "Šťourání v uchu",
+      "hint": "Vatička",
+      "similar": "Šťourání v nose"
+    },
+    {
+      "word": "Mlaskání",
+      "hint": "Jídlo",
+      "similar": "Srkání"
+    },
+    {
+      "word": "Srkání",
+      "hint": "Polévka",
+      "similar": "Mlaskání"
+    },
+    {
+      "word": "Říhání",
+      "hint": "Bublinky",
+      "similar": "Mlaskání"
+    },
+    {
+      "word": "Skřípání zubů",
+      "hint": "Čelist",
+      "similar": "Chrápání"
+    },
+    {
+      "word": "Prokrastinace",
+      "hint": "Zítra",
+      "similar": "Lenost"
+    },
+    {
+      "word": "Lenost",
+      "hint": "Gauč",
+      "similar": "Prokrastinace"
+    },
+    {
+      "word": "Pozdní příchody",
+      "hint": "Hodinky",
+      "similar": "Prokrastinace"
+    },
+    {
+      "word": "Odkládání budíku",
+      "hint": "Ráno",
+      "similar": "Ponocování"
+    },
+    {
+      "word": "Ponocování",
+      "hint": "Únava",
+      "similar": "Odkládání budíku"
+    },
+    {
+      "word": "Mobil na záchodě",
+      "hint": "Sezení",
+      "similar": "Mobil u jídla"
+    },
+    {
+      "word": "Mobil u jídla",
+      "hint": "Stůl",
+      "similar": "Mobil na záchodě"
+    },
+    {
+      "word": "Mobil v posteli",
+      "hint": "Tma",
+      "similar": "Ponocování"
+    },
+    {
+      "word": "Scrollování",
+      "hint": "Palec",
+      "similar": "Mobil v posteli"
+    },
+    {
+      "word": "Skákání do řeči",
+      "hint": "Přerušení",
+      "similar": "Neposlouchání"
+    },
+    {
+      "word": "Neposlouchání",
+      "hint": "Kývání",
+      "similar": "Skákání do řeči"
+    },
+    {
+      "word": "Pomlouvání",
+      "hint": "Šeptání",
+      "similar": "Drby"
+    },
+    {
+      "word": "Drby",
+      "hint": "Novinky",
+      "similar": "Pomlouvání"
+    },
+    {
+      "word": "Lhaní",
+      "hint": "Výmysly",
+      "similar": "Přehánění"
+    },
+    {
+      "word": "Přehánění",
+      "hint": "Historky",
+      "similar": "Lhaní"
+    },
+    {
+      "word": "Nadávání",
+      "hint": "Pípnutí",
+      "similar": "Křičení"
+    },
+    {
+      "word": "Křičení",
+      "hint": "Hlasitost",
+      "similar": "Nadávání"
+    },
+    {
+      "word": "Fňukání",
+      "hint": "Stížnosti",
+      "similar": "Stěžování"
+    },
+    {
+      "word": "Stěžování",
+      "hint": "Nespokojenost",
+      "similar": "Fňukání"
+    },
+    {
+      "word": "Nepořádek v pokoji",
+      "hint": "Hromady",
+      "similar": "Neumyté nádobí"
+    },
+    {
+      "word": "Neumyté nádobí",
+      "hint": "Dřez",
+      "similar": "Nepořádek v pokoji"
+    },
+    {
+      "word": "Ponožky po zemi",
+      "hint": "Hromádka",
+      "similar": "Nepořádek v pokoji"
+    },
+    {
+      "word": "Židle s oblečením",
+      "hint": "Hromada",
+      "similar": "Ponožky po zemi"
+    },
+    {
+      "word": "Zapomínání",
+      "hint": "Paměť",
+      "similar": "Ztrácení věcí"
+    },
+    {
+      "word": "Ztrácení věcí",
+      "hint": "Hledání",
+      "similar": "Zapomínání"
+    },
+    {
+      "word": "Mlsání",
+      "hint": "Sladkosti",
+      "similar": "Přejídání"
+    },
+    {
+      "word": "Přejídání",
+      "hint": "Talíř",
+      "similar": "Mlsání"
+    },
+    {
+      "word": "Noční lednička",
+      "hint": "Hlad",
+      "similar": "Mlsání"
+    },
+    {
+      "word": "Fast food",
+      "hint": "Rychlost",
+      "similar": "Noční lednička"
+    },
+    {
+      "word": "Energeťáky",
+      "hint": "Plechovky",
+      "similar": "Kafe po litrech"
+    },
+    {
+      "word": "Kafe po litrech",
+      "hint": "Hrnek",
+      "similar": "Energeťáky"
+    },
+    {
+      "word": "Vapování",
+      "hint": "Pára",
+      "similar": "Kouření"
+    },
+    {
+      "word": "Kouření",
+      "hint": "Krabička",
+      "similar": "Vapování"
+    },
+    {
+      "word": "Spaní v oblečení",
+      "hint": "Postel",
+      "similar": "Spaní do oběda"
+    },
+    {
+      "word": "Spaní do oběda",
+      "hint": "Víkend",
+      "similar": "Ponocování"
+    },
+    {
+      "word": "Nakupování na netu",
+      "hint": "Balíky",
+      "similar": "Impulzivní nákupy"
+    },
+    {
+      "word": "Impulzivní nákupy",
+      "hint": "Výprodej",
+      "similar": "Nakupování na netu"
+    },
+    {
+      "word": "Sázení",
+      "hint": "Kurzy",
+      "similar": "Stírací losy"
+    },
+    {
+      "word": "Ťukání nohou",
+      "hint": "Nervozita",
+      "similar": "Klepání prstů"
+    },
+    {
+      "word": "Klepání prstů",
+      "hint": "Stůl",
+      "similar": "Ťukání nohou"
+    },
+    {
+      "word": "Hraní s vlasy",
+      "hint": "Prameny",
+      "similar": "Kousání rtů"
+    },
+    {
+      "word": "Kousání rtů",
+      "hint": "Nervozita",
+      "similar": "Hraní s vlasy"
+    },
+    {
+      "word": "Pískání",
+      "hint": "Melodie",
+      "similar": "Broukání"
+    },
+    {
+      "word": "Broukání",
+      "hint": "Pusa",
+      "similar": "Pískání"
+    },
+    {
+      "word": "Mluvení se sebou",
+      "hint": "Samota",
+      "similar": "Mluvení ze spaní"
+    },
+    {
+      "word": "Hlasité telefonování",
+      "hint": "Tramvaj",
+      "similar": "Hlasitá hudba"
+    },
+    {
+      "word": "Hlasitá hudba",
+      "hint": "Sluchátka",
+      "similar": "Hlasité telefonování"
+    },
+    {
+      "word": "Pozdní odpovídání",
+      "hint": "Seen",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Selfie všude",
+      "hint": "Úhel",
+      "similar": "Fotka jídla"
+    },
+    {
+      "word": "Binge-watching",
+      "hint": "Epizody",
+      "similar": "Ponocování"
+    },
+    {
+      "word": "Hraní do noci",
+      "hint": "Ovladač",
+      "similar": "Binge-watching"
+    },
+    {
+      "word": "Zpívání ve sprše",
+      "hint": "Mýdlo",
+      "similar": "Broukání"
+    },
+    {
+      "word": "Odkládání nádobí",
+      "hint": "Dřez",
+      "similar": "Neumyté nádobí"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'data/app_state.dart';
 import 'data/storage.dart';
-import 'screens/home_screen.dart';
+import 'screens/context_screen.dart';
 import 'ui/theme.dart';
 
 Future<void> main() async {
@@ -22,16 +22,21 @@ class ImpostorApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScope(
       state: state,
-      child: MaterialApp(
-        title: 'Impostor',
-        debugShowCheckedModeBanner: false,
-        theme: buildTheme(Brightness.light),
-        darkTheme: buildTheme(Brightness.dark),
-        themeMode: ThemeMode.system,
-        locale: const Locale('cs'),
-        supportedLocales: const [Locale('cs')],
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
-        home: const HomeScreen(),
+      // Theme follows the chosen context, so the whole app re-tints on change.
+      child: ListenableBuilder(
+        listenable: state,
+        builder: (context, _) => MaterialApp(
+          title: 'Impostor',
+          debugShowCheckedModeBanner: false,
+          theme: buildTheme(Brightness.light, state.playContext),
+          darkTheme: buildTheme(Brightness.dark, state.playContext),
+          themeMode: ThemeMode.system,
+          themeAnimationDuration: const Duration(milliseconds: 450),
+          locale: const Locale('cs'),
+          supportedLocales: const [Locale('cs')],
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
+          home: const ContextScreen(),
+        ),
       ),
     );
   }

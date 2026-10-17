@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../logic/game_engine.dart';
+import '../ui/motion.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import 'round_screen.dart';
 
 /// Pass-the-phone screen: each player privately flips their card.
@@ -64,6 +66,7 @@ class _RevealScreenState extends State<RevealScreen> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final total = widget.round.roles.length;
+    final progress = (_index + (_seen ? 1 : 0)) / total;
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, _) async {
@@ -81,53 +84,103 @@ class _RevealScreenState extends State<RevealScreen> {
             },
           ),
         ),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-            child: Column(
-              children: [
-                LinearProgressIndicator(
-                  value: (_index + (_seen ? 1 : 0)) / total,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  _revealed ? _role.player : 'Předej telefon',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  _revealed ? 'Zapamatuj si to' : _role.player,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800),
-                ),
-                const SizedBox(height: 24),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: _flip,
-                    child: FlipCard(
-                      flipped: _revealed,
-                      front: _CardFront(player: _role.player),
-                      back: _CardBack(role: _role, packName: widget.round.packName),
+        body: AmbientBackground(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+              child: Column(
+                children: [
+                  _GradientProgress(value: progress),
+                  const SizedBox(height: 24),
+                  AnimatedSwitcher(
+                    duration: Motion.of(context, Motion.quick),
+                    transitionBuilder: (child, a) => FadeTransition(
+                      opacity: a,
+                      child: SlideTransition(
+                        position: Tween(begin: const Offset(0, 0.25), end: Offset.zero).animate(a),
+                        child: child,
+                      ),
+                    ),
+                    child: Column(
+                      key: ValueKey('$_index-$_revealed'),
+                      children: [
+                        Text(
+                          _revealed ? _role.player : 'Předej telefon',
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          _revealed ? 'Zapamatuj si to' : _role.player,
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                      ],
                     ),
                   ),
-                ),
-                const SizedBox(height: 24),
-                AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 200),
-                  child: _seen && !_revealed
-                      ? FilledButton(
-                          key: const ValueKey('next'),
-                          onPressed: _next,
-                          child: Text(_last ? 'Všichni viděli, jdeme hrát' : 'Další hráč'),
-                        )
-                      : OutlinedButton(
-                          key: ValueKey(_revealed),
-                          onPressed: _flip,
-                          child: Text(_revealed ? 'Skrýt kartu' : 'Ukázat kartu'),
+                  const SizedBox(height: 24),
+                  Expanded(
+                    child: Semantics(
+                      button: true,
+                      label: _revealed ? 'Skrýt kartu' : 'Ukázat kartu',
+                      child: Pressable(
+                        onTap: _flip,
+                        scale: 0.98,
+                        child: FlipCard(
+                          key: ValueKey(_index),
+                          flipped: _revealed,
+                          front: _CardFront(player: _role.player),
+                          back: _CardBack(role: _role, packName: widget.round.packName),
                         ),
-                ),
-              ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  AnimatedSwitcher(
+                    duration: Motion.of(context, Motion.quick),
+                    child: _seen && !_revealed
+                        ? GradientButton(
+                            key: const ValueKey('next'),
+                            icon: _last ? Icons.play_arrow_rounded : Icons.arrow_forward_rounded,
+                            onPressed: _next,
+                            label: _last ? 'Všichni viděli, jdeme hrát' : 'Další hráč',
+                          )
+                        : OutlinedButton(
+                            key: ValueKey(_revealed),
+                            onPressed: _flip,
+                            child: Text(_revealed ? 'Skrýt kartu' : 'Ukázat kartu'),
+                          ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _GradientProgress extends StatelessWidget {
+  const _GradientProgress({required this.value});
+  final double value;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
+      height: 8,
+      decoration: BoxDecoration(color: scheme.surfaceContainerHighest, borderRadius: BorderRadius.circular(8)),
+      alignment: Alignment.centerLeft,
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(end: value),
+        duration: Motion.of(context, Motion.base),
+        curve: Motion.ease,
+        builder: (context, v, _) => FractionallySizedBox(
+          widthFactor: v.clamp(0.0, 1.0),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: AppScope.of(context).playContext.gradient,
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         ),
@@ -148,7 +201,7 @@ class FlipCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder<double>(
       tween: Tween(end: flipped ? 1 : 0),
-      duration: const Duration(milliseconds: 380),
+      duration: Motion.of(context, Motion.base),
       curve: Curves.easeInOutCubic,
       builder: (context, t, _) {
         final angle = t * pi;
@@ -173,25 +226,40 @@ class _CardFront extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final ctx = AppScope.of(context).playContext;
     return Container(
       width: double.infinity,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(28),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [scheme.primary, scheme.tertiary],
-        ),
+        borderRadius: BorderRadius.circular(32),
+        gradient: ctx.gradient,
+        boxShadow: [BoxShadow(color: ctx.accent.withValues(alpha: 0.35), blurRadius: 32, offset: const Offset(0, 14))],
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
         children: [
-          Icon(Icons.visibility_off_outlined, size: 56, color: scheme.onPrimary),
-          const SizedBox(height: 16),
-          Text('Klepni a podívej se', style: TextStyle(color: scheme.onPrimary, fontSize: 18)),
-          const SizedBox(height: 4),
-          Text('Ostatní se nedívají!', style: TextStyle(color: scheme.onPrimary.withValues(alpha: 0.75))),
+          Positioned(
+            right: -24,
+            top: -40,
+            child: Text(
+              '?',
+              style: TextStyle(fontSize: 240, fontWeight: FontWeight.w900, color: Colors.white.withValues(alpha: 0.12)),
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(ctx.emoji, style: const TextStyle(fontSize: 56)),
+                const SizedBox(height: 16),
+                const Text(
+                  'Klepni a podívej se',
+                  style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800),
+                ),
+                const SizedBox(height: 4),
+                Text('Ostatní se nedívají!', style: TextStyle(color: Colors.white.withValues(alpha: 0.85))),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -207,15 +275,16 @@ class _CardBack extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final impostor = role.kind == RoleKind.impostor;
-    final bg = impostor ? impostorColor : scheme.surfaceContainerHighest;
+    final ctx = AppScope.of(context).playContext;
     final fg = impostor ? Colors.white : scheme.onSurface;
-    return Container(
+    final card = Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        color: bg,
-        borderRadius: BorderRadius.circular(28),
-        border: impostor ? null : Border.all(color: scheme.outlineVariant),
+        color: impostor ? null : scheme.surfaceContainerHighest,
+        gradient: impostor ? Party.impostor : null,
+        borderRadius: BorderRadius.circular(32),
+        border: impostor ? null : Border.all(color: ctx.accent.withValues(alpha: 0.6), width: 2),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -229,7 +298,7 @@ class _CardBack extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              role.hint != null ? 'Nápověda: ${role.hint}' : 'Neznáš slovo. Nenech se odhalit.',
+              role.hint != null ? 'Nápověda: ${role.hint}' : ctx.impostorLine,
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 18),
             ),
@@ -247,6 +316,57 @@ class _CardBack extends StatelessWidget {
             Text('Téma: $packName', style: TextStyle(color: scheme.onSurfaceVariant)),
           ],
         ],
+      ),
+    );
+    return impostor ? _Pulse(child: card) : card;
+  }
+}
+
+/// Breathing red glow around the impostor card.
+class _Pulse extends StatefulWidget {
+  const _Pulse({required this.child});
+  final Widget child;
+
+  @override
+  State<_Pulse> createState() => _PulseState();
+}
+
+class _PulseState extends State<_Pulse> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (Motion.reduced(context)) {
+      _c.value = 0.5;
+    } else if (!_c.isAnimating) {
+      _c.repeat(reverse: true);
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _c,
+      child: widget.child,
+      builder: (context, child) => DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(32),
+          boxShadow: [
+            BoxShadow(
+              color: Party.red.withValues(alpha: 0.25 + 0.3 * _c.value),
+              blurRadius: 24 + 24 * _c.value,
+              spreadRadius: 2 * _c.value,
+            ),
+          ],
+        ),
+        child: child,
       ),
     );
   }

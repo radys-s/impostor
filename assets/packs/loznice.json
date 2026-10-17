@@ -1,0 +1,323 @@
+{
+  "id": "loznice",
+  "name": "Ložnice",
+  "emoji": "🛏️",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Pouta",
+      "hint": "Kov",
+      "similar": "Šátek přes oči"
+    },
+    {
+      "word": "Šátek přes oči",
+      "hint": "Tma",
+      "similar": "Pouta"
+    },
+    {
+      "word": "Masážní olej",
+      "hint": "Vůně",
+      "similar": "Svíčky"
+    },
+    {
+      "word": "Svíčky",
+      "hint": "Plamen",
+      "similar": "Masážní olej"
+    },
+    {
+      "word": "Krajkové prádlo",
+      "hint": "Průsvitnost",
+      "similar": "Saténové pyžamo"
+    },
+    {
+      "word": "Saténové pyžamo",
+      "hint": "Hladkost",
+      "similar": "Krajkové prádlo"
+    },
+    {
+      "word": "Hedvábné povlečení",
+      "hint": "Klouzání",
+      "similar": "Saténové pyžamo"
+    },
+    {
+      "word": "Plátky růží",
+      "hint": "Postel",
+      "similar": "Svíčky"
+    },
+    {
+      "word": "Šampaňské v posteli",
+      "hint": "Bublinky",
+      "similar": "Jahody se šlehačkou"
+    },
+    {
+      "word": "Jahody se šlehačkou",
+      "hint": "Mlsání",
+      "similar": "Šampaňské v posteli"
+    },
+    {
+      "word": "Striptýz",
+      "hint": "Hudba",
+      "similar": "Svádivý tanec"
+    },
+    {
+      "word": "Svádivý tanec",
+      "hint": "Boky",
+      "similar": "Striptýz"
+    },
+    {
+      "word": "Masáž zad",
+      "hint": "Ruce",
+      "similar": "Masážní olej"
+    },
+    {
+      "word": "Kostým sestřičky",
+      "hint": "Převlek",
+      "similar": "Policejní kostým"
+    },
+    {
+      "word": "Policejní kostým",
+      "hint": "Uniforma",
+      "similar": "Kostým sestřičky"
+    },
+    {
+      "word": "Hraní rolí",
+      "hint": "Scénář",
+      "similar": "Kostým sestřičky"
+    },
+    {
+      "word": "Bezpečné slovo",
+      "hint": "Dohoda",
+      "similar": "Pouta"
+    },
+    {
+      "word": "Kondom",
+      "hint": "Ochrana",
+      "similar": "Antikoncepce"
+    },
+    {
+      "word": "Antikoncepce",
+      "hint": "Prášky",
+      "similar": "Kondom"
+    },
+    {
+      "word": "Lubrikant",
+      "hint": "Tuba",
+      "similar": "Masážní olej"
+    },
+    {
+      "word": "Vibrátor",
+      "hint": "Baterky",
+      "similar": "Masážní olej"
+    },
+    {
+      "word": "Sexshop",
+      "hint": "Výloha",
+      "similar": "Krajkové prádlo"
+    },
+    {
+      "word": "Noční stolek",
+      "hint": "Šuplík",
+      "similar": "Postel"
+    },
+    {
+      "word": "Vrzající postel",
+      "hint": "Sousedi",
+      "similar": "Tenké stěny"
+    },
+    {
+      "word": "Tenké stěny",
+      "hint": "Ozvěna",
+      "similar": "Vrzající postel"
+    },
+    {
+      "word": "Zámek na dveřích",
+      "hint": "Soukromí",
+      "similar": "Cedulka Nerušit"
+    },
+    {
+      "word": "Cedulka Nerušit",
+      "hint": "Hotel",
+      "similar": "Zámek na dveřích"
+    },
+    {
+      "word": "Ranní rozcvička",
+      "hint": "Probuzení",
+      "similar": "Ranní pusa"
+    },
+    {
+      "word": "Ranní pusa",
+      "hint": "Polštář",
+      "similar": "Ranní rozcvička"
+    },
+    {
+      "word": "Spaní nahatý",
+      "hint": "Peřina",
+      "similar": "Spaní ve tričku"
+    },
+    {
+      "word": "Spaní ve tričku",
+      "hint": "Pohodlí",
+      "similar": "Spaní nahatý"
+    },
+    {
+      "word": "Lžičkování",
+      "hint": "Záda",
+      "similar": "Objímání"
+    },
+    {
+      "word": "Polštářová konverzace",
+      "hint": "Šeptání",
+      "similar": "Lžičkování"
+    },
+    {
+      "word": "Mazlení",
+      "hint": "Teplo",
+      "similar": "Lžičkování"
+    },
+    {
+      "word": "Líbání na krku",
+      "hint": "Mrazení",
+      "similar": "Cucflek"
+    },
+    {
+      "word": "Cucflek",
+      "hint": "Šála",
+      "similar": "Líbání na krku"
+    },
+    {
+      "word": "Kousnutí do rtu",
+      "hint": "Pohled",
+      "similar": "Líbání na krku"
+    },
+    {
+      "word": "Pohled do očí",
+      "hint": "Napětí",
+      "similar": "Mrknutí"
+    },
+    {
+      "word": "Mrknutí",
+      "hint": "Signál",
+      "similar": "Pohled do očí"
+    },
+    {
+      "word": "Rozepínání podprsenky",
+      "hint": "Spona",
+      "similar": "Rozepínání košile"
+    },
+    {
+      "word": "Rozepínání košile",
+      "hint": "Knoflíky",
+      "similar": "Rozepínání podprsenky"
+    },
+    {
+      "word": "Kamasutra",
+      "hint": "Kniha",
+      "similar": "Padesát odstínů šedi"
+    },
+    {
+      "word": "Padesát odstínů šedi",
+      "hint": "Kravata",
+      "similar": "Kamasutra"
+    },
+    {
+      "word": "Zrcadlo nad postelí",
+      "hint": "Strop",
+      "similar": "Vodní postel"
+    },
+    {
+      "word": "Vodní postel",
+      "hint": "Vlny",
+      "similar": "Zrcadlo nad postelí"
+    },
+    {
+      "word": "Vířivka ve dvou",
+      "hint": "Pára",
+      "similar": "Sprcha ve dvou"
+    },
+    {
+      "word": "Sprcha ve dvou",
+      "hint": "Pěna",
+      "similar": "Vířivka ve dvou"
+    },
+    {
+      "word": "Rychlovka",
+      "hint": "Spěch",
+      "similar": "Dlouhá noc"
+    },
+    {
+      "word": "Dlouhá noc",
+      "hint": "Výdrž",
+      "similar": "Rychlovka"
+    },
+    {
+      "word": "Předehra",
+      "hint": "Trpělivost",
+      "similar": "Mazlení"
+    },
+    {
+      "word": "Cigárko potom",
+      "hint": "Balkon",
+      "similar": "Polštářová konverzace"
+    },
+    {
+      "word": "Přistižení spolubydlícím",
+      "hint": "Dveře",
+      "similar": "Tenké stěny"
+    },
+    {
+      "word": "Rozházené oblečení",
+      "hint": "Podlaha",
+      "similar": "Rozepínání košile"
+    },
+    {
+      "word": "Ranní dech",
+      "hint": "Zuby",
+      "similar": "Ranní pusa"
+    },
+    {
+      "word": "Ukradená peřina",
+      "hint": "Zima",
+      "similar": "Rozvalování"
+    },
+    {
+      "word": "Rozvalování",
+      "hint": "Místo",
+      "similar": "Ukradená peřina"
+    },
+    {
+      "word": "Studené nohy",
+      "hint": "Ponožky",
+      "similar": "Ukradená peřina"
+    },
+    {
+      "word": "Romantický playlist",
+      "hint": "Ploužák",
+      "similar": "Plátky růží"
+    },
+    {
+      "word": "Afrodiziaka",
+      "hint": "Ústřice",
+      "similar": "Jahody se šlehačkou"
+    },
+    {
+      "word": "Ústřice",
+      "hint": "Moře",
+      "similar": "Afrodiziaka"
+    },
+    {
+      "word": "Župan",
+      "hint": "Pásek",
+      "similar": "Saténové pyžamo"
+    },
+    {
+      "word": "Lechtání",
+      "hint": "Smích",
+      "similar": "Kousnutí do rtu"
+    },
+    {
+      "word": "Sexting",
+      "hint": "Mobil",
+      "similar": "Svůdné zprávy"
+    }
+  ]
+}

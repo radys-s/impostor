@@ -2,6 +2,7 @@
   "id": "doprava",
   "name": "Doprava",
   "emoji": "🚗",
+  "audience": "family",
   "words": [
     {
       "word": "Auto",

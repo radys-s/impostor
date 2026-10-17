@@ -1,0 +1,318 @@
+{
+  "id": "trapne-pro-dospele",
+  "name": "Trapné pro dospělé",
+  "emoji": "🫣",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Přistižení rodiči",
+      "hint": "Dveře",
+      "similar": "Přistižení spolubydlícím"
+    },
+    {
+      "word": "Přistižení spolubydlícím",
+      "hint": "Klíče",
+      "similar": "Přistižení rodiči"
+    },
+    {
+      "word": "Smazaná historie",
+      "hint": "Prohlížeč",
+      "similar": "Anonymní okno"
+    },
+    {
+      "word": "Anonymní okno",
+      "hint": "Soukromí",
+      "similar": "Smazaná historie"
+    },
+    {
+      "word": "Fotka omylem",
+      "hint": "Galerie",
+      "similar": "Zpráva omylem"
+    },
+    {
+      "word": "Zpráva omylem",
+      "hint": "Šéf",
+      "similar": "Fotka omylem"
+    },
+    {
+      "word": "Špatné jméno",
+      "hint": "Postel",
+      "similar": "Zapomenuté jméno"
+    },
+    {
+      "word": "Zapomenuté jméno",
+      "hint": "Ráno",
+      "similar": "Špatné jméno"
+    },
+    {
+      "word": "Ranní útěk",
+      "hint": "Boty",
+      "similar": "Walk of shame"
+    },
+    {
+      "word": "Walk of shame",
+      "hint": "Podpatky",
+      "similar": "Ranní útěk"
+    },
+    {
+      "word": "Kocovina v práci",
+      "hint": "Porada",
+      "similar": "Nemocenská"
+    },
+    {
+      "word": "Firemní večírek",
+      "hint": "Šéf",
+      "similar": "Teambuilding"
+    },
+    {
+      "word": "Teambuilding",
+      "hint": "Kolegové",
+      "similar": "Firemní večírek"
+    },
+    {
+      "word": "Líbačka s kolegou",
+      "hint": "Kancelář",
+      "similar": "Flirt se šéfem"
+    },
+    {
+      "word": "Flirt se šéfem",
+      "hint": "Kariéra",
+      "similar": "Líbačka s kolegou"
+    },
+    {
+      "word": "Mluvení ze spaní",
+      "hint": "Tajemství",
+      "similar": "Chrápání"
+    },
+    {
+      "word": "Prdnutí v posteli",
+      "hint": "Peřina",
+      "similar": "Říhnutí"
+    },
+    {
+      "word": "Kupování kondomů",
+      "hint": "Pokladna",
+      "similar": "Těhotenský test"
+    },
+    {
+      "word": "Těhotenský test",
+      "hint": "Čárky",
+      "similar": "Kupování kondomů"
+    },
+    {
+      "word": "Gynekolog",
+      "hint": "Křeslo",
+      "similar": "Urolog"
+    },
+    {
+      "word": "Urolog",
+      "hint": "Vyšetření",
+      "similar": "Gynekolog"
+    },
+    {
+      "word": "Sousedi přes stěnu",
+      "hint": "Zvuky",
+      "similar": "Vrzající postel"
+    },
+    {
+      "word": "Profil na seznamce",
+      "hint": "Fotky",
+      "similar": "Kolega na seznamce"
+    },
+    {
+      "word": "Kolega na seznamce",
+      "hint": "Swipe",
+      "similar": "Profil na seznamce"
+    },
+    {
+      "word": "Tchyně bez klepání",
+      "hint": "Dveře",
+      "similar": "Přistižení rodiči"
+    },
+    {
+      "word": "Dětské fotky",
+      "hint": "Plátno",
+      "similar": "Svatební proslov"
+    },
+    {
+      "word": "Svatební proslov",
+      "hint": "Mikrofon",
+      "similar": "Dětské fotky"
+    },
+    {
+      "word": "Opilý svědek",
+      "hint": "Proslov",
+      "similar": "Svatební proslov"
+    },
+    {
+      "word": "Poklopec na schůzce",
+      "hint": "Zip",
+      "similar": "Prádlo na balkoně"
+    },
+    {
+      "word": "Prádlo na balkoně",
+      "hint": "Šňůra",
+      "similar": "Poklopec na schůzce"
+    },
+    {
+      "word": "Vyzvánění na pohřbu",
+      "hint": "Ticho",
+      "similar": "Vyzvánění v kině"
+    },
+    {
+      "word": "Vyzvánění v kině",
+      "hint": "Tma",
+      "similar": "Vyzvánění na pohřbu"
+    },
+    {
+      "word": "Zapnutá kamera",
+      "hint": "Pyžamo",
+      "similar": "Zapnutý mikrofon"
+    },
+    {
+      "word": "Zapnutý mikrofon",
+      "hint": "Záchod",
+      "similar": "Zapnutá kamera"
+    },
+    {
+      "word": "Chrápání v divadle",
+      "hint": "Představení",
+      "similar": "Usnutí na poradě"
+    },
+    {
+      "word": "Usnutí na poradě",
+      "hint": "Prezentace",
+      "similar": "Chrápání v divadle"
+    },
+    {
+      "word": "Plešatění",
+      "hint": "Zrcadlo",
+      "similar": "Šediny"
+    },
+    {
+      "word": "Šediny",
+      "hint": "Pinzeta",
+      "similar": "Plešatění"
+    },
+    {
+      "word": "Krize středního věku",
+      "hint": "Kabriolet",
+      "similar": "Šediny"
+    },
+    {
+      "word": "Pivní břicho",
+      "hint": "Pupek",
+      "similar": "Šediny"
+    },
+    {
+      "word": "Placení na rande",
+      "hint": "Peněženka",
+      "similar": "Zamítnutá karta"
+    },
+    {
+      "word": "Zamítnutá karta",
+      "hint": "Terminál",
+      "similar": "Placení na rande"
+    },
+    {
+      "word": "Soused v sexshopu",
+      "hint": "Košík",
+      "similar": "Kolega na seznamce"
+    },
+    {
+      "word": "Otázky na vnoučata",
+      "hint": "Rodina",
+      "similar": "Otázky na svatbu"
+    },
+    {
+      "word": "Otázky na svatbu",
+      "hint": "Teta",
+      "similar": "Otázky na vnoučata"
+    },
+    {
+      "word": "Single na svatbě",
+      "hint": "Kytice",
+      "similar": "Otázky na svatbu"
+    },
+    {
+      "word": "Chytání kytice",
+      "hint": "Nevěsta",
+      "similar": "Single na svatbě"
+    },
+    {
+      "word": "Nahatý v sauně",
+      "hint": "Ručník",
+      "similar": "Smíšená sauna"
+    },
+    {
+      "word": "Smíšená sauna",
+      "hint": "Pára",
+      "similar": "Nahatý v sauně"
+    },
+    {
+      "word": "Nudistická pláž",
+      "hint": "Opalování",
+      "similar": "Smíšená sauna"
+    },
+    {
+      "word": "Zapomenuté výročí",
+      "hint": "Datum",
+      "similar": "Zapomenuté narozeniny"
+    },
+    {
+      "word": "Zapomenuté narozeniny",
+      "hint": "Kalendář",
+      "similar": "Zapomenuté výročí"
+    },
+    {
+      "word": "Přeposlaný dárek",
+      "hint": "Obal",
+      "similar": "Dárek bez cenovky"
+    },
+    {
+      "word": "Ex na Tinderu",
+      "hint": "Šok",
+      "similar": "Kolega na seznamce"
+    },
+    {
+      "word": "Nedělní oběd",
+      "hint": "Kocovina",
+      "similar": "Rodinná oslava"
+    },
+    {
+      "word": "Rodinná oslava",
+      "hint": "Strýc",
+      "similar": "Nedělní oběd"
+    },
+    {
+      "word": "Opilý strýc",
+      "hint": "Vtipy",
+      "similar": "Opilý svědek"
+    },
+    {
+      "word": "Pád z podpatků",
+      "hint": "Kotník",
+      "similar": "Ranní útěk"
+    },
+    {
+      "word": "Roztržené kalhoty",
+      "hint": "Dřep",
+      "similar": "Poklopec na schůzce"
+    },
+    {
+      "word": "Fotka z puberty",
+      "hint": "Účes",
+      "similar": "Dětské fotky"
+    },
+    {
+      "word": "Účtenka z hotelu",
+      "hint": "Peněženka",
+      "similar": "Smazaná historie"
+    },
+    {
+      "word": "Hotel na hodiny",
+      "hint": "Recepce",
+      "similar": "Účtenka z hotelu"
+    }
+  ]
+}

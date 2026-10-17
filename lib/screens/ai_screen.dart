@@ -4,6 +4,7 @@ import '../ai/ai_client.dart';
 import '../data/app_state.dart';
 import '../models/word_pack.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import '../util/text.dart';
 
 /// Generates words for any topic via the free AI worker.
@@ -90,6 +91,7 @@ class _AiScreenState extends State<AiScreen> {
       emoji: '✨',
       words: words,
       fromAi: true,
+      audience: state.playContext.defaultAudience,
     ));
     showSnack(context, 'Téma uloženo do Moje témata');
     Navigator.of(context).pop();
@@ -102,19 +104,18 @@ class _AiScreenState extends State<AiScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('AI téma')),
-      body: PageBody(
+      body: AmbientBackground(
+        child: PageBody(
         bottom: result != null && result.isNotEmpty
-            ? FilledButton.icon(
+            ? GradientButton(
                 onPressed: _save,
-                icon: const Icon(Icons.check),
-                label: Text(widget.returnWords ? 'Přidat ${result.length} slov' : 'Uložit téma (${result.length} slov)'),
+                icon: Icons.check_rounded,
+                label: widget.returnWords ? 'Přidat ${result.length} slov' : 'Uložit téma (${result.length} slov)',
               )
-            : FilledButton.icon(
+            : GradientButton(
                 onPressed: _loading ? null : _generate,
-                icon: _loading
-                    ? const SizedBox.square(dimension: 20, child: CircularProgressIndicator(strokeWidth: 2))
-                    : const Icon(Icons.auto_awesome),
-                label: Text(_loading ? 'Generuji…' : 'Vygenerovat'),
+                icon: _loading ? Icons.hourglass_top_rounded : Icons.auto_awesome,
+                label: _loading ? 'Generuji…' : 'Vygenerovat',
               ),
         children: [
           TextField(
@@ -197,6 +198,7 @@ class _AiScreenState extends State<AiScreen> {
             ),
           ],
         ],
+        ),
       ),
     );
   }

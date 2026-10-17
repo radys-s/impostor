@@ -1,0 +1,328 @@
+{
+  "id": "noc-ve-meste",
+  "name": "Noc ve městě",
+  "emoji": "🌃",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Klub",
+      "hint": "Fronta",
+      "similar": "Bar"
+    },
+    {
+      "word": "Bar",
+      "hint": "Pult",
+      "similar": "Klub"
+    },
+    {
+      "word": "Rooftop bar",
+      "hint": "Výhled",
+      "similar": "Koktejlový bar"
+    },
+    {
+      "word": "Pivnice",
+      "hint": "Tácky",
+      "similar": "Vinárna"
+    },
+    {
+      "word": "Vinárna",
+      "hint": "Sklenky",
+      "similar": "Pivnice"
+    },
+    {
+      "word": "Nonstop",
+      "hint": "Automaty",
+      "similar": "Herna"
+    },
+    {
+      "word": "Herna",
+      "hint": "Blikání",
+      "similar": "Kasino"
+    },
+    {
+      "word": "Kasino",
+      "hint": "Žetony",
+      "similar": "Herna"
+    },
+    {
+      "word": "Striptýzový klub",
+      "hint": "Tyč",
+      "similar": "Kabaret"
+    },
+    {
+      "word": "Kabaret",
+      "hint": "Peří",
+      "similar": "Striptýzový klub"
+    },
+    {
+      "word": "Vyhazovač",
+      "hint": "Dveře",
+      "similar": "Šatnářka"
+    },
+    {
+      "word": "Šatnářka",
+      "hint": "Lísteček",
+      "similar": "Vyhazovač"
+    },
+    {
+      "word": "VIP salonek",
+      "hint": "Exkluzivita",
+      "similar": "Bar"
+    },
+    {
+      "word": "Lahev v klubu",
+      "hint": "Prskavka",
+      "similar": "VIP salonek"
+    },
+    {
+      "word": "Panák",
+      "hint": "Přípitek",
+      "similar": "Pivo"
+    },
+    {
+      "word": "Tequila",
+      "hint": "Citron",
+      "similar": "Vodka"
+    },
+    {
+      "word": "Vodka",
+      "hint": "Rusko",
+      "similar": "Tequila"
+    },
+    {
+      "word": "Jägermeister",
+      "hint": "Jelen",
+      "similar": "Becherovka"
+    },
+    {
+      "word": "Mojito",
+      "hint": "Máta",
+      "similar": "Piña colada"
+    },
+    {
+      "word": "Piña colada",
+      "hint": "Kokos",
+      "similar": "Mojito"
+    },
+    {
+      "word": "Aperol Spritz",
+      "hint": "Oranžová",
+      "similar": "Hugo"
+    },
+    {
+      "word": "Hugo",
+      "hint": "Bezinka",
+      "similar": "Aperol Spritz"
+    },
+    {
+      "word": "Gin s tonikem",
+      "hint": "Jalovec",
+      "similar": "Mojito"
+    },
+    {
+      "word": "Runda",
+      "hint": "Štědrost",
+      "similar": "Panák"
+    },
+    {
+      "word": "Pub crawl",
+      "hint": "Trasa",
+      "similar": "Bar"
+    },
+    {
+      "word": "Taneční parket",
+      "hint": "Světla",
+      "similar": "Bar"
+    },
+    {
+      "word": "Twerking",
+      "hint": "Boky",
+      "similar": "Tanec u tyče"
+    },
+    {
+      "word": "Tanec u tyče",
+      "hint": "Akrobacie",
+      "similar": "Twerking"
+    },
+    {
+      "word": "Balení na baru",
+      "hint": "Drink",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Pozvání na drink",
+      "hint": "Pozornost",
+      "similar": "Balení na baru"
+    },
+    {
+      "word": "Číslo na ubrousku",
+      "hint": "Propiska",
+      "similar": "Výměna Instagramu"
+    },
+    {
+      "word": "Výměna Instagramu",
+      "hint": "Mobil",
+      "similar": "Číslo na ubrousku"
+    },
+    {
+      "word": "Odchod po anglicku",
+      "hint": "Ticho",
+      "similar": "Poslední runda"
+    },
+    {
+      "word": "Poslední runda",
+      "hint": "Zavíračka",
+      "similar": "Odchod po anglicku"
+    },
+    {
+      "word": "Zavíračka",
+      "hint": "Světla",
+      "similar": "Poslední runda"
+    },
+    {
+      "word": "Noční tramvaj",
+      "hint": "Rozjezd",
+      "similar": "Uber domů"
+    },
+    {
+      "word": "Uber domů",
+      "hint": "Aplikace",
+      "similar": "Noční tramvaj"
+    },
+    {
+      "word": "Noční kebab",
+      "hint": "Hlad",
+      "similar": "Párek v rohlíku"
+    },
+    {
+      "word": "Párek v rohlíku",
+      "hint": "Stánek",
+      "similar": "Noční kebab"
+    },
+    {
+      "word": "Rozlučka se svobodou",
+      "hint": "Šerpa",
+      "similar": "Striptér"
+    },
+    {
+      "word": "Striptér",
+      "hint": "Převlek",
+      "similar": "Rozlučka se svobodou"
+    },
+    {
+      "word": "Selfie s cizincem",
+      "hint": "Noc",
+      "similar": "Číslo na ubrousku"
+    },
+    {
+      "word": "Ztracený mobil",
+      "hint": "Taxi",
+      "similar": "Ztracená peněženka"
+    },
+    {
+      "word": "Ztracená peněženka",
+      "hint": "Kapsy",
+      "similar": "Ztracený mobil"
+    },
+    {
+      "word": "Walk of shame",
+      "hint": "Podpatky",
+      "similar": "Ranní návrat"
+    },
+    {
+      "word": "Ranní návrat",
+      "hint": "Slunce",
+      "similar": "Walk of shame"
+    },
+    {
+      "word": "Podpatky v ruce",
+      "hint": "Bolest",
+      "similar": "Walk of shame"
+    },
+    {
+      "word": "Karaoke bar",
+      "hint": "Mikrofon",
+      "similar": "Taneční parket"
+    },
+    {
+      "word": "Afterparty",
+      "hint": "Byt",
+      "similar": "Ranní návrat"
+    },
+    {
+      "word": "Policejní kontrola",
+      "hint": "Fukání",
+      "similar": "Vyhazovač"
+    },
+    {
+      "word": "Hospodská rvačka",
+      "hint": "Pěsti",
+      "similar": "Vyhazovač"
+    },
+    {
+      "word": "Nevolnost v taxíku",
+      "hint": "Okénko",
+      "similar": "Noční kebab"
+    },
+    {
+      "word": "Silvestr ve městě",
+      "hint": "Ohňostroj",
+      "similar": "Afterparty"
+    },
+    {
+      "word": "Opilecké SMS",
+      "hint": "Překlepy",
+      "similar": "Opilecký telefonát"
+    },
+    {
+      "word": "Opilecký telefonát",
+      "hint": "Ex",
+      "similar": "Opilecké SMS"
+    },
+    {
+      "word": "Tetování v noci",
+      "hint": "Lítost",
+      "similar": "Piercing"
+    },
+    {
+      "word": "Piercing",
+      "hint": "Jehla",
+      "similar": "Tetování v noci"
+    },
+    {
+      "word": "Speed dating",
+      "hint": "Stopky",
+      "similar": "Rande naslepo"
+    },
+    {
+      "word": "Fronta na záchody",
+      "hint": "Čekání",
+      "similar": "Fronta do klubu"
+    },
+    {
+      "word": "Fronta do klubu",
+      "hint": "Zima",
+      "similar": "Fronta na záchody"
+    },
+    {
+      "word": "Sázka o panáka",
+      "hint": "Výzva",
+      "similar": "Runda"
+    },
+    {
+      "word": "Taxikář filozof",
+      "hint": "Řeči",
+      "similar": "Uber domů"
+    },
+    {
+      "word": "Elektrokoloběžka",
+      "hint": "Chodník",
+      "similar": "Noční tramvaj"
+    },
+    {
+      "word": "Dress code",
+      "hint": "Košile",
+      "similar": "Vyhazovač"
+    }
+  ]
+}

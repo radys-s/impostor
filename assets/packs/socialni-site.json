@@ -1,0 +1,318 @@
+{
+  "id": "socialni-site",
+  "name": "Sociální sítě",
+  "emoji": "📱",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Instagram",
+      "hint": "Fotky",
+      "similar": "TikTok"
+    },
+    {
+      "word": "TikTok",
+      "hint": "Tanečky",
+      "similar": "Instagram"
+    },
+    {
+      "word": "Snapchat",
+      "hint": "Duch",
+      "similar": "Instagram"
+    },
+    {
+      "word": "Facebook",
+      "hint": "Babičky",
+      "similar": "Instagram"
+    },
+    {
+      "word": "BeReal",
+      "hint": "Notifikace",
+      "similar": "Snapchat"
+    },
+    {
+      "word": "Twitter",
+      "hint": "Ptáček",
+      "similar": "Threads"
+    },
+    {
+      "word": "Threads",
+      "hint": "Novinka",
+      "similar": "Twitter"
+    },
+    {
+      "word": "LinkedIn",
+      "hint": "Kariéra",
+      "similar": "Facebook"
+    },
+    {
+      "word": "Pinterest",
+      "hint": "Nástěnka",
+      "similar": "Instagram"
+    },
+    {
+      "word": "YouTube",
+      "hint": "Kanál",
+      "similar": "Twitch"
+    },
+    {
+      "word": "Story",
+      "hint": "Kolečko",
+      "similar": "Příspěvek"
+    },
+    {
+      "word": "Příspěvek",
+      "hint": "Feed",
+      "similar": "Story"
+    },
+    {
+      "word": "Close friends",
+      "hint": "Zelená",
+      "similar": "Story"
+    },
+    {
+      "word": "Bio",
+      "hint": "Profil",
+      "similar": "Profilovka"
+    },
+    {
+      "word": "Profilovka",
+      "hint": "Fotka",
+      "similar": "Bio"
+    },
+    {
+      "word": "Sledující",
+      "hint": "Počet",
+      "similar": "Lajky"
+    },
+    {
+      "word": "Lajky",
+      "hint": "Srdíčka",
+      "similar": "Sledující"
+    },
+    {
+      "word": "Follow back",
+      "hint": "Vzájemnost",
+      "similar": "Unfollow"
+    },
+    {
+      "word": "Unfollow",
+      "hint": "Odchod",
+      "similar": "Blokování"
+    },
+    {
+      "word": "Blokování",
+      "hint": "Konec",
+      "similar": "Unfollow"
+    },
+    {
+      "word": "Shadowban",
+      "hint": "Neviditelnost",
+      "similar": "Blokování"
+    },
+    {
+      "word": "Ověřený účet",
+      "hint": "Fajfka",
+      "similar": "Fake profil"
+    },
+    {
+      "word": "Fake profil",
+      "hint": "Fotky",
+      "similar": "Ověřený účet"
+    },
+    {
+      "word": "Druhý účet",
+      "hint": "Tajnost",
+      "similar": "Fake profil"
+    },
+    {
+      "word": "Komentáře",
+      "hint": "Diskuze",
+      "similar": "Lajky"
+    },
+    {
+      "word": "Hejtři",
+      "hint": "Negativita",
+      "similar": "Fanoušci"
+    },
+    {
+      "word": "Fanoušci",
+      "hint": "Podpora",
+      "similar": "Hejtři"
+    },
+    {
+      "word": "Sdílení",
+      "hint": "Šipka",
+      "similar": "Repost"
+    },
+    {
+      "word": "Repost",
+      "hint": "Story",
+      "similar": "Sdílení"
+    },
+    {
+      "word": "Označení",
+      "hint": "Fotka",
+      "similar": "Zmínka"
+    },
+    {
+      "word": "DMka",
+      "hint": "Zprávy",
+      "similar": "Komentáře"
+    },
+    {
+      "word": "Seen",
+      "hint": "Ignor",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Ghosting",
+      "hint": "Ticho",
+      "similar": "Seen"
+    },
+    {
+      "word": "Streak",
+      "hint": "Ohníček",
+      "similar": "Lajky"
+    },
+    {
+      "word": "Selfie",
+      "hint": "Úhel",
+      "similar": "Fotka v zrcadle"
+    },
+    {
+      "word": "Fotka v zrcadle",
+      "hint": "Posilovna",
+      "similar": "Selfie"
+    },
+    {
+      "word": "Filtr",
+      "hint": "Zkrášlení",
+      "similar": "Photoshop"
+    },
+    {
+      "word": "Hashtag",
+      "hint": "Mřížka",
+      "similar": "Označení"
+    },
+    {
+      "word": "Trend",
+      "hint": "Zvuk",
+      "similar": "Challenge"
+    },
+    {
+      "word": "Challenge",
+      "hint": "Natáčení",
+      "similar": "Trend"
+    },
+    {
+      "word": "Influencer",
+      "hint": "Spolupráce",
+      "similar": "Youtuber"
+    },
+    {
+      "word": "Slevový kód",
+      "hint": "Procenta",
+      "similar": "Spolupráce"
+    },
+    {
+      "word": "Giveaway",
+      "hint": "Soutěž",
+      "similar": "Slevový kód"
+    },
+    {
+      "word": "Live",
+      "hint": "Přímý",
+      "similar": "Story"
+    },
+    {
+      "word": "Algoritmus",
+      "hint": "Doporučení",
+      "similar": "Feed"
+    },
+    {
+      "word": "Feed",
+      "hint": "Scrollování",
+      "similar": "Algoritmus"
+    },
+    {
+      "word": "Notifikace",
+      "hint": "Pípnutí",
+      "similar": "Zprávy"
+    },
+    {
+      "word": "Screen time",
+      "hint": "Hodiny",
+      "similar": "Doomscrolling"
+    },
+    {
+      "word": "Doomscrolling",
+      "hint": "Noc",
+      "similar": "Screen time"
+    },
+    {
+      "word": "Ztlumení",
+      "hint": "Klid",
+      "similar": "Unfollow"
+    },
+    {
+      "word": "Archiv",
+      "hint": "Schování",
+      "similar": "Smazaný příspěvek"
+    },
+    {
+      "word": "Smazaný příspěvek",
+      "hint": "Lítost",
+      "similar": "Archiv"
+    },
+    {
+      "word": "Screenshot",
+      "hint": "Důkaz",
+      "similar": "Nahrávání obrazovky"
+    },
+    {
+      "word": "Virál",
+      "hint": "Sdílení",
+      "similar": "Trend"
+    },
+    {
+      "word": "Cancel",
+      "hint": "Bojkot",
+      "similar": "Shitstorm"
+    },
+    {
+      "word": "Shitstorm",
+      "hint": "Bouře",
+      "similar": "Cancel"
+    },
+    {
+      "word": "Collab",
+      "hint": "Dvojice",
+      "similar": "Spolupráce"
+    },
+    {
+      "word": "Outfit dne",
+      "hint": "Zrcadlo",
+      "similar": "Fotka v zrcadle"
+    },
+    {
+      "word": "Fotka jídla",
+      "hint": "Talíř",
+      "similar": "Outfit dne"
+    },
+    {
+      "word": "Dovolenkové fotky",
+      "hint": "Pláž",
+      "similar": "Fotka jídla"
+    },
+    {
+      "word": "Catfish",
+      "hint": "Podvod",
+      "similar": "Fake profil"
+    },
+    {
+      "word": "Bot ve sledujících",
+      "hint": "Nákup",
+      "similar": "Fake profil"
+    }
+  ]
+}

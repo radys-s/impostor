@@ -1,0 +1,318 @@
+{
+  "id": "ex-a-drama",
+  "name": "Ex a drama",
+  "emoji": "💔",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Ex",
+      "hint": "Minulost",
+      "similar": "Crush"
+    },
+    {
+      "word": "Rozchod přes SMS",
+      "hint": "Mobil",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Ghosting",
+      "hint": "Ticho",
+      "similar": "Rozchod přes SMS"
+    },
+    {
+      "word": "Breadcrumbing",
+      "hint": "Drobky",
+      "similar": "Ghosting"
+    },
+    {
+      "word": "Návrat k ex",
+      "hint": "Chyba",
+      "similar": "Rozchod"
+    },
+    {
+      "word": "Stalkování ex",
+      "hint": "Instagram",
+      "similar": "Návrat k ex"
+    },
+    {
+      "word": "Smazání fotek",
+      "hint": "Galerie",
+      "similar": "Blokování"
+    },
+    {
+      "word": "Blokování",
+      "hint": "Konec",
+      "similar": "Smazání fotek"
+    },
+    {
+      "word": "Vrácení věcí",
+      "hint": "Krabice",
+      "similar": "Smazání fotek"
+    },
+    {
+      "word": "Mikina od ex",
+      "hint": "Vůně",
+      "similar": "Vrácení věcí"
+    },
+    {
+      "word": "Nový partner ex",
+      "hint": "Fotka",
+      "similar": "Rebound"
+    },
+    {
+      "word": "Rebound",
+      "hint": "Náplast",
+      "similar": "Nový partner ex"
+    },
+    {
+      "word": "Pomsta",
+      "hint": "Chlad",
+      "similar": "Žárlivost"
+    },
+    {
+      "word": "Žárlivost",
+      "hint": "Mobil",
+      "similar": "Pomsta"
+    },
+    {
+      "word": "Nevěra",
+      "hint": "Lež",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Přistižení",
+      "hint": "Dveře",
+      "similar": "Nevěra"
+    },
+    {
+      "word": "Milenka",
+      "hint": "Tajemství",
+      "similar": "Milenec"
+    },
+    {
+      "word": "Milenec",
+      "hint": "Skříň",
+      "similar": "Milenka"
+    },
+    {
+      "word": "Trojúhelník",
+      "hint": "Komplikace",
+      "similar": "Nevěra"
+    },
+    {
+      "word": "Hádka na veřejnosti",
+      "hint": "Restaurace",
+      "similar": "Scéna"
+    },
+    {
+      "word": "Scéna",
+      "hint": "Křik",
+      "similar": "Hádka na veřejnosti"
+    },
+    {
+      "word": "Bouchnutí dveřmi",
+      "hint": "Odchod",
+      "similar": "Tichá domácnost"
+    },
+    {
+      "word": "Tichá domácnost",
+      "hint": "Ignorování",
+      "similar": "Bouchnutí dveřmi"
+    },
+    {
+      "word": "Pasivní agresivita",
+      "hint": "Poznámky",
+      "similar": "Tichá domácnost"
+    },
+    {
+      "word": "Jsem v pohodě",
+      "hint": "Lež",
+      "similar": "Tichá domácnost"
+    },
+    {
+      "word": "Drby",
+      "hint": "Kamarádky",
+      "similar": "Pomluvy"
+    },
+    {
+      "word": "Pomluvy",
+      "hint": "Šuškání",
+      "similar": "Drby"
+    },
+    {
+      "word": "Screenshot konverzace",
+      "hint": "Důkaz",
+      "similar": "Přeposlání zprávy"
+    },
+    {
+      "word": "Přeposlání zprávy",
+      "hint": "Skupina",
+      "similar": "Screenshot konverzace"
+    },
+    {
+      "word": "Toxický vztah",
+      "hint": "Kolotoč",
+      "similar": "Red flag"
+    },
+    {
+      "word": "Red flag",
+      "hint": "Varování",
+      "similar": "Toxický vztah"
+    },
+    {
+      "word": "Gaslighting",
+      "hint": "Zmatení",
+      "similar": "Manipulace"
+    },
+    {
+      "word": "Manipulace",
+      "hint": "Výčitky",
+      "similar": "Gaslighting"
+    },
+    {
+      "word": "Výčitky",
+      "hint": "Vina",
+      "similar": "Manipulace"
+    },
+    {
+      "word": "Ex na svatbě",
+      "hint": "Pozvánka",
+      "similar": "Ex na párty"
+    },
+    {
+      "word": "Ex na párty",
+      "hint": "Napětí",
+      "similar": "Ex na svatbě"
+    },
+    {
+      "word": "Opilecký telefonát",
+      "hint": "Noc",
+      "similar": "Opilecké SMS"
+    },
+    {
+      "word": "Péče o psa",
+      "hint": "Víkendy",
+      "similar": "Vrácení věcí"
+    },
+    {
+      "word": "Rozvod",
+      "hint": "Právník",
+      "similar": "Rozchod"
+    },
+    {
+      "word": "Alimenty",
+      "hint": "Peníze",
+      "similar": "Rozvod"
+    },
+    {
+      "word": "Rozdělení majetku",
+      "hint": "Seznam",
+      "similar": "Rozvod"
+    },
+    {
+      "word": "Tchyně",
+      "hint": "Kritika",
+      "similar": "Tchán"
+    },
+    {
+      "word": "Kamarádova ex",
+      "hint": "Tabu",
+      "similar": "Bratrova ex"
+    },
+    {
+      "word": "Bratrova ex",
+      "hint": "Rodina",
+      "similar": "Kamarádova ex"
+    },
+    {
+      "word": "Friendzóna",
+      "hint": "Kamarád",
+      "similar": "Crush"
+    },
+    {
+      "word": "Crush",
+      "hint": "Motýlci",
+      "similar": "Friendzóna"
+    },
+    {
+      "word": "Situationship",
+      "hint": "Nejasnost",
+      "similar": "Vztah"
+    },
+    {
+      "word": "Pauza ve vztahu",
+      "hint": "Odstup",
+      "similar": "Rozchod"
+    },
+    {
+      "word": "Breakup playlist",
+      "hint": "Slzy",
+      "similar": "Zmrzlina z kyblíku"
+    },
+    {
+      "word": "Zmrzlina z kyblíku",
+      "hint": "Gauč",
+      "similar": "Breakup playlist"
+    },
+    {
+      "word": "Rozchodový účes",
+      "hint": "Nůžky",
+      "similar": "Glow up"
+    },
+    {
+      "word": "Glow up",
+      "hint": "Proměna",
+      "similar": "Revenge body"
+    },
+    {
+      "word": "Revenge body",
+      "hint": "Posilovna",
+      "similar": "Glow up"
+    },
+    {
+      "word": "Sen o ex",
+      "hint": "Spánek",
+      "similar": "Návrat k ex"
+    },
+    {
+      "word": "Telefonát o půlnoci",
+      "hint": "Vyzvánění",
+      "similar": "Opilecký telefonát"
+    },
+    {
+      "word": "Drama queen",
+      "hint": "Přehánění",
+      "similar": "Scéna"
+    },
+    {
+      "word": "Sdílený Netflix",
+      "hint": "Heslo",
+      "similar": "Péče o psa"
+    },
+    {
+      "word": "Společní přátelé",
+      "hint": "Strany",
+      "similar": "Kamarádova ex"
+    },
+    {
+      "word": "Hádka ve skupince",
+      "hint": "Chat",
+      "similar": "Hádka na veřejnosti"
+    },
+    {
+      "word": "Odhalení lži",
+      "hint": "Důkazy",
+      "similar": "Screenshot konverzace"
+    },
+    {
+      "word": "Sbalené kufry",
+      "hint": "Odchod",
+      "similar": "Bouchnutí dveřmi"
+    },
+    {
+      "word": "Zásnuby ex",
+      "hint": "Prsten",
+      "similar": "Nový partner ex"
+    }
+  ]
+}

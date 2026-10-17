@@ -1,8 +1,10 @@
 import 'package:flutter/widgets.dart';
 
 import '../logic/game_engine.dart';
+import '../models/play_context.dart';
 import '../models/settings.dart';
 import '../models/word_pack.dart';
+import '../store/store.dart';
 import '../util/text.dart';
 import 'storage.dart';
 
@@ -12,6 +14,10 @@ class AppState extends ChangeNotifier {
         gameSettings = _storage.loadGameSettings(),
         appSettings = _storage.loadAppSettings(),
         customPacks = List.of(_storage.loadCustomPacks()),
+        storePacks = List.of(_storage.loadStorePacks()),
+        features = _storage.loadFeatures(),
+        playContext = _storage.loadContext() ?? PlayContext.friends,
+        adultConfirmed = _storage.loadAdultConfirmed(),
         scores = Map.of(_storage.loadScores()),
         _recent = List.of(_storage.loadRecent());
 
@@ -23,16 +29,82 @@ class AppState extends ChangeNotifier {
   GameSettings gameSettings;
   AppSettings appSettings;
   List<WordPack> customPacks;
+  List<WordPack> storePacks;
+  Set<String> features;
+  PlayContext playContext;
+  bool adultConfirmed;
   Map<String, int> scores;
   final List<String> _recent;
 
   static const minPlayers = 3;
   static const maxPlayers = 20;
-  static const _recentLimit = 60;
+  static const _recentLimit = 80;
 
   String get installId => _storage.installId();
 
-  List<WordPack> get allPacks => [...customPacks, ...builtinPacks];
+  // Context
+
+  void setContext(PlayContext c) {
+    playContext = c;
+    if (c.adult) confirmAdult(notify: false);
+    _storage.saveContext(c);
+    notifyListeners();
+  }
+
+  void confirmAdult({bool notify = true}) {
+    if (adultConfirmed) return;
+    adultConfirmed = true;
+    _storage.saveAdultConfirmed();
+    if (notify) notifyListeners();
+  }
+
+  // Plugins
+
+  bool has(FeaturePlugin f) => features.contains(f.id);
+  bool get scoresOn => has(FeaturePlugin.scores);
+  bool get votingOn => has(FeaturePlugin.voting) && appSettings.inAppVoting;
+
+  void installFeature(FeaturePlugin f) {
+    features = {...features, f.id};
+    if (f == FeaturePlugin.voting) appSettings = appSettings.copyWith(inAppVoting: true);
+    _storage.saveAppSettings(appSettings);
+    _storage.saveFeatures(features);
+    notifyListeners();
+  }
+
+  void removeFeature(FeaturePlugin f) {
+    features = {...features}..remove(f.id);
+    _storage.saveFeatures(features);
+    notifyListeners();
+  }
+
+  bool hasStorePack(String id) => storePacks.any((p) => p.id == id);
+
+  void installStorePack(WordPack pack) {
+    storePacks = [for (final p in storePacks) if (p.id != pack.id) p, pack];
+    _storage.saveStorePacks(storePacks);
+    notifyListeners();
+  }
+
+  void removeStorePack(String id) {
+    storePacks = [for (final p in storePacks) if (p.id != id) p];
+    _dropSelection(id);
+    _storage.saveStorePacks(storePacks);
+    notifyListeners();
+  }
+
+  // Packs
+
+  List<WordPack> get allPacks => [...customPacks, ...storePacks, ...builtinPacks];
+
+  bool fitsContext(WordPack p) => playContext.audiences.contains(p.audience);
+
+  /// Packs offered in the current context: own packs always, the rest by audience.
+  List<WordPack> get contextPacks => [
+        for (final p in customPacks) p,
+        for (final p in [...storePacks, ...builtinPacks])
+          if (fitsContext(p)) p,
+      ];
 
   WordPack? packById(String id) {
     for (final p in allPacks) {
@@ -41,11 +113,62 @@ class AppState extends ChangeNotifier {
     return null;
   }
 
-  /// Packs chosen for the next game; all built-in packs when nothing valid is selected.
+  /// Packs for the next game: the chosen ones that fit the context, otherwise
+  /// every non-custom pack of the context.
   List<WordPack> get selectedPacks {
-    final chosen = [for (final id in gameSettings.packIds) ?packById(id)].where((p) => p.words.isNotEmpty).toList();
-    return chosen.isEmpty ? builtinPacks : chosen;
+    final offered = contextPacks;
+    final chosen = [
+      for (final p in offered)
+        if (gameSettings.packIds.contains(p.id) && p.words.isNotEmpty) p,
+    ];
+    if (chosen.isNotEmpty) return chosen;
+    final defaults = [for (final p in offered) if (!customPacksIds.contains(p.id)) p];
+    return defaults.isNotEmpty ? defaults : (offered.isNotEmpty ? offered : [fallbackPack]);
   }
+
+  Set<String> get customPacksIds => {for (final p in customPacks) p.id};
+
+  bool get hasManualSelection => selectedPacks.any((p) => gameSettings.packIds.contains(p.id));
+
+  void togglePack(String id, bool on) {
+    final ids = {...gameSettings.packIds};
+    on ? ids.add(id) : ids.remove(id);
+    updateGameSettings(gameSettings.copyWith(packIds: ids));
+  }
+
+  void clearPackSelection() {
+    final offered = {for (final p in contextPacks) p.id};
+    updateGameSettings(gameSettings.copyWith(packIds: {...gameSettings.packIds}..removeAll(offered)));
+  }
+
+  void savePack(WordPack pack) {
+    final cleaned = pack.copyWith(words: dedupeWords(pack.words), builtin: false, fromStore: false);
+    final index = customPacks.indexWhere((p) => p.id == cleaned.id);
+    customPacks = [...customPacks];
+    if (index >= 0) {
+      customPacks[index] = cleaned;
+    } else {
+      customPacks.insert(0, cleaned);
+    }
+    _storage.saveCustomPacks(customPacks);
+    notifyListeners();
+  }
+
+  void deletePack(String id) {
+    customPacks = [for (final p in customPacks) if (p.id != id) p];
+    _dropSelection(id);
+    _storage.saveCustomPacks(customPacks);
+    notifyListeners();
+  }
+
+  void _dropSelection(String id) {
+    if (gameSettings.packIds.contains(id)) {
+      gameSettings = gameSettings.copyWith(packIds: {...gameSettings.packIds}..remove(id));
+      _storage.saveGameSettings(gameSettings);
+    }
+  }
+
+  String newPackId() => 'vlastni-${DateTime.now().microsecondsSinceEpoch}';
 
   // Players
 
@@ -108,32 +231,6 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Packs
-
-  void savePack(WordPack pack) {
-    final cleaned = pack.copyWith(words: dedupeWords(pack.words), builtin: false);
-    final index = customPacks.indexWhere((p) => p.id == cleaned.id);
-    customPacks = [...customPacks];
-    if (index >= 0) {
-      customPacks[index] = cleaned;
-    } else {
-      customPacks.insert(0, cleaned);
-    }
-    _storage.saveCustomPacks(customPacks);
-    notifyListeners();
-  }
-
-  void deletePack(String id) {
-    customPacks = [for (final p in customPacks) if (p.id != id) p];
-    if (gameSettings.packIds.contains(id)) {
-      updateGameSettings(gameSettings.copyWith(packIds: {...gameSettings.packIds}..remove(id)));
-    }
-    _storage.saveCustomPacks(customPacks);
-    notifyListeners();
-  }
-
-  String newPackId() => 'vlastni-${DateTime.now().microsecondsSinceEpoch}';
-
   // Rounds and scores
 
   Round startRound() {
@@ -150,6 +247,7 @@ class AppState extends ChangeNotifier {
   }
 
   void addPoints(Map<String, int> points) {
+    if (!scoresOn) return;
     scores = {...scores};
     points.forEach((player, value) => scores[player] = (scores[player] ?? 0) + value);
     _storage.saveScores(scores);

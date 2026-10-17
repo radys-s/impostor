@@ -2,6 +2,7 @@
   "id": "obleceni",
   "name": "Oblečení",
   "emoji": "👕",
+  "audience": "family",
   "words": [
     {
       "word": "Tričko",

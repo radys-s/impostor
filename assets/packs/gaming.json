@@ -1,0 +1,328 @@
+{
+  "id": "gaming",
+  "name": "Gaming",
+  "emoji": "🎮",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Minecraft",
+      "hint": "Kostky",
+      "similar": "Roblox"
+    },
+    {
+      "word": "Roblox",
+      "hint": "Avatar",
+      "similar": "Minecraft"
+    },
+    {
+      "word": "Fortnite",
+      "hint": "Přežití",
+      "similar": "PUBG"
+    },
+    {
+      "word": "PUBG",
+      "hint": "Pánev",
+      "similar": "Fortnite"
+    },
+    {
+      "word": "Among Us",
+      "hint": "Podezření",
+      "similar": "Městečko Palermo"
+    },
+    {
+      "word": "GTA",
+      "hint": "Auta",
+      "similar": "Mafia"
+    },
+    {
+      "word": "Mafia",
+      "hint": "Gangsteři",
+      "similar": "GTA"
+    },
+    {
+      "word": "Kingdom Come",
+      "hint": "Středověk",
+      "similar": "Zaklínač"
+    },
+    {
+      "word": "Zaklínač",
+      "hint": "Monstra",
+      "similar": "Kingdom Come"
+    },
+    {
+      "word": "FIFA",
+      "hint": "Fotbal",
+      "similar": "NHL"
+    },
+    {
+      "word": "NHL",
+      "hint": "Puk",
+      "similar": "FIFA"
+    },
+    {
+      "word": "Call of Duty",
+      "hint": "Válka",
+      "similar": "Battlefield"
+    },
+    {
+      "word": "Battlefield",
+      "hint": "Vojáci",
+      "similar": "Call of Duty"
+    },
+    {
+      "word": "Counter-Strike",
+      "hint": "Bomba",
+      "similar": "Valorant"
+    },
+    {
+      "word": "Valorant",
+      "hint": "Agenti",
+      "similar": "Counter-Strike"
+    },
+    {
+      "word": "League of Legends",
+      "hint": "Šampioni",
+      "similar": "Dota"
+    },
+    {
+      "word": "Dota",
+      "hint": "Hrdinové",
+      "similar": "League of Legends"
+    },
+    {
+      "word": "Pokémon",
+      "hint": "Sbírání",
+      "similar": "Tamagoči"
+    },
+    {
+      "word": "Tamagoči",
+      "hint": "Mazlíček",
+      "similar": "Pokémon"
+    },
+    {
+      "word": "Super Mario",
+      "hint": "Houby",
+      "similar": "Sonic"
+    },
+    {
+      "word": "Sonic",
+      "hint": "Ježek",
+      "similar": "Super Mario"
+    },
+    {
+      "word": "Zelda",
+      "hint": "Princezna",
+      "similar": "Super Mario"
+    },
+    {
+      "word": "Tetris",
+      "hint": "Řádky",
+      "similar": "Candy Crush"
+    },
+    {
+      "word": "Candy Crush",
+      "hint": "Bonbóny",
+      "similar": "Tetris"
+    },
+    {
+      "word": "Angry Birds",
+      "hint": "Prak",
+      "similar": "Candy Crush"
+    },
+    {
+      "word": "Subway Surfers",
+      "hint": "Koleje",
+      "similar": "Temple Run"
+    },
+    {
+      "word": "Temple Run",
+      "hint": "Chrám",
+      "similar": "Subway Surfers"
+    },
+    {
+      "word": "Clash Royale",
+      "hint": "Karty",
+      "similar": "Clash of Clans"
+    },
+    {
+      "word": "The Sims",
+      "hint": "Domeček",
+      "similar": "Minecraft"
+    },
+    {
+      "word": "PlayStation",
+      "hint": "Konzole",
+      "similar": "Xbox"
+    },
+    {
+      "word": "Xbox",
+      "hint": "Zelená",
+      "similar": "PlayStation"
+    },
+    {
+      "word": "Nintendo Switch",
+      "hint": "Přenosná",
+      "similar": "PlayStation"
+    },
+    {
+      "word": "Herní PC",
+      "hint": "RGB",
+      "similar": "Notebook"
+    },
+    {
+      "word": "Ovladač",
+      "hint": "Tlačítka",
+      "similar": "Klávesnice"
+    },
+    {
+      "word": "Herní židle",
+      "hint": "Opěrka",
+      "similar": "Herní stůl"
+    },
+    {
+      "word": "Headset",
+      "hint": "Mikrofon",
+      "similar": "Sluchátka"
+    },
+    {
+      "word": "Lag",
+      "hint": "Zpoždění",
+      "similar": "Ping"
+    },
+    {
+      "word": "Ping",
+      "hint": "Milisekundy",
+      "similar": "Lag"
+    },
+    {
+      "word": "FPS",
+      "hint": "Plynulost",
+      "similar": "Lag"
+    },
+    {
+      "word": "Noob",
+      "hint": "Začátečník",
+      "similar": "Tryhard"
+    },
+    {
+      "word": "Tryhard",
+      "hint": "Snaha",
+      "similar": "Noob"
+    },
+    {
+      "word": "Rage quit",
+      "hint": "Vztek",
+      "similar": "AFK"
+    },
+    {
+      "word": "AFK",
+      "hint": "Pryč",
+      "similar": "Rage quit"
+    },
+    {
+      "word": "Camper",
+      "hint": "Schovávání",
+      "similar": "Tryhard"
+    },
+    {
+      "word": "Cheater",
+      "hint": "Podvod",
+      "similar": "Hacker"
+    },
+    {
+      "word": "Bug",
+      "hint": "Chyba",
+      "similar": "Glitch"
+    },
+    {
+      "word": "Glitch",
+      "hint": "Zasekávání",
+      "similar": "Bug"
+    },
+    {
+      "word": "Speedrun",
+      "hint": "Stopky",
+      "similar": "Glitch"
+    },
+    {
+      "word": "Boss",
+      "hint": "Konec",
+      "similar": "Miniboss"
+    },
+    {
+      "word": "Respawn",
+      "hint": "Znovuzrození",
+      "similar": "Checkpoint"
+    },
+    {
+      "word": "Checkpoint",
+      "hint": "Uložení",
+      "similar": "Respawn"
+    },
+    {
+      "word": "Level up",
+      "hint": "Zkušenosti",
+      "similar": "Achievement"
+    },
+    {
+      "word": "Achievement",
+      "hint": "Trofej",
+      "similar": "Level up"
+    },
+    {
+      "word": "Loot box",
+      "hint": "Náhoda",
+      "similar": "Skin"
+    },
+    {
+      "word": "Skin",
+      "hint": "Vzhled",
+      "similar": "Loot box"
+    },
+    {
+      "word": "Battle pass",
+      "hint": "Sezóna",
+      "similar": "Skin"
+    },
+    {
+      "word": "Mikrotransakce",
+      "hint": "Peníze",
+      "similar": "Loot box"
+    },
+    {
+      "word": "Steam",
+      "hint": "Výprodej",
+      "similar": "Epic Games"
+    },
+    {
+      "word": "Twitch",
+      "hint": "Stream",
+      "similar": "YouTube"
+    },
+    {
+      "word": "Esport",
+      "hint": "Turnaj",
+      "similar": "LAN party"
+    },
+    {
+      "word": "LAN party",
+      "hint": "Kabely",
+      "similar": "Esport"
+    },
+    {
+      "word": "Streamer",
+      "hint": "Kamera",
+      "similar": "Youtuber"
+    },
+    {
+      "word": "Gamer",
+      "hint": "Noc",
+      "similar": "Streamer"
+    },
+    {
+      "word": "Hraní do rána",
+      "hint": "Únava",
+      "similar": "Rage quit"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 
 class PlayersScreen extends StatefulWidget {
   const PlayersScreen({super.key});
@@ -59,7 +60,8 @@ class _PlayersScreenState extends State<PlayersScreen> {
     final full = state.players.length >= AppState.maxPlayers;
     return Scaffold(
       appBar: AppBar(title: Text('Hráči (${state.players.length})')),
-      body: SafeArea(
+      body: AmbientBackground(
+        child: SafeArea(
         child: Column(
           children: [
             Padding(
@@ -82,11 +84,23 @@ class _PlayersScreenState extends State<PlayersScreen> {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  IconButton.filled(
-                    onPressed: full ? null : _add,
-                    icon: const Icon(Icons.add),
-                    style: IconButton.styleFrom(minimumSize: const Size(56, 56)),
-                    tooltip: 'Přidat',
+                  SizedBox(
+                    width: 58,
+                    child: Tooltip(
+                      message: 'Přidat',
+                      child: Pressable(
+                        onTap: full ? null : _add,
+                        child: Container(
+                          height: 56,
+                          decoration: BoxDecoration(
+                            gradient: full ? null : state.playContext.gradient,
+                            color: full ? Theme.of(context).colorScheme.surfaceContainerHighest : null,
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                          child: const Icon(Icons.add_rounded, color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -104,10 +118,12 @@ class _PlayersScreenState extends State<PlayersScreen> {
                         return Padding(
                           key: ValueKey(name),
                           padding: const EdgeInsets.only(bottom: 8),
-                          child: Card(
+                          child: FadeSlideIn(
+                            index: i,
+                            child: Card(
                             child: ListTile(
-                              leading: CircleAvatar(child: Text(name.characters.first.toUpperCase())),
-                              title: Text(name),
+                              leading: _Avatar(name: name, index: i),
+                              title: Text(name, style: const TextStyle(fontWeight: FontWeight.w700)),
                               onTap: () => _rename(i, name),
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
@@ -122,12 +138,40 @@ class _PlayersScreenState extends State<PlayersScreen> {
                               ),
                             ),
                           ),
+                          ),
                         );
                       },
                     ),
             ),
           ],
         ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Initial on a party colour picked by position.
+class _Avatar extends StatelessWidget {
+  const _Avatar({required this.name, required this.index});
+
+  final String name;
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = Party.confetti[index % Party.confetti.length];
+    return Container(
+      width: 40,
+      height: 40,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors: [c, Color.lerp(c, Colors.black, 0.25)!]),
+        shape: BoxShape.circle,
+      ),
+      child: Text(
+        name.characters.first.toUpperCase(),
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 17),
       ),
     );
   }
@@ -141,7 +185,7 @@ class _Empty extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Text(
-            'Přidej aspoň 3 hráče.\nPořadí určuje, jak si budete předávat telefon.',
+            '👋\n\nPřidej aspoň 3 hráče.\nPořadí určuje, jak si budete předávat telefon.',
             textAlign: TextAlign.center,
             style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant),
           ),

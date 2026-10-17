@@ -1,0 +1,318 @@
+{
+  "id": "skolni-prusvihy",
+  "name": "Školní průšvihy",
+  "emoji": "🙈",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Poznámka",
+      "hint": "Žákovská",
+      "similar": "Důtka"
+    },
+    {
+      "word": "Důtka",
+      "hint": "Ředitel",
+      "similar": "Poznámka"
+    },
+    {
+      "word": "Dvojka z chování",
+      "hint": "Vysvědčení",
+      "similar": "Důtka"
+    },
+    {
+      "word": "Záškoláctví",
+      "hint": "Park",
+      "similar": "Falešná omluvenka"
+    },
+    {
+      "word": "Falešná omluvenka",
+      "hint": "Podpis",
+      "similar": "Záškoláctví"
+    },
+    {
+      "word": "Padělaný podpis",
+      "hint": "Rodiče",
+      "similar": "Falešná omluvenka"
+    },
+    {
+      "word": "Tahák",
+      "hint": "Rukáv",
+      "similar": "Opisování"
+    },
+    {
+      "word": "Opisování",
+      "hint": "Soused",
+      "similar": "Tahák"
+    },
+    {
+      "word": "Mobil při písemce",
+      "hint": "Lavice",
+      "similar": "Tahák"
+    },
+    {
+      "word": "Zabavený mobil",
+      "hint": "Katedra",
+      "similar": "Poznámka"
+    },
+    {
+      "word": "Pozdní příchod",
+      "hint": "Zvonění",
+      "similar": "Záškoláctví"
+    },
+    {
+      "word": "Zapomenutý úkol",
+      "hint": "Výmluva",
+      "similar": "Pozdní příchod"
+    },
+    {
+      "word": "Spaní v hodině",
+      "hint": "Lavice",
+      "similar": "Smích při hodině"
+    },
+    {
+      "word": "Žvýkačka pod lavicí",
+      "hint": "Lepení",
+      "similar": "Kreslení na lavici"
+    },
+    {
+      "word": "Kreslení na lavici",
+      "hint": "Fixa",
+      "similar": "Žvýkačka pod lavicí"
+    },
+    {
+      "word": "Papírové vlaštovky",
+      "hint": "Házení",
+      "similar": "Plivátko"
+    },
+    {
+      "word": "Plivátko",
+      "hint": "Brčko",
+      "similar": "Papírové vlaštovky"
+    },
+    {
+      "word": "Smích při hodině",
+      "hint": "Záchvat",
+      "similar": "Spaní v hodině"
+    },
+    {
+      "word": "Vyhazov za dveře",
+      "hint": "Chodba",
+      "similar": "Poznámka"
+    },
+    {
+      "word": "Návštěva u ředitele",
+      "hint": "Kancelář",
+      "similar": "Vyhazov za dveře"
+    },
+    {
+      "word": "Rodičovské schůzky",
+      "hint": "Strach",
+      "similar": "Návštěva u ředitele"
+    },
+    {
+      "word": "Propadnutí",
+      "hint": "Opakování",
+      "similar": "Reparát"
+    },
+    {
+      "word": "Reparát",
+      "hint": "Prázdniny",
+      "similar": "Propadnutí"
+    },
+    {
+      "word": "Pětka z písemky",
+      "hint": "Schovávání",
+      "similar": "Reparát"
+    },
+    {
+      "word": "Schovaná žákovská",
+      "hint": "Batoh",
+      "similar": "Padělaný podpis"
+    },
+    {
+      "word": "Kouření na záchodech",
+      "hint": "Cigarety",
+      "similar": "Vape"
+    },
+    {
+      "word": "Vape",
+      "hint": "Pára",
+      "similar": "Kouření na záchodech"
+    },
+    {
+      "word": "Útěk ze školy",
+      "hint": "Plot",
+      "similar": "Záškoláctví"
+    },
+    {
+      "word": "Rvačka o přestávce",
+      "hint": "Chodba",
+      "similar": "Hádka s učitelem"
+    },
+    {
+      "word": "Hádka s učitelem",
+      "hint": "Odmlouvání",
+      "similar": "Rvačka o přestávce"
+    },
+    {
+      "word": "Drzost",
+      "hint": "Pusa",
+      "similar": "Hádka s učitelem"
+    },
+    {
+      "word": "Rozbité okno",
+      "hint": "Míč",
+      "similar": "Požární poplach"
+    },
+    {
+      "word": "Hasicí přístroj",
+      "hint": "Pěna",
+      "similar": "Požární poplach"
+    },
+    {
+      "word": "Požární poplach",
+      "hint": "Evakuace",
+      "similar": "Hasicí přístroj"
+    },
+    {
+      "word": "Prank na učitele",
+      "hint": "Křída",
+      "similar": "Připínáček na židli"
+    },
+    {
+      "word": "Připínáček na židli",
+      "hint": "Sednutí",
+      "similar": "Prank na učitele"
+    },
+    {
+      "word": "Zamčená třída",
+      "hint": "Klíč",
+      "similar": "Prank na učitele"
+    },
+    {
+      "word": "Hlášení rozhlasem",
+      "hint": "Reproduktor",
+      "similar": "Návštěva u ředitele"
+    },
+    {
+      "word": "Ztracené přezůvky",
+      "hint": "Šatna",
+      "similar": "Zapomenutý cvičky"
+    },
+    {
+      "word": "Zapomenutý cvičky",
+      "hint": "Tělocvik",
+      "similar": "Ztracené přezůvky"
+    },
+    {
+      "word": "Ulití z tělocviku",
+      "hint": "Bolest",
+      "similar": "Zapomenutý cvičky"
+    },
+    {
+      "word": "Krádež svačiny",
+      "hint": "Hlad",
+      "similar": "Školní jídelna"
+    },
+    {
+      "word": "Tajná láska",
+      "hint": "Psaníčko",
+      "similar": "Zamilovanost"
+    },
+    {
+      "word": "Psaníčko",
+      "hint": "Lavice",
+      "similar": "Tajná láska"
+    },
+    {
+      "word": "Přezdívka pro učitele",
+      "hint": "Šeptání",
+      "similar": "Pomluvy"
+    },
+    {
+      "word": "Pomluvy",
+      "hint": "Šuškání",
+      "similar": "Přezdívka pro učitele"
+    },
+    {
+      "word": "Mobil zazvonil",
+      "hint": "Vyzvánění",
+      "similar": "Zabavený mobil"
+    },
+    {
+      "word": "Zkoušení u tabule",
+      "hint": "Křída",
+      "similar": "Písemka"
+    },
+    {
+      "word": "Večerka na lyžáku",
+      "hint": "Pokoj",
+      "similar": "Noční výprava"
+    },
+    {
+      "word": "Noční výprava",
+      "hint": "Chodba",
+      "similar": "Večerka na lyžáku"
+    },
+    {
+      "word": "Polštářová bitva",
+      "hint": "Peří",
+      "similar": "Noční výprava"
+    },
+    {
+      "word": "Učitel v Lidlu",
+      "hint": "Nákup",
+      "similar": "Učitel na Instagramu"
+    },
+    {
+      "word": "Učitel na Instagramu",
+      "hint": "Fotky",
+      "similar": "Učitel v Lidlu"
+    },
+    {
+      "word": "Suplování",
+      "hint": "Neznámý",
+      "similar": "Volná hodina"
+    },
+    {
+      "word": "Volná hodina",
+      "hint": "Radost",
+      "similar": "Suplování"
+    },
+    {
+      "word": "Odpadlá písemka",
+      "hint": "Úleva",
+      "similar": "Volná hodina"
+    },
+    {
+      "word": "Vyfotit tabuli",
+      "hint": "Mobil",
+      "similar": "Opisování"
+    },
+    {
+      "word": "Skupinový projekt",
+      "hint": "Flákač",
+      "similar": "Referát"
+    },
+    {
+      "word": "Flákač",
+      "hint": "Nicnedělání",
+      "similar": "Šprt"
+    },
+    {
+      "word": "Šprt",
+      "hint": "Jedničky",
+      "similar": "Flákač"
+    },
+    {
+      "word": "Třídní šašek",
+      "hint": "Vtipy",
+      "similar": "Šprt"
+    },
+    {
+      "word": "Bonzák",
+      "hint": "Žalování",
+      "similar": "Šprt"
+    }
+  ]
+}

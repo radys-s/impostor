@@ -1,0 +1,313 @@
+{
+  "id": "after-party",
+  "name": "After party",
+  "emoji": "🌙",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Pravda nebo úkol",
+      "hint": "Odvaha",
+      "similar": "Nikdy jsem nikdy"
+    },
+    {
+      "word": "Nikdy jsem nikdy",
+      "hint": "Přiznání",
+      "similar": "Pravda nebo úkol"
+    },
+    {
+      "word": "Flaška",
+      "hint": "Točení",
+      "similar": "Pravda nebo úkol"
+    },
+    {
+      "word": "Svlékací poker",
+      "hint": "Karty",
+      "similar": "Svlékací twister"
+    },
+    {
+      "word": "Svlékací twister",
+      "hint": "Barvy",
+      "similar": "Svlékací poker"
+    },
+    {
+      "word": "Body shot",
+      "hint": "Pupík",
+      "similar": "Tequila"
+    },
+    {
+      "word": "Tequila",
+      "hint": "Citron",
+      "similar": "Body shot"
+    },
+    {
+      "word": "Jelly shoty",
+      "hint": "Želé",
+      "similar": "Panáky"
+    },
+    {
+      "word": "Beer pong",
+      "hint": "Kelímky",
+      "similar": "Flip cup"
+    },
+    {
+      "word": "Flip cup",
+      "hint": "Obracení",
+      "similar": "Beer pong"
+    },
+    {
+      "word": "Vířivka o půlnoci",
+      "hint": "Pára",
+      "similar": "Koupání nahatý"
+    },
+    {
+      "word": "Koupání nahatý",
+      "hint": "Měsíc",
+      "similar": "Vířivka o půlnoci"
+    },
+    {
+      "word": "Gauč na přespání",
+      "hint": "Deka",
+      "similar": "Spaní ve vaně"
+    },
+    {
+      "word": "Spaní ve vaně",
+      "hint": "Ručník",
+      "similar": "Gauč na přespání"
+    },
+    {
+      "word": "Ztracená podprsenka",
+      "hint": "Hledání",
+      "similar": "Cizí mikina"
+    },
+    {
+      "word": "Cizí mikina",
+      "hint": "Vůně",
+      "similar": "Ztracená podprsenka"
+    },
+    {
+      "word": "Opilecké vyznání",
+      "hint": "Slzy",
+      "similar": "Opilecký telefonát"
+    },
+    {
+      "word": "Opilecký telefonát",
+      "hint": "Ex",
+      "similar": "Opilecké vyznání"
+    },
+    {
+      "word": "Líbačka v kuchyni",
+      "hint": "Lednice",
+      "similar": "Líbačka na balkoně"
+    },
+    {
+      "word": "Líbačka na balkoně",
+      "hint": "Cigareta",
+      "similar": "Líbačka v kuchyni"
+    },
+    {
+      "word": "Kouření na balkoně",
+      "hint": "Zima",
+      "similar": "Líbačka na balkoně"
+    },
+    {
+      "word": "Hlubokomyslné řeči",
+      "hint": "Filozofie",
+      "similar": "Opilecké vyznání"
+    },
+    {
+      "word": "Kuchyňská párty",
+      "hint": "Lednička",
+      "similar": "Hlubokomyslné řeči"
+    },
+    {
+      "word": "Noční smažení",
+      "hint": "Pánev",
+      "similar": "Pizza z mrazáku"
+    },
+    {
+      "word": "Pizza z mrazáku",
+      "hint": "Trouba",
+      "similar": "Noční smažení"
+    },
+    {
+      "word": "Zbytky alkoholu",
+      "hint": "Míchání",
+      "similar": "Domácí koktejl"
+    },
+    {
+      "word": "Domácí koktejl",
+      "hint": "Experiment",
+      "similar": "Zbytky alkoholu"
+    },
+    {
+      "word": "Kocovinová snídaně",
+      "hint": "Vajíčka",
+      "similar": "Pizza z mrazáku"
+    },
+    {
+      "word": "Afterparty playlist",
+      "hint": "Ploužák",
+      "similar": "Karaoke na YouTube"
+    },
+    {
+      "word": "Karaoke na YouTube",
+      "hint": "Notebook",
+      "similar": "Afterparty playlist"
+    },
+    {
+      "word": "Tanec na stole",
+      "hint": "Odvaha",
+      "similar": "Svádivý tanec"
+    },
+    {
+      "word": "Svádivý tanec",
+      "hint": "Boky",
+      "similar": "Tanec na stole"
+    },
+    {
+      "word": "Masáž zad",
+      "hint": "Ruce",
+      "similar": "Lechtání"
+    },
+    {
+      "word": "Šeptání do ucha",
+      "hint": "Dech",
+      "similar": "Masáž zad"
+    },
+    {
+      "word": "Sousedi bouchají",
+      "hint": "Strop",
+      "similar": "Policie u dveří"
+    },
+    {
+      "word": "Policie u dveří",
+      "hint": "Hluk",
+      "similar": "Sousedi bouchají"
+    },
+    {
+      "word": "Kdo s kým",
+      "hint": "Drby",
+      "similar": "Ranní rekapitulace"
+    },
+    {
+      "word": "Ranní rekapitulace",
+      "hint": "Fotky",
+      "similar": "Kdo s kým"
+    },
+    {
+      "word": "Fotky z párty",
+      "hint": "Mazání",
+      "similar": "Ranní rekapitulace"
+    },
+    {
+      "word": "Cizí kalhotky",
+      "hint": "Gauč",
+      "similar": "Cizí mikina"
+    },
+    {
+      "word": "Kelímky všude",
+      "hint": "Úklid",
+      "similar": "Prázdné lahve"
+    },
+    {
+      "word": "Prázdné lahve",
+      "hint": "Sklo",
+      "similar": "Kelímky všude"
+    },
+    {
+      "word": "Cizí postel",
+      "hint": "Polštář",
+      "similar": "Gauč na přespání"
+    },
+    {
+      "word": "Probuzení s překvapením",
+      "hint": "Postel",
+      "similar": "Walk of shame"
+    },
+    {
+      "word": "Walk of shame",
+      "hint": "Podpatky",
+      "similar": "Ranní útěk"
+    },
+    {
+      "word": "Ranní útěk",
+      "hint": "Boty",
+      "similar": "Walk of shame"
+    },
+    {
+      "word": "Číslo na ruce",
+      "hint": "Propiska",
+      "similar": "Výměna Instagramu"
+    },
+    {
+      "word": "Výměna Instagramu",
+      "hint": "Mobil",
+      "similar": "Číslo na ruce"
+    },
+    {
+      "word": "Uspávání kamaráda",
+      "hint": "Péče",
+      "similar": "Držení vlasů"
+    },
+    {
+      "word": "Držení vlasů",
+      "hint": "Záchod",
+      "similar": "Uspávání kamaráda"
+    },
+    {
+      "word": "Voda před spaním",
+      "hint": "Sklenice",
+      "similar": "Paralen"
+    },
+    {
+      "word": "Rozbitá sklenička",
+      "hint": "Střepy",
+      "similar": "Rozlité víno"
+    },
+    {
+      "word": "Rozlité víno",
+      "hint": "Koberec",
+      "similar": "Rozbitá sklenička"
+    },
+    {
+      "word": "Spálená pizza",
+      "hint": "Kouř",
+      "similar": "Pizza z mrazáku"
+    },
+    {
+      "word": "Hudba do rána",
+      "hint": "Repráky",
+      "similar": "Afterparty playlist"
+    },
+    {
+      "word": "Ranní pusa",
+      "hint": "Polštář",
+      "similar": "Ranní útěk"
+    },
+    {
+      "word": "Prskavky v šampaňském",
+      "hint": "Jiskry",
+      "similar": "Šampaňské z lahve"
+    },
+    {
+      "word": "Šampaňské z lahve",
+      "hint": "Bublinky",
+      "similar": "Prskavky v šampaňském"
+    },
+    {
+      "word": "Fotky spícího",
+      "hint": "Fixa",
+      "similar": "Fotky z párty"
+    },
+    {
+      "word": "Hotelový pokoj",
+      "hint": "Karta",
+      "similar": "Airbnb párty"
+    },
+    {
+      "word": "Airbnb párty",
+      "hint": "Pronájem",
+      "similar": "Hotelový pokoj"
+    }
+  ]
+}

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../logic/game_engine.dart';
+import '../ui/motion.dart';
 import '../ui/theme.dart';
+import '../ui/widgets.dart';
 import 'result_screen.dart';
 
-/// Secret in-app voting: the phone goes around once more.
+/// Secret in-app voting (plugin): the phone goes around once more.
 class VoteScreen extends StatefulWidget {
   const VoteScreen({super.key, required this.round});
 
@@ -19,8 +21,6 @@ class _VoteScreenState extends State<VoteScreen> {
   final Map<String, String?> _votes = {};
   int _index = 0;
   bool _ready = false;
-
-  static const _nobody = '\u0000nobody';
 
   String get _voter => widget.round.roles[_index].player;
 
@@ -53,51 +53,55 @@ class _VoteScreenState extends State<VoteScreen> {
           title: Text('Hlasování ${_index + 1}/${widget.round.roles.length}'),
           automaticallyImplyLeading: false,
         ),
-        body: !_ready
-            ? PageBody(
-                bottom: FilledButton(
-                  onPressed: () => setState(() => _ready = true),
-                  child: const Text('Jsem to já, hlasovat'),
-                ),
-                children: [
-                  const SizedBox(height: 80),
-                  Icon(Icons.how_to_vote_outlined, size: 72, color: scheme.primary),
-                  const SizedBox(height: 24),
-                  Text('Předej telefon', textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
-                  Text(
-                    _voter,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w800),
+        body: AmbientBackground(
+          child: AnimatedSwitcher(
+            duration: Motion.of(context, Motion.base),
+            child: !_ready
+                ? PageBody(
+                    key: ValueKey('pass-$_index'),
+                    bottom: GradientButton(
+                      onPressed: () => setState(() => _ready = true),
+                      icon: Icons.lock_open_rounded,
+                      label: 'Jsem to já, hlasovat',
+                    ),
+                    children: [
+                      const SizedBox(height: 72),
+                      const Center(child: EmojiBadge('🗳️', size: 96)),
+                      const SizedBox(height: 24),
+                      Text('Předej telefon', textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
+                      Text(_voter, textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineMedium),
+                      const SizedBox(height: 8),
+                      Text('Hlasuj tajně.', textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
+                    ],
+                  )
+                : PageBody(
+                    key: ValueKey('vote-$_index'),
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 8, 4, 16),
+                        child: Text('$_voter, kdo je podle tebe impostor?', style: Theme.of(context).textTheme.titleLarge),
+                      ),
+                      for (final (i, name) in others.indexed)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: PartyTile(
+                            leading: EmojiBadge(name.characters.first.toUpperCase(), size: 40),
+                            title: name,
+                            trailing: Icon(Icons.how_to_vote_outlined, color: scheme.onSurfaceVariant),
+                            onTap: () => _vote(name),
+                            key: ValueKey('vote-$i-$name'),
+                          ),
+                        ),
+                      if (allowNobody)
+                        PartyTile(
+                          leading: const EmojiBadge('🤷', size: 40),
+                          title: 'Žádný impostor tu není',
+                          onTap: () => _vote(null),
+                        ),
+                    ],
                   ),
-                  const SizedBox(height: 8),
-                  Text('Hlasuj tajně.', textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
-                ],
-              )
-            : PageBody(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(4, 8, 4, 16),
-                    child: Text(
-                      '$_voter, kdo je podle tebe impostor?',
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  for (final name in others)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 8),
-                      child: OutlinedButton(onPressed: () => _vote(name), child: Text(name)),
-                    ),
-                  if (allowNobody) ...[
-                    const SizedBox(height: 8),
-                    FilledButton.tonal(
-                      key: const ValueKey(_nobody),
-                      onPressed: () => _vote(null),
-                      style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-                      child: const Text('Myslím, že tu žádný impostor není'),
-                    ),
-                  ],
-                ],
-              ),
+          ),
+        ),
       ),
     );
   }

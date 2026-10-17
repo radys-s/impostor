@@ -1,0 +1,318 @@
+{
+  "id": "guilty-pleasures",
+  "name": "Guilty pleasures",
+  "emoji": "🤫",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Reality show",
+      "hint": "Drama",
+      "similar": "Love Island"
+    },
+    {
+      "word": "Love Island",
+      "hint": "Vila",
+      "similar": "Ostrov pokušení"
+    },
+    {
+      "word": "Ostrov pokušení",
+      "hint": "Věrnost",
+      "similar": "Love Island"
+    },
+    {
+      "word": "Výměna manželek",
+      "hint": "Rodiny",
+      "similar": "Prostřeno"
+    },
+    {
+      "word": "Prostřeno",
+      "hint": "Večeře",
+      "similar": "MasterChef"
+    },
+    {
+      "word": "MasterChef",
+      "hint": "Porota",
+      "similar": "Prostřeno"
+    },
+    {
+      "word": "Telenovela",
+      "hint": "Slzy",
+      "similar": "Turecký seriál"
+    },
+    {
+      "word": "Turecký seriál",
+      "hint": "Istanbul",
+      "similar": "Telenovela"
+    },
+    {
+      "word": "Romantické komedie",
+      "hint": "Happyend",
+      "similar": "Telenovela"
+    },
+    {
+      "word": "Erotické romány",
+      "hint": "Svazky",
+      "similar": "Padesát odstínů šedi"
+    },
+    {
+      "word": "Padesát odstínů šedi",
+      "hint": "Kravata",
+      "similar": "Erotické romány"
+    },
+    {
+      "word": "Horoskop",
+      "hint": "Znamení",
+      "similar": "Tarot"
+    },
+    {
+      "word": "Tarot",
+      "hint": "Karty",
+      "similar": "Horoskop"
+    },
+    {
+      "word": "Bulvár",
+      "hint": "Titulky",
+      "similar": "Drby o celebritách"
+    },
+    {
+      "word": "Drby o celebritách",
+      "hint": "Časopis",
+      "similar": "Bulvár"
+    },
+    {
+      "word": "Instagram celebrit",
+      "hint": "Stalkování",
+      "similar": "Drby o celebritách"
+    },
+    {
+      "word": "Půlnoční fast food",
+      "hint": "Hlad",
+      "similar": "Pizza do postele"
+    },
+    {
+      "word": "Pizza do postele",
+      "hint": "Drobky",
+      "similar": "Půlnoční fast food"
+    },
+    {
+      "word": "Nutella lžící",
+      "hint": "Sklenice",
+      "similar": "Zmrzlina z kyblíku"
+    },
+    {
+      "word": "Zmrzlina z kyblíku",
+      "hint": "Gauč",
+      "similar": "Nutella lžící"
+    },
+    {
+      "word": "Instantní nudle",
+      "hint": "Pětiminutovka",
+      "similar": "Půlnoční fast food"
+    },
+    {
+      "word": "Chipsy s dipem",
+      "hint": "Křupání",
+      "similar": "Popcorn s máslem"
+    },
+    {
+      "word": "Popcorn s máslem",
+      "hint": "Mikrovlnka",
+      "similar": "Chipsy s dipem"
+    },
+    {
+      "word": "Zpívání ve sprše",
+      "hint": "Mýdlo",
+      "similar": "Karaoke"
+    },
+    {
+      "word": "Karaoke",
+      "hint": "Mikrofon",
+      "similar": "Zpívání ve sprše"
+    },
+    {
+      "word": "ABBA",
+      "hint": "Švédsko",
+      "similar": "Boney M."
+    },
+    {
+      "word": "Hity z devadesátek",
+      "hint": "Retro",
+      "similar": "ABBA"
+    },
+    {
+      "word": "Eurovize",
+      "hint": "Hlasování",
+      "similar": "Superstar"
+    },
+    {
+      "word": "Superstar",
+      "hint": "Porota",
+      "similar": "Eurovize"
+    },
+    {
+      "word": "StarDance",
+      "hint": "Parket",
+      "similar": "Superstar"
+    },
+    {
+      "word": "Nakupování ze stresu",
+      "hint": "Košík",
+      "similar": "Výprodeje"
+    },
+    {
+      "word": "Výprodeje",
+      "hint": "Slevy",
+      "similar": "Nakupování ze stresu"
+    },
+    {
+      "word": "Spánek přes den",
+      "hint": "Gauč",
+      "similar": "Pyžamový den"
+    },
+    {
+      "word": "Pyžamový den",
+      "hint": "Neděle",
+      "similar": "Spánek přes den"
+    },
+    {
+      "word": "Binge-watching",
+      "hint": "Epizody",
+      "similar": "Pyžamový den"
+    },
+    {
+      "word": "Disney filmy",
+      "hint": "Princezny",
+      "similar": "Pohádky"
+    },
+    {
+      "word": "Hraní na mobilu",
+      "hint": "Level",
+      "similar": "Candy Crush"
+    },
+    {
+      "word": "Candy Crush",
+      "hint": "Bonbóny",
+      "similar": "Hraní na mobilu"
+    },
+    {
+      "word": "Stalkování ex",
+      "hint": "Profil",
+      "similar": "Instagram celebrit"
+    },
+    {
+      "word": "Odposlouchávání sousedů",
+      "hint": "Zeď",
+      "similar": "Drby o celebritách"
+    },
+    {
+      "word": "Selfie v zrcadle",
+      "hint": "Úhel",
+      "similar": "Filtry"
+    },
+    {
+      "word": "Filtry",
+      "hint": "Pleť",
+      "similar": "Selfie v zrcadle"
+    },
+    {
+      "word": "Botox",
+      "hint": "Vrásky",
+      "similar": "Filtry"
+    },
+    {
+      "word": "Solárium",
+      "hint": "Opálení",
+      "similar": "Samoopalovák"
+    },
+    {
+      "word": "Samoopalovák",
+      "hint": "Oranžová",
+      "similar": "Solárium"
+    },
+    {
+      "word": "Masáž",
+      "hint": "Relax",
+      "similar": "Wellness"
+    },
+    {
+      "word": "Wellness",
+      "hint": "Pára",
+      "similar": "Masáž"
+    },
+    {
+      "word": "Brunch",
+      "hint": "Avokádo",
+      "similar": "Pozdní snídaně"
+    },
+    {
+      "word": "Aperol",
+      "hint": "Terasa",
+      "similar": "Prosecco"
+    },
+    {
+      "word": "Prosecco v úterý",
+      "hint": "Bublinky",
+      "similar": "Aperol"
+    },
+    {
+      "word": "Víno na gauči",
+      "hint": "Sklenka",
+      "similar": "Prosecco v úterý"
+    },
+    {
+      "word": "Lotto",
+      "hint": "Sázka",
+      "similar": "Stírací los"
+    },
+    {
+      "word": "Stírací los",
+      "hint": "Mince",
+      "similar": "Lotto"
+    },
+    {
+      "word": "Koupelová bomba",
+      "hint": "Vana",
+      "similar": "Vonné svíčky"
+    },
+    {
+      "word": "Vonné svíčky",
+      "hint": "Levandule",
+      "similar": "Koupelová bomba"
+    },
+    {
+      "word": "Pomlouvání u kafe",
+      "hint": "Kamarádky",
+      "similar": "Drby o celebritách"
+    },
+    {
+      "word": "True crime",
+      "hint": "Vraždy",
+      "similar": "Detektivky"
+    },
+    {
+      "word": "Detektivky",
+      "hint": "Vrah",
+      "similar": "True crime"
+    },
+    {
+      "word": "Plyšák v posteli",
+      "hint": "Mazlení",
+      "similar": "Deka"
+    },
+    {
+      "word": "Dětské cereálie",
+      "hint": "Mléko",
+      "similar": "Nutella lžící"
+    },
+    {
+      "word": "Trapné písničky",
+      "hint": "Refrén",
+      "similar": "Hity z devadesátek"
+    },
+    {
+      "word": "Šlehačka ze spreje",
+      "hint": "Pusa",
+      "similar": "Nutella lžící"
+    }
+  ]
+}

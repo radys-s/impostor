@@ -1,0 +1,338 @@
+{
+  "id": "cesky-rap-a-influenceri",
+  "name": "Český rap a influenceři",
+  "emoji": "🎤",
+  "audience": "friends",
+  "words": [
+    {
+      "word": "Viktor Sheen",
+      "hint": "Melodie",
+      "similar": "Calin"
+    },
+    {
+      "word": "Calin",
+      "hint": "Hlas",
+      "similar": "Viktor Sheen"
+    },
+    {
+      "word": "Yzomandias",
+      "hint": "Label",
+      "similar": "Nik Tendo"
+    },
+    {
+      "word": "Nik Tendo",
+      "hint": "Milion+",
+      "similar": "Yzomandias"
+    },
+    {
+      "word": "Ben Cristovao",
+      "hint": "Eurovize",
+      "similar": "Calin"
+    },
+    {
+      "word": "Marpo",
+      "hint": "Country",
+      "similar": "Ektor"
+    },
+    {
+      "word": "Ektor",
+      "hint": "Rýmy",
+      "similar": "Marpo"
+    },
+    {
+      "word": "Vladimír 518",
+      "hint": "Grafika",
+      "similar": "Orion"
+    },
+    {
+      "word": "Orion",
+      "hint": "Veterán",
+      "similar": "Vladimír 518"
+    },
+    {
+      "word": "PSH",
+      "hint": "Legendy",
+      "similar": "Prago Union"
+    },
+    {
+      "word": "Prago Union",
+      "hint": "Kapela",
+      "similar": "PSH"
+    },
+    {
+      "word": "Hugo Toxxx",
+      "hint": "Kontroverze",
+      "similar": "Řezník"
+    },
+    {
+      "word": "Řezník",
+      "hint": "Hororcore",
+      "similar": "Hugo Toxxx"
+    },
+    {
+      "word": "Paulie Garand",
+      "hint": "Liberec",
+      "similar": "Lvcas Dope"
+    },
+    {
+      "word": "Lvcas Dope",
+      "hint": "Chill",
+      "similar": "Paulie Garand"
+    },
+    {
+      "word": "Sergei Barracuda",
+      "hint": "Party",
+      "similar": "Yzomandias"
+    },
+    {
+      "word": "Rytmus",
+      "hint": "Slovensko",
+      "similar": "Separ"
+    },
+    {
+      "word": "Separ",
+      "hint": "Bratislava",
+      "similar": "Rytmus"
+    },
+    {
+      "word": "Majk Spirit",
+      "hint": "Trio",
+      "similar": "Rytmus"
+    },
+    {
+      "word": "Kontrafakt",
+      "hint": "Slovensko",
+      "similar": "H16"
+    },
+    {
+      "word": "H16",
+      "hint": "Trio",
+      "similar": "Kontrafakt"
+    },
+    {
+      "word": "Indy & Wich",
+      "hint": "Devadesátky",
+      "similar": "PSH"
+    },
+    {
+      "word": "Pil C",
+      "hint": "Temnota",
+      "similar": "Hasan"
+    },
+    {
+      "word": "Hasan",
+      "hint": "Generace",
+      "similar": "Pil C"
+    },
+    {
+      "word": "Smack",
+      "hint": "Tetování",
+      "similar": "Hugo Toxxx"
+    },
+    {
+      "word": "Dollar Prync",
+      "hint": "Bling",
+      "similar": "Sergei Barracuda"
+    },
+    {
+      "word": "Jirka Král",
+      "hint": "YouTube",
+      "similar": "Kovy"
+    },
+    {
+      "word": "Kovy",
+      "hint": "Politika",
+      "similar": "Jirka Král"
+    },
+    {
+      "word": "PedrosGame",
+      "hint": "Minecraft",
+      "similar": "GoGoManTV"
+    },
+    {
+      "word": "GoGoManTV",
+      "hint": "Gaming",
+      "similar": "PedrosGame"
+    },
+    {
+      "word": "Agraelus",
+      "hint": "Twitch",
+      "similar": "PedrosGame"
+    },
+    {
+      "word": "Anna Šulcová",
+      "hint": "Vlog",
+      "similar": "Teri Blitzen"
+    },
+    {
+      "word": "Teri Blitzen",
+      "hint": "Make-up",
+      "similar": "Anna Šulcová"
+    },
+    {
+      "word": "Shopaholic Nicol",
+      "hint": "Nakupování",
+      "similar": "Teri Blitzen"
+    },
+    {
+      "word": "Petr Mára",
+      "hint": "Apple",
+      "similar": "Jirka Král"
+    },
+    {
+      "word": "Battle rap",
+      "hint": "Souboj",
+      "similar": "Freestyle"
+    },
+    {
+      "word": "Freestyle",
+      "hint": "Improvizace",
+      "similar": "Battle rap"
+    },
+    {
+      "word": "Beat",
+      "hint": "Smyčka",
+      "similar": "Instrumentál"
+    },
+    {
+      "word": "Featuring",
+      "hint": "Spolupráce",
+      "similar": "Remix"
+    },
+    {
+      "word": "Remix",
+      "hint": "Úprava",
+      "similar": "Featuring"
+    },
+    {
+      "word": "Diss",
+      "hint": "Urážka",
+      "similar": "Beef"
+    },
+    {
+      "word": "Beef",
+      "hint": "Spor",
+      "similar": "Diss"
+    },
+    {
+      "word": "Autotune",
+      "hint": "Hlas",
+      "similar": "Playback"
+    },
+    {
+      "word": "Playback",
+      "hint": "Rty",
+      "similar": "Autotune"
+    },
+    {
+      "word": "Mixtape",
+      "hint": "Kazeta",
+      "similar": "Album"
+    },
+    {
+      "word": "Videoklip",
+      "hint": "Natáčení",
+      "similar": "Koncert"
+    },
+    {
+      "word": "Hip Hop Kemp",
+      "hint": "Hradec",
+      "similar": "Rock for People"
+    },
+    {
+      "word": "Rock for People",
+      "hint": "Festival",
+      "similar": "Hip Hop Kemp"
+    },
+    {
+      "word": "Merch",
+      "hint": "Mikiny",
+      "similar": "Fanshop"
+    },
+    {
+      "word": "Řetězy",
+      "hint": "Zlato",
+      "similar": "Grillz"
+    },
+    {
+      "word": "Grillz",
+      "hint": "Zuby",
+      "similar": "Řetězy"
+    },
+    {
+      "word": "Spotify",
+      "hint": "Streamy",
+      "similar": "Apple Music"
+    },
+    {
+      "word": "Zlatá deska",
+      "hint": "Prodeje",
+      "similar": "Platinová deska"
+    },
+    {
+      "word": "Label",
+      "hint": "Smlouva",
+      "similar": "Manažer"
+    },
+    {
+      "word": "Influencer",
+      "hint": "Sledující",
+      "similar": "Youtuber"
+    },
+    {
+      "word": "Spolupráce",
+      "hint": "Reklama",
+      "similar": "Barter"
+    },
+    {
+      "word": "Slevový kód",
+      "hint": "Procenta",
+      "similar": "Spolupráce"
+    },
+    {
+      "word": "Giveaway",
+      "hint": "Soutěž",
+      "similar": "Slevový kód"
+    },
+    {
+      "word": "Unboxing",
+      "hint": "Krabice",
+      "similar": "Haul"
+    },
+    {
+      "word": "Reakce na video",
+      "hint": "Komentování",
+      "similar": "Podcast"
+    },
+    {
+      "word": "Podcast",
+      "hint": "Mikrofon",
+      "similar": "Reakce na video"
+    },
+    {
+      "word": "Q&A",
+      "hint": "Otázky",
+      "similar": "Live"
+    },
+    {
+      "word": "Live",
+      "hint": "Chat",
+      "similar": "Q&A"
+    },
+    {
+      "word": "Collab",
+      "hint": "Dvojice",
+      "similar": "Featuring"
+    },
+    {
+      "word": "Hate komentáře",
+      "hint": "Toxicita",
+      "similar": "Diss"
+    },
+    {
+      "word": "Drama na Instagramu",
+      "hint": "Story",
+      "similar": "Beef"
+    }
+  ]
+}
