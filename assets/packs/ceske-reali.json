@@ -1,0 +1,357 @@
+{
+  "id": "ceske-reali",
+  "name": "České reálie",
+  "emoji": "🇨🇿",
+  "words": [
+    {
+      "word": "Kofola",
+      "hint": "Limonáda",
+      "similar": "Coca-Cola"
+    },
+    {
+      "word": "Becherovka",
+      "hint": "Bylinky",
+      "similar": "Fernet"
+    },
+    {
+      "word": "Fernet",
+      "hint": "Hořkost",
+      "similar": "Becherovka"
+    },
+    {
+      "word": "Slivovice",
+      "hint": "Švestky",
+      "similar": "Hruškovice"
+    },
+    {
+      "word": "Pilsner Urquell",
+      "hint": "Ležák",
+      "similar": "Budvar"
+    },
+    {
+      "word": "Budvar",
+      "hint": "Jih",
+      "similar": "Pilsner Urquell"
+    },
+    {
+      "word": "Tatranky",
+      "hint": "Oplatky",
+      "similar": "Horalky"
+    },
+    {
+      "word": "Horalky",
+      "hint": "Svačina",
+      "similar": "Tatranky"
+    },
+    {
+      "word": "Margot",
+      "hint": "Kokos",
+      "similar": "Bounty"
+    },
+    {
+      "word": "Studentská pečeť",
+      "hint": "Rozinky",
+      "similar": "Margot"
+    },
+    {
+      "word": "Lentilky",
+      "hint": "Barvy",
+      "similar": "M&M's"
+    },
+    {
+      "word": "Mattoni",
+      "hint": "Bublinky",
+      "similar": "Magnesia"
+    },
+    {
+      "word": "Magnesia",
+      "hint": "Hořčík",
+      "similar": "Mattoni"
+    },
+    {
+      "word": "Škoda Octavia",
+      "hint": "Kombi",
+      "similar": "Škoda Fabia"
+    },
+    {
+      "word": "Škoda Fabia",
+      "hint": "Ojetina",
+      "similar": "Škoda Octavia"
+    },
+    {
+      "word": "Trabant",
+      "hint": "Plast",
+      "similar": "Lada"
+    },
+    {
+      "word": "Jawa",
+      "hint": "Motorka",
+      "similar": "Babeta"
+    },
+    {
+      "word": "Babeta",
+      "hint": "Moped",
+      "similar": "Jawa"
+    },
+    {
+      "word": "Tatra",
+      "hint": "Náklaďák",
+      "similar": "Liaz"
+    },
+    {
+      "word": "Baťa",
+      "hint": "Boty",
+      "similar": "Botas"
+    },
+    {
+      "word": "Botas",
+      "hint": "Tenisky",
+      "similar": "Baťa"
+    },
+    {
+      "word": "Igráček",
+      "hint": "Figurka",
+      "similar": "Merkur"
+    },
+    {
+      "word": "Chalupa",
+      "hint": "Víkend",
+      "similar": "Chata"
+    },
+    {
+      "word": "Chata",
+      "hint": "Les",
+      "similar": "Chalupa"
+    },
+    {
+      "word": "Zahrádka",
+      "hint": "Rajčata",
+      "similar": "Chata"
+    },
+    {
+      "word": "Houbaření",
+      "hint": "Košík",
+      "similar": "Rybaření"
+    },
+    {
+      "word": "Trampování",
+      "hint": "Kytara",
+      "similar": "Houbaření"
+    },
+    {
+      "word": "Vodáci",
+      "hint": "Peřeje",
+      "similar": "Trampování"
+    },
+    {
+      "word": "Panelák",
+      "hint": "Sídliště",
+      "similar": "Činžák"
+    },
+    {
+      "word": "Hospoda",
+      "hint": "Štamgast",
+      "similar": "Kavárna"
+    },
+    {
+      "word": "Štamgast",
+      "hint": "Pult",
+      "similar": "Výčepní"
+    },
+    {
+      "word": "Tuzemák",
+      "hint": "Grog",
+      "similar": "Slivovice"
+    },
+    {
+      "word": "Grog",
+      "hint": "Zima",
+      "similar": "Svařák"
+    },
+    {
+      "word": "Svařák",
+      "hint": "Trhy",
+      "similar": "Grog"
+    },
+    {
+      "word": "Hermelín",
+      "hint": "Plíseň",
+      "similar": "Olomoucké tvarůžky"
+    },
+    {
+      "word": "Olomoucké tvarůžky",
+      "hint": "Zápach",
+      "similar": "Hermelín"
+    },
+    {
+      "word": "Česká pošta",
+      "hint": "Fronta",
+      "similar": "Zásilkovna"
+    },
+    {
+      "word": "Zásilkovna",
+      "hint": "Výdejna",
+      "similar": "Česká pošta"
+    },
+    {
+      "word": "Alza",
+      "hint": "Mimozemšťan",
+      "similar": "Datart"
+    },
+    {
+      "word": "České dráhy",
+      "hint": "Zpoždění",
+      "similar": "RegioJet"
+    },
+    {
+      "word": "RegioJet",
+      "hint": "Žlutá",
+      "similar": "České dráhy"
+    },
+    {
+      "word": "Pendolino",
+      "hint": "Rychlost",
+      "similar": "RegioJet"
+    },
+    {
+      "word": "Česká televize",
+      "hint": "Poplatky",
+      "similar": "Nova"
+    },
+    {
+      "word": "Nova",
+      "hint": "Reklamy",
+      "similar": "Prima"
+    },
+    {
+      "word": "Prima",
+      "hint": "Vaření",
+      "similar": "Nova"
+    },
+    {
+      "word": "Zlatý slavík",
+      "hint": "Anketa",
+      "similar": "Český lev"
+    },
+    {
+      "word": "Český lev",
+      "hint": "Film",
+      "similar": "Zlatý slavík"
+    },
+    {
+      "word": "Sokol",
+      "hint": "Slet",
+      "similar": "Junák"
+    },
+    {
+      "word": "Junák",
+      "hint": "Tábor",
+      "similar": "Sokol"
+    },
+    {
+      "word": "Pionýr",
+      "hint": "Šátek",
+      "similar": "Junák"
+    },
+    {
+      "word": "Spartakiáda",
+      "hint": "Cvičení",
+      "similar": "Sokol"
+    },
+    {
+      "word": "Hymna",
+      "hint": "Zpěv",
+      "similar": "Vlajka"
+    },
+    {
+      "word": "Vlajka",
+      "hint": "Klín",
+      "similar": "Státní znak"
+    },
+    {
+      "word": "Státní znak",
+      "hint": "Lev",
+      "similar": "Vlajka"
+    },
+    {
+      "word": "Koruna",
+      "hint": "Mince",
+      "similar": "Euro"
+    },
+    {
+      "word": "Občanka",
+      "hint": "Peněženka",
+      "similar": "Řidičák"
+    },
+    {
+      "word": "Rodné číslo",
+      "hint": "Lomítko",
+      "similar": "Občanka"
+    },
+    {
+      "word": "Československo",
+      "hint": "Federace",
+      "similar": "Rakousko-Uhersko"
+    },
+    {
+      "word": "Rakousko-Uhersko",
+      "hint": "Monarchie",
+      "similar": "Československo"
+    },
+    {
+      "word": "Sametová revoluce",
+      "hint": "Klíče",
+      "similar": "Pražské jaro"
+    },
+    {
+      "word": "Pražské jaro",
+      "hint": "Tanky",
+      "similar": "Sametová revoluce"
+    },
+    {
+      "word": "Babička",
+      "hint": "Kniha",
+      "similar": "Kytice"
+    },
+    {
+      "word": "Kytice",
+      "hint": "Balady",
+      "similar": "Babička"
+    },
+    {
+      "word": "Švejk",
+      "hint": "Voják",
+      "similar": "Jára Cimrman"
+    },
+    {
+      "word": "Krakonoš",
+      "hint": "Hory",
+      "similar": "Vodník"
+    },
+    {
+      "word": "Vodník",
+      "hint": "Rybník",
+      "similar": "Krakonoš"
+    },
+    {
+      "word": "Golem",
+      "hint": "Rabín",
+      "similar": "Vodník"
+    },
+    {
+      "word": "Bílá paní",
+      "hint": "Hrad",
+      "similar": "Polednice"
+    },
+    {
+      "word": "Polednice",
+      "hint": "Balada",
+      "similar": "Bílá paní"
+    },
+    {
+      "word": "Svíčková se šlehačkou",
+      "hint": "Brusinky",
+      "similar": "Vepřo knedlo zelo"
+    }
+  ]
+}

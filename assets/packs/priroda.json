@@ -1,0 +1,347 @@
+{
+  "id": "priroda",
+  "name": "Příroda",
+  "emoji": "🌲",
+  "words": [
+    {
+      "word": "Les",
+      "hint": "Stromy",
+      "similar": "Park"
+    },
+    {
+      "word": "Louka",
+      "hint": "Tráva",
+      "similar": "Pole"
+    },
+    {
+      "word": "Pole",
+      "hint": "Obilí",
+      "similar": "Louka"
+    },
+    {
+      "word": "Hora",
+      "hint": "Vrchol",
+      "similar": "Kopec"
+    },
+    {
+      "word": "Kopec",
+      "hint": "Výhled",
+      "similar": "Hora"
+    },
+    {
+      "word": "Údolí",
+      "hint": "Svah",
+      "similar": "Rokle"
+    },
+    {
+      "word": "Řeka",
+      "hint": "Proud",
+      "similar": "Potok"
+    },
+    {
+      "word": "Potok",
+      "hint": "Kameny",
+      "similar": "Řeka"
+    },
+    {
+      "word": "Rybník",
+      "hint": "Kapři",
+      "similar": "Jezero"
+    },
+    {
+      "word": "Jezero",
+      "hint": "Koupání",
+      "similar": "Rybník"
+    },
+    {
+      "word": "Moře",
+      "hint": "Sůl",
+      "similar": "Oceán"
+    },
+    {
+      "word": "Oceán",
+      "hint": "Hloubka",
+      "similar": "Moře"
+    },
+    {
+      "word": "Vodopád",
+      "hint": "Hukot",
+      "similar": "Peřeje"
+    },
+    {
+      "word": "Pramen",
+      "hint": "Voda",
+      "similar": "Studánka"
+    },
+    {
+      "word": "Studánka",
+      "hint": "Les",
+      "similar": "Pramen"
+    },
+    {
+      "word": "Jeskyně",
+      "hint": "Krápníky",
+      "similar": "Propast"
+    },
+    {
+      "word": "Propast",
+      "hint": "Pád",
+      "similar": "Jeskyně"
+    },
+    {
+      "word": "Sopka",
+      "hint": "Láva",
+      "similar": "Gejzír"
+    },
+    {
+      "word": "Gejzír",
+      "hint": "Island",
+      "similar": "Sopka"
+    },
+    {
+      "word": "Poušť",
+      "hint": "Písek",
+      "similar": "Oáza"
+    },
+    {
+      "word": "Oáza",
+      "hint": "Palmy",
+      "similar": "Poušť"
+    },
+    {
+      "word": "Džungle",
+      "hint": "Liány",
+      "similar": "Savana"
+    },
+    {
+      "word": "Savana",
+      "hint": "Afrika",
+      "similar": "Step"
+    },
+    {
+      "word": "Ostrov",
+      "hint": "Moře",
+      "similar": "Poloostrov"
+    },
+    {
+      "word": "Pláž",
+      "hint": "Opalování",
+      "similar": "Útes"
+    },
+    {
+      "word": "Útes",
+      "hint": "Skála",
+      "similar": "Pláž"
+    },
+    {
+      "word": "Bažina",
+      "hint": "Bláto",
+      "similar": "Rašeliniště"
+    },
+    {
+      "word": "Ledovec",
+      "hint": "Grónsko",
+      "similar": "Kra"
+    },
+    {
+      "word": "Duha",
+      "hint": "Barvy",
+      "similar": "Polární záře"
+    },
+    {
+      "word": "Polární záře",
+      "hint": "Sever",
+      "similar": "Duha"
+    },
+    {
+      "word": "Bouřka",
+      "hint": "Hrom",
+      "similar": "Krupobití"
+    },
+    {
+      "word": "Blesk",
+      "hint": "Elektřina",
+      "similar": "Hrom"
+    },
+    {
+      "word": "Hrom",
+      "hint": "Rána",
+      "similar": "Blesk"
+    },
+    {
+      "word": "Mlha",
+      "hint": "Viditelnost",
+      "similar": "Rosa"
+    },
+    {
+      "word": "Rosa",
+      "hint": "Ráno",
+      "similar": "Jinovatka"
+    },
+    {
+      "word": "Jinovatka",
+      "hint": "Mráz",
+      "similar": "Rosa"
+    },
+    {
+      "word": "Sníh",
+      "hint": "Zima",
+      "similar": "Kroupy"
+    },
+    {
+      "word": "Kroupy",
+      "hint": "Led",
+      "similar": "Sníh"
+    },
+    {
+      "word": "Déšť",
+      "hint": "Kapky",
+      "similar": "Sníh"
+    },
+    {
+      "word": "Vítr",
+      "hint": "Foukání",
+      "similar": "Vichřice"
+    },
+    {
+      "word": "Tornádo",
+      "hint": "Vír",
+      "similar": "Hurikán"
+    },
+    {
+      "word": "Hurikán",
+      "hint": "Oceán",
+      "similar": "Tornádo"
+    },
+    {
+      "word": "Zemětřesení",
+      "hint": "Otřesy",
+      "similar": "Sopka"
+    },
+    {
+      "word": "Mrak",
+      "hint": "Nebe",
+      "similar": "Mlha"
+    },
+    {
+      "word": "Slunce",
+      "hint": "Teplo",
+      "similar": "Měsíc"
+    },
+    {
+      "word": "Měsíc",
+      "hint": "Noc",
+      "similar": "Hvězdy"
+    },
+    {
+      "word": "Hvězdy",
+      "hint": "Třpyt",
+      "similar": "Měsíc"
+    },
+    {
+      "word": "Západ slunce",
+      "hint": "Večer",
+      "similar": "Východ slunce"
+    },
+    {
+      "word": "Dub",
+      "hint": "Žaludy",
+      "similar": "Buk"
+    },
+    {
+      "word": "Buk",
+      "hint": "Kmen",
+      "similar": "Dub"
+    },
+    {
+      "word": "Bříza",
+      "hint": "Bílá",
+      "similar": "Lípa"
+    },
+    {
+      "word": "Lípa",
+      "hint": "Symbol",
+      "similar": "Dub"
+    },
+    {
+      "word": "Smrk",
+      "hint": "Jehličí",
+      "similar": "Borovice"
+    },
+    {
+      "word": "Borovice",
+      "hint": "Šiška",
+      "similar": "Smrk"
+    },
+    {
+      "word": "Kaštan",
+      "hint": "Podzim",
+      "similar": "Ořešák"
+    },
+    {
+      "word": "Jabloň",
+      "hint": "Zahrada",
+      "similar": "Hrušeň"
+    },
+    {
+      "word": "Kopřiva",
+      "hint": "Pálení",
+      "similar": "Bodlák"
+    },
+    {
+      "word": "Pampeliška",
+      "hint": "Chmýří",
+      "similar": "Sedmikráska"
+    },
+    {
+      "word": "Sedmikráska",
+      "hint": "Trávník",
+      "similar": "Pampeliška"
+    },
+    {
+      "word": "Sněženka",
+      "hint": "Jaro",
+      "similar": "Bledule"
+    },
+    {
+      "word": "Tulipán",
+      "hint": "Holandsko",
+      "similar": "Narcis"
+    },
+    {
+      "word": "Růže",
+      "hint": "Trny",
+      "similar": "Tulipán"
+    },
+    {
+      "word": "Slunečnice",
+      "hint": "Semínka",
+      "similar": "Řepka"
+    },
+    {
+      "word": "Mák",
+      "hint": "Červená",
+      "similar": "Chrpa"
+    },
+    {
+      "word": "Mech",
+      "hint": "Kámen",
+      "similar": "Kapradí"
+    },
+    {
+      "word": "Kapradí",
+      "hint": "Stín",
+      "similar": "Mech"
+    },
+    {
+      "word": "Houby",
+      "hint": "Košík",
+      "similar": "Borůvky"
+    },
+    {
+      "word": "Borůvky",
+      "hint": "Paseka",
+      "similar": "Maliny"
+    }
+  ]
+}

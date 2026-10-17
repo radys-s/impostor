@@ -1,0 +1,337 @@
+{
+  "id": "technologie",
+  "name": "Technologie",
+  "emoji": "💻",
+  "words": [
+    {
+      "word": "Mobil",
+      "hint": "Displej",
+      "similar": "Tablet"
+    },
+    {
+      "word": "Tablet",
+      "hint": "Dotyk",
+      "similar": "Notebook"
+    },
+    {
+      "word": "Notebook",
+      "hint": "Baterie",
+      "similar": "Stolní počítač"
+    },
+    {
+      "word": "Stolní počítač",
+      "hint": "Skříň",
+      "similar": "Notebook"
+    },
+    {
+      "word": "Monitor",
+      "hint": "Obrazovka",
+      "similar": "Televize"
+    },
+    {
+      "word": "Klávesnice",
+      "hint": "Psaní",
+      "similar": "Myš"
+    },
+    {
+      "word": "Myš",
+      "hint": "Kurzor",
+      "similar": "Touchpad"
+    },
+    {
+      "word": "Tiskárna",
+      "hint": "Papír",
+      "similar": "Skener"
+    },
+    {
+      "word": "Skener",
+      "hint": "Kopie",
+      "similar": "Tiskárna"
+    },
+    {
+      "word": "Router",
+      "hint": "Signál",
+      "similar": "Modem"
+    },
+    {
+      "word": "Wi-Fi",
+      "hint": "Heslo",
+      "similar": "Bluetooth"
+    },
+    {
+      "word": "Bluetooth",
+      "hint": "Párování",
+      "similar": "Wi-Fi"
+    },
+    {
+      "word": "Flashka",
+      "hint": "Data",
+      "similar": "Externí disk"
+    },
+    {
+      "word": "Externí disk",
+      "hint": "Záloha",
+      "similar": "Flashka"
+    },
+    {
+      "word": "Nabíječka",
+      "hint": "Kabel",
+      "similar": "Powerbanka"
+    },
+    {
+      "word": "Powerbanka",
+      "hint": "Cesty",
+      "similar": "Nabíječka"
+    },
+    {
+      "word": "Chytré hodinky",
+      "hint": "Kroky",
+      "similar": "Fitness náramek"
+    },
+    {
+      "word": "Fitness náramek",
+      "hint": "Sport",
+      "similar": "Chytré hodinky"
+    },
+    {
+      "word": "Herní konzole",
+      "hint": "Ovladač",
+      "similar": "Počítač"
+    },
+    {
+      "word": "Virtuální realita",
+      "hint": "Brýle",
+      "similar": "Herní konzole"
+    },
+    {
+      "word": "Dron",
+      "hint": "Vrtule",
+      "similar": "Akční kamera"
+    },
+    {
+      "word": "Akční kamera",
+      "hint": "Helma",
+      "similar": "Fotoaparát"
+    },
+    {
+      "word": "Fotoaparát",
+      "hint": "Objektiv",
+      "similar": "Akční kamera"
+    },
+    {
+      "word": "Selfie tyč",
+      "hint": "Turisti",
+      "similar": "Stativ"
+    },
+    {
+      "word": "Stativ",
+      "hint": "Nožičky",
+      "similar": "Selfie tyč"
+    },
+    {
+      "word": "Internet",
+      "hint": "Síť",
+      "similar": "Wi-Fi"
+    },
+    {
+      "word": "E-mail",
+      "hint": "Schránka",
+      "similar": "SMS"
+    },
+    {
+      "word": "SMS",
+      "hint": "Zpráva",
+      "similar": "E-mail"
+    },
+    {
+      "word": "Videohovor",
+      "hint": "Kamera",
+      "similar": "Telefonát"
+    },
+    {
+      "word": "Instagram",
+      "hint": "Fotky",
+      "similar": "TikTok"
+    },
+    {
+      "word": "TikTok",
+      "hint": "Videa",
+      "similar": "Instagram"
+    },
+    {
+      "word": "YouTube",
+      "hint": "Kanál",
+      "similar": "Netflix"
+    },
+    {
+      "word": "Netflix",
+      "hint": "Seriály",
+      "similar": "YouTube"
+    },
+    {
+      "word": "Facebook",
+      "hint": "Přátelé",
+      "similar": "Instagram"
+    },
+    {
+      "word": "WhatsApp",
+      "hint": "Zprávy",
+      "similar": "Messenger"
+    },
+    {
+      "word": "Google",
+      "hint": "Hledání",
+      "similar": "Wikipedie"
+    },
+    {
+      "word": "Wikipedie",
+      "hint": "Encyklopedie",
+      "similar": "Google"
+    },
+    {
+      "word": "Umělá inteligence",
+      "hint": "Algoritmy",
+      "similar": "Robot"
+    },
+    {
+      "word": "Robot",
+      "hint": "Kov",
+      "similar": "Umělá inteligence"
+    },
+    {
+      "word": "Robotický vysavač",
+      "hint": "Úklid",
+      "similar": "Robot"
+    },
+    {
+      "word": "Aplikace",
+      "hint": "Obchod",
+      "similar": "Program"
+    },
+    {
+      "word": "Heslo",
+      "hint": "Tajemství",
+      "similar": "PIN"
+    },
+    {
+      "word": "PIN",
+      "hint": "Číslice",
+      "similar": "Heslo"
+    },
+    {
+      "word": "Hacker",
+      "hint": "Útok",
+      "similar": "Programátor"
+    },
+    {
+      "word": "Virus",
+      "hint": "Nákaza",
+      "similar": "Spam"
+    },
+    {
+      "word": "Spam",
+      "hint": "Reklama",
+      "similar": "Virus"
+    },
+    {
+      "word": "Cloud",
+      "hint": "Úložiště",
+      "similar": "Externí disk"
+    },
+    {
+      "word": "QR kód",
+      "hint": "Skenování",
+      "similar": "Čárový kód"
+    },
+    {
+      "word": "Čárový kód",
+      "hint": "Pokladna",
+      "similar": "QR kód"
+    },
+    {
+      "word": "GPS",
+      "hint": "Satelit",
+      "similar": "Mapy"
+    },
+    {
+      "word": "Satelit",
+      "hint": "Orbita",
+      "similar": "GPS"
+    },
+    {
+      "word": "Elektromobil",
+      "hint": "Nabíjení",
+      "similar": "Hybrid"
+    },
+    {
+      "word": "3D tiskárna",
+      "hint": "Plast",
+      "similar": "Tiskárna"
+    },
+    {
+      "word": "Bitcoin",
+      "hint": "Těžba",
+      "similar": "Platební karta"
+    },
+    {
+      "word": "Platební karta",
+      "hint": "Terminál",
+      "similar": "Hotovost"
+    },
+    {
+      "word": "Bezkontaktní platba",
+      "hint": "Přiložení",
+      "similar": "Platební karta"
+    },
+    {
+      "word": "Chytrá domácnost",
+      "hint": "Ovládání",
+      "similar": "Chytrý reproduktor"
+    },
+    {
+      "word": "Chytrý reproduktor",
+      "hint": "Hlas",
+      "similar": "Chytrá domácnost"
+    },
+    {
+      "word": "Webkamera",
+      "hint": "Notebook",
+      "similar": "Mikrofon"
+    },
+    {
+      "word": "Software",
+      "hint": "Instalace",
+      "similar": "Hardware"
+    },
+    {
+      "word": "Hardware",
+      "hint": "Součástky",
+      "similar": "Software"
+    },
+    {
+      "word": "Procesor",
+      "hint": "Jádra",
+      "similar": "Grafická karta"
+    },
+    {
+      "word": "Grafická karta",
+      "hint": "Hry",
+      "similar": "Procesor"
+    },
+    {
+      "word": "Baterie",
+      "hint": "Kapacita",
+      "similar": "Powerbanka"
+    },
+    {
+      "word": "Aktualizace",
+      "hint": "Restart",
+      "similar": "Instalace"
+    },
+    {
+      "word": "Emoji",
+      "hint": "Smajlík",
+      "similar": "GIF"
+    }
+  ]
+}

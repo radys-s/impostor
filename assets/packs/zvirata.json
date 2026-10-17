@@ -1,0 +1,407 @@
+{
+  "id": "zvirata",
+  "name": "Zvířata",
+  "emoji": "🐾",
+  "words": [
+    {
+      "word": "Pes",
+      "hint": "Bouda",
+      "similar": "Kočka"
+    },
+    {
+      "word": "Kočka",
+      "hint": "Mazlíček",
+      "similar": "Pes"
+    },
+    {
+      "word": "Kůň",
+      "hint": "Stáj",
+      "similar": "Osel"
+    },
+    {
+      "word": "Osel",
+      "hint": "Tvrdohlavost",
+      "similar": "Kůň"
+    },
+    {
+      "word": "Kráva",
+      "hint": "Mléko",
+      "similar": "Koza"
+    },
+    {
+      "word": "Koza",
+      "hint": "Statek",
+      "similar": "Ovce"
+    },
+    {
+      "word": "Ovce",
+      "hint": "Vlna",
+      "similar": "Koza"
+    },
+    {
+      "word": "Prase",
+      "hint": "Bláto",
+      "similar": "Divočák"
+    },
+    {
+      "word": "Divočák",
+      "hint": "Les",
+      "similar": "Prase"
+    },
+    {
+      "word": "Slepice",
+      "hint": "Vejce",
+      "similar": "Kachna"
+    },
+    {
+      "word": "Kohout",
+      "hint": "Ráno",
+      "similar": "Slepice"
+    },
+    {
+      "word": "Kachna",
+      "hint": "Rybník",
+      "similar": "Husa"
+    },
+    {
+      "word": "Husa",
+      "hint": "Peří",
+      "similar": "Kachna"
+    },
+    {
+      "word": "Labuť",
+      "hint": "Elegance",
+      "similar": "Husa"
+    },
+    {
+      "word": "Králík",
+      "hint": "Mrkev",
+      "similar": "Zajíc"
+    },
+    {
+      "word": "Zajíc",
+      "hint": "Pole",
+      "similar": "Králík"
+    },
+    {
+      "word": "Křeček",
+      "hint": "Klec",
+      "similar": "Morče"
+    },
+    {
+      "word": "Morče",
+      "hint": "Hlodavec",
+      "similar": "Křeček"
+    },
+    {
+      "word": "Myš",
+      "hint": "Díra",
+      "similar": "Krysa"
+    },
+    {
+      "word": "Krysa",
+      "hint": "Kanál",
+      "similar": "Myš"
+    },
+    {
+      "word": "Veverka",
+      "hint": "Strom",
+      "similar": "Kuna"
+    },
+    {
+      "word": "Ježek",
+      "hint": "Podzim",
+      "similar": "Krtek"
+    },
+    {
+      "word": "Krtek",
+      "hint": "Zahrada",
+      "similar": "Ježek"
+    },
+    {
+      "word": "Liška",
+      "hint": "Lstivost",
+      "similar": "Vlk"
+    },
+    {
+      "word": "Vlk",
+      "hint": "Smečka",
+      "similar": "Liška"
+    },
+    {
+      "word": "Medvěd",
+      "hint": "Brloh",
+      "similar": "Vlk"
+    },
+    {
+      "word": "Jelen",
+      "hint": "Paroží",
+      "similar": "Srnka"
+    },
+    {
+      "word": "Srnka",
+      "hint": "Louka",
+      "similar": "Jelen"
+    },
+    {
+      "word": "Los",
+      "hint": "Skandinávie",
+      "similar": "Jelen"
+    },
+    {
+      "word": "Lev",
+      "hint": "Savana",
+      "similar": "Tygr"
+    },
+    {
+      "word": "Tygr",
+      "hint": "Pruhy",
+      "similar": "Lev"
+    },
+    {
+      "word": "Gepard",
+      "hint": "Rychlost",
+      "similar": "Levhart"
+    },
+    {
+      "word": "Levhart",
+      "hint": "Skvrny",
+      "similar": "Gepard"
+    },
+    {
+      "word": "Slon",
+      "hint": "Afrika",
+      "similar": "Nosorožec"
+    },
+    {
+      "word": "Nosorožec",
+      "hint": "Roh",
+      "similar": "Hroch"
+    },
+    {
+      "word": "Hroch",
+      "hint": "Řeka",
+      "similar": "Nosorožec"
+    },
+    {
+      "word": "Žirafa",
+      "hint": "Výška",
+      "similar": "Zebra"
+    },
+    {
+      "word": "Zebra",
+      "hint": "Savana",
+      "similar": "Kůň"
+    },
+    {
+      "word": "Opice",
+      "hint": "Banány",
+      "similar": "Gorila"
+    },
+    {
+      "word": "Gorila",
+      "hint": "Džungle",
+      "similar": "Šimpanz"
+    },
+    {
+      "word": "Klokan",
+      "hint": "Austrálie",
+      "similar": "Koala"
+    },
+    {
+      "word": "Koala",
+      "hint": "Eukalyptus",
+      "similar": "Lenochod"
+    },
+    {
+      "word": "Lenochod",
+      "hint": "Pomalost",
+      "similar": "Koala"
+    },
+    {
+      "word": "Panda",
+      "hint": "Bambus",
+      "similar": "Medvěd"
+    },
+    {
+      "word": "Lední medvěd",
+      "hint": "Arktida",
+      "similar": "Tučňák"
+    },
+    {
+      "word": "Tučňák",
+      "hint": "Antarktida",
+      "similar": "Lední medvěd"
+    },
+    {
+      "word": "Tuleň",
+      "hint": "Led",
+      "similar": "Mrož"
+    },
+    {
+      "word": "Mrož",
+      "hint": "Kly",
+      "similar": "Tuleň"
+    },
+    {
+      "word": "Delfín",
+      "hint": "Moře",
+      "similar": "Velryba"
+    },
+    {
+      "word": "Velryba",
+      "hint": "Oceán",
+      "similar": "Delfín"
+    },
+    {
+      "word": "Žralok",
+      "hint": "Zuby",
+      "similar": "Delfín"
+    },
+    {
+      "word": "Chobotnice",
+      "hint": "Chapadla",
+      "similar": "Medúza"
+    },
+    {
+      "word": "Medúza",
+      "hint": "Pláž",
+      "similar": "Chobotnice"
+    },
+    {
+      "word": "Krab",
+      "hint": "Klepeta",
+      "similar": "Humr"
+    },
+    {
+      "word": "Želva",
+      "hint": "Krunýř",
+      "similar": "Šnek"
+    },
+    {
+      "word": "Šnek",
+      "hint": "Ulita",
+      "similar": "Slimák"
+    },
+    {
+      "word": "Žába",
+      "hint": "Rybník",
+      "similar": "Ropucha"
+    },
+    {
+      "word": "Had",
+      "hint": "Jed",
+      "similar": "Ještěrka"
+    },
+    {
+      "word": "Krokodýl",
+      "hint": "Bažina",
+      "similar": "Aligátor"
+    },
+    {
+      "word": "Ještěrka",
+      "hint": "Slunce",
+      "similar": "Had"
+    },
+    {
+      "word": "Orel",
+      "hint": "Výška",
+      "similar": "Sokol"
+    },
+    {
+      "word": "Sova",
+      "hint": "Noc",
+      "similar": "Výr"
+    },
+    {
+      "word": "Papoušek",
+      "hint": "Barvy",
+      "similar": "Andulka"
+    },
+    {
+      "word": "Holub",
+      "hint": "Náměstí",
+      "similar": "Vrabec"
+    },
+    {
+      "word": "Vrabec",
+      "hint": "Drobky",
+      "similar": "Sýkorka"
+    },
+    {
+      "word": "Čáp",
+      "hint": "Komín",
+      "similar": "Volavka"
+    },
+    {
+      "word": "Pštros",
+      "hint": "Písek",
+      "similar": "Emu"
+    },
+    {
+      "word": "Plameňák",
+      "hint": "Růžová",
+      "similar": "Pštros"
+    },
+    {
+      "word": "Netopýr",
+      "hint": "Jeskyně",
+      "similar": "Sova"
+    },
+    {
+      "word": "Včela",
+      "hint": "Úl",
+      "similar": "Vosa"
+    },
+    {
+      "word": "Mravenec",
+      "hint": "Jehličí",
+      "similar": "Brouk"
+    },
+    {
+      "word": "Motýl",
+      "hint": "Louka",
+      "similar": "Můra"
+    },
+    {
+      "word": "Pavouk",
+      "hint": "Síť",
+      "similar": "Štír"
+    },
+    {
+      "word": "Beruška",
+      "hint": "Štěstí",
+      "similar": "Motýl"
+    },
+    {
+      "word": "Komár",
+      "hint": "Léto",
+      "similar": "Moucha"
+    },
+    {
+      "word": "Moucha",
+      "hint": "Kuchyň",
+      "similar": "Komár"
+    },
+    {
+      "word": "Velbloud",
+      "hint": "Poušť",
+      "similar": "Lama"
+    },
+    {
+      "word": "Lama",
+      "hint": "Andy",
+      "similar": "Velbloud"
+    },
+    {
+      "word": "Bobr",
+      "hint": "Hráz",
+      "similar": "Vydra"
+    },
+    {
+      "word": "Vydra",
+      "hint": "Řeka",
+      "similar": "Bobr"
+    }
+  ]
+}

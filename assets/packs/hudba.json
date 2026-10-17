@@ -1,0 +1,347 @@
+{
+  "id": "hudba",
+  "name": "Hudba",
+  "emoji": "🎵",
+  "words": [
+    {
+      "word": "Kytara",
+      "hint": "Táborák",
+      "similar": "Ukulele"
+    },
+    {
+      "word": "Elektrická kytara",
+      "hint": "Zesilovač",
+      "similar": "Baskytara"
+    },
+    {
+      "word": "Baskytara",
+      "hint": "Rytmus",
+      "similar": "Kytara"
+    },
+    {
+      "word": "Klavír",
+      "hint": "Pedál",
+      "similar": "Varhany"
+    },
+    {
+      "word": "Varhany",
+      "hint": "Kostel",
+      "similar": "Klavír"
+    },
+    {
+      "word": "Housle",
+      "hint": "Orchestr",
+      "similar": "Violoncello"
+    },
+    {
+      "word": "Violoncello",
+      "hint": "Smyčec",
+      "similar": "Housle"
+    },
+    {
+      "word": "Kontrabas",
+      "hint": "Jazz",
+      "similar": "Violoncello"
+    },
+    {
+      "word": "Bicí",
+      "hint": "Činely",
+      "similar": "Buben"
+    },
+    {
+      "word": "Buben",
+      "hint": "Pochod",
+      "similar": "Bicí"
+    },
+    {
+      "word": "Flétna",
+      "hint": "Dech",
+      "similar": "Klarinet"
+    },
+    {
+      "word": "Klarinet",
+      "hint": "Plátek",
+      "similar": "Saxofon"
+    },
+    {
+      "word": "Saxofon",
+      "hint": "Jazz",
+      "similar": "Trubka"
+    },
+    {
+      "word": "Trubka",
+      "hint": "Fanfára",
+      "similar": "Pozoun"
+    },
+    {
+      "word": "Pozoun",
+      "hint": "Šoupátko",
+      "similar": "Trubka"
+    },
+    {
+      "word": "Akordeon",
+      "hint": "Měchy",
+      "similar": "Dudy"
+    },
+    {
+      "word": "Dudy",
+      "hint": "Skotsko",
+      "similar": "Akordeon"
+    },
+    {
+      "word": "Foukací harmonika",
+      "hint": "Blues",
+      "similar": "Akordeon"
+    },
+    {
+      "word": "Ukulele",
+      "hint": "Havaj",
+      "similar": "Kytara"
+    },
+    {
+      "word": "Harfa",
+      "hint": "Andělé",
+      "similar": "Lyra"
+    },
+    {
+      "word": "Triangl",
+      "hint": "Kov",
+      "similar": "Činely"
+    },
+    {
+      "word": "Činely",
+      "hint": "Bubeník",
+      "similar": "Triangl"
+    },
+    {
+      "word": "Xylofon",
+      "hint": "Destičky",
+      "similar": "Zvonkohra"
+    },
+    {
+      "word": "Zvonkohra",
+      "hint": "Vánoce",
+      "similar": "Xylofon"
+    },
+    {
+      "word": "Mikrofon",
+      "hint": "Pódium",
+      "similar": "Reproduktor"
+    },
+    {
+      "word": "Reproduktor",
+      "hint": "Hlasitost",
+      "similar": "Sluchátka"
+    },
+    {
+      "word": "Sluchátka",
+      "hint": "Uši",
+      "similar": "Reproduktor"
+    },
+    {
+      "word": "Gramofon",
+      "hint": "Vinyl",
+      "similar": "Rádio"
+    },
+    {
+      "word": "Rádio",
+      "hint": "Vlny",
+      "similar": "Gramofon"
+    },
+    {
+      "word": "Rock",
+      "hint": "Kytary",
+      "similar": "Metal"
+    },
+    {
+      "word": "Metal",
+      "hint": "Hlučnost",
+      "similar": "Rock"
+    },
+    {
+      "word": "Punk",
+      "hint": "Číro",
+      "similar": "Rock"
+    },
+    {
+      "word": "Jazz",
+      "hint": "Improvizace",
+      "similar": "Blues"
+    },
+    {
+      "word": "Blues",
+      "hint": "Smutek",
+      "similar": "Jazz"
+    },
+    {
+      "word": "Rap",
+      "hint": "Rýmy",
+      "similar": "Beatbox"
+    },
+    {
+      "word": "Pop",
+      "hint": "Hitparáda",
+      "similar": "Disco"
+    },
+    {
+      "word": "Disco",
+      "hint": "Třpytky",
+      "similar": "Pop"
+    },
+    {
+      "word": "Techno",
+      "hint": "Rave",
+      "similar": "Dubstep"
+    },
+    {
+      "word": "Country",
+      "hint": "Kovbojové",
+      "similar": "Folk"
+    },
+    {
+      "word": "Folk",
+      "hint": "Táborák",
+      "similar": "Country"
+    },
+    {
+      "word": "Opera",
+      "hint": "Árie",
+      "similar": "Opereta"
+    },
+    {
+      "word": "Opereta",
+      "hint": "Divadlo",
+      "similar": "Opera"
+    },
+    {
+      "word": "Muzikál",
+      "hint": "Broadway",
+      "similar": "Opera"
+    },
+    {
+      "word": "Reggae",
+      "hint": "Jamajka",
+      "similar": "Ska"
+    },
+    {
+      "word": "Vážná hudba",
+      "hint": "Filharmonie",
+      "similar": "Jazz"
+    },
+    {
+      "word": "Dechovka",
+      "hint": "Posvícení",
+      "similar": "Country"
+    },
+    {
+      "word": "Orchestr",
+      "hint": "Frak",
+      "similar": "Kapela"
+    },
+    {
+      "word": "Kapela",
+      "hint": "Zkušebna",
+      "similar": "Orchestr"
+    },
+    {
+      "word": "Sbor",
+      "hint": "Hlasy",
+      "similar": "Kapela"
+    },
+    {
+      "word": "Dirigent",
+      "hint": "Taktovka",
+      "similar": "Skladatel"
+    },
+    {
+      "word": "Skladatel",
+      "hint": "Noty",
+      "similar": "Textař"
+    },
+    {
+      "word": "Noty",
+      "hint": "Osnova",
+      "similar": "Akordy"
+    },
+    {
+      "word": "Akord",
+      "hint": "Harmonie",
+      "similar": "Melodie"
+    },
+    {
+      "word": "Melodie",
+      "hint": "Pískání",
+      "similar": "Rytmus"
+    },
+    {
+      "word": "Rytmus",
+      "hint": "Tleskání",
+      "similar": "Tempo"
+    },
+    {
+      "word": "Refrén",
+      "hint": "Opakování",
+      "similar": "Sloka"
+    },
+    {
+      "word": "Sloka",
+      "hint": "Text",
+      "similar": "Refrén"
+    },
+    {
+      "word": "Karaoke",
+      "hint": "Bar",
+      "similar": "Koncert"
+    },
+    {
+      "word": "Koncert",
+      "hint": "Vstupenky",
+      "similar": "Festival"
+    },
+    {
+      "word": "Festival",
+      "hint": "Stany",
+      "similar": "Koncert"
+    },
+    {
+      "word": "Duet",
+      "hint": "Dvojice",
+      "similar": "Sbor"
+    },
+    {
+      "word": "Ladička",
+      "hint": "Tón",
+      "similar": "Metronom"
+    },
+    {
+      "word": "Metronom",
+      "hint": "Tikání",
+      "similar": "Ladička"
+    },
+    {
+      "word": "DJ",
+      "hint": "Mixpult",
+      "similar": "Producent"
+    },
+    {
+      "word": "Playlist",
+      "hint": "Seznam",
+      "similar": "Album"
+    },
+    {
+      "word": "Album",
+      "hint": "Obal",
+      "similar": "Singl"
+    },
+    {
+      "word": "Videoklip",
+      "hint": "Televize",
+      "similar": "Koncert"
+    },
+    {
+      "word": "Eurovize",
+      "hint": "Soutěž",
+      "similar": "SuperStar"
+    }
+  ]
+}

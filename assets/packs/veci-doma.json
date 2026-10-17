@@ -1,0 +1,352 @@
+{
+  "id": "veci-doma",
+  "name": "Věci doma",
+  "emoji": "🏠",
+  "words": [
+    {
+      "word": "Gauč",
+      "hint": "Obývák",
+      "similar": "Křeslo"
+    },
+    {
+      "word": "Křeslo",
+      "hint": "Opěrky",
+      "similar": "Gauč"
+    },
+    {
+      "word": "Postel",
+      "hint": "Ložnice",
+      "similar": "Matrace"
+    },
+    {
+      "word": "Matrace",
+      "hint": "Pružiny",
+      "similar": "Postel"
+    },
+    {
+      "word": "Polštář",
+      "hint": "Spánek",
+      "similar": "Peřina"
+    },
+    {
+      "word": "Peřina",
+      "hint": "Povlečení",
+      "similar": "Deka"
+    },
+    {
+      "word": "Deka",
+      "hint": "Teplo",
+      "similar": "Peřina"
+    },
+    {
+      "word": "Stůl",
+      "hint": "Nohy",
+      "similar": "Židle"
+    },
+    {
+      "word": "Židle",
+      "hint": "Opěradlo",
+      "similar": "Stolička"
+    },
+    {
+      "word": "Skříň",
+      "hint": "Ramínka",
+      "similar": "Komoda"
+    },
+    {
+      "word": "Komoda",
+      "hint": "Šuplíky",
+      "similar": "Skříň"
+    },
+    {
+      "word": "Knihovna",
+      "hint": "Police",
+      "similar": "Komoda"
+    },
+    {
+      "word": "Zrcadlo",
+      "hint": "Odraz",
+      "similar": "Obraz"
+    },
+    {
+      "word": "Obraz",
+      "hint": "Zeď",
+      "similar": "Plakát"
+    },
+    {
+      "word": "Hodiny",
+      "hint": "Čas",
+      "similar": "Budík"
+    },
+    {
+      "word": "Budík",
+      "hint": "Ráno",
+      "similar": "Hodiny"
+    },
+    {
+      "word": "Lampa",
+      "hint": "Stínidlo",
+      "similar": "Lustr"
+    },
+    {
+      "word": "Lustr",
+      "hint": "Strop",
+      "similar": "Lampa"
+    },
+    {
+      "word": "Televize",
+      "hint": "Obrazovka",
+      "similar": "Rádio"
+    },
+    {
+      "word": "Ovladač",
+      "hint": "Tlačítka",
+      "similar": "Mobil"
+    },
+    {
+      "word": "Koberec",
+      "hint": "Podlaha",
+      "similar": "Rohožka"
+    },
+    {
+      "word": "Rohožka",
+      "hint": "Dveře",
+      "similar": "Koberec"
+    },
+    {
+      "word": "Záclona",
+      "hint": "Okno",
+      "similar": "Závěs"
+    },
+    {
+      "word": "Závěs",
+      "hint": "Tma",
+      "similar": "Žaluzie"
+    },
+    {
+      "word": "Žaluzie",
+      "hint": "Lamely",
+      "similar": "Záclona"
+    },
+    {
+      "word": "Radiátor",
+      "hint": "Zima",
+      "similar": "Krb"
+    },
+    {
+      "word": "Krb",
+      "hint": "Polena",
+      "similar": "Kamna"
+    },
+    {
+      "word": "Vysavač",
+      "hint": "Prach",
+      "similar": "Mop"
+    },
+    {
+      "word": "Mop",
+      "hint": "Kbelík",
+      "similar": "Smeták"
+    },
+    {
+      "word": "Smeták",
+      "hint": "Lopatka",
+      "similar": "Vysavač"
+    },
+    {
+      "word": "Pračka",
+      "hint": "Prádlo",
+      "similar": "Sušička"
+    },
+    {
+      "word": "Sušička",
+      "hint": "Buben",
+      "similar": "Pračka"
+    },
+    {
+      "word": "Žehlička",
+      "hint": "Košile",
+      "similar": "Žehlicí prkno"
+    },
+    {
+      "word": "Sušák",
+      "hint": "Kolíčky",
+      "similar": "Sušička"
+    },
+    {
+      "word": "Ramínko",
+      "hint": "Skříň",
+      "similar": "Věšák"
+    },
+    {
+      "word": "Věšák",
+      "hint": "Kabáty",
+      "similar": "Ramínko"
+    },
+    {
+      "word": "Botník",
+      "hint": "Předsíň",
+      "similar": "Věšák"
+    },
+    {
+      "word": "Deštník",
+      "hint": "Mokro",
+      "similar": "Pláštěnka"
+    },
+    {
+      "word": "Klíče",
+      "hint": "Kapsa",
+      "similar": "Zámek"
+    },
+    {
+      "word": "Zásuvka",
+      "hint": "Elektřina",
+      "similar": "Prodlužovačka"
+    },
+    {
+      "word": "Prodlužovačka",
+      "hint": "Kabel",
+      "similar": "Zásuvka"
+    },
+    {
+      "word": "Vypínač",
+      "hint": "Světlo",
+      "similar": "Zásuvka"
+    },
+    {
+      "word": "Žárovka",
+      "hint": "Objímka",
+      "similar": "Zářivka"
+    },
+    {
+      "word": "Vana",
+      "hint": "Pěna",
+      "similar": "Sprcha"
+    },
+    {
+      "word": "Sprcha",
+      "hint": "Kabina",
+      "similar": "Vana"
+    },
+    {
+      "word": "Umyvadlo",
+      "hint": "Kohoutek",
+      "similar": "Dřez"
+    },
+    {
+      "word": "Záchod",
+      "hint": "Splachování",
+      "similar": "Pisoár"
+    },
+    {
+      "word": "Toaletní papír",
+      "hint": "Role",
+      "similar": "Kapesníky"
+    },
+    {
+      "word": "Ručník",
+      "hint": "Utírání",
+      "similar": "Osuška"
+    },
+    {
+      "word": "Kartáček na zuby",
+      "hint": "Pasta",
+      "similar": "Zubní nit"
+    },
+    {
+      "word": "Hřeben",
+      "hint": "Vlasy",
+      "similar": "Kartáč"
+    },
+    {
+      "word": "Fén",
+      "hint": "Foukání",
+      "similar": "Kulma"
+    },
+    {
+      "word": "Mýdlo",
+      "hint": "Ruce",
+      "similar": "Sprchový gel"
+    },
+    {
+      "word": "Odpadkový koš",
+      "hint": "Smetí",
+      "similar": "Popelnice"
+    },
+    {
+      "word": "Popelnice",
+      "hint": "Třídění",
+      "similar": "Odpadkový koš"
+    },
+    {
+      "word": "Květináč",
+      "hint": "Hlína",
+      "similar": "Váza"
+    },
+    {
+      "word": "Váza",
+      "hint": "Květiny",
+      "similar": "Květináč"
+    },
+    {
+      "word": "Svíčka",
+      "hint": "Plamen",
+      "similar": "Lucerna"
+    },
+    {
+      "word": "Rámeček",
+      "hint": "Fotka",
+      "similar": "Obraz"
+    },
+    {
+      "word": "Polička",
+      "hint": "Zeď",
+      "similar": "Knihovna"
+    },
+    {
+      "word": "Kalendář",
+      "hint": "Měsíce",
+      "similar": "Diář"
+    },
+    {
+      "word": "Zvonek",
+      "hint": "Návštěva",
+      "similar": "Klepadlo"
+    },
+    {
+      "word": "Poštovní schránka",
+      "hint": "Dopisy",
+      "similar": "Zvonek"
+    },
+    {
+      "word": "Dveře",
+      "hint": "Klika",
+      "similar": "Okno"
+    },
+    {
+      "word": "Okno",
+      "hint": "Výhled",
+      "similar": "Dveře"
+    },
+    {
+      "word": "Schody",
+      "hint": "Patro",
+      "similar": "Výtah"
+    },
+    {
+      "word": "Půda",
+      "hint": "Krabice",
+      "similar": "Sklep"
+    },
+    {
+      "word": "Sklep",
+      "hint": "Tma",
+      "similar": "Půda"
+    },
+    {
+      "word": "Balkon",
+      "hint": "Kytky",
+      "similar": "Terasa"
+    }
+  ]
+}

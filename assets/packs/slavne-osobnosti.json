@@ -1,0 +1,377 @@
+{
+  "id": "slavne-osobnosti",
+  "name": "Slavné osobnosti",
+  "emoji": "⭐",
+  "words": [
+    {
+      "word": "Karel IV.",
+      "hint": "Most",
+      "similar": "Svatý Václav"
+    },
+    {
+      "word": "Svatý Václav",
+      "hint": "Kůň",
+      "similar": "Karel IV."
+    },
+    {
+      "word": "Jan Hus",
+      "hint": "Kostnice",
+      "similar": "Jan Žižka"
+    },
+    {
+      "word": "Jan Žižka",
+      "hint": "Husité",
+      "similar": "Jan Hus"
+    },
+    {
+      "word": "Jan Amos Komenský",
+      "hint": "Pedagog",
+      "similar": "Jan Hus"
+    },
+    {
+      "word": "T. G. Masaryk",
+      "hint": "Prezident",
+      "similar": "Václav Havel"
+    },
+    {
+      "word": "Václav Havel",
+      "hint": "Dramatik",
+      "similar": "T. G. Masaryk"
+    },
+    {
+      "word": "Božena Němcová",
+      "hint": "Babička",
+      "similar": "Karel Jaromír Erben"
+    },
+    {
+      "word": "Karel Čapek",
+      "hint": "Robot",
+      "similar": "Jaroslav Hašek"
+    },
+    {
+      "word": "Jaroslav Hašek",
+      "hint": "Švejk",
+      "similar": "Karel Čapek"
+    },
+    {
+      "word": "Franz Kafka",
+      "hint": "Proměna",
+      "similar": "Karel Čapek"
+    },
+    {
+      "word": "Bedřich Smetana",
+      "hint": "Skladatel",
+      "similar": "Antonín Dvořák"
+    },
+    {
+      "word": "Antonín Dvořák",
+      "hint": "Symfonie",
+      "similar": "Bedřich Smetana"
+    },
+    {
+      "word": "Alfons Mucha",
+      "hint": "Secese",
+      "similar": "Josef Lada"
+    },
+    {
+      "word": "Josef Lada",
+      "hint": "Ilustrace",
+      "similar": "Alfons Mucha"
+    },
+    {
+      "word": "Emil Zátopek",
+      "hint": "Běh",
+      "similar": "Usain Bolt"
+    },
+    {
+      "word": "Jaromír Jágr",
+      "hint": "Hokej",
+      "similar": "Dominik Hašek"
+    },
+    {
+      "word": "Dominik Hašek",
+      "hint": "Brankář",
+      "similar": "Jaromír Jágr"
+    },
+    {
+      "word": "Martina Navrátilová",
+      "hint": "Tenis",
+      "similar": "Petra Kvitová"
+    },
+    {
+      "word": "Petra Kvitová",
+      "hint": "Wimbledon",
+      "similar": "Martina Navrátilová"
+    },
+    {
+      "word": "Věra Čáslavská",
+      "hint": "Gymnastika",
+      "similar": "Emil Zátopek"
+    },
+    {
+      "word": "Karel Gott",
+      "hint": "Slavík",
+      "similar": "Helena Vondráčková"
+    },
+    {
+      "word": "Helena Vondráčková",
+      "hint": "Zpěvačka",
+      "similar": "Karel Gott"
+    },
+    {
+      "word": "Lucie Bílá",
+      "hint": "Muzikál",
+      "similar": "Helena Vondráčková"
+    },
+    {
+      "word": "Jan Werich",
+      "hint": "Divadlo",
+      "similar": "Vlasta Burian"
+    },
+    {
+      "word": "Vlasta Burian",
+      "hint": "Komik",
+      "similar": "Jan Werich"
+    },
+    {
+      "word": "Miloš Forman",
+      "hint": "Režisér",
+      "similar": "Jiří Menzel"
+    },
+    {
+      "word": "Jiří Menzel",
+      "hint": "Vlaky",
+      "similar": "Miloš Forman"
+    },
+    {
+      "word": "Zdeněk Svěrák",
+      "hint": "Scénář",
+      "similar": "Ladislav Smoljak"
+    },
+    {
+      "word": "Jára Cimrman",
+      "hint": "Génius",
+      "similar": "Zdeněk Svěrák"
+    },
+    {
+      "word": "Albert Einstein",
+      "hint": "Relativita",
+      "similar": "Isaac Newton"
+    },
+    {
+      "word": "Isaac Newton",
+      "hint": "Jablko",
+      "similar": "Albert Einstein"
+    },
+    {
+      "word": "Marie Curie",
+      "hint": "Radioaktivita",
+      "similar": "Nikola Tesla"
+    },
+    {
+      "word": "Nikola Tesla",
+      "hint": "Elektřina",
+      "similar": "Thomas Edison"
+    },
+    {
+      "word": "Thomas Edison",
+      "hint": "Žárovka",
+      "similar": "Nikola Tesla"
+    },
+    {
+      "word": "Leonardo da Vinci",
+      "hint": "Renesance",
+      "similar": "Michelangelo"
+    },
+    {
+      "word": "Michelangelo",
+      "hint": "Strop",
+      "similar": "Leonardo da Vinci"
+    },
+    {
+      "word": "Vincent van Gogh",
+      "hint": "Ucho",
+      "similar": "Pablo Picasso"
+    },
+    {
+      "word": "Pablo Picasso",
+      "hint": "Kubismus",
+      "similar": "Vincent van Gogh"
+    },
+    {
+      "word": "Wolfgang Amadeus Mozart",
+      "hint": "Rekviem",
+      "similar": "Ludwig van Beethoven"
+    },
+    {
+      "word": "Ludwig van Beethoven",
+      "hint": "Hluchota",
+      "similar": "Wolfgang Amadeus Mozart"
+    },
+    {
+      "word": "William Shakespeare",
+      "hint": "Drama",
+      "similar": "Charles Dickens"
+    },
+    {
+      "word": "Napoleon",
+      "hint": "Císař",
+      "similar": "Julius Caesar"
+    },
+    {
+      "word": "Julius Caesar",
+      "hint": "Řím",
+      "similar": "Napoleon"
+    },
+    {
+      "word": "Kleopatra",
+      "hint": "Egypt",
+      "similar": "Nefertiti"
+    },
+    {
+      "word": "Kryštof Kolumbus",
+      "hint": "Objevitel",
+      "similar": "Marco Polo"
+    },
+    {
+      "word": "Marco Polo",
+      "hint": "Hedvábí",
+      "similar": "Kryštof Kolumbus"
+    },
+    {
+      "word": "Neil Armstrong",
+      "hint": "Měsíc",
+      "similar": "Jurij Gagarin"
+    },
+    {
+      "word": "Jurij Gagarin",
+      "hint": "Vesmír",
+      "similar": "Neil Armstrong"
+    },
+    {
+      "word": "Elvis Presley",
+      "hint": "Rokenrol",
+      "similar": "Michael Jackson"
+    },
+    {
+      "word": "Michael Jackson",
+      "hint": "Pop",
+      "similar": "Elvis Presley"
+    },
+    {
+      "word": "Freddie Mercury",
+      "hint": "Kapela",
+      "similar": "David Bowie"
+    },
+    {
+      "word": "Madonna",
+      "hint": "Zpěvačka",
+      "similar": "Lady Gaga"
+    },
+    {
+      "word": "Lady Gaga",
+      "hint": "Kostýmy",
+      "similar": "Madonna"
+    },
+    {
+      "word": "Charlie Chaplin",
+      "hint": "Klobouk",
+      "similar": "Vlasta Burian"
+    },
+    {
+      "word": "Marilyn Monroe",
+      "hint": "Blondýna",
+      "similar": "Audrey Hepburn"
+    },
+    {
+      "word": "Audrey Hepburn",
+      "hint": "Elegance",
+      "similar": "Marilyn Monroe"
+    },
+    {
+      "word": "Steve Jobs",
+      "hint": "Garáž",
+      "similar": "Bill Gates"
+    },
+    {
+      "word": "Bill Gates",
+      "hint": "Miliardář",
+      "similar": "Steve Jobs"
+    },
+    {
+      "word": "Elon Musk",
+      "hint": "Rakety",
+      "similar": "Jeff Bezos"
+    },
+    {
+      "word": "Mahátma Gándhí",
+      "hint": "Nenásilí",
+      "similar": "Martin Luther King"
+    },
+    {
+      "word": "Martin Luther King",
+      "hint": "Sen",
+      "similar": "Nelson Mandela"
+    },
+    {
+      "word": "Nelson Mandela",
+      "hint": "Vězení",
+      "similar": "Mahátma Gándhí"
+    },
+    {
+      "word": "Matka Tereza",
+      "hint": "Charita",
+      "similar": "Jan Pavel II."
+    },
+    {
+      "word": "Jan Pavel II.",
+      "hint": "Papež",
+      "similar": "Matka Tereza"
+    },
+    {
+      "word": "Cristiano Ronaldo",
+      "hint": "Fotbal",
+      "similar": "Lionel Messi"
+    },
+    {
+      "word": "Lionel Messi",
+      "hint": "Argentina",
+      "similar": "Cristiano Ronaldo"
+    },
+    {
+      "word": "Michael Jordan",
+      "hint": "Basketbal",
+      "similar": "LeBron James"
+    },
+    {
+      "word": "Usain Bolt",
+      "hint": "Sprint",
+      "similar": "Emil Zátopek"
+    },
+    {
+      "word": "Roger Federer",
+      "hint": "Tenis",
+      "similar": "Rafael Nadal"
+    },
+    {
+      "word": "Rafael Nadal",
+      "hint": "Antuka",
+      "similar": "Roger Federer"
+    },
+    {
+      "word": "Sigmund Freud",
+      "hint": "Psychoanalýza",
+      "similar": "Carl Gustav Jung"
+    },
+    {
+      "word": "Charles Darwin",
+      "hint": "Evoluce",
+      "similar": "Gregor Mendel"
+    },
+    {
+      "word": "Gregor Mendel",
+      "hint": "Hrách",
+      "similar": "Charles Darwin"
+    }
+  ]
+}

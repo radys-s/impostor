@@ -1,0 +1,337 @@
+{
+  "id": "doprava",
+  "name": "Doprava",
+  "emoji": "🚗",
+  "words": [
+    {
+      "word": "Auto",
+      "hint": "Volant",
+      "similar": "Motorka"
+    },
+    {
+      "word": "Motorka",
+      "hint": "Helma",
+      "similar": "Skútr"
+    },
+    {
+      "word": "Skútr",
+      "hint": "Město",
+      "similar": "Motorka"
+    },
+    {
+      "word": "Kolo",
+      "hint": "Pedály",
+      "similar": "Koloběžka"
+    },
+    {
+      "word": "Koloběžka",
+      "hint": "Chodník",
+      "similar": "Kolo"
+    },
+    {
+      "word": "Autobus",
+      "hint": "Zastávka",
+      "similar": "Trolejbus"
+    },
+    {
+      "word": "Trolejbus",
+      "hint": "Dráty",
+      "similar": "Tramvaj"
+    },
+    {
+      "word": "Tramvaj",
+      "hint": "Koleje",
+      "similar": "Trolejbus"
+    },
+    {
+      "word": "Metro",
+      "hint": "Podzemí",
+      "similar": "Tramvaj"
+    },
+    {
+      "word": "Vlak",
+      "hint": "Nádraží",
+      "similar": "Metro"
+    },
+    {
+      "word": "Lokomotiva",
+      "hint": "Vagóny",
+      "similar": "Vlak"
+    },
+    {
+      "word": "Lanovka",
+      "hint": "Hory",
+      "similar": "Vlek"
+    },
+    {
+      "word": "Vlek",
+      "hint": "Sjezdovka",
+      "similar": "Lanovka"
+    },
+    {
+      "word": "Letadlo",
+      "hint": "Letiště",
+      "similar": "Vrtulník"
+    },
+    {
+      "word": "Vrtulník",
+      "hint": "Záchrana",
+      "similar": "Letadlo"
+    },
+    {
+      "word": "Balón",
+      "hint": "Koš",
+      "similar": "Vzducholoď"
+    },
+    {
+      "word": "Vzducholoď",
+      "hint": "Plyn",
+      "similar": "Balón"
+    },
+    {
+      "word": "Raketa",
+      "hint": "Vesmír",
+      "similar": "Raketoplán"
+    },
+    {
+      "word": "Loď",
+      "hint": "Přístav",
+      "similar": "Trajekt"
+    },
+    {
+      "word": "Trajekt",
+      "hint": "Přeprava",
+      "similar": "Loď"
+    },
+    {
+      "word": "Ponorka",
+      "hint": "Hloubka",
+      "similar": "Loď"
+    },
+    {
+      "word": "Jachta",
+      "hint": "Plachty",
+      "similar": "Loď"
+    },
+    {
+      "word": "Kánoe",
+      "hint": "Pádlo",
+      "similar": "Kajak"
+    },
+    {
+      "word": "Kajak",
+      "hint": "Řeka",
+      "similar": "Kánoe"
+    },
+    {
+      "word": "Šlapadlo",
+      "hint": "Rybník",
+      "similar": "Kánoe"
+    },
+    {
+      "word": "Taxi",
+      "hint": "Taxametr",
+      "similar": "Limuzína"
+    },
+    {
+      "word": "Limuzína",
+      "hint": "Luxus",
+      "similar": "Taxi"
+    },
+    {
+      "word": "Kamion",
+      "hint": "Dálnice",
+      "similar": "Dodávka"
+    },
+    {
+      "word": "Dodávka",
+      "hint": "Stěhování",
+      "similar": "Kamion"
+    },
+    {
+      "word": "Traktor",
+      "hint": "Pole",
+      "similar": "Bagr"
+    },
+    {
+      "word": "Bagr",
+      "hint": "Lžíce",
+      "similar": "Jeřáb"
+    },
+    {
+      "word": "Jeřáb",
+      "hint": "Stavba",
+      "similar": "Bagr"
+    },
+    {
+      "word": "Sanitka",
+      "hint": "Siréna",
+      "similar": "Hasičské auto"
+    },
+    {
+      "word": "Hasičské auto",
+      "hint": "Žebřík",
+      "similar": "Sanitka"
+    },
+    {
+      "word": "Policejní auto",
+      "hint": "Majáček",
+      "similar": "Sanitka"
+    },
+    {
+      "word": "Popelářské auto",
+      "hint": "Ráno",
+      "similar": "Kamion"
+    },
+    {
+      "word": "Karavan",
+      "hint": "Kemp",
+      "similar": "Obytný vůz"
+    },
+    {
+      "word": "Kočár",
+      "hint": "Koně",
+      "similar": "Povoz"
+    },
+    {
+      "word": "Rikša",
+      "hint": "Asie",
+      "similar": "Taxi"
+    },
+    {
+      "word": "Segway",
+      "hint": "Turisti",
+      "similar": "Koloběžka"
+    },
+    {
+      "word": "Skateboard",
+      "hint": "Rampa",
+      "similar": "Koloběžka"
+    },
+    {
+      "word": "Dálnice",
+      "hint": "Známka",
+      "similar": "Silnice"
+    },
+    {
+      "word": "Křižovatka",
+      "hint": "Semafor",
+      "similar": "Kruhový objezd"
+    },
+    {
+      "word": "Kruhový objezd",
+      "hint": "Blinkr",
+      "similar": "Křižovatka"
+    },
+    {
+      "word": "Semafor",
+      "hint": "Barvy",
+      "similar": "Přechod"
+    },
+    {
+      "word": "Přechod",
+      "hint": "Zebra",
+      "similar": "Semafor"
+    },
+    {
+      "word": "Benzínka",
+      "hint": "Tankování",
+      "similar": "Parkoviště"
+    },
+    {
+      "word": "Parkoviště",
+      "hint": "Lístek",
+      "similar": "Garáž"
+    },
+    {
+      "word": "Garáž",
+      "hint": "Vrata",
+      "similar": "Parkoviště"
+    },
+    {
+      "word": "Tunel",
+      "hint": "Tma",
+      "similar": "Most"
+    },
+    {
+      "word": "Most",
+      "hint": "Řeka",
+      "similar": "Tunel"
+    },
+    {
+      "word": "Letiště",
+      "hint": "Odbavení",
+      "similar": "Nádraží"
+    },
+    {
+      "word": "Nádraží",
+      "hint": "Peron",
+      "similar": "Letiště"
+    },
+    {
+      "word": "Řidičák",
+      "hint": "Autoškola",
+      "similar": "Občanka"
+    },
+    {
+      "word": "Pokuta",
+      "hint": "Policie",
+      "similar": "Parkovné"
+    },
+    {
+      "word": "Jízdenka",
+      "hint": "Označení",
+      "similar": "Letenka"
+    },
+    {
+      "word": "Letenka",
+      "hint": "Odlet",
+      "similar": "Jízdenka"
+    },
+    {
+      "word": "Kufr",
+      "hint": "Dovolená",
+      "similar": "Batoh"
+    },
+    {
+      "word": "Navigace",
+      "hint": "Mapa",
+      "similar": "Kompas"
+    },
+    {
+      "word": "Volant",
+      "hint": "Řízení",
+      "similar": "Řadicí páka"
+    },
+    {
+      "word": "Pneumatika",
+      "hint": "Guma",
+      "similar": "Ráfek"
+    },
+    {
+      "word": "Bezpečnostní pás",
+      "hint": "Připoutání",
+      "similar": "Airbag"
+    },
+    {
+      "word": "Airbag",
+      "hint": "Náraz",
+      "similar": "Bezpečnostní pás"
+    },
+    {
+      "word": "Stopování",
+      "hint": "Palec",
+      "similar": "Spolujízda"
+    },
+    {
+      "word": "Spolujízda",
+      "hint": "Aplikace",
+      "similar": "Stopování"
+    },
+    {
+      "word": "Elektromobil",
+      "hint": "Nabíječka",
+      "similar": "Hybrid"
+    }
+  ]
+}

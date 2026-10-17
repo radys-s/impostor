@@ -1,0 +1,357 @@
+{
+  "id": "sport",
+  "name": "Sport",
+  "emoji": "⚽",
+  "words": [
+    {
+      "word": "Fotbal",
+      "hint": "Branka",
+      "similar": "Hokej"
+    },
+    {
+      "word": "Hokej",
+      "hint": "Led",
+      "similar": "Florbal"
+    },
+    {
+      "word": "Florbal",
+      "hint": "Tělocvična",
+      "similar": "Hokej"
+    },
+    {
+      "word": "Tenis",
+      "hint": "Raketa",
+      "similar": "Badminton"
+    },
+    {
+      "word": "Badminton",
+      "hint": "Košíček",
+      "similar": "Tenis"
+    },
+    {
+      "word": "Stolní tenis",
+      "hint": "Pálka",
+      "similar": "Badminton"
+    },
+    {
+      "word": "Basketbal",
+      "hint": "Koš",
+      "similar": "Volejbal"
+    },
+    {
+      "word": "Volejbal",
+      "hint": "Síť",
+      "similar": "Basketbal"
+    },
+    {
+      "word": "Plážový volejbal",
+      "hint": "Písek",
+      "similar": "Volejbal"
+    },
+    {
+      "word": "Házená",
+      "hint": "Hala",
+      "similar": "Basketbal"
+    },
+    {
+      "word": "Baseball",
+      "hint": "Pálka",
+      "similar": "Kriket"
+    },
+    {
+      "word": "Golf",
+      "hint": "Jamka",
+      "similar": "Minigolf"
+    },
+    {
+      "word": "Minigolf",
+      "hint": "Překážky",
+      "similar": "Golf"
+    },
+    {
+      "word": "Lyžování",
+      "hint": "Sjezdovka",
+      "similar": "Snowboarding"
+    },
+    {
+      "word": "Snowboarding",
+      "hint": "Prkno",
+      "similar": "Lyžování"
+    },
+    {
+      "word": "Běh na lyžích",
+      "hint": "Stopa",
+      "similar": "Lyžování"
+    },
+    {
+      "word": "Skoky na lyžích",
+      "hint": "Můstek",
+      "similar": "Běh na lyžích"
+    },
+    {
+      "word": "Biatlon",
+      "hint": "Střelba",
+      "similar": "Běh na lyžích"
+    },
+    {
+      "word": "Krasobruslení",
+      "hint": "Piruety",
+      "similar": "Rychlobruslení"
+    },
+    {
+      "word": "Rychlobruslení",
+      "hint": "Ovál",
+      "similar": "Krasobruslení"
+    },
+    {
+      "word": "Plavání",
+      "hint": "Bazén",
+      "similar": "Potápění"
+    },
+    {
+      "word": "Potápění",
+      "hint": "Hloubka",
+      "similar": "Plavání"
+    },
+    {
+      "word": "Vodní pólo",
+      "hint": "Bazén",
+      "similar": "Házená"
+    },
+    {
+      "word": "Veslování",
+      "hint": "Loď",
+      "similar": "Kanoistika"
+    },
+    {
+      "word": "Kanoistika",
+      "hint": "Pádlo",
+      "similar": "Veslování"
+    },
+    {
+      "word": "Surfování",
+      "hint": "Vlny",
+      "similar": "Windsurfing"
+    },
+    {
+      "word": "Jachting",
+      "hint": "Plachta",
+      "similar": "Veslování"
+    },
+    {
+      "word": "Cyklistika",
+      "hint": "Pedály",
+      "similar": "Triatlon"
+    },
+    {
+      "word": "Triatlon",
+      "hint": "Vytrvalost",
+      "similar": "Cyklistika"
+    },
+    {
+      "word": "Maraton",
+      "hint": "Kilometry",
+      "similar": "Sprint"
+    },
+    {
+      "word": "Sprint",
+      "hint": "Rychlost",
+      "similar": "Maraton"
+    },
+    {
+      "word": "Skok do výšky",
+      "hint": "Laťka",
+      "similar": "Skok o tyči"
+    },
+    {
+      "word": "Skok o tyči",
+      "hint": "Laťka",
+      "similar": "Skok do výšky"
+    },
+    {
+      "word": "Vrh koulí",
+      "hint": "Síla",
+      "similar": "Hod oštěpem"
+    },
+    {
+      "word": "Hod oštěpem",
+      "hint": "Dálka",
+      "similar": "Vrh koulí"
+    },
+    {
+      "word": "Gymnastika",
+      "hint": "Kladina",
+      "similar": "Akrobacie"
+    },
+    {
+      "word": "Box",
+      "hint": "Ring",
+      "similar": "Kickbox"
+    },
+    {
+      "word": "Judo",
+      "hint": "Kimono",
+      "similar": "Karate"
+    },
+    {
+      "word": "Karate",
+      "hint": "Pásek",
+      "similar": "Judo"
+    },
+    {
+      "word": "Šerm",
+      "hint": "Kord",
+      "similar": "Box"
+    },
+    {
+      "word": "Lukostřelba",
+      "hint": "Terč",
+      "similar": "Střelba"
+    },
+    {
+      "word": "Šipky",
+      "hint": "Terč",
+      "similar": "Kulečník"
+    },
+    {
+      "word": "Kulečník",
+      "hint": "Tágo",
+      "similar": "Šipky"
+    },
+    {
+      "word": "Bowling",
+      "hint": "Koule",
+      "similar": "Kuželky"
+    },
+    {
+      "word": "Kuželky",
+      "hint": "Hospoda",
+      "similar": "Bowling"
+    },
+    {
+      "word": "Formule 1",
+      "hint": "Okruh",
+      "similar": "Rallye"
+    },
+    {
+      "word": "Rallye",
+      "hint": "Navigátor",
+      "similar": "Formule 1"
+    },
+    {
+      "word": "Motokros",
+      "hint": "Bláto",
+      "similar": "Rallye"
+    },
+    {
+      "word": "Jezdectví",
+      "hint": "Kůň",
+      "similar": "Dostihy"
+    },
+    {
+      "word": "Dostihy",
+      "hint": "Sázky",
+      "similar": "Jezdectví"
+    },
+    {
+      "word": "Horolezectví",
+      "hint": "Skála",
+      "similar": "Turistika"
+    },
+    {
+      "word": "Turistika",
+      "hint": "Batoh",
+      "similar": "Horolezectví"
+    },
+    {
+      "word": "Jóga",
+      "hint": "Podložka",
+      "similar": "Pilates"
+    },
+    {
+      "word": "Pilates",
+      "hint": "Protahování",
+      "similar": "Jóga"
+    },
+    {
+      "word": "Posilovna",
+      "hint": "Činky",
+      "similar": "Crossfit"
+    },
+    {
+      "word": "Crossfit",
+      "hint": "Intenzita",
+      "similar": "Posilovna"
+    },
+    {
+      "word": "Rugby",
+      "hint": "Vajíčko",
+      "similar": "Americký fotbal"
+    },
+    {
+      "word": "Americký fotbal",
+      "hint": "Helma",
+      "similar": "Rugby"
+    },
+    {
+      "word": "Kriket",
+      "hint": "Anglie",
+      "similar": "Baseball"
+    },
+    {
+      "word": "Squash",
+      "hint": "Stěna",
+      "similar": "Tenis"
+    },
+    {
+      "word": "Nohejbal",
+      "hint": "Kurt",
+      "similar": "Volejbal"
+    },
+    {
+      "word": "Pétanque",
+      "hint": "Koule",
+      "similar": "Bowling"
+    },
+    {
+      "word": "Skateboarding",
+      "hint": "Rampa",
+      "similar": "Snowboarding"
+    },
+    {
+      "word": "Kolečkové brusle",
+      "hint": "Asfalt",
+      "similar": "Skateboarding"
+    },
+    {
+      "word": "Paragliding",
+      "hint": "Křídlo",
+      "similar": "Parašutismus"
+    },
+    {
+      "word": "Parašutismus",
+      "hint": "Letadlo",
+      "similar": "Paragliding"
+    },
+    {
+      "word": "Orientační běh",
+      "hint": "Mapa",
+      "similar": "Maraton"
+    },
+    {
+      "word": "Curling",
+      "hint": "Kámen",
+      "similar": "Kuželky"
+    },
+    {
+      "word": "Šachy",
+      "hint": "Tah",
+      "similar": "Dáma"
+    },
+    {
+      "word": "Sjezd",
+      "hint": "Rychlost",
+      "similar": "Slalom"
+    }
+  ]
+}

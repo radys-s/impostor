@@ -1,0 +1,392 @@
+{
+  "id": "povolani",
+  "name": "Povolání",
+  "emoji": "👷",
+  "words": [
+    {
+      "word": "Lékař",
+      "hint": "Ordinace",
+      "similar": "Zdravotní sestra"
+    },
+    {
+      "word": "Zdravotní sestra",
+      "hint": "Nemocnice",
+      "similar": "Lékař"
+    },
+    {
+      "word": "Zubař",
+      "hint": "Křeslo",
+      "similar": "Lékař"
+    },
+    {
+      "word": "Veterinář",
+      "hint": "Zvířata",
+      "similar": "Lékař"
+    },
+    {
+      "word": "Učitel",
+      "hint": "Třída",
+      "similar": "Profesor"
+    },
+    {
+      "word": "Profesor",
+      "hint": "Univerzita",
+      "similar": "Učitel"
+    },
+    {
+      "word": "Policista",
+      "hint": "Uniforma",
+      "similar": "Detektiv"
+    },
+    {
+      "word": "Detektiv",
+      "hint": "Záhada",
+      "similar": "Policista"
+    },
+    {
+      "word": "Hasič",
+      "hint": "Žebřík",
+      "similar": "Záchranář"
+    },
+    {
+      "word": "Záchranář",
+      "hint": "Sanitka",
+      "similar": "Hasič"
+    },
+    {
+      "word": "Voják",
+      "hint": "Armáda",
+      "similar": "Policista"
+    },
+    {
+      "word": "Pilot",
+      "hint": "Kokpit",
+      "similar": "Letuška"
+    },
+    {
+      "word": "Letuška",
+      "hint": "Uniforma",
+      "similar": "Pilot"
+    },
+    {
+      "word": "Kuchař",
+      "hint": "Restaurace",
+      "similar": "Číšník"
+    },
+    {
+      "word": "Číšník",
+      "hint": "Spropitné",
+      "similar": "Kuchař"
+    },
+    {
+      "word": "Barman",
+      "hint": "Koktejl",
+      "similar": "Číšník"
+    },
+    {
+      "word": "Pekař",
+      "hint": "Mouka",
+      "similar": "Cukrář"
+    },
+    {
+      "word": "Cukrář",
+      "hint": "Zákusky",
+      "similar": "Pekař"
+    },
+    {
+      "word": "Řezník",
+      "hint": "Maso",
+      "similar": "Kuchař"
+    },
+    {
+      "word": "Prodavač",
+      "hint": "Obchod",
+      "similar": "Pokladní"
+    },
+    {
+      "word": "Pokladní",
+      "hint": "Účtenka",
+      "similar": "Prodavač"
+    },
+    {
+      "word": "Řidič autobusu",
+      "hint": "Zastávka",
+      "similar": "Taxikář"
+    },
+    {
+      "word": "Taxikář",
+      "hint": "Noc",
+      "similar": "Řidič autobusu"
+    },
+    {
+      "word": "Strojvedoucí",
+      "hint": "Koleje",
+      "similar": "Průvodčí"
+    },
+    {
+      "word": "Průvodčí",
+      "hint": "Jízdenka",
+      "similar": "Strojvedoucí"
+    },
+    {
+      "word": "Pošťák",
+      "hint": "Dopisy",
+      "similar": "Kurýr"
+    },
+    {
+      "word": "Kurýr",
+      "hint": "Balík",
+      "similar": "Pošťák"
+    },
+    {
+      "word": "Popelář",
+      "hint": "Ráno",
+      "similar": "Uklízečka"
+    },
+    {
+      "word": "Uklízečka",
+      "hint": "Kbelík",
+      "similar": "Popelář"
+    },
+    {
+      "word": "Instalatér",
+      "hint": "Trubky",
+      "similar": "Elektrikář"
+    },
+    {
+      "word": "Elektrikář",
+      "hint": "Kabely",
+      "similar": "Instalatér"
+    },
+    {
+      "word": "Zedník",
+      "hint": "Cihly",
+      "similar": "Tesař"
+    },
+    {
+      "word": "Tesař",
+      "hint": "Dřevo",
+      "similar": "Truhlář"
+    },
+    {
+      "word": "Truhlář",
+      "hint": "Nábytek",
+      "similar": "Tesař"
+    },
+    {
+      "word": "Malíř pokojů",
+      "hint": "Váleček",
+      "similar": "Zedník"
+    },
+    {
+      "word": "Automechanik",
+      "hint": "Dílna",
+      "similar": "Elektrikář"
+    },
+    {
+      "word": "Kadeřník",
+      "hint": "Nůžky",
+      "similar": "Kosmetička"
+    },
+    {
+      "word": "Kosmetička",
+      "hint": "Salon",
+      "similar": "Kadeřník"
+    },
+    {
+      "word": "Holič",
+      "hint": "Vousy",
+      "similar": "Kadeřník"
+    },
+    {
+      "word": "Programátor",
+      "hint": "Počítač",
+      "similar": "Grafik"
+    },
+    {
+      "word": "Grafik",
+      "hint": "Logo",
+      "similar": "Fotograf"
+    },
+    {
+      "word": "Fotograf",
+      "hint": "Objektiv",
+      "similar": "Kameraman"
+    },
+    {
+      "word": "Kameraman",
+      "hint": "Natáčení",
+      "similar": "Fotograf"
+    },
+    {
+      "word": "Herec",
+      "hint": "Divadlo",
+      "similar": "Zpěvák"
+    },
+    {
+      "word": "Zpěvák",
+      "hint": "Mikrofon",
+      "similar": "Herec"
+    },
+    {
+      "word": "Moderátor",
+      "hint": "Televize",
+      "similar": "Novinář"
+    },
+    {
+      "word": "Novinář",
+      "hint": "Článek",
+      "similar": "Moderátor"
+    },
+    {
+      "word": "Spisovatel",
+      "hint": "Kniha",
+      "similar": "Novinář"
+    },
+    {
+      "word": "Právník",
+      "hint": "Soud",
+      "similar": "Soudce"
+    },
+    {
+      "word": "Soudce",
+      "hint": "Kladívko",
+      "similar": "Právník"
+    },
+    {
+      "word": "Účetní",
+      "hint": "Čísla",
+      "similar": "Bankéř"
+    },
+    {
+      "word": "Bankéř",
+      "hint": "Peníze",
+      "similar": "Účetní"
+    },
+    {
+      "word": "Architekt",
+      "hint": "Plány",
+      "similar": "Stavbyvedoucí"
+    },
+    {
+      "word": "Vědec",
+      "hint": "Laboratoř",
+      "similar": "Profesor"
+    },
+    {
+      "word": "Lékárník",
+      "hint": "Léky",
+      "similar": "Lékař"
+    },
+    {
+      "word": "Farmář",
+      "hint": "Traktor",
+      "similar": "Zahradník"
+    },
+    {
+      "word": "Zahradník",
+      "hint": "Rostliny",
+      "similar": "Farmář"
+    },
+    {
+      "word": "Rybář",
+      "hint": "Řeka",
+      "similar": "Myslivec"
+    },
+    {
+      "word": "Myslivec",
+      "hint": "Les",
+      "similar": "Rybář"
+    },
+    {
+      "word": "Kominík",
+      "hint": "Štěstí",
+      "similar": "Popelář"
+    },
+    {
+      "word": "Astronaut",
+      "hint": "Vesmír",
+      "similar": "Pilot"
+    },
+    {
+      "word": "Kněz",
+      "hint": "Kostel",
+      "similar": "Jeptiška"
+    },
+    {
+      "word": "Jeptiška",
+      "hint": "Klášter",
+      "similar": "Kněz"
+    },
+    {
+      "word": "Fotbalista",
+      "hint": "Trávník",
+      "similar": "Hokejista"
+    },
+    {
+      "word": "Hokejista",
+      "hint": "Led",
+      "similar": "Fotbalista"
+    },
+    {
+      "word": "Trenér",
+      "hint": "Píšťalka",
+      "similar": "Rozhodčí"
+    },
+    {
+      "word": "Rozhodčí",
+      "hint": "Karta",
+      "similar": "Trenér"
+    },
+    {
+      "word": "Modelka",
+      "hint": "Přehlídka",
+      "similar": "Fotograf"
+    },
+    {
+      "word": "Klaun",
+      "hint": "Cirkus",
+      "similar": "Kouzelník"
+    },
+    {
+      "word": "Kouzelník",
+      "hint": "Klobouk",
+      "similar": "Klaun"
+    },
+    {
+      "word": "Psycholog",
+      "hint": "Rozhovor",
+      "similar": "Lékař"
+    },
+    {
+      "word": "Tlumočník",
+      "hint": "Jazyky",
+      "similar": "Překladatel"
+    },
+    {
+      "word": "Překladatel",
+      "hint": "Slovník",
+      "similar": "Tlumočník"
+    },
+    {
+      "word": "Sekretářka",
+      "hint": "Kancelář",
+      "similar": "Recepční"
+    },
+    {
+      "word": "Recepční",
+      "hint": "Hotel",
+      "similar": "Sekretářka"
+    },
+    {
+      "word": "Pokrývač",
+      "hint": "Střecha",
+      "similar": "Tesař"
+    },
+    {
+      "word": "Svářeč",
+      "hint": "Jiskry",
+      "similar": "Elektrikář"
+    }
+  ]
+}

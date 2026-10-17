@@ -1,0 +1,357 @@
+{
+  "id": "serialy",
+  "name": "Seriály",
+  "emoji": "📺",
+  "words": [
+    {
+      "word": "Ulice",
+      "hint": "Nekonečno",
+      "similar": "Ordinace"
+    },
+    {
+      "word": "Ordinace",
+      "hint": "Lékaři",
+      "similar": "Ulice"
+    },
+    {
+      "word": "Přátelé",
+      "hint": "Kavárna",
+      "similar": "Teorie velkého třesku"
+    },
+    {
+      "word": "Teorie velkého třesku",
+      "hint": "Fyzici",
+      "similar": "Přátelé"
+    },
+    {
+      "word": "Simpsonovi",
+      "hint": "Žlutá",
+      "similar": "Griffinovi"
+    },
+    {
+      "word": "Griffinovi",
+      "hint": "Animace",
+      "similar": "Simpsonovi"
+    },
+    {
+      "word": "Hra o trůny",
+      "hint": "Draci",
+      "similar": "Zaklínač"
+    },
+    {
+      "word": "Zaklínač",
+      "hint": "Netvoři",
+      "similar": "Hra o trůny"
+    },
+    {
+      "word": "Perníkový táta",
+      "hint": "Drogy",
+      "similar": "Narcos"
+    },
+    {
+      "word": "Narcos",
+      "hint": "Kartel",
+      "similar": "Perníkový táta"
+    },
+    {
+      "word": "Stranger Things",
+      "hint": "Osmdesátky",
+      "similar": "Dark"
+    },
+    {
+      "word": "Dark",
+      "hint": "Čas",
+      "similar": "Stranger Things"
+    },
+    {
+      "word": "Papírový dům",
+      "hint": "Loupež",
+      "similar": "Squid Game"
+    },
+    {
+      "word": "Squid Game",
+      "hint": "Hry",
+      "similar": "Papírový dům"
+    },
+    {
+      "word": "Peaky Blinders",
+      "hint": "Gang",
+      "similar": "Narcos"
+    },
+    {
+      "word": "Sherlock",
+      "hint": "Detektiv",
+      "similar": "Columbo"
+    },
+    {
+      "word": "Columbo",
+      "hint": "Plášť",
+      "similar": "Poirot"
+    },
+    {
+      "word": "Poirot",
+      "hint": "Kníry",
+      "similar": "Columbo"
+    },
+    {
+      "word": "Vraždy v Midsomeru",
+      "hint": "Vesnice",
+      "similar": "Poirot"
+    },
+    {
+      "word": "Dr. House",
+      "hint": "Diagnóza",
+      "similar": "Chirurgové"
+    },
+    {
+      "word": "Chirurgové",
+      "hint": "Nemocnice",
+      "similar": "Dr. House"
+    },
+    {
+      "word": "Kriminálka Anděl",
+      "hint": "Policie",
+      "similar": "Policie Modrava"
+    },
+    {
+      "word": "Policie Modrava",
+      "hint": "Šumava",
+      "similar": "Kriminálka Anděl"
+    },
+    {
+      "word": "Četnické humoresky",
+      "hint": "Brno",
+      "similar": "Major Zeman"
+    },
+    {
+      "word": "Major Zeman",
+      "hint": "Socialismus",
+      "similar": "Četnické humoresky"
+    },
+    {
+      "word": "Arabela",
+      "hint": "Pohádky",
+      "similar": "Pan Tau"
+    },
+    {
+      "word": "Pan Tau",
+      "hint": "Klobouk",
+      "similar": "Arabela"
+    },
+    {
+      "word": "Návštěvníci",
+      "hint": "Budoucnost",
+      "similar": "Arabela"
+    },
+    {
+      "word": "Létající Čestmír",
+      "hint": "Vesmír",
+      "similar": "Návštěvníci"
+    },
+    {
+      "word": "Sanitka",
+      "hint": "Řidiči",
+      "similar": "Ordinace"
+    },
+    {
+      "word": "Chalupáři",
+      "hint": "Venkov",
+      "similar": "Taková normální rodinka"
+    },
+    {
+      "word": "Taková normální rodinka",
+      "hint": "Domácnost",
+      "similar": "Chalupáři"
+    },
+    {
+      "word": "Most!",
+      "hint": "Ústí",
+      "similar": "Okresní přebor"
+    },
+    {
+      "word": "Okresní přebor",
+      "hint": "Fotbal",
+      "similar": "Most!"
+    },
+    {
+      "word": "Kancelář Blaník",
+      "hint": "Lobbista",
+      "similar": "Most!"
+    },
+    {
+      "word": "Vyprávěj",
+      "hint": "Retro",
+      "similar": "Chalupáři"
+    },
+    {
+      "word": "Pustina",
+      "hint": "Doly",
+      "similar": "Rapl"
+    },
+    {
+      "word": "Rapl",
+      "hint": "Detektiv",
+      "similar": "Pustina"
+    },
+    {
+      "word": "Případy 1. oddělení",
+      "hint": "Vraždy",
+      "similar": "Kriminálka Anděl"
+    },
+    {
+      "word": "Comeback",
+      "hint": "Hudba",
+      "similar": "Most!"
+    },
+    {
+      "word": "Přístav",
+      "hint": "Sídliště",
+      "similar": "Comeback"
+    },
+    {
+      "word": "Dallas",
+      "hint": "Ropa",
+      "similar": "Dynastie"
+    },
+    {
+      "word": "Dynastie",
+      "hint": "Bohatství",
+      "similar": "Dallas"
+    },
+    {
+      "word": "Futurama",
+      "hint": "Budoucnost",
+      "similar": "Simpsonovi"
+    },
+    {
+      "word": "South Park",
+      "hint": "Městečko",
+      "similar": "Griffinovi"
+    },
+    {
+      "word": "Kancl",
+      "hint": "Kancelář",
+      "similar": "Přátelé"
+    },
+    {
+      "word": "Sex ve městě",
+      "hint": "Manhattan",
+      "similar": "Zoufalé manželky"
+    },
+    {
+      "word": "Zoufalé manželky",
+      "hint": "Předměstí",
+      "similar": "Sex ve městě"
+    },
+    {
+      "word": "Gilmorova děvčata",
+      "hint": "Káva",
+      "similar": "Zoufalé manželky"
+    },
+    {
+      "word": "Kosti",
+      "hint": "Antropoložka",
+      "similar": "Mentalista"
+    },
+    {
+      "word": "Mentalista",
+      "hint": "Triky",
+      "similar": "Sherlock"
+    },
+    {
+      "word": "Kriminálka Miami",
+      "hint": "Pláže",
+      "similar": "Kosti"
+    },
+    {
+      "word": "Ztraceni",
+      "hint": "Ostrov",
+      "similar": "Útěk z vězení"
+    },
+    {
+      "word": "Útěk z vězení",
+      "hint": "Tetování",
+      "similar": "Ztraceni"
+    },
+    {
+      "word": "Živí mrtví",
+      "hint": "Apokalypsa",
+      "similar": "Ztraceni"
+    },
+    {
+      "word": "Vikingové",
+      "hint": "Lodě",
+      "similar": "Zaklínač"
+    },
+    {
+      "word": "Koruna",
+      "hint": "Monarchie",
+      "similar": "Downton Abbey"
+    },
+    {
+      "word": "Downton Abbey",
+      "hint": "Sluhové",
+      "similar": "Koruna"
+    },
+    {
+      "word": "Bridgertonovi",
+      "hint": "Plesy",
+      "similar": "Downton Abbey"
+    },
+    {
+      "word": "Wednesday",
+      "hint": "Ruka",
+      "similar": "Addamsova rodina"
+    },
+    {
+      "word": "Dexter",
+      "hint": "Krev",
+      "similar": "Hannibal"
+    },
+    {
+      "word": "Hannibal",
+      "hint": "Kanibal",
+      "similar": "Dexter"
+    },
+    {
+      "word": "Black Mirror",
+      "hint": "Technologie",
+      "similar": "Dark"
+    },
+    {
+      "word": "Mr. Bean",
+      "hint": "Medvídek",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Pat a Mat",
+      "hint": "Kutilové",
+      "similar": "Krteček"
+    },
+    {
+      "word": "Krteček",
+      "hint": "Zahrada",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Večerníček",
+      "hint": "Postel",
+      "similar": "Krteček"
+    },
+    {
+      "word": "Bob a Bobek",
+      "hint": "Klobouk",
+      "similar": "Pat a Mat"
+    },
+    {
+      "word": "Maxipes Fík",
+      "hint": "Kreslený",
+      "similar": "Rumcajs"
+    },
+    {
+      "word": "Rumcajs",
+      "hint": "Les",
+      "similar": "Maxipes Fík"
+    }
+  ]
+}

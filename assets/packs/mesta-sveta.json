@@ -1,0 +1,377 @@
+{
+  "id": "mesta-sveta",
+  "name": "Města světa",
+  "emoji": "🌍",
+  "words": [
+    {
+      "word": "Paříž",
+      "hint": "Romantika",
+      "similar": "Londýn"
+    },
+    {
+      "word": "Londýn",
+      "hint": "Mlha",
+      "similar": "Dublin"
+    },
+    {
+      "word": "Řím",
+      "hint": "Antika",
+      "similar": "Atény"
+    },
+    {
+      "word": "Atény",
+      "hint": "Sloupy",
+      "similar": "Řím"
+    },
+    {
+      "word": "Berlín",
+      "hint": "Zeď",
+      "similar": "Vídeň"
+    },
+    {
+      "word": "Vídeň",
+      "hint": "Opera",
+      "similar": "Budapešť"
+    },
+    {
+      "word": "Budapešť",
+      "hint": "Dunaj",
+      "similar": "Vídeň"
+    },
+    {
+      "word": "Bratislava",
+      "hint": "Soused",
+      "similar": "Vídeň"
+    },
+    {
+      "word": "Varšava",
+      "hint": "Polsko",
+      "similar": "Krakov"
+    },
+    {
+      "word": "Krakov",
+      "hint": "Drak",
+      "similar": "Varšava"
+    },
+    {
+      "word": "Madrid",
+      "hint": "Real",
+      "similar": "Barcelona"
+    },
+    {
+      "word": "Barcelona",
+      "hint": "Gaudí",
+      "similar": "Madrid"
+    },
+    {
+      "word": "Lisabon",
+      "hint": "Tramvaje",
+      "similar": "Porto"
+    },
+    {
+      "word": "Porto",
+      "hint": "Víno",
+      "similar": "Lisabon"
+    },
+    {
+      "word": "Amsterdam",
+      "hint": "Kanály",
+      "similar": "Benátky"
+    },
+    {
+      "word": "Benátky",
+      "hint": "Gondoly",
+      "similar": "Amsterdam"
+    },
+    {
+      "word": "Florencie",
+      "hint": "Renesance",
+      "similar": "Milán"
+    },
+    {
+      "word": "Milán",
+      "hint": "Móda",
+      "similar": "Florencie"
+    },
+    {
+      "word": "Neapol",
+      "hint": "Pizza",
+      "similar": "Milán"
+    },
+    {
+      "word": "Moskva",
+      "hint": "Kreml",
+      "similar": "Petrohrad"
+    },
+    {
+      "word": "Petrohrad",
+      "hint": "Car",
+      "similar": "Moskva"
+    },
+    {
+      "word": "Kyjev",
+      "hint": "Dněpr",
+      "similar": "Varšava"
+    },
+    {
+      "word": "Istanbul",
+      "hint": "Mešity",
+      "similar": "Káhira"
+    },
+    {
+      "word": "Káhira",
+      "hint": "Pyramidy",
+      "similar": "Istanbul"
+    },
+    {
+      "word": "Dubaj",
+      "hint": "Mrakodrapy",
+      "similar": "Singapur"
+    },
+    {
+      "word": "New York",
+      "hint": "Taxíky",
+      "similar": "Los Angeles"
+    },
+    {
+      "word": "Los Angeles",
+      "hint": "Hollywood",
+      "similar": "San Francisco"
+    },
+    {
+      "word": "San Francisco",
+      "hint": "Most",
+      "similar": "Los Angeles"
+    },
+    {
+      "word": "Las Vegas",
+      "hint": "Kasino",
+      "similar": "Monte Carlo"
+    },
+    {
+      "word": "Monte Carlo",
+      "hint": "Formule",
+      "similar": "Las Vegas"
+    },
+    {
+      "word": "Chicago",
+      "hint": "Vítr",
+      "similar": "New York"
+    },
+    {
+      "word": "Washington",
+      "hint": "Prezident",
+      "similar": "New York"
+    },
+    {
+      "word": "Miami",
+      "hint": "Pláže",
+      "similar": "Los Angeles"
+    },
+    {
+      "word": "Toronto",
+      "hint": "Kanada",
+      "similar": "Vancouver"
+    },
+    {
+      "word": "Vancouver",
+      "hint": "Tichomoří",
+      "similar": "Toronto"
+    },
+    {
+      "word": "Rio de Janeiro",
+      "hint": "Karneval",
+      "similar": "São Paulo"
+    },
+    {
+      "word": "São Paulo",
+      "hint": "Brazílie",
+      "similar": "Rio de Janeiro"
+    },
+    {
+      "word": "Buenos Aires",
+      "hint": "Tango",
+      "similar": "Rio de Janeiro"
+    },
+    {
+      "word": "Havana",
+      "hint": "Doutníky",
+      "similar": "Miami"
+    },
+    {
+      "word": "Tokio",
+      "hint": "Neony",
+      "similar": "Soul"
+    },
+    {
+      "word": "Kjóto",
+      "hint": "Chrámy",
+      "similar": "Tokio"
+    },
+    {
+      "word": "Peking",
+      "hint": "Čína",
+      "similar": "Šanghaj"
+    },
+    {
+      "word": "Šanghaj",
+      "hint": "Přístav",
+      "similar": "Hongkong"
+    },
+    {
+      "word": "Hongkong",
+      "hint": "Mrakodrapy",
+      "similar": "Singapur"
+    },
+    {
+      "word": "Singapur",
+      "hint": "Ostrov",
+      "similar": "Hongkong"
+    },
+    {
+      "word": "Soul",
+      "hint": "Korea",
+      "similar": "Tokio"
+    },
+    {
+      "word": "Bangkok",
+      "hint": "Thajsko",
+      "similar": "Singapur"
+    },
+    {
+      "word": "Dillí",
+      "hint": "Indie",
+      "similar": "Bombaj"
+    },
+    {
+      "word": "Bombaj",
+      "hint": "Bollywood",
+      "similar": "Dillí"
+    },
+    {
+      "word": "Sydney",
+      "hint": "Opera",
+      "similar": "Melbourne"
+    },
+    {
+      "word": "Melbourne",
+      "hint": "Austrálie",
+      "similar": "Sydney"
+    },
+    {
+      "word": "Kapské Město",
+      "hint": "Mys",
+      "similar": "Johannesburg"
+    },
+    {
+      "word": "Jeruzalém",
+      "hint": "Víra",
+      "similar": "Mekka"
+    },
+    {
+      "word": "Mekka",
+      "hint": "Pouť",
+      "similar": "Jeruzalém"
+    },
+    {
+      "word": "Vatikán",
+      "hint": "Papež",
+      "similar": "Řím"
+    },
+    {
+      "word": "Stockholm",
+      "hint": "Švédsko",
+      "similar": "Oslo"
+    },
+    {
+      "word": "Oslo",
+      "hint": "Fjordy",
+      "similar": "Stockholm"
+    },
+    {
+      "word": "Kodaň",
+      "hint": "Víla",
+      "similar": "Stockholm"
+    },
+    {
+      "word": "Helsinky",
+      "hint": "Sauna",
+      "similar": "Stockholm"
+    },
+    {
+      "word": "Reykjavík",
+      "hint": "Gejzíry",
+      "similar": "Oslo"
+    },
+    {
+      "word": "Dublin",
+      "hint": "Irsko",
+      "similar": "Londýn"
+    },
+    {
+      "word": "Edinburgh",
+      "hint": "Skotsko",
+      "similar": "Dublin"
+    },
+    {
+      "word": "Brusel",
+      "hint": "Unie",
+      "similar": "Amsterdam"
+    },
+    {
+      "word": "Ženeva",
+      "hint": "Jezero",
+      "similar": "Curych"
+    },
+    {
+      "word": "Curych",
+      "hint": "Banky",
+      "similar": "Ženeva"
+    },
+    {
+      "word": "Mnichov",
+      "hint": "Oktoberfest",
+      "similar": "Berlín"
+    },
+    {
+      "word": "Salcburk",
+      "hint": "Mozart",
+      "similar": "Vídeň"
+    },
+    {
+      "word": "Drážďany",
+      "hint": "Sasko",
+      "similar": "Lipsko"
+    },
+    {
+      "word": "Dubrovník",
+      "hint": "Hradby",
+      "similar": "Split"
+    },
+    {
+      "word": "Split",
+      "hint": "Chorvatsko",
+      "similar": "Dubrovník"
+    },
+    {
+      "word": "Nice",
+      "hint": "Riviéra",
+      "similar": "Cannes"
+    },
+    {
+      "word": "Cannes",
+      "hint": "Festival",
+      "similar": "Nice"
+    },
+    {
+      "word": "Hamburk",
+      "hint": "Přístav",
+      "similar": "Berlín"
+    },
+    {
+      "word": "Marrákeš",
+      "hint": "Trhy",
+      "similar": "Káhira"
+    }
+  ]
+}

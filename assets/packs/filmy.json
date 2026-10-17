@@ -1,0 +1,407 @@
+{
+  "id": "filmy",
+  "name": "Filmy",
+  "emoji": "🎬",
+  "words": [
+    {
+      "word": "Pelíšky",
+      "hint": "Vánoce",
+      "similar": "Pupendo"
+    },
+    {
+      "word": "Pupendo",
+      "hint": "Normalizace",
+      "similar": "Pelíšky"
+    },
+    {
+      "word": "Vratné lahve",
+      "hint": "Supermarket",
+      "similar": "Kolja"
+    },
+    {
+      "word": "Kolja",
+      "hint": "Violoncello",
+      "similar": "Obecná škola"
+    },
+    {
+      "word": "Obecná škola",
+      "hint": "Učitel",
+      "similar": "Kolja"
+    },
+    {
+      "word": "Vesničko má středisková",
+      "hint": "Družstvo",
+      "similar": "Slavnosti sněženek"
+    },
+    {
+      "word": "Slavnosti sněženek",
+      "hint": "Myslivci",
+      "similar": "Vesničko má středisková"
+    },
+    {
+      "word": "Limonádový Joe",
+      "hint": "Kovbojové",
+      "similar": "Adéla ještě nevečeřela"
+    },
+    {
+      "word": "Adéla ještě nevečeřela",
+      "hint": "Detektiv",
+      "similar": "Limonádový Joe"
+    },
+    {
+      "word": "Popelka",
+      "hint": "Zima",
+      "similar": "Pyšná princezna"
+    },
+    {
+      "word": "Pyšná princezna",
+      "hint": "Zahrada",
+      "similar": "Šíleně smutná princezna"
+    },
+    {
+      "word": "Šíleně smutná princezna",
+      "hint": "Muzikál",
+      "similar": "Pyšná princezna"
+    },
+    {
+      "word": "Císařův pekař",
+      "hint": "Golem",
+      "similar": "Hrátky s čertem"
+    },
+    {
+      "word": "Hrátky s čertem",
+      "hint": "Peklo",
+      "similar": "Anděl Páně"
+    },
+    {
+      "word": "Anděl Páně",
+      "hint": "Nebe",
+      "similar": "Hrátky s čertem"
+    },
+    {
+      "word": "Ať žijí duchové",
+      "hint": "Strašidla",
+      "similar": "Saxána"
+    },
+    {
+      "word": "Saxána",
+      "hint": "Čarodějnice",
+      "similar": "Ať žijí duchové"
+    },
+    {
+      "word": "Musíme si pomáhat",
+      "hint": "Válka",
+      "similar": "Obecná škola"
+    },
+    {
+      "word": "Tmavomodrý svět",
+      "hint": "Piloti",
+      "similar": "Musíme si pomáhat"
+    },
+    {
+      "word": "Ostře sledované vlaky",
+      "hint": "Nádraží",
+      "similar": "Obchod na korze"
+    },
+    {
+      "word": "Obchod na korze",
+      "hint": "Válka",
+      "similar": "Ostře sledované vlaky"
+    },
+    {
+      "word": "Samotáři",
+      "hint": "Praha",
+      "similar": "Pupendo"
+    },
+    {
+      "word": "Účastníci zájezdu",
+      "hint": "Dovolená",
+      "similar": "Román pro ženy"
+    },
+    {
+      "word": "Román pro ženy",
+      "hint": "Láska",
+      "similar": "Účastníci zájezdu"
+    },
+    {
+      "word": "Šakalí léta",
+      "hint": "Rokenrol",
+      "similar": "Rebelové"
+    },
+    {
+      "word": "Rebelové",
+      "hint": "Emigrace",
+      "similar": "Šakalí léta"
+    },
+    {
+      "word": "Titanic",
+      "hint": "Loď",
+      "similar": "Pearl Harbor"
+    },
+    {
+      "word": "Avatar",
+      "hint": "Planeta",
+      "similar": "Duna"
+    },
+    {
+      "word": "Duna",
+      "hint": "Poušť",
+      "similar": "Hvězdné války"
+    },
+    {
+      "word": "Hvězdné války",
+      "hint": "Galaxie",
+      "similar": "Star Trek"
+    },
+    {
+      "word": "Star Trek",
+      "hint": "Posádka",
+      "similar": "Hvězdné války"
+    },
+    {
+      "word": "Harry Potter",
+      "hint": "Kouzla",
+      "similar": "Pán prstenů"
+    },
+    {
+      "word": "Pán prstenů",
+      "hint": "Výprava",
+      "similar": "Hobit"
+    },
+    {
+      "word": "Hobit",
+      "hint": "Drak",
+      "similar": "Pán prstenů"
+    },
+    {
+      "word": "Matrix",
+      "hint": "Simulace",
+      "similar": "Počátek"
+    },
+    {
+      "word": "Počátek",
+      "hint": "Sny",
+      "similar": "Matrix"
+    },
+    {
+      "word": "Interstellar",
+      "hint": "Vesmír",
+      "similar": "Gravitace"
+    },
+    {
+      "word": "Gravitace",
+      "hint": "Astronauti",
+      "similar": "Interstellar"
+    },
+    {
+      "word": "Forrest Gump",
+      "hint": "Bonbóny",
+      "similar": "Zelená míle"
+    },
+    {
+      "word": "Zelená míle",
+      "hint": "Vězení",
+      "similar": "Forrest Gump"
+    },
+    {
+      "word": "Kmotr",
+      "hint": "Mafie",
+      "similar": "Mafiáni"
+    },
+    {
+      "word": "Pulp Fiction",
+      "hint": "Kufřík",
+      "similar": "Nespoutaný Django"
+    },
+    {
+      "word": "Nespoutaný Django",
+      "hint": "Western",
+      "similar": "Pulp Fiction"
+    },
+    {
+      "word": "Jurský park",
+      "hint": "Ostrov",
+      "similar": "King Kong"
+    },
+    {
+      "word": "King Kong",
+      "hint": "Opice",
+      "similar": "Jurský park"
+    },
+    {
+      "word": "Čelisti",
+      "hint": "Moře",
+      "similar": "Jurský park"
+    },
+    {
+      "word": "Terminátor",
+      "hint": "Budoucnost",
+      "similar": "Robocop"
+    },
+    {
+      "word": "Robocop",
+      "hint": "Policie",
+      "similar": "Terminátor"
+    },
+    {
+      "word": "Vetřelec",
+      "hint": "Monstrum",
+      "similar": "Predátor"
+    },
+    {
+      "word": "Predátor",
+      "hint": "Džungle",
+      "similar": "Vetřelec"
+    },
+    {
+      "word": "Rocky",
+      "hint": "Box",
+      "similar": "Rambo"
+    },
+    {
+      "word": "Rambo",
+      "hint": "Vietnam",
+      "similar": "Rocky"
+    },
+    {
+      "word": "Návrat do budoucnosti",
+      "hint": "Stroj",
+      "similar": "Muži v černém"
+    },
+    {
+      "word": "Muži v černém",
+      "hint": "Mimozemšťané",
+      "similar": "Návrat do budoucnosti"
+    },
+    {
+      "word": "Shrek",
+      "hint": "Bažina",
+      "similar": "Doba ledová"
+    },
+    {
+      "word": "Doba ledová",
+      "hint": "Mamut",
+      "similar": "Madagaskar"
+    },
+    {
+      "word": "Madagaskar",
+      "hint": "Zoo",
+      "similar": "Doba ledová"
+    },
+    {
+      "word": "Lví král",
+      "hint": "Savana",
+      "similar": "Kniha džunglí"
+    },
+    {
+      "word": "Kniha džunglí",
+      "hint": "Medvěd",
+      "similar": "Lví král"
+    },
+    {
+      "word": "Ledové království",
+      "hint": "Sníh",
+      "similar": "Na vlásku"
+    },
+    {
+      "word": "Na vlásku",
+      "hint": "Věž",
+      "similar": "Ledové království"
+    },
+    {
+      "word": "Toy Story",
+      "hint": "Hračky",
+      "similar": "Auta"
+    },
+    {
+      "word": "Auta",
+      "hint": "Závody",
+      "similar": "Toy Story"
+    },
+    {
+      "word": "Hledá se Nemo",
+      "hint": "Oceán",
+      "similar": "Malá mořská víla"
+    },
+    {
+      "word": "Malá mořská víla",
+      "hint": "Hlubina",
+      "similar": "Hledá se Nemo"
+    },
+    {
+      "word": "Sám doma",
+      "hint": "Zloději",
+      "similar": "Grinch"
+    },
+    {
+      "word": "Grinch",
+      "hint": "Zelený",
+      "similar": "Sám doma"
+    },
+    {
+      "word": "Piráti z Karibiku",
+      "hint": "Kapitán",
+      "similar": "Indiana Jones"
+    },
+    {
+      "word": "Indiana Jones",
+      "hint": "Poklad",
+      "similar": "Piráti z Karibiku"
+    },
+    {
+      "word": "Mamma Mia!",
+      "hint": "Řecko",
+      "similar": "Pomáda"
+    },
+    {
+      "word": "Pomáda",
+      "hint": "Tanec",
+      "similar": "Mamma Mia!"
+    },
+    {
+      "word": "Hříšný tanec",
+      "hint": "Léto",
+      "similar": "Pomáda"
+    },
+    {
+      "word": "Batman",
+      "hint": "Noc",
+      "similar": "Superman"
+    },
+    {
+      "word": "Spider-Man",
+      "hint": "Město",
+      "similar": "Batman"
+    },
+    {
+      "word": "Avengers",
+      "hint": "Tým",
+      "similar": "Strážci Galaxie"
+    },
+    {
+      "word": "Joker",
+      "hint": "Úsměv",
+      "similar": "Batman"
+    },
+    {
+      "word": "Gladiátor",
+      "hint": "Aréna",
+      "similar": "Statečné srdce"
+    },
+    {
+      "word": "Statečné srdce",
+      "hint": "Skotsko",
+      "similar": "Gladiátor"
+    },
+    {
+      "word": "Mlčení jehňátek",
+      "hint": "Kanibal",
+      "similar": "Psycho"
+    },
+    {
+      "word": "Psycho",
+      "hint": "Sprcha",
+      "similar": "Mlčení jehňátek"
+    }
+  ]
+}

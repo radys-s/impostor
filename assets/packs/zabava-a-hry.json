@@ -1,0 +1,347 @@
+{
+  "id": "zabava-a-hry",
+  "name": "Zábava a hry",
+  "emoji": "🎲",
+  "words": [
+    {
+      "word": "Dáma",
+      "hint": "Kameny",
+      "similar": "Mlýn"
+    },
+    {
+      "word": "Mlýn",
+      "hint": "Řada",
+      "similar": "Dáma"
+    },
+    {
+      "word": "Člověče, nezlob se",
+      "hint": "Figurky",
+      "similar": "Dostihy a sázky"
+    },
+    {
+      "word": "Monopoly",
+      "hint": "Ulice",
+      "similar": "Dostihy a sázky"
+    },
+    {
+      "word": "Dostihy a sázky",
+      "hint": "Koně",
+      "similar": "Monopoly"
+    },
+    {
+      "word": "Activity",
+      "hint": "Pantomima",
+      "similar": "Krycí jména"
+    },
+    {
+      "word": "Krycí jména",
+      "hint": "Agenti",
+      "similar": "Activity"
+    },
+    {
+      "word": "Scrabble",
+      "hint": "Písmena",
+      "similar": "Slovní fotbal"
+    },
+    {
+      "word": "Slovní fotbal",
+      "hint": "Slova",
+      "similar": "Scrabble"
+    },
+    {
+      "word": "Osadníci z Katanu",
+      "hint": "Suroviny",
+      "similar": "Carcassonne"
+    },
+    {
+      "word": "Carcassonne",
+      "hint": "Dílky",
+      "similar": "Osadníci z Katanu"
+    },
+    {
+      "word": "Uno",
+      "hint": "Barvy",
+      "similar": "Prší"
+    },
+    {
+      "word": "Prší",
+      "hint": "Karty",
+      "similar": "Uno"
+    },
+    {
+      "word": "Mariáš",
+      "hint": "Hospoda",
+      "similar": "Prší"
+    },
+    {
+      "word": "Poker",
+      "hint": "Blafování",
+      "similar": "Blackjack"
+    },
+    {
+      "word": "Blackjack",
+      "hint": "Kasino",
+      "similar": "Poker"
+    },
+    {
+      "word": "Pasiáns",
+      "hint": "Samota",
+      "similar": "Prší"
+    },
+    {
+      "word": "Puzzle",
+      "hint": "Obrázek",
+      "similar": "Domino"
+    },
+    {
+      "word": "Domino",
+      "hint": "Tečky",
+      "similar": "Puzzle"
+    },
+    {
+      "word": "Lego",
+      "hint": "Kostičky",
+      "similar": "Merkur"
+    },
+    {
+      "word": "Merkur",
+      "hint": "Šroubky",
+      "similar": "Lego"
+    },
+    {
+      "word": "Rubikova kostka",
+      "hint": "Otáčení",
+      "similar": "Puzzle"
+    },
+    {
+      "word": "Kostky",
+      "hint": "Házení",
+      "similar": "Ruleta"
+    },
+    {
+      "word": "Ruleta",
+      "hint": "Kasino",
+      "similar": "Kostky"
+    },
+    {
+      "word": "Bingo",
+      "hint": "Čísla",
+      "similar": "Loterie"
+    },
+    {
+      "word": "Loterie",
+      "hint": "Tah",
+      "similar": "Bingo"
+    },
+    {
+      "word": "Stírací los",
+      "hint": "Mince",
+      "similar": "Loterie"
+    },
+    {
+      "word": "Schovávaná",
+      "hint": "Počítání",
+      "similar": "Na honěnou"
+    },
+    {
+      "word": "Na honěnou",
+      "hint": "Běhání",
+      "similar": "Schovávaná"
+    },
+    {
+      "word": "Skákací panák",
+      "hint": "Křída",
+      "similar": "Švihadlo"
+    },
+    {
+      "word": "Švihadlo",
+      "hint": "Skákání",
+      "similar": "Skákací panák"
+    },
+    {
+      "word": "Twister",
+      "hint": "Ohýbání",
+      "similar": "Activity"
+    },
+    {
+      "word": "Kvíz",
+      "hint": "Otázky",
+      "similar": "Riskuj!"
+    },
+    {
+      "word": "Riskuj!",
+      "hint": "Soutěž",
+      "similar": "Kvíz"
+    },
+    {
+      "word": "Úniková hra",
+      "hint": "Šifry",
+      "similar": "Kvíz"
+    },
+    {
+      "word": "Laser game",
+      "hint": "Vesty",
+      "similar": "Paintball"
+    },
+    {
+      "word": "Paintball",
+      "hint": "Kuličky",
+      "similar": "Laser game"
+    },
+    {
+      "word": "Kino",
+      "hint": "Popcorn",
+      "similar": "Divadlo"
+    },
+    {
+      "word": "Divadlo",
+      "hint": "Opona",
+      "similar": "Kino"
+    },
+    {
+      "word": "Zábavní park",
+      "hint": "Atrakce",
+      "similar": "Pouť"
+    },
+    {
+      "word": "Pouť",
+      "hint": "Střelnice",
+      "similar": "Zábavní park"
+    },
+    {
+      "word": "Horská dráha",
+      "hint": "Adrenalin",
+      "similar": "Kolotoč"
+    },
+    {
+      "word": "Kolotoč",
+      "hint": "Točení",
+      "similar": "Horská dráha"
+    },
+    {
+      "word": "Cirkus",
+      "hint": "Šapitó",
+      "similar": "Varieté"
+    },
+    {
+      "word": "Akvapark",
+      "hint": "Tobogány",
+      "similar": "Koupaliště"
+    },
+    {
+      "word": "Koupaliště",
+      "hint": "Léto",
+      "similar": "Akvapark"
+    },
+    {
+      "word": "Videohry",
+      "hint": "Konzole",
+      "similar": "Deskové hry"
+    },
+    {
+      "word": "Deskové hry",
+      "hint": "Krabice",
+      "similar": "Videohry"
+    },
+    {
+      "word": "Minecraft",
+      "hint": "Kostky",
+      "similar": "Roblox"
+    },
+    {
+      "word": "Fortnite",
+      "hint": "Přežití",
+      "similar": "Minecraft"
+    },
+    {
+      "word": "Super Mario",
+      "hint": "Houby",
+      "similar": "Pac-Man"
+    },
+    {
+      "word": "Pac-Man",
+      "hint": "Duchové",
+      "similar": "Super Mario"
+    },
+    {
+      "word": "Tetris",
+      "hint": "Řádky",
+      "similar": "Pac-Man"
+    },
+    {
+      "word": "Pexeso",
+      "hint": "Paměť",
+      "similar": "Puzzle"
+    },
+    {
+      "word": "Kámen, nůžky, papír",
+      "hint": "Ruka",
+      "similar": "Hod mincí"
+    },
+    {
+      "word": "Piškvorky",
+      "hint": "Mřížka",
+      "similar": "Lodě"
+    },
+    {
+      "word": "Lodě",
+      "hint": "Zásah",
+      "similar": "Piškvorky"
+    },
+    {
+      "word": "Šibenice",
+      "hint": "Písmena",
+      "similar": "Piškvorky"
+    },
+    {
+      "word": "Městečko Palermo",
+      "hint": "Vrah",
+      "similar": "Krycí jména"
+    },
+    {
+      "word": "Kvarteto",
+      "hint": "Sady",
+      "similar": "Prší"
+    },
+    {
+      "word": "Bowling",
+      "hint": "Dráha",
+      "similar": "Kuželky"
+    },
+    {
+      "word": "Karaoke",
+      "hint": "Mikrofon",
+      "similar": "Kvíz"
+    },
+    {
+      "word": "Jenga",
+      "hint": "Věž",
+      "similar": "Domino"
+    },
+    {
+      "word": "Sudoku",
+      "hint": "Mřížka",
+      "similar": "Křížovka"
+    },
+    {
+      "word": "Křížovka",
+      "hint": "Tajenka",
+      "similar": "Sudoku"
+    },
+    {
+      "word": "Kuličky",
+      "hint": "Důlek",
+      "similar": "Káča"
+    },
+    {
+      "word": "Káča",
+      "hint": "Točení",
+      "similar": "Kuličky"
+    },
+    {
+      "word": "Pouštění draka",
+      "hint": "Vítr",
+      "similar": "Káča"
+    }
+  ]
+}

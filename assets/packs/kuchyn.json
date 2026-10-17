@@ -1,0 +1,337 @@
+{
+  "id": "kuchyn",
+  "name": "Kuchyň",
+  "emoji": "🍳",
+  "words": [
+    {
+      "word": "Lednička",
+      "hint": "Chlad",
+      "similar": "Mrazák"
+    },
+    {
+      "word": "Mrazák",
+      "hint": "Led",
+      "similar": "Lednička"
+    },
+    {
+      "word": "Sporák",
+      "hint": "Plotýnky",
+      "similar": "Trouba"
+    },
+    {
+      "word": "Trouba",
+      "hint": "Pečení",
+      "similar": "Mikrovlnka"
+    },
+    {
+      "word": "Mikrovlnka",
+      "hint": "Ohřívání",
+      "similar": "Trouba"
+    },
+    {
+      "word": "Myčka",
+      "hint": "Nádobí",
+      "similar": "Dřez"
+    },
+    {
+      "word": "Dřez",
+      "hint": "Voda",
+      "similar": "Myčka"
+    },
+    {
+      "word": "Rychlovarná konvice",
+      "hint": "Čaj",
+      "similar": "Kávovar"
+    },
+    {
+      "word": "Kávovar",
+      "hint": "Ráno",
+      "similar": "Rychlovarná konvice"
+    },
+    {
+      "word": "Toustovač",
+      "hint": "Chleba",
+      "similar": "Sendvičovač"
+    },
+    {
+      "word": "Mixér",
+      "hint": "Smoothie",
+      "similar": "Kuchyňský robot"
+    },
+    {
+      "word": "Kuchyňský robot",
+      "hint": "Těsto",
+      "similar": "Mixér"
+    },
+    {
+      "word": "Hrnec",
+      "hint": "Polévka",
+      "similar": "Pánev"
+    },
+    {
+      "word": "Pánev",
+      "hint": "Smažení",
+      "similar": "Hrnec"
+    },
+    {
+      "word": "Wok",
+      "hint": "Asie",
+      "similar": "Pánev"
+    },
+    {
+      "word": "Tlakový hrnec",
+      "hint": "Pára",
+      "similar": "Hrnec"
+    },
+    {
+      "word": "Pekáč",
+      "hint": "Trouba",
+      "similar": "Plech"
+    },
+    {
+      "word": "Plech",
+      "hint": "Cukroví",
+      "similar": "Pekáč"
+    },
+    {
+      "word": "Vařečka",
+      "hint": "Míchání",
+      "similar": "Naběračka"
+    },
+    {
+      "word": "Naběračka",
+      "hint": "Polévka",
+      "similar": "Vařečka"
+    },
+    {
+      "word": "Obracečka",
+      "hint": "Palačinky",
+      "similar": "Vařečka"
+    },
+    {
+      "word": "Metla",
+      "hint": "Šlehání",
+      "similar": "Vařečka"
+    },
+    {
+      "word": "Váleček",
+      "hint": "Těsto",
+      "similar": "Vykrajovátka"
+    },
+    {
+      "word": "Vykrajovátka",
+      "hint": "Cukroví",
+      "similar": "Váleček"
+    },
+    {
+      "word": "Struhadlo",
+      "hint": "Sýr",
+      "similar": "Škrabka"
+    },
+    {
+      "word": "Škrabka",
+      "hint": "Brambory",
+      "similar": "Struhadlo"
+    },
+    {
+      "word": "Nůž",
+      "hint": "Ostří",
+      "similar": "Nůžky"
+    },
+    {
+      "word": "Prkénko",
+      "hint": "Krájení",
+      "similar": "Talíř"
+    },
+    {
+      "word": "Talíř",
+      "hint": "Jídlo",
+      "similar": "Miska"
+    },
+    {
+      "word": "Miska",
+      "hint": "Cereálie",
+      "similar": "Talíř"
+    },
+    {
+      "word": "Hrnek",
+      "hint": "Káva",
+      "similar": "Sklenice"
+    },
+    {
+      "word": "Sklenice",
+      "hint": "Pití",
+      "similar": "Hrnek"
+    },
+    {
+      "word": "Vidlička",
+      "hint": "Příbor",
+      "similar": "Lžíce"
+    },
+    {
+      "word": "Lžíce",
+      "hint": "Polévka",
+      "similar": "Vidlička"
+    },
+    {
+      "word": "Hůlky",
+      "hint": "Asie",
+      "similar": "Vidlička"
+    },
+    {
+      "word": "Cedník",
+      "hint": "Těstoviny",
+      "similar": "Sítko"
+    },
+    {
+      "word": "Sítko",
+      "hint": "Čaj",
+      "similar": "Cedník"
+    },
+    {
+      "word": "Otvírák",
+      "hint": "Plechovka",
+      "similar": "Vývrtka"
+    },
+    {
+      "word": "Vývrtka",
+      "hint": "Víno",
+      "similar": "Otvírák"
+    },
+    {
+      "word": "Kuchyňská váha",
+      "hint": "Gramy",
+      "similar": "Odměrka"
+    },
+    {
+      "word": "Odměrka",
+      "hint": "Mililitry",
+      "similar": "Kuchyňská váha"
+    },
+    {
+      "word": "Alobal",
+      "hint": "Role",
+      "similar": "Potravinová fólie"
+    },
+    {
+      "word": "Pečicí papír",
+      "hint": "Plech",
+      "similar": "Alobal"
+    },
+    {
+      "word": "Utěrka",
+      "hint": "Nádobí",
+      "similar": "Houbička"
+    },
+    {
+      "word": "Houbička",
+      "hint": "Saponát",
+      "similar": "Utěrka"
+    },
+    {
+      "word": "Saponát",
+      "hint": "Pěna",
+      "similar": "Mýdlo"
+    },
+    {
+      "word": "Chňapka",
+      "hint": "Horko",
+      "similar": "Zástěra"
+    },
+    {
+      "word": "Zástěra",
+      "hint": "Kuchař",
+      "similar": "Chňapka"
+    },
+    {
+      "word": "Kořenka",
+      "hint": "Police",
+      "similar": "Solnička"
+    },
+    {
+      "word": "Solnička",
+      "hint": "Stůl",
+      "similar": "Pepřenka"
+    },
+    {
+      "word": "Cukřenka",
+      "hint": "Káva",
+      "similar": "Solnička"
+    },
+    {
+      "word": "Mlýnek na pepř",
+      "hint": "Drcení",
+      "similar": "Solnička"
+    },
+    {
+      "word": "Hmoždíř",
+      "hint": "Tlučení",
+      "similar": "Mlýnek na pepř"
+    },
+    {
+      "word": "Podnos",
+      "hint": "Servírování",
+      "similar": "Talíř"
+    },
+    {
+      "word": "Dóza",
+      "hint": "Víčko",
+      "similar": "Zavařovačka"
+    },
+    {
+      "word": "Zavařovačka",
+      "hint": "Kompot",
+      "similar": "Dóza"
+    },
+    {
+      "word": "Termoska",
+      "hint": "Výlet",
+      "similar": "Hrnek"
+    },
+    {
+      "word": "Lis na česnek",
+      "hint": "Stroužky",
+      "similar": "Struhadlo"
+    },
+    {
+      "word": "Odšťavňovač",
+      "hint": "Pomeranče",
+      "similar": "Mixér"
+    },
+    {
+      "word": "Fritéza",
+      "hint": "Olej",
+      "similar": "Trouba"
+    },
+    {
+      "word": "Gril",
+      "hint": "Zahrada",
+      "similar": "Pánev"
+    },
+    {
+      "word": "Kuchyňská linka",
+      "hint": "Skříňky",
+      "similar": "Spíž"
+    },
+    {
+      "word": "Spíž",
+      "hint": "Zásoby",
+      "similar": "Lednička"
+    },
+    {
+      "word": "Digestoř",
+      "hint": "Odsávání",
+      "similar": "Sporák"
+    },
+    {
+      "word": "Recept",
+      "hint": "Postup",
+      "similar": "Kuchařka"
+    },
+    {
+      "word": "Kuchařka",
+      "hint": "Kniha",
+      "similar": "Recept"
+    }
+  ]
+}

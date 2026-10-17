@@ -1,0 +1,342 @@
+{
+  "id": "skola",
+  "name": "Škola",
+  "emoji": "🎒",
+  "words": [
+    {
+      "word": "Tabule",
+      "hint": "Třída",
+      "similar": "Nástěnka"
+    },
+    {
+      "word": "Křída",
+      "hint": "Prach",
+      "similar": "Fix"
+    },
+    {
+      "word": "Lavice",
+      "hint": "Spolužák",
+      "similar": "Katedra"
+    },
+    {
+      "word": "Katedra",
+      "hint": "Učitel",
+      "similar": "Lavice"
+    },
+    {
+      "word": "Penál",
+      "hint": "Tužky",
+      "similar": "Aktovka"
+    },
+    {
+      "word": "Aktovka",
+      "hint": "Záda",
+      "similar": "Batoh"
+    },
+    {
+      "word": "Sešit",
+      "hint": "Linky",
+      "similar": "Učebnice"
+    },
+    {
+      "word": "Učebnice",
+      "hint": "Kapitoly",
+      "similar": "Pracovní sešit"
+    },
+    {
+      "word": "Pravítko",
+      "hint": "Měření",
+      "similar": "Úhloměr"
+    },
+    {
+      "word": "Úhloměr",
+      "hint": "Stupně",
+      "similar": "Kružítko"
+    },
+    {
+      "word": "Kružítko",
+      "hint": "Hrot",
+      "similar": "Úhloměr"
+    },
+    {
+      "word": "Guma",
+      "hint": "Chyby",
+      "similar": "Ořezávátko"
+    },
+    {
+      "word": "Ořezávátko",
+      "hint": "Špička",
+      "similar": "Guma"
+    },
+    {
+      "word": "Pastelky",
+      "hint": "Barvy",
+      "similar": "Fixy"
+    },
+    {
+      "word": "Fixy",
+      "hint": "Víčka",
+      "similar": "Pastelky"
+    },
+    {
+      "word": "Lepidlo",
+      "hint": "Tyčinka",
+      "similar": "Nůžky"
+    },
+    {
+      "word": "Nůžky",
+      "hint": "Stříhání",
+      "similar": "Lepidlo"
+    },
+    {
+      "word": "Kalkulačka",
+      "hint": "Čísla",
+      "similar": "Počítadlo"
+    },
+    {
+      "word": "Žákovská knížka",
+      "hint": "Podpis",
+      "similar": "Vysvědčení"
+    },
+    {
+      "word": "Vysvědčení",
+      "hint": "Červen",
+      "similar": "Žákovská knížka"
+    },
+    {
+      "word": "Jednička",
+      "hint": "Pochvala",
+      "similar": "Pětka"
+    },
+    {
+      "word": "Pětka",
+      "hint": "Strach",
+      "similar": "Jednička"
+    },
+    {
+      "word": "Písemka",
+      "hint": "Stres",
+      "similar": "Zkoušení"
+    },
+    {
+      "word": "Zkoušení",
+      "hint": "Tabule",
+      "similar": "Písemka"
+    },
+    {
+      "word": "Diktát",
+      "hint": "Pravopis",
+      "similar": "Sloh"
+    },
+    {
+      "word": "Sloh",
+      "hint": "Vypravování",
+      "similar": "Diktát"
+    },
+    {
+      "word": "Domácí úkol",
+      "hint": "Večer",
+      "similar": "Referát"
+    },
+    {
+      "word": "Referát",
+      "hint": "Prezentace",
+      "similar": "Domácí úkol"
+    },
+    {
+      "word": "Tahák",
+      "hint": "Podvádění",
+      "similar": "Opisování"
+    },
+    {
+      "word": "Přestávka",
+      "hint": "Svačina",
+      "similar": "Volná hodina"
+    },
+    {
+      "word": "Svačina",
+      "hint": "Krabička",
+      "similar": "Oběd"
+    },
+    {
+      "word": "Školní jídelna",
+      "hint": "Fronta",
+      "similar": "Bufet"
+    },
+    {
+      "word": "Tělocvična",
+      "hint": "Žíněnky",
+      "similar": "Hřiště"
+    },
+    {
+      "word": "Šatna",
+      "hint": "Skříňka",
+      "similar": "Přezůvky"
+    },
+    {
+      "word": "Přezůvky",
+      "hint": "Podrážka",
+      "similar": "Bačkory"
+    },
+    {
+      "word": "Školník",
+      "hint": "Klíče",
+      "similar": "Uklízečka"
+    },
+    {
+      "word": "Ředitel",
+      "hint": "Kancelář",
+      "similar": "Učitel"
+    },
+    {
+      "word": "Třídní učitel",
+      "hint": "Zodpovědnost",
+      "similar": "Ředitel"
+    },
+    {
+      "word": "Spolužák",
+      "hint": "Lavice",
+      "similar": "Kamarád"
+    },
+    {
+      "word": "Třídní kniha",
+      "hint": "Zápis",
+      "similar": "Žákovská knížka"
+    },
+    {
+      "word": "Zvonění",
+      "hint": "Konec",
+      "similar": "Přestávka"
+    },
+    {
+      "word": "Matematika",
+      "hint": "Rovnice",
+      "similar": "Fyzika"
+    },
+    {
+      "word": "Fyzika",
+      "hint": "Pokusy",
+      "similar": "Chemie"
+    },
+    {
+      "word": "Chemie",
+      "hint": "Zkumavky",
+      "similar": "Fyzika"
+    },
+    {
+      "word": "Biologie",
+      "hint": "Buňky",
+      "similar": "Chemie"
+    },
+    {
+      "word": "Zeměpis",
+      "hint": "Mapy",
+      "similar": "Dějepis"
+    },
+    {
+      "word": "Dějepis",
+      "hint": "Letopočty",
+      "similar": "Zeměpis"
+    },
+    {
+      "word": "Čeština",
+      "hint": "Mluvnice",
+      "similar": "Angličtina"
+    },
+    {
+      "word": "Angličtina",
+      "hint": "Slovíčka",
+      "similar": "Němčina"
+    },
+    {
+      "word": "Tělocvik",
+      "hint": "Šplh",
+      "similar": "Výtvarka"
+    },
+    {
+      "word": "Výtvarka",
+      "hint": "Malování",
+      "similar": "Hudebka"
+    },
+    {
+      "word": "Hudebka",
+      "hint": "Zpívání",
+      "similar": "Výtvarka"
+    },
+    {
+      "word": "Informatika",
+      "hint": "Počítače",
+      "similar": "Matematika"
+    },
+    {
+      "word": "Školní výlet",
+      "hint": "Autobus",
+      "similar": "Exkurze"
+    },
+    {
+      "word": "Lyžák",
+      "hint": "Hory",
+      "similar": "Školní výlet"
+    },
+    {
+      "word": "Škola v přírodě",
+      "hint": "Chata",
+      "similar": "Lyžák"
+    },
+    {
+      "word": "Maturita",
+      "hint": "Zkouška",
+      "similar": "Přijímačky"
+    },
+    {
+      "word": "Přijímačky",
+      "hint": "Nervy",
+      "similar": "Maturita"
+    },
+    {
+      "word": "Promoce",
+      "hint": "Talár",
+      "similar": "Maturita"
+    },
+    {
+      "word": "Univerzita",
+      "hint": "Přednášky",
+      "similar": "Gymnázium"
+    },
+    {
+      "word": "Gymnázium",
+      "hint": "Studenti",
+      "similar": "Univerzita"
+    },
+    {
+      "word": "Školka",
+      "hint": "Děti",
+      "similar": "Družina"
+    },
+    {
+      "word": "Družina",
+      "hint": "Odpoledne",
+      "similar": "Školka"
+    },
+    {
+      "word": "Prázdniny",
+      "hint": "Léto",
+      "similar": "Ředitelské volno"
+    },
+    {
+      "word": "Ředitelské volno",
+      "hint": "Radost",
+      "similar": "Prázdniny"
+    },
+    {
+      "word": "Atlas",
+      "hint": "Mapy",
+      "similar": "Glóbus"
+    },
+    {
+      "word": "Glóbus",
+      "hint": "Koule",
+      "similar": "Atlas"
+    }
+  ]
+}

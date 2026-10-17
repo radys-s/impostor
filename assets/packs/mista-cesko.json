@@ -1,0 +1,372 @@
+{
+  "id": "mista-cesko",
+  "name": "Místa v Česku",
+  "emoji": "🏰",
+  "words": [
+    {
+      "word": "Praha",
+      "hint": "Metropole",
+      "similar": "Brno"
+    },
+    {
+      "word": "Brno",
+      "hint": "Morava",
+      "similar": "Olomouc"
+    },
+    {
+      "word": "Ostrava",
+      "hint": "Uhlí",
+      "similar": "Karviná"
+    },
+    {
+      "word": "Plzeň",
+      "hint": "Pivo",
+      "similar": "České Budějovice"
+    },
+    {
+      "word": "České Budějovice",
+      "hint": "Budvar",
+      "similar": "Plzeň"
+    },
+    {
+      "word": "Olomouc",
+      "hint": "Tvarůžky",
+      "similar": "Brno"
+    },
+    {
+      "word": "Liberec",
+      "hint": "Sever",
+      "similar": "Jablonec nad Nisou"
+    },
+    {
+      "word": "Ještěd",
+      "hint": "Vysílač",
+      "similar": "Sněžka"
+    },
+    {
+      "word": "Sněžka",
+      "hint": "Vrchol",
+      "similar": "Lysá hora"
+    },
+    {
+      "word": "Lysá hora",
+      "hint": "Beskydy",
+      "similar": "Radhošť"
+    },
+    {
+      "word": "Radhošť",
+      "hint": "Radegast",
+      "similar": "Lysá hora"
+    },
+    {
+      "word": "Krkonoše",
+      "hint": "Hory",
+      "similar": "Šumava"
+    },
+    {
+      "word": "Šumava",
+      "hint": "Lesy",
+      "similar": "Jeseníky"
+    },
+    {
+      "word": "Jeseníky",
+      "hint": "Praděd",
+      "similar": "Krkonoše"
+    },
+    {
+      "word": "Praděd",
+      "hint": "Vysílač",
+      "similar": "Sněžka"
+    },
+    {
+      "word": "Beskydy",
+      "hint": "Valaši",
+      "similar": "Jeseníky"
+    },
+    {
+      "word": "Krušné hory",
+      "hint": "Klínovec",
+      "similar": "Jizerské hory"
+    },
+    {
+      "word": "Jizerské hory",
+      "hint": "Liberec",
+      "similar": "Krušné hory"
+    },
+    {
+      "word": "Český Krumlov",
+      "hint": "Zámek",
+      "similar": "Telč"
+    },
+    {
+      "word": "Telč",
+      "hint": "Náměstí",
+      "similar": "Český Krumlov"
+    },
+    {
+      "word": "Kutná Hora",
+      "hint": "Kostnice",
+      "similar": "Telč"
+    },
+    {
+      "word": "Karlovy Vary",
+      "hint": "Lázně",
+      "similar": "Mariánské Lázně"
+    },
+    {
+      "word": "Mariánské Lázně",
+      "hint": "Kolonáda",
+      "similar": "Karlovy Vary"
+    },
+    {
+      "word": "Karlštejn",
+      "hint": "Hrad",
+      "similar": "Křivoklát"
+    },
+    {
+      "word": "Křivoklát",
+      "hint": "Lesy",
+      "similar": "Karlštejn"
+    },
+    {
+      "word": "Pražský hrad",
+      "hint": "Prezident",
+      "similar": "Vyšehrad"
+    },
+    {
+      "word": "Vyšehrad",
+      "hint": "Libuše",
+      "similar": "Pražský hrad"
+    },
+    {
+      "word": "Karlův most",
+      "hint": "Sochy",
+      "similar": "Staroměstské náměstí"
+    },
+    {
+      "word": "Staroměstské náměstí",
+      "hint": "Orloj",
+      "similar": "Václavské náměstí"
+    },
+    {
+      "word": "Václavské náměstí",
+      "hint": "Demonstrace",
+      "similar": "Staroměstské náměstí"
+    },
+    {
+      "word": "Petřín",
+      "hint": "Rozhledna",
+      "similar": "Letná"
+    },
+    {
+      "word": "Letná",
+      "hint": "Metronom",
+      "similar": "Petřín"
+    },
+    {
+      "word": "Žižkovská věž",
+      "hint": "Miminka",
+      "similar": "Petřín"
+    },
+    {
+      "word": "Macocha",
+      "hint": "Propast",
+      "similar": "Moravský kras"
+    },
+    {
+      "word": "Moravský kras",
+      "hint": "Jeskyně",
+      "similar": "Český ráj"
+    },
+    {
+      "word": "Český ráj",
+      "hint": "Skály",
+      "similar": "Adršpach"
+    },
+    {
+      "word": "Adršpach",
+      "hint": "Pískovce",
+      "similar": "Český ráj"
+    },
+    {
+      "word": "České Švýcarsko",
+      "hint": "Brána",
+      "similar": "Český ráj"
+    },
+    {
+      "word": "Hřensko",
+      "hint": "Kaňon",
+      "similar": "Děčín"
+    },
+    {
+      "word": "Lipno",
+      "hint": "Přehrada",
+      "similar": "Orlík"
+    },
+    {
+      "word": "Orlík",
+      "hint": "Vltava",
+      "similar": "Lipno"
+    },
+    {
+      "word": "Máchovo jezero",
+      "hint": "Doksy",
+      "similar": "Lipno"
+    },
+    {
+      "word": "Lednice",
+      "hint": "Minaret",
+      "similar": "Valtice"
+    },
+    {
+      "word": "Valtice",
+      "hint": "Víno",
+      "similar": "Lednice"
+    },
+    {
+      "word": "Mikulov",
+      "hint": "Vinaři",
+      "similar": "Valtice"
+    },
+    {
+      "word": "Pálava",
+      "hint": "Vinice",
+      "similar": "Mikulov"
+    },
+    {
+      "word": "Třeboň",
+      "hint": "Rybníky",
+      "similar": "Jindřichův Hradec"
+    },
+    {
+      "word": "Jindřichův Hradec",
+      "hint": "Zámek",
+      "similar": "Třeboň"
+    },
+    {
+      "word": "Hradec Králové",
+      "hint": "Salón",
+      "similar": "Pardubice"
+    },
+    {
+      "word": "Pardubice",
+      "hint": "Perník",
+      "similar": "Hradec Králové"
+    },
+    {
+      "word": "Kroměříž",
+      "hint": "Zahrady",
+      "similar": "Lednice"
+    },
+    {
+      "word": "Zlín",
+      "hint": "Baťa",
+      "similar": "Kroměříž"
+    },
+    {
+      "word": "Ústí nad Labem",
+      "hint": "Sever",
+      "similar": "Děčín"
+    },
+    {
+      "word": "Děčín",
+      "hint": "Pevnost",
+      "similar": "Ústí nad Labem"
+    },
+    {
+      "word": "Terezín",
+      "hint": "Ghetto",
+      "similar": "Josefov"
+    },
+    {
+      "word": "Říp",
+      "hint": "Praotec",
+      "similar": "Blaník"
+    },
+    {
+      "word": "Blaník",
+      "hint": "Rytíři",
+      "similar": "Říp"
+    },
+    {
+      "word": "Slavkov u Brna",
+      "hint": "Napoleon",
+      "similar": "Terezín"
+    },
+    {
+      "word": "Litomyšl",
+      "hint": "Smetana",
+      "similar": "Polička"
+    },
+    {
+      "word": "Tábor",
+      "hint": "Husité",
+      "similar": "Písek"
+    },
+    {
+      "word": "Písek",
+      "hint": "Otava",
+      "similar": "Tábor"
+    },
+    {
+      "word": "Kokořín",
+      "hint": "Hrad",
+      "similar": "Bezděz"
+    },
+    {
+      "word": "Bezděz",
+      "hint": "Zřícenina",
+      "similar": "Kokořín"
+    },
+    {
+      "word": "Trosky",
+      "hint": "Věže",
+      "similar": "Bezděz"
+    },
+    {
+      "word": "Hluboká nad Vltavou",
+      "hint": "Bílá",
+      "similar": "Český Krumlov"
+    },
+    {
+      "word": "Konopiště",
+      "hint": "Ferdinand",
+      "similar": "Karlštejn"
+    },
+    {
+      "word": "Velehrad",
+      "hint": "Pouť",
+      "similar": "Svatý Hostýn"
+    },
+    {
+      "word": "Svatý Hostýn",
+      "hint": "Poutníci",
+      "similar": "Velehrad"
+    },
+    {
+      "word": "Dolní Vítkovice",
+      "hint": "Huť",
+      "similar": "Landek"
+    },
+    {
+      "word": "Pražská zoo",
+      "hint": "Troja",
+      "similar": "Zoo Dvůr Králové"
+    },
+    {
+      "word": "Zoo Dvůr Králové",
+      "hint": "Safari",
+      "similar": "Pražská zoo"
+    },
+    {
+      "word": "Vltava",
+      "hint": "Řeka",
+      "similar": "Labe"
+    },
+    {
+      "word": "Labe",
+      "hint": "Hamburk",
+      "similar": "Vltava"
+    }
+  ]
+}

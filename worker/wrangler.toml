@@ -1,0 +1,29 @@
+name = "impostor-ai"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+
+# Workers AI on the Workers Free plan: 10,000 Neurons/day, no card, no API key
+# in the app. The Free plan is never charged; once the daily allocation is used
+# up the model returns error 4006 and the Worker answers 429 `quota_global`
+# until the next UTC day.
+[ai]
+binding = "AI"
+
+# Daily quota counters.
+# PLACEHOLDER: before the first deploy run `npx wrangler kv namespace create QUOTA`
+# on the target Cloudflare account and replace the id below with the returned one.
+[[kv_namespaces]]
+binding = "QUOTA"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+MODEL = "@cf/mistralai/mistral-small-3.1-24b-instruct"
+# Word-generation requests per install per UTC day.
+WORDS_PER_INSTALL = "15"
+# Reserved model calls per UTC day for everybody (2 per request for a retry).
+# KV counts are approximate under concurrent traffic; the Workers Free plan is
+# the cost boundary.
+GLOBAL_DAILY_CAP = "150"
+
+[observability]
+enabled = false

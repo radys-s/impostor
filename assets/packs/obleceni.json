@@ -1,0 +1,337 @@
+{
+  "id": "obleceni",
+  "name": "Oblečení",
+  "emoji": "👕",
+  "words": [
+    {
+      "word": "Tričko",
+      "hint": "Rukávy",
+      "similar": "Košile"
+    },
+    {
+      "word": "Košile",
+      "hint": "Knoflíky",
+      "similar": "Halenka"
+    },
+    {
+      "word": "Halenka",
+      "hint": "Dáma",
+      "similar": "Košile"
+    },
+    {
+      "word": "Mikina",
+      "hint": "Kapuce",
+      "similar": "Svetr"
+    },
+    {
+      "word": "Svetr",
+      "hint": "Vlna",
+      "similar": "Mikina"
+    },
+    {
+      "word": "Rolák",
+      "hint": "Krk",
+      "similar": "Svetr"
+    },
+    {
+      "word": "Bunda",
+      "hint": "Zip",
+      "similar": "Kabát"
+    },
+    {
+      "word": "Kabát",
+      "hint": "Zima",
+      "similar": "Bunda"
+    },
+    {
+      "word": "Pláštěnka",
+      "hint": "Déšť",
+      "similar": "Bunda"
+    },
+    {
+      "word": "Sako",
+      "hint": "Kancelář",
+      "similar": "Vesta"
+    },
+    {
+      "word": "Oblek",
+      "hint": "Svatba",
+      "similar": "Smoking"
+    },
+    {
+      "word": "Smoking",
+      "hint": "Gala",
+      "similar": "Oblek"
+    },
+    {
+      "word": "Vesta",
+      "hint": "Vrstva",
+      "similar": "Sako"
+    },
+    {
+      "word": "Kravata",
+      "hint": "Uzel",
+      "similar": "Motýlek"
+    },
+    {
+      "word": "Motýlek",
+      "hint": "Ples",
+      "similar": "Kravata"
+    },
+    {
+      "word": "Džíny",
+      "hint": "Modrá",
+      "similar": "Manšestráky"
+    },
+    {
+      "word": "Kalhoty",
+      "hint": "Nohavice",
+      "similar": "Tepláky"
+    },
+    {
+      "word": "Tepláky",
+      "hint": "Pohodlí",
+      "similar": "Legíny"
+    },
+    {
+      "word": "Legíny",
+      "hint": "Cvičení",
+      "similar": "Tepláky"
+    },
+    {
+      "word": "Kraťasy",
+      "hint": "Léto",
+      "similar": "Bermudy"
+    },
+    {
+      "word": "Sukně",
+      "hint": "Pas",
+      "similar": "Šaty"
+    },
+    {
+      "word": "Šaty",
+      "hint": "Ples",
+      "similar": "Sukně"
+    },
+    {
+      "word": "Svatební šaty",
+      "hint": "Závoj",
+      "similar": "Večerní šaty"
+    },
+    {
+      "word": "Pyžamo",
+      "hint": "Spaní",
+      "similar": "Noční košile"
+    },
+    {
+      "word": "Župan",
+      "hint": "Koupelna",
+      "similar": "Pyžamo"
+    },
+    {
+      "word": "Spodní prádlo",
+      "hint": "Šuplík",
+      "similar": "Plavky"
+    },
+    {
+      "word": "Podprsenka",
+      "hint": "Ramínka",
+      "similar": "Plavky"
+    },
+    {
+      "word": "Ponožky",
+      "hint": "Pár",
+      "similar": "Podkolenky"
+    },
+    {
+      "word": "Punčocháče",
+      "hint": "Nohy",
+      "similar": "Ponožky"
+    },
+    {
+      "word": "Plavky",
+      "hint": "Bazén",
+      "similar": "Spodní prádlo"
+    },
+    {
+      "word": "Čepice",
+      "hint": "Zima",
+      "similar": "Kšiltovka"
+    },
+    {
+      "word": "Kšiltovka",
+      "hint": "Slunce",
+      "similar": "Čepice"
+    },
+    {
+      "word": "Klobouk",
+      "hint": "Krempa",
+      "similar": "Kšiltovka"
+    },
+    {
+      "word": "Šála",
+      "hint": "Krk",
+      "similar": "Šátek"
+    },
+    {
+      "word": "Šátek",
+      "hint": "Hlava",
+      "similar": "Šála"
+    },
+    {
+      "word": "Rukavice",
+      "hint": "Prsty",
+      "similar": "Palčáky"
+    },
+    {
+      "word": "Palčáky",
+      "hint": "Sníh",
+      "similar": "Rukavice"
+    },
+    {
+      "word": "Boty",
+      "hint": "Tkaničky",
+      "similar": "Tenisky"
+    },
+    {
+      "word": "Tenisky",
+      "hint": "Sport",
+      "similar": "Kecky"
+    },
+    {
+      "word": "Kecky",
+      "hint": "Plátno",
+      "similar": "Tenisky"
+    },
+    {
+      "word": "Kozačky",
+      "hint": "Kolena",
+      "similar": "Holínky"
+    },
+    {
+      "word": "Holínky",
+      "hint": "Kaluže",
+      "similar": "Kozačky"
+    },
+    {
+      "word": "Sandály",
+      "hint": "Léto",
+      "similar": "Žabky"
+    },
+    {
+      "word": "Žabky",
+      "hint": "Pláž",
+      "similar": "Sandály"
+    },
+    {
+      "word": "Pantofle",
+      "hint": "Domov",
+      "similar": "Bačkory"
+    },
+    {
+      "word": "Bačkory",
+      "hint": "Teplo",
+      "similar": "Pantofle"
+    },
+    {
+      "word": "Lodičky",
+      "hint": "Podpatek",
+      "similar": "Baleríny"
+    },
+    {
+      "word": "Pásek",
+      "hint": "Přezka",
+      "similar": "Šle"
+    },
+    {
+      "word": "Šle",
+      "hint": "Kalhoty",
+      "similar": "Pásek"
+    },
+    {
+      "word": "Kabelka",
+      "hint": "Peněženka",
+      "similar": "Ledvinka"
+    },
+    {
+      "word": "Ledvinka",
+      "hint": "Pas",
+      "similar": "Kabelka"
+    },
+    {
+      "word": "Batoh",
+      "hint": "Záda",
+      "similar": "Taška"
+    },
+    {
+      "word": "Brýle",
+      "hint": "Oči",
+      "similar": "Sluneční brýle"
+    },
+    {
+      "word": "Sluneční brýle",
+      "hint": "Léto",
+      "similar": "Brýle"
+    },
+    {
+      "word": "Náušnice",
+      "hint": "Uši",
+      "similar": "Náhrdelník"
+    },
+    {
+      "word": "Náhrdelník",
+      "hint": "Krk",
+      "similar": "Řetízek"
+    },
+    {
+      "word": "Prsten",
+      "hint": "Zásnuby",
+      "similar": "Náramek"
+    },
+    {
+      "word": "Náramek",
+      "hint": "Zápěstí",
+      "similar": "Hodinky"
+    },
+    {
+      "word": "Hodinky",
+      "hint": "Čas",
+      "similar": "Náramek"
+    },
+    {
+      "word": "Uniforma",
+      "hint": "Práce",
+      "similar": "Kostým"
+    },
+    {
+      "word": "Kostým",
+      "hint": "Maškarní",
+      "similar": "Uniforma"
+    },
+    {
+      "word": "Montérky",
+      "hint": "Dílna",
+      "similar": "Tepláky"
+    },
+    {
+      "word": "Dres",
+      "hint": "Číslo",
+      "similar": "Tričko"
+    },
+    {
+      "word": "Body",
+      "hint": "Miminko",
+      "similar": "Dupačky"
+    },
+    {
+      "word": "Kombinéza",
+      "hint": "Lyžování",
+      "similar": "Overal"
+    },
+    {
+      "word": "Tílko",
+      "hint": "Ramena",
+      "similar": "Tričko"
+    }
+  ]
+}

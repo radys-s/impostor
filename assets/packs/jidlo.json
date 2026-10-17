@@ -1,0 +1,407 @@
+{
+  "id": "jidlo",
+  "name": "Jídlo",
+  "emoji": "🍕",
+  "words": [
+    {
+      "word": "Svíčková",
+      "hint": "Omáčka",
+      "similar": "Guláš"
+    },
+    {
+      "word": "Guláš",
+      "hint": "Kotlík",
+      "similar": "Svíčková"
+    },
+    {
+      "word": "Řízek",
+      "hint": "Neděle",
+      "similar": "Karbanátek"
+    },
+    {
+      "word": "Knedlíky",
+      "hint": "Příloha",
+      "similar": "Halušky"
+    },
+    {
+      "word": "Bramboráky",
+      "hint": "Pánev",
+      "similar": "Placky"
+    },
+    {
+      "word": "Vepřo knedlo zelo",
+      "hint": "Tradice",
+      "similar": "Svíčková"
+    },
+    {
+      "word": "Pizza",
+      "hint": "Itálie",
+      "similar": "Lasagne"
+    },
+    {
+      "word": "Lasagne",
+      "hint": "Vrstvy",
+      "similar": "Pizza"
+    },
+    {
+      "word": "Špagety",
+      "hint": "Itálie",
+      "similar": "Rizoto"
+    },
+    {
+      "word": "Hamburger",
+      "hint": "Rychlovka",
+      "similar": "Hot dog"
+    },
+    {
+      "word": "Hot dog",
+      "hint": "Stánek",
+      "similar": "Hamburger"
+    },
+    {
+      "word": "Kebab",
+      "hint": "Noc",
+      "similar": "Gyros"
+    },
+    {
+      "word": "Sushi",
+      "hint": "Japonsko",
+      "similar": "Ramen"
+    },
+    {
+      "word": "Ramen",
+      "hint": "Vývar",
+      "similar": "Sushi"
+    },
+    {
+      "word": "Palačinky",
+      "hint": "Sladkost",
+      "similar": "Lívance"
+    },
+    {
+      "word": "Lívance",
+      "hint": "Snídaně",
+      "similar": "Palačinky"
+    },
+    {
+      "word": "Buchty",
+      "hint": "Babička",
+      "similar": "Koláče"
+    },
+    {
+      "word": "Koláče",
+      "hint": "Svatba",
+      "similar": "Buchty"
+    },
+    {
+      "word": "Trdelník",
+      "hint": "Turisti",
+      "similar": "Langoš"
+    },
+    {
+      "word": "Langoš",
+      "hint": "Pouť",
+      "similar": "Trdelník"
+    },
+    {
+      "word": "Smažený sýr",
+      "hint": "Tatarka",
+      "similar": "Hermelín"
+    },
+    {
+      "word": "Nakládaný hermelín",
+      "hint": "Hospoda",
+      "similar": "Utopenec"
+    },
+    {
+      "word": "Utopenec",
+      "hint": "Ocet",
+      "similar": "Tlačenka"
+    },
+    {
+      "word": "Tlačenka",
+      "hint": "Zabijačka",
+      "similar": "Jitrnice"
+    },
+    {
+      "word": "Jitrnice",
+      "hint": "Zabijačka",
+      "similar": "Jelito"
+    },
+    {
+      "word": "Párek",
+      "hint": "Hořčice",
+      "similar": "Klobása"
+    },
+    {
+      "word": "Klobása",
+      "hint": "Gril",
+      "similar": "Párek"
+    },
+    {
+      "word": "Chlebíček",
+      "hint": "Oslava",
+      "similar": "Jednohubky"
+    },
+    {
+      "word": "Rohlík",
+      "hint": "Pekárna",
+      "similar": "Houska"
+    },
+    {
+      "word": "Chléb",
+      "hint": "Krajíc",
+      "similar": "Rohlík"
+    },
+    {
+      "word": "Česnečka",
+      "hint": "Kocovina",
+      "similar": "Kulajda"
+    },
+    {
+      "word": "Kulajda",
+      "hint": "Houby",
+      "similar": "Česnečka"
+    },
+    {
+      "word": "Vývar",
+      "hint": "Nemoc",
+      "similar": "Česnečka"
+    },
+    {
+      "word": "Rizoto",
+      "hint": "Rýže",
+      "similar": "Paella"
+    },
+    {
+      "word": "Paella",
+      "hint": "Španělsko",
+      "similar": "Rizoto"
+    },
+    {
+      "word": "Tacos",
+      "hint": "Mexiko",
+      "similar": "Burrito"
+    },
+    {
+      "word": "Burrito",
+      "hint": "Tortila",
+      "similar": "Tacos"
+    },
+    {
+      "word": "Kuře na paprice",
+      "hint": "Smetana",
+      "similar": "Segedínský guláš"
+    },
+    {
+      "word": "Segedínský guláš",
+      "hint": "Zelí",
+      "similar": "Vepřo knedlo zelo"
+    },
+    {
+      "word": "Kachna",
+      "hint": "Posvícení",
+      "similar": "Husa"
+    },
+    {
+      "word": "Míchaná vejce",
+      "hint": "Snídaně",
+      "similar": "Omeleta"
+    },
+    {
+      "word": "Omeleta",
+      "hint": "Pánev",
+      "similar": "Míchaná vejce"
+    },
+    {
+      "word": "Hranolky",
+      "hint": "Fritéza",
+      "similar": "Krokety"
+    },
+    {
+      "word": "Krokety",
+      "hint": "Příloha",
+      "similar": "Hranolky"
+    },
+    {
+      "word": "Bramborová kaše",
+      "hint": "Máslo",
+      "similar": "Hranolky"
+    },
+    {
+      "word": "Bramborový salát",
+      "hint": "Vánoce",
+      "similar": "Vlašský salát"
+    },
+    {
+      "word": "Rajská omáčka",
+      "hint": "Hovězí",
+      "similar": "Svíčková"
+    },
+    {
+      "word": "Čočka",
+      "hint": "Luštěniny",
+      "similar": "Hrách"
+    },
+    {
+      "word": "Popcorn",
+      "hint": "Kino",
+      "similar": "Brambůrky"
+    },
+    {
+      "word": "Brambůrky",
+      "hint": "Sáček",
+      "similar": "Popcorn"
+    },
+    {
+      "word": "Čokoláda",
+      "hint": "Sladkost",
+      "similar": "Bonbóny"
+    },
+    {
+      "word": "Zmrzlina",
+      "hint": "Léto",
+      "similar": "Nanuk"
+    },
+    {
+      "word": "Dort",
+      "hint": "Narozeniny",
+      "similar": "Bábovka"
+    },
+    {
+      "word": "Bábovka",
+      "hint": "Forma",
+      "similar": "Dort"
+    },
+    {
+      "word": "Štrúdl",
+      "hint": "Jablka",
+      "similar": "Koláč"
+    },
+    {
+      "word": "Perník",
+      "hint": "Pardubice",
+      "similar": "Vánočka"
+    },
+    {
+      "word": "Vánočka",
+      "hint": "Rozinky",
+      "similar": "Mazanec"
+    },
+    {
+      "word": "Kobliha",
+      "hint": "Marmeláda",
+      "similar": "Muffin"
+    },
+    {
+      "word": "Muffin",
+      "hint": "Kávárna",
+      "similar": "Kobliha"
+    },
+    {
+      "word": "Jogurt",
+      "hint": "Lednička",
+      "similar": "Tvaroh"
+    },
+    {
+      "word": "Sýr",
+      "hint": "Myš",
+      "similar": "Máslo"
+    },
+    {
+      "word": "Med",
+      "hint": "Včely",
+      "similar": "Džem"
+    },
+    {
+      "word": "Ovesná kaše",
+      "hint": "Snídaně",
+      "similar": "Müsli"
+    },
+    {
+      "word": "Müsli",
+      "hint": "Mléko",
+      "similar": "Ovesná kaše"
+    },
+    {
+      "word": "Tatarák",
+      "hint": "Topinky",
+      "similar": "Steak"
+    },
+    {
+      "word": "Steak",
+      "hint": "Propečení",
+      "similar": "Tatarák"
+    },
+    {
+      "word": "Pečená žebra",
+      "hint": "Pivnice",
+      "similar": "Kuřecí křídla"
+    },
+    {
+      "word": "Kuřecí křídla",
+      "hint": "Pikantní",
+      "similar": "Pečená žebra"
+    },
+    {
+      "word": "Topinky",
+      "hint": "Česnek",
+      "similar": "Chlebíček"
+    },
+    {
+      "word": "Halušky",
+      "hint": "Slovensko",
+      "similar": "Bramboráky"
+    },
+    {
+      "word": "Pirohy",
+      "hint": "Plnění",
+      "similar": "Ravioli"
+    },
+    {
+      "word": "Ovocné knedlíky",
+      "hint": "Jahody",
+      "similar": "Pirohy"
+    },
+    {
+      "word": "Krupicová kaše",
+      "hint": "Dětství",
+      "similar": "Ovesná kaše"
+    },
+    {
+      "word": "Kapr",
+      "hint": "Vánoce",
+      "similar": "Pstruh"
+    },
+    {
+      "word": "Pstruh",
+      "hint": "Grilování",
+      "similar": "Kapr"
+    },
+    {
+      "word": "Toust",
+      "hint": "Sýr",
+      "similar": "Sendvič"
+    },
+    {
+      "word": "Sendvič",
+      "hint": "Svačina",
+      "similar": "Bageta"
+    },
+    {
+      "word": "Bageta",
+      "hint": "Benzínka",
+      "similar": "Sendvič"
+    },
+    {
+      "word": "Pomazánka",
+      "hint": "Chleba",
+      "similar": "Paštika"
+    },
+    {
+      "word": "Paštika",
+      "hint": "Konzerva",
+      "similar": "Pomazánka"
+    }
+  ]
+}

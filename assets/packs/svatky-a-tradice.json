@@ -1,0 +1,342 @@
+{
+  "id": "svatky-a-tradice",
+  "name": "Svátky a tradice",
+  "emoji": "🎄",
+  "words": [
+    {
+      "word": "Vánoce",
+      "hint": "Prosinec",
+      "similar": "Velikonoce"
+    },
+    {
+      "word": "Štědrý den",
+      "hint": "Večeře",
+      "similar": "Silvestr"
+    },
+    {
+      "word": "Velikonoce",
+      "hint": "Jaro",
+      "similar": "Vánoce"
+    },
+    {
+      "word": "Silvestr",
+      "hint": "Půlnoc",
+      "similar": "Nový rok"
+    },
+    {
+      "word": "Nový rok",
+      "hint": "Předsevzetí",
+      "similar": "Silvestr"
+    },
+    {
+      "word": "Mikuláš",
+      "hint": "Nadílka",
+      "similar": "Ježíšek"
+    },
+    {
+      "word": "Čert",
+      "hint": "Peklo",
+      "similar": "Anděl"
+    },
+    {
+      "word": "Anděl",
+      "hint": "Křídla",
+      "similar": "Čert"
+    },
+    {
+      "word": "Ježíšek",
+      "hint": "Dárky",
+      "similar": "Santa Claus"
+    },
+    {
+      "word": "Santa Claus",
+      "hint": "Sobi",
+      "similar": "Ježíšek"
+    },
+    {
+      "word": "Vánoční stromeček",
+      "hint": "Ozdoby",
+      "similar": "Betlém"
+    },
+    {
+      "word": "Betlém",
+      "hint": "Jesličky",
+      "similar": "Vánoční stromeček"
+    },
+    {
+      "word": "Adventní věnec",
+      "hint": "Svíčky",
+      "similar": "Adventní kalendář"
+    },
+    {
+      "word": "Adventní kalendář",
+      "hint": "Okénka",
+      "similar": "Adventní věnec"
+    },
+    {
+      "word": "Cukroví",
+      "hint": "Pečení",
+      "similar": "Perník"
+    },
+    {
+      "word": "Vánoční kapr",
+      "hint": "Vana",
+      "similar": "Bramborový salát"
+    },
+    {
+      "word": "Lití olova",
+      "hint": "Budoucnost",
+      "similar": "Rozkrajování jablka"
+    },
+    {
+      "word": "Rozkrajování jablka",
+      "hint": "Hvězdička",
+      "similar": "Lití olova"
+    },
+    {
+      "word": "Pouštění lodiček",
+      "hint": "Skořápky",
+      "similar": "Lití olova"
+    },
+    {
+      "word": "Házení botou",
+      "hint": "Vdavky",
+      "similar": "Lití olova"
+    },
+    {
+      "word": "Zlaté prasátko",
+      "hint": "Půst",
+      "similar": "Ježíšek"
+    },
+    {
+      "word": "Jmelí",
+      "hint": "Polibek",
+      "similar": "Barborky"
+    },
+    {
+      "word": "Barborky",
+      "hint": "Větvičky",
+      "similar": "Jmelí"
+    },
+    {
+      "word": "Koledy",
+      "hint": "Zpívání",
+      "similar": "Rybova mše"
+    },
+    {
+      "word": "Rybova mše",
+      "hint": "Kostel",
+      "similar": "Koledy"
+    },
+    {
+      "word": "Půlnoční",
+      "hint": "Zvony",
+      "similar": "Rybova mše"
+    },
+    {
+      "word": "Pomlázka",
+      "hint": "Proutí",
+      "similar": "Kraslice"
+    },
+    {
+      "word": "Kraslice",
+      "hint": "Vajíčka",
+      "similar": "Pomlázka"
+    },
+    {
+      "word": "Velikonoční beránek",
+      "hint": "Pečivo",
+      "similar": "Mazanec"
+    },
+    {
+      "word": "Mazanec",
+      "hint": "Kynuté",
+      "similar": "Velikonoční beránek"
+    },
+    {
+      "word": "Zelený čtvrtek",
+      "hint": "Špenát",
+      "similar": "Velký pátek"
+    },
+    {
+      "word": "Velký pátek",
+      "hint": "Poklady",
+      "similar": "Zelený čtvrtek"
+    },
+    {
+      "word": "Masopust",
+      "hint": "Masky",
+      "similar": "Halloween"
+    },
+    {
+      "word": "Halloween",
+      "hint": "Dýně",
+      "similar": "Dušičky"
+    },
+    {
+      "word": "Dušičky",
+      "hint": "Hřbitov",
+      "similar": "Halloween"
+    },
+    {
+      "word": "Pálení čarodějnic",
+      "hint": "Oheň",
+      "similar": "Stavění máje"
+    },
+    {
+      "word": "Stavění máje",
+      "hint": "Strom",
+      "similar": "Pálení čarodějnic"
+    },
+    {
+      "word": "První máj",
+      "hint": "Láska",
+      "similar": "Valentýn"
+    },
+    {
+      "word": "Valentýn",
+      "hint": "Srdce",
+      "similar": "První máj"
+    },
+    {
+      "word": "Den matek",
+      "hint": "Kytice",
+      "similar": "Den otců"
+    },
+    {
+      "word": "Den otců",
+      "hint": "Červen",
+      "similar": "Den matek"
+    },
+    {
+      "word": "MDŽ",
+      "hint": "Karafiát",
+      "similar": "Den matek"
+    },
+    {
+      "word": "Narozeniny",
+      "hint": "Přání",
+      "similar": "Svátek"
+    },
+    {
+      "word": "Svátek",
+      "hint": "Kalendář",
+      "similar": "Narozeniny"
+    },
+    {
+      "word": "Svatba",
+      "hint": "Prstýnky",
+      "similar": "Zásnuby"
+    },
+    {
+      "word": "Zásnuby",
+      "hint": "Klečení",
+      "similar": "Svatba"
+    },
+    {
+      "word": "Rozlučka se svobodou",
+      "hint": "Večírek",
+      "similar": "Svatba"
+    },
+    {
+      "word": "Posvícení",
+      "hint": "Husa",
+      "similar": "Dožínky"
+    },
+    {
+      "word": "Dožínky",
+      "hint": "Úroda",
+      "similar": "Posvícení"
+    },
+    {
+      "word": "Hody",
+      "hint": "Kroje",
+      "similar": "Posvícení"
+    },
+    {
+      "word": "Vynášení Morany",
+      "hint": "Řeka",
+      "similar": "Pálení čarodějnic"
+    },
+    {
+      "word": "Tři králové",
+      "hint": "Křída",
+      "similar": "Mikuláš"
+    },
+    {
+      "word": "Svatý Štěpán",
+      "hint": "Návštěvy",
+      "similar": "Štědrý den"
+    },
+    {
+      "word": "Dárky",
+      "hint": "Balení",
+      "similar": "Nadílka"
+    },
+    {
+      "word": "Ohňostroj",
+      "hint": "Rachejtle",
+      "similar": "Prskavky"
+    },
+    {
+      "word": "Prskavky",
+      "hint": "Jiskry",
+      "similar": "Ohňostroj"
+    },
+    {
+      "word": "Hromnice",
+      "hint": "Pranostika",
+      "similar": "Medard"
+    },
+    {
+      "word": "Medard",
+      "hint": "Déšť",
+      "similar": "Hromnice"
+    },
+    {
+      "word": "Svatý Martin",
+      "hint": "Sníh",
+      "similar": "Posvícení"
+    },
+    {
+      "word": "Svatomartinské víno",
+      "hint": "Listopad",
+      "similar": "Burčák"
+    },
+    {
+      "word": "Burčák",
+      "hint": "Září",
+      "similar": "Svatomartinské víno"
+    },
+    {
+      "word": "Vánoční trhy",
+      "hint": "Stánky",
+      "similar": "Velikonoční trhy"
+    },
+    {
+      "word": "Velikonoční trhy",
+      "hint": "Řemesla",
+      "similar": "Vánoční trhy"
+    },
+    {
+      "word": "Štědrovečerní večeře",
+      "hint": "Šupiny",
+      "similar": "Silvestrovská večeře"
+    },
+    {
+      "word": "Mrskut",
+      "hint": "Pondělí",
+      "similar": "Pomlázka"
+    },
+    {
+      "word": "Křtiny",
+      "hint": "Miminko",
+      "similar": "Svatba"
+    },
+    {
+      "word": "Poutě",
+      "hint": "Kolotoče",
+      "similar": "Hody"
+    }
+  ]
+}
