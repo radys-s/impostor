@@ -4,6 +4,7 @@ import '../ai/ai_client.dart';
 import '../data/app_state.dart';
 import '../models/play_context.dart';
 import '../store/store.dart';
+import '../ui/icons.dart';
 import '../ui/motion.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
@@ -124,7 +125,7 @@ class _StoreScreenState extends State<StoreScreen> {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: _StoreTile(
-                    emoji: f.emoji,
+                    icon: f.icon,
                     title: f.name,
                     description: f == FeaturePlugin.ai && !AiClient.configured
                         ? '${f.description} Server zatím není zapojený.'
@@ -151,7 +152,7 @@ class _StoreScreenState extends State<StoreScreen> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: _StoreTile(
-                      emoji: item.emoji,
+                      icon: PackIcons.of(item.emoji),
                       title: item.name,
                       description: item.description,
                       badge: item.audience == Audience.adult
@@ -173,7 +174,7 @@ class _StoreScreenState extends State<StoreScreen> {
 
 class _StoreTile extends StatelessWidget {
   const _StoreTile({
-    required this.emoji,
+    required this.icon,
     required this.title,
     required this.description,
     required this.installed,
@@ -183,7 +184,7 @@ class _StoreTile extends StatelessWidget {
     this.busy = false,
   });
 
-  final String emoji;
+  final IconData icon;
   final String title;
   final String description;
   final bool installed;
@@ -210,7 +211,7 @@ class _StoreTile extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          EmojiBadge(emoji, size: 48),
+          IconBadge(icon, size: 48),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
@@ -308,7 +309,7 @@ class _Offline extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            const Text('📡', style: TextStyle(fontSize: 40)),
+            Icon(Icons.wifi_off_rounded, size: 40, color: scheme.onSurfaceVariant),
             const SizedBox(height: 8),
             Text(message, textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
             const SizedBox(height: 12),

@@ -66,7 +66,7 @@ class _VoteScreenState extends State<VoteScreen> {
                     ),
                     children: [
                       const SizedBox(height: 72),
-                      const Center(child: EmojiBadge('🗳️', size: 96)),
+                      const Center(child: IconBadge(Icons.how_to_vote_rounded, size: 96)),
                       const SizedBox(height: 24),
                       Text('Předej telefon', textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
                       Text(_voter, textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineMedium),
@@ -85,7 +85,7 @@ class _VoteScreenState extends State<VoteScreen> {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 10),
                           child: PartyTile(
-                            leading: EmojiBadge(name.characters.first.toUpperCase(), size: 40),
+                            leading: LetterBadge(name.characters.first.toUpperCase(), size: 40),
                             title: name,
                             trailing: Icon(Icons.how_to_vote_outlined, color: scheme.onSurfaceVariant),
                             onTap: () => _vote(name),
@@ -94,7 +94,7 @@ class _VoteScreenState extends State<VoteScreen> {
                         ),
                       if (allowNobody)
                         PartyTile(
-                          leading: const EmojiBadge('🤷', size: 40),
+                          leading: const IconBadge(Icons.block_rounded, size: 40),
                           title: 'Žádný impostor tu není',
                           onTap: () => _vote(null),
                         ),

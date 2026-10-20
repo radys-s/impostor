@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../ai/ai_client.dart';
 import '../data/app_state.dart';
 import '../store/store.dart';
+import '../ui/how_to_play.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import 'context_screen.dart';
@@ -24,7 +25,7 @@ class SettingsScreen extends StatelessWidget {
         child: PageBody(
           children: [
             PartyTile(
-              leading: EmojiBadge(state.playContext.emoji),
+              leading: IconBadge(state.playContext.icon),
               title: 'Hrajeme: ${state.playContext.label}',
               subtitle: state.playContext.tagline,
               trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
@@ -53,7 +54,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             PartyTile(
-              leading: const EmojiBadge('🧩'),
+              leading: const IconBadge(Icons.storefront_rounded),
               title: 'Obchod s rozšířeními',
               subtitle: state.features.isEmpty
                   ? 'Skóre, hlasování, AI a balíčky slov. Zdarma.'
@@ -64,17 +65,18 @@ class SettingsScreen extends StatelessWidget {
             const SectionLabel('Jak se hraje'),
             const Card(
               child: Padding(
-                padding: EdgeInsets.all(18),
+                padding: EdgeInsets.fromLTRB(18, 18, 18, 4),
+                child: HowToPlay(),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(18),
                 child: Text(
-                  '1. Každý si tajně prohlédne svou kartu.\n'
-                  '2. Všichni kromě impostora vidí stejné tajné slovo.\n'
-                  '3. Po řadě každý řekne jedno slovo, které k němu sedí. '
-                  'Ne moc jasné, ať impostor slovo neuhodne.\n'
-                  '4. Diskutujte a nahlas hlasujte, kdo je impostor.\n'
-                  '5. Když impostora odhalíte, má poslední šanci uhodnout slovo.\n\n'
                   'Undercover: impostor dostane podobné slovo a neví, že je impostor.\n'
                   'Chaos: občas není impostor nikdo, nebo jsou to všichni.',
-                  style: TextStyle(height: 1.45),
+                  style: TextStyle(height: 1.45, color: scheme.onSurfaceVariant),
                 ),
               ),
             ),

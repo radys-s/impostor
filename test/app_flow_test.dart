@@ -32,11 +32,14 @@ Future<void> revealAll(WidgetTester tester, int players) async {
   for (var i = 0; i < players; i++) {
     await tester.tap(find.text('Ukázat kartu'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Skrýt kartu'));
+    await tester.tap(find.textContaining('Mám to, skrýt'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text(i == players - 1 ? 'Všichni viděli, jdeme hrát' : 'Další hráč'));
-    await tester.pumpAndSettle();
+    // Let the accidental double-tap lock expire before the next player.
+    await tester.pump(const Duration(seconds: 1));
   }
+  expect(find.text('Všichni mají kartu'), findsOneWidget);
+  await tester.tap(find.text('Začít kolo'));
+  await tester.pumpAndSettle();
 }
 
 void main() {
@@ -91,8 +94,6 @@ void main() {
     expect(find.text('ZAČÍNÁ'), findsOneWidget);
     await tester.tap(find.text('Odhalit impostora'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Odhalit'));
-    await tester.pumpAndSettle();
     expect(find.text('Tajné slovo'), findsOneWidget);
     expect(find.text('Kdo bere body?'), findsNothing);
     expect(find.text('Další kolo'), findsOneWidget);
@@ -108,8 +109,6 @@ void main() {
     await tester.pumpAndSettle();
     await revealAll(tester, 4);
     await tester.tap(find.text('Odhalit impostora'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Odhalit'));
     await tester.pumpAndSettle();
 
     // Chaos is off, so there is exactly one impostor and "Hráči" is offered.
@@ -145,5 +144,45 @@ void main() {
       await tester.pumpAndSettle();
     }
     expect(find.text('Další kolo'), findsOneWidget);
+  });
+
+  testWidgets('quick second tap after hiding does not open the next card', (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Ukázat kartu'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Mám to, skrýt'));
+    await tester.pumpAndSettle();
+    expect(find.text('Bob'), findsOneWidget);
+    await tester.tap(find.text('Ukázat kartu'));
+    await tester.pumpAndSettle();
+    expect(find.text('Zapamatuj si to'), findsNothing);
+    await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('round: forgotten word peek and leaving the round', (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await revealAll(tester, 3);
+
+    await tester.tap(find.byTooltip('Někdo zapomněl slovo'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Bob').last);
+    await tester.pumpAndSettle();
+    expect(find.text('Skrýt'), findsOneWidget);
+    await tester.tap(find.text('Skrýt'));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byTooltip('Ukončit kolo'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Ukončit'));
+    await tester.pumpAndSettle();
+    expect(find.byType(HomeScreen), findsOneWidget);
   });
 }

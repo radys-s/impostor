@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -22,29 +23,52 @@ class RevealScreen extends StatefulWidget {
 class _RevealScreenState extends State<RevealScreen> {
   int _index = 0;
   bool _revealed = false;
-  bool _seen = false;
+
+  /// Everyone has seen their card; waiting to start the round.
+  bool _done = false;
+
+  /// Swallows a quick second tap right after hiding, so the previous player
+  /// cannot accidentally open the next player's card.
+  bool _locked = false;
+  Timer? _unlock;
+
+  @override
+  void dispose() {
+    _unlock?.cancel();
+    super.dispose();
+  }
 
   PlayerRole get _role => widget.round.roles[_index];
   bool get _last => _index == widget.round.roles.length - 1;
+  String? get _nextPlayer => _last ? null : widget.round.roles[_index + 1].player;
 
-  void _flip() {
+  void _tapCard() {
+    if (_done) return _start();
+    if (_locked) return;
     tick(AppScope.read(context).appSettings.haptics);
+    if (!_revealed) {
+      setState(() => _revealed = true);
+      return;
+    }
+    // Hide and hand over in one step.
+    _locked = true;
+    _unlock = Timer(const Duration(milliseconds: 700), () => _locked = false);
     setState(() {
-      _revealed = !_revealed;
-      if (_revealed) _seen = true;
+      _revealed = false;
+      if (_last) {
+        _done = true;
+      } else {
+        _index++;
+      }
     });
   }
 
-  void _next() {
-    if (_last) {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => RoundScreen(round: widget.round)));
-      return;
-    }
-    setState(() {
-      _index++;
-      _revealed = false;
-      _seen = false;
-    });
+  bool _starting = false;
+
+  void _start() {
+    if (_starting) return;
+    _starting = true;
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => RoundScreen(round: widget.round)));
   }
 
   Future<bool> _confirmLeave() async {
@@ -66,7 +90,19 @@ class _RevealScreenState extends State<RevealScreen> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final total = widget.round.roles.length;
-    final progress = (_index + (_seen ? 1 : 0)) / total;
+    final progress = _done ? 1.0 : (_index + (_revealed ? 1 : 0)) / total;
+    final String over;
+    final String headline;
+    if (_done) {
+      over = 'Hotovo';
+      headline = 'Všichni mají kartu';
+    } else if (_revealed) {
+      over = _role.player;
+      headline = 'Zapamatuj si to';
+    } else {
+      over = _index == 0 ? 'Začíná' : 'Předej telefon';
+      headline = _role.player;
+    }
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, _) async {
@@ -75,7 +111,7 @@ class _RevealScreenState extends State<RevealScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Karta ${_index + 1} z $total'),
+          title: Text(_done ? 'Karty rozdané' : 'Karta ${_index + 1} z $total'),
           leading: IconButton(
             icon: const Icon(Icons.close),
             tooltip: 'Ukončit kolo',
@@ -92,63 +128,72 @@ class _RevealScreenState extends State<RevealScreen> {
                 children: [
                   _GradientProgress(value: progress),
                   const SizedBox(height: 24),
-                  AnimatedSwitcher(
-                    duration: Motion.of(context, Motion.quick),
-                    transitionBuilder: (child, a) => FadeTransition(
-                      opacity: a,
-                      child: SlideTransition(
-                        position: Tween(begin: const Offset(0, 0.25), end: Offset.zero).animate(a),
-                        child: child,
+                  SizedBox(
+                    height: 76,
+                    child: AnimatedSwitcher(
+                      duration: Motion.of(context, Motion.base),
+                      // Fade-through: the old line is gone before the new one appears.
+                      switchInCurve: const Interval(0.5, 1, curve: Motion.ease),
+                      switchOutCurve: const Interval(0.5, 1),
+                      transitionBuilder: (child, a) => FadeTransition(
+                        opacity: a,
+                        child: SlideTransition(
+                          position: Tween(begin: const Offset(0, 0.2), end: Offset.zero).animate(a),
+                          child: child,
+                        ),
+                      ),
+                      child: Column(
+                        key: ValueKey('$_index-$_revealed-$_done'),
+                        children: [
+                          Text(over, maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant)),
+                          const SizedBox(height: 4),
+                          Text(
+                            headline,
+                            textAlign: TextAlign.center,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
+                        ],
                       ),
                     ),
-                    child: Column(
-                      key: ValueKey('$_index-$_revealed'),
-                      children: [
-                        Text(
-                          _revealed ? _role.player : 'Předej telefon',
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          _revealed ? 'Zapamatuj si to' : _role.player,
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                      ],
-                    ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 16),
                   Expanded(
                     child: Semantics(
                       button: true,
-                      label: _revealed ? 'Skrýt kartu' : 'Ukázat kartu',
+                      label: _done ? 'Začít kolo' : (_revealed ? 'Skrýt kartu a předat dál' : 'Ukázat kartu'),
+                      excludeSemantics: true,
                       child: Pressable(
-                        onTap: _flip,
+                        onTap: _tapCard,
                         scale: 0.98,
-                        child: FlipCard(
-                          key: ValueKey(_index),
-                          flipped: _revealed,
-                          front: _CardFront(player: _role.player),
-                          back: _CardBack(role: _role, packName: widget.round.packName),
+                        child: AnimatedSwitcher(
+                          duration: Motion.of(context, Motion.base),
+                          transitionBuilder: (child, a) => FadeTransition(
+                            opacity: a,
+                            child: ScaleTransition(scale: Tween(begin: 0.92, end: 1.0).animate(a), child: child),
+                          ),
+                          child: _done
+                              ? const _CardDone(key: ValueKey('done'))
+                              : FlipCard(
+                                  key: ValueKey(_index),
+                                  flipped: _revealed,
+                                  front: _CardFront(first: _index == 0),
+                                  back: _CardBack(role: _role, packName: widget.round.packName, nextPlayer: _nextPlayer),
+                                ),
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
-                  AnimatedSwitcher(
-                    duration: Motion.of(context, Motion.quick),
-                    child: _seen && !_revealed
-                        ? GradientButton(
-                            key: const ValueKey('next'),
-                            icon: _last ? Icons.play_arrow_rounded : Icons.arrow_forward_rounded,
-                            onPressed: _next,
-                            label: _last ? 'Všichni viděli, jdeme hrát' : 'Další hráč',
-                          )
-                        : OutlinedButton(
-                            key: ValueKey(_revealed),
-                            onPressed: _flip,
-                            child: Text(_revealed ? 'Skrýt kartu' : 'Ukázat kartu'),
-                          ),
+                  const SizedBox(height: 20),
+                  GradientButton(
+                    icon: _done
+                        ? Icons.play_arrow_rounded
+                        : (_revealed ? Icons.visibility_off_rounded : Icons.visibility_rounded),
+                    onPressed: _tapCard,
+                    label: _done
+                        ? 'Začít kolo'
+                        : (_revealed ? (_last ? 'Mám to, skrýt' : 'Mám to, skrýt a předat') : 'Ukázat kartu'),
                   ),
                 ],
               ),
@@ -221,8 +266,10 @@ class FlipCard extends StatelessWidget {
 }
 
 class _CardFront extends StatelessWidget {
-  const _CardFront({required this.player});
-  final String player;
+  const _CardFront({required this.first});
+
+  /// The first player gets a slightly longer explanation.
+  final bool first;
 
   @override
   Widget build(BuildContext context) {
@@ -249,14 +296,21 @@ class _CardFront extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(ctx.emoji, style: const TextStyle(fontSize: 56)),
-                const SizedBox(height: 16),
+                const TapHint(),
+                const SizedBox(height: 20),
                 const Text(
-                  'Klepni a podívej se',
-                  style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800),
+                  'Klepni na kartu',
+                  style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w800),
                 ),
-                const SizedBox(height: 4),
-                Text('Ostatní se nedívají!', style: TextStyle(color: Colors.white.withValues(alpha: 0.85))),
+                const SizedBox(height: 6),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Text(
+                    first ? 'Ostatní se nedívají. Uvidíš tajné slovo, nebo zjistíš, že jsi impostor.' : 'Ostatní se nedívají!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white.withValues(alpha: 0.88), height: 1.35),
+                  ),
+                ),
               ],
             ),
           ),
@@ -267,9 +321,10 @@ class _CardFront extends StatelessWidget {
 }
 
 class _CardBack extends StatelessWidget {
-  const _CardBack({required this.role, required this.packName});
+  const _CardBack({required this.role, required this.packName, this.nextPlayer});
   final PlayerRole role;
   final String packName;
+  final String? nextPlayer;
 
   @override
   Widget build(BuildContext context) {
@@ -290,7 +345,7 @@ class _CardBack extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           if (impostor) ...[
-            const Icon(Icons.theater_comedy_outlined, size: 64, color: Colors.white),
+            const Icon(Icons.theater_comedy_rounded, size: 64, color: Colors.white),
             const SizedBox(height: 12),
             const FittedBox(
               child: Text('IMPOSTOR',
@@ -315,10 +370,59 @@ class _CardBack extends StatelessWidget {
             // line is shown to everyone who has a word.
             Text('Téma: $packName', style: TextStyle(color: scheme.onSurfaceVariant)),
           ],
+          const SizedBox(height: 28),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.touch_app_rounded, size: 16, color: fg.withValues(alpha: 0.7)),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Text(
+                  nextPlayer == null ? 'Klepni a skryj kartu' : 'Klepni, skryj a podej: $nextPlayer',
+                  style: TextStyle(color: fg.withValues(alpha: 0.7), fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
     return impostor ? _Pulse(child: card) : card;
+  }
+}
+
+/// Shown after the last card: everybody knows their role.
+class _CardDone extends StatelessWidget {
+  const _CardDone({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctx = AppScope.of(context).playContext;
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(32),
+        gradient: ctx.gradient,
+        boxShadow: [BoxShadow(color: ctx.accent.withValues(alpha: 0.35), blurRadius: 32, offset: const Offset(0, 14))],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.check_circle_rounded, size: 84, color: Colors.white),
+          const SizedBox(height: 16),
+          const Text('Můžete začít', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
+          const SizedBox(height: 6),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 28),
+            child: Text(
+              'Položte telefon doprostřed. Aplikace řekne, kdo začíná.',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.88), height: 1.35),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 

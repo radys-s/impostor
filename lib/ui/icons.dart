@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+
+import '../store/store.dart';
+
+/// Minimal line icons for packs. Packs keep their emoji as a stable key
+/// (stored in JSON and custom packs); the UI only ever shows the icon.
+abstract final class PackIcons {
+  static const fallback = Icons.style_rounded;
+
+  static const Map<String, IconData> _byEmoji = {
+    '🍕': Icons.local_pizza_rounded,
+    '🐾': Icons.pets_rounded,
+    '🐶': Icons.pets_rounded,
+    '👷': Icons.engineering_rounded,
+    '💼': Icons.work_rounded,
+    '⚽': Icons.sports_soccer_rounded,
+    '🏰': Icons.castle_rounded,
+    '🌍': Icons.public_rounded,
+    '🎬': Icons.movie_rounded,
+    '⭐': Icons.star_rounded,
+    '🎵': Icons.music_note_rounded,
+    '🏠': Icons.home_rounded,
+    '🍳': Icons.soup_kitchen_rounded,
+    '🚗': Icons.directions_car_rounded,
+    '🌲': Icons.forest_rounded,
+    '🎒': Icons.school_rounded,
+    '📚': Icons.menu_book_rounded,
+    '👕': Icons.checkroom_rounded,
+    '🎄': Icons.celebration_rounded,
+    '🇨🇿': Icons.flag_rounded,
+    '📺': Icons.live_tv_rounded,
+    '💻': Icons.devices_rounded,
+    '🎲': Icons.casino_rounded,
+    '🎮': Icons.sports_esports_rounded,
+    '😂': Icons.sentiment_very_satisfied_rounded,
+    '📱': Icons.smartphone_rounded,
+    '🙈': Icons.visibility_off_rounded,
+    '🫣': Icons.face_retouching_off_rounded,
+    '😳': Icons.sentiment_neutral_rounded,
+    '🙃': Icons.mood_rounded,
+    '🎉': Icons.celebration_rounded,
+    '🍻': Icons.sports_bar_rounded,
+    '🌃': Icons.nightlife_rounded,
+    '🌙': Icons.nightlight_round,
+    '💘': Icons.favorite_rounded,
+    '❤️': Icons.favorite_rounded,
+    '💔': Icons.heart_broken_rounded,
+    '🤫': Icons.lock_rounded,
+    '🛏️': Icons.bed_rounded,
+    '🎞️': Icons.theaters_rounded,
+    '🎤': Icons.mic_rounded,
+    '🧚': Icons.auto_awesome_rounded,
+    '✨': Icons.auto_awesome_rounded,
+    '🧪': Icons.science_rounded,
+    '🧩': Icons.extension_rounded,
+  };
+
+  static IconData of(String emoji) =>
+      _byEmoji[emoji] ?? _byEmoji[emoji.replaceAll('\uFE0F', '')] ?? _byEmoji['$emoji\uFE0F'] ?? fallback;
+
+  /// Choices offered in the pack editor (emoji keys, shown as icons).
+  static const editorChoices = ['🎲', '🍕', '🐾', '🎬', '⚽', '🎵', '🌍', '🏠', '💼', '🚗', '🎮', '🎉', '🌲', '🧪', '📚', '❤️'];
+}
+
+extension FeatureIcon on FeaturePlugin {
+  IconData get icon => switch (this) {
+        FeaturePlugin.scores => Icons.emoji_events_rounded,
+        FeaturePlugin.voting => Icons.how_to_vote_rounded,
+        FeaturePlugin.ai => Icons.auto_awesome_rounded,
+      };
+}

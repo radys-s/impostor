@@ -54,7 +54,9 @@ class ScoresScreen extends StatelessWidget {
                 children: [
                   for (final (i, name) in names.indexed)
                     ListTile(
-                      leading: EmojiBadge(i < 3 ? ['🥇', '🥈', '🥉'][i] : '${i + 1}', size: 40),
+                      leading: i < 3
+                          ? LetterBadge('${i + 1}', size: 40, gradient: LinearGradient(colors: _medals[i]))
+                          : LetterBadge('${i + 1}', size: 40),
                       title: Text(name),
                       trailing: Text(
                         '${state.scores[name] ?? 0} ${plural(state.scores[name] ?? 0, 'bod', 'body', 'bodů')}',
@@ -70,3 +72,9 @@ class ScoresScreen extends StatelessWidget {
     );
   }
 }
+
+const _medals = [
+  [Color(0xFFFFC93C), Color(0xFFFF9F1C)],
+  [Color(0xFFC9D1D9), Color(0xFF8B98A5)],
+  [Color(0xFFE0A06A), Color(0xFFB86B3A)],
+];

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/app_state.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
+import '../util/text.dart';
 
 class PlayersScreen extends StatefulWidget {
   const PlayersScreen({super.key});
@@ -58,6 +59,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
   Widget build(BuildContext context) {
     final state = AppScope.of(context);
     final full = state.players.length >= AppState.maxPlayers;
+    final missing = AppState.minPlayers - state.players.length;
     return Scaffold(
       appBar: AppBar(title: Text('Hráči (${state.players.length})')),
       body: AmbientBackground(
@@ -130,10 +132,10 @@ class _PlayersScreenState extends State<PlayersScreen> {
                                 children: [
                                   IconButton(
                                     tooltip: 'Odebrat',
-                                    icon: const Icon(Icons.close),
+                                    icon: const Icon(Icons.close_rounded),
                                     onPressed: () => state.removePlayer(i),
                                   ),
-                                  ReorderableDragStartListener(index: i, child: const Icon(Icons.drag_handle)),
+                                  ReorderableDragStartListener(index: i, child: const Icon(Icons.drag_indicator_rounded)),
                                 ],
                               ),
                             ),
@@ -143,6 +145,33 @@ class _PlayersScreenState extends State<PlayersScreen> {
                       },
                     ),
             ),
+            if (state.players.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.touch_app_outlined, size: 16, color: Theme.of(context).colorScheme.onSurfaceVariant),
+                        const SizedBox(width: 6),
+                        Flexible(
+                          child: Text(
+                            'Klepni na jméno a přejmenuj · táhni a změň pořadí',
+                            style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.onSurfaceVariant),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    GradientButton(
+                      icon: missing > 0 ? Icons.person_add_alt_1_rounded : Icons.check_rounded,
+                      label: missing > 0 ? 'Ještě $missing ${plural(missing, 'hráč', 'hráči', 'hráčů')}' : 'Hotovo',
+                      onPressed: missing > 0 ? null : () => Navigator.of(context).pop(),
+                    ),
+                  ],
+                ),
+              ),
           ],
         ),
         ),
@@ -184,10 +213,19 @@ class _Empty extends StatelessWidget {
   Widget build(BuildContext context) => Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
-          child: Text(
-            '👋\n\nPřidej aspoň 3 hráče.\nPořadí určuje, jak si budete předávat telefon.',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const IconBadge(Icons.group_add_rounded, size: 72),
+              const SizedBox(height: 18),
+              Text('Kdo hraje?', style: Theme.of(context).textTheme.titleLarge),
+              const SizedBox(height: 6),
+              Text(
+                'Napiš jméno nahoře a potvrď. Potřebujete aspoň 3 hráče.\nPořadí určuje, komu se předává telefon.',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant, height: 1.4),
+              ),
+            ],
           ),
         ),
       );

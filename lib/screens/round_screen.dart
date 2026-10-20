@@ -63,6 +63,68 @@ class _RoundScreenState extends State<RoundScreen> {
     });
   }
 
+  Future<void> _leave() async {
+    final leave = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Ukončit kolo?'),
+        content: const Text('Vrátíte se na začátek, impostor zůstane tajemstvím.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Hrát dál')),
+          FilledButton(onPressed: () => Navigator.pop(context, true), child: const Text('Ukončit')),
+        ],
+      ),
+    );
+    if (leave == true && mounted) {
+      _timer?.cancel();
+      Navigator.of(context).pop();
+    }
+  }
+
+  /// Lets one player re-check their card privately.
+  Future<void> _peek() async {
+    final role = await showModalBottomSheet<PlayerRole>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => SafeArea(
+        child: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+          children: [
+            Text('Kdo zapomněl?', style: Theme.of(context).textTheme.titleLarge),
+            const SizedBox(height: 4),
+            Text('Ostatní se nedívají. Karta se ukáže jen tobě.',
+                style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
+            const SizedBox(height: 12),
+            for (final r in widget.round.roles)
+              ListTile(
+                leading: LetterBadge(r.player.characters.first.toUpperCase(), size: 36),
+                title: Text(r.player, style: const TextStyle(fontWeight: FontWeight.w700)),
+                trailing: const Icon(Icons.visibility_rounded),
+                onTap: () => Navigator.pop(context, r),
+              ),
+          ],
+        ),
+      ),
+    );
+    if (role == null || !mounted) return;
+    final impostor = role.kind == RoleKind.impostor;
+    await showDialog<void>(
+      context: context,
+      builder: (context) => AlertDialog(
+        icon: Icon(impostor ? Icons.theater_comedy_rounded : Icons.key_rounded, size: 40),
+        title: Text(impostor ? 'Jsi IMPOSTOR' : role.cardText, textAlign: TextAlign.center),
+        content: Text(
+          impostor
+              ? (role.hint != null ? 'Nápověda: ${role.hint}' : 'Neznáš slovo. Blafuj dál.')
+              : 'Téma: ${widget.round.packName}',
+          textAlign: TextAlign.center,
+        ),
+        actions: [FilledButton(onPressed: () => Navigator.pop(context), child: const Text('Skrýt'))],
+      ),
+    );
+  }
+
   void _finish() {
     _timer?.cancel();
     final state = AppScope.read(context);
@@ -79,8 +141,21 @@ class _RoundScreenState extends State<RoundScreen> {
 
     return PopScope(
       canPop: false,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) _leave();
+      },
       child: Scaffold(
-        appBar: AppBar(title: const Text('Kolo'), automaticallyImplyLeading: false),
+        appBar: AppBar(
+          title: const Text('Kolo'),
+          leading: IconButton(icon: const Icon(Icons.close_rounded), tooltip: 'Ukončit kolo', onPressed: _leave),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.visibility_outlined),
+              tooltip: 'Někdo zapomněl slovo',
+              onPressed: _peek,
+            ),
+          ],
+        ),
         body: AmbientBackground(
           child: PageBody(
             bottom: GradientButton(
@@ -114,6 +189,8 @@ class _RoundScreenState extends State<RoundScreen> {
                   ],
                 ),
               ),
+              const SizedBox(height: 16),
+              _Phases(voting: state.votingOn),
               if (hasTimer) ...[
                 const SizedBox(height: 16),
                 Center(
@@ -132,7 +209,7 @@ class _RoundScreenState extends State<RoundScreen> {
                     for (final (i, seat) in round.order.indexed)
                       ListTile(
                         dense: true,
-                        leading: EmojiBadge('${i + 1}', size: 30),
+                        leading: LetterBadge('${i + 1}', size: 30),
                         title: Text(round.roles[seat].player, style: const TextStyle(fontWeight: FontWeight.w600)),
                       ),
                   ],
@@ -241,4 +318,38 @@ class _RingPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_RingPainter old) => old.value != value || old.colors != colors || old.track != track;
+}
+
+/// What happens in this round, as three connected steps.
+class _Phases extends StatelessWidget {
+  const _Phases({required this.voting});
+
+  final bool voting;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final steps = [
+      (Icons.record_voice_over_rounded, 'Slova'),
+      (Icons.forum_rounded, 'Diskuze'),
+      (voting ? Icons.how_to_vote_rounded : Icons.back_hand_rounded, 'Hlasování'),
+    ];
+    return Row(
+      children: [
+        for (final (i, (icon, label)) in steps.indexed) ...[
+          if (i > 0)
+            Expanded(
+              child: Container(height: 2, margin: const EdgeInsets.only(bottom: 22), color: scheme.outlineVariant),
+            ),
+          Column(
+            children: [
+              IconBadge(icon, size: 40),
+              const SizedBox(height: 6),
+              Text(label, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: scheme.onSurfaceVariant)),
+            ],
+          ),
+        ],
+      ],
+    );
+  }
 }

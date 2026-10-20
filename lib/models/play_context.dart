@@ -19,6 +19,7 @@ enum PlayContext {
   family(
     label: 'Rodina',
     emoji: '🏡',
+    icon: Icons.cottage_rounded,
     tagline: 'V pohodě pro všechny generace',
     audiences: {Audience.family},
     colors: [Color(0xFF16C784), Color(0xFFB8E62E)],
@@ -27,6 +28,7 @@ enum PlayContext {
   friends(
     label: 'Kamarádi',
     emoji: '😎',
+    icon: Icons.groups_rounded,
     tagline: 'Drzejší slova, víc smíchu · 13+',
     audiences: {Audience.family, Audience.friends},
     colors: [Color(0xFFFFB800), Color(0xFFFF6B1A)],
@@ -35,7 +37,8 @@ enum PlayContext {
   mix(
     label: 'Mix všeho',
     emoji: '🎲',
-    tagline: 'Všechno dohromady, včetně 18+',
+    icon: Icons.shuffle_rounded,
+    tagline: 'Všechno dohromady, i pikantní',
     audiences: {Audience.family, Audience.friends, Audience.adult},
     colors: [Color(0xFFFF3D57), Color(0xFFFFB800)],
     adult: true,
@@ -44,7 +47,8 @@ enum PlayContext {
   freaky(
     label: 'Freaky',
     emoji: '😈',
-    tagline: 'Spicy témata jen pro dospělé · 18+',
+    icon: Icons.local_fire_department_rounded,
+    tagline: 'Spicy témata jen pro dospělé',
     audiences: {Audience.adult},
     colors: [Color(0xFFFF2E88), Color(0xFF8A2BE2)],
     adult: true,
@@ -54,6 +58,7 @@ enum PlayContext {
   const PlayContext({
     required this.label,
     required this.emoji,
+    required this.icon,
     required this.tagline,
     required this.audiences,
     required this.colors,
@@ -63,6 +68,7 @@ enum PlayContext {
 
   final String label;
   final String emoji;
+  final IconData icon;
   final String tagline;
   final Set<Audience> audiences;
   final List<Color> colors;

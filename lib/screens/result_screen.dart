@@ -40,6 +40,13 @@ class _ResultScreenState extends State<ResultScreen> {
     return _round.impostors.any((r) => r.player == v.accused);
   }
 
+  @override
+  void initState() {
+    super.initState();
+    // Verbal mode: the round screen's "Odhalit impostora" already was the reveal tap.
+    if (!_inApp) WidgetsBinding.instance.addPostFrameCallback((_) => mounted ? _reveal() : null);
+  }
+
   void _reveal() {
     final state = AppScope.read(context);
     buzz(state.appSettings.haptics);
@@ -93,17 +100,17 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
                 children: [
                   if (_vote != null) FadeSlideIn(child: _VoteSummary(vote: _vote, round: _round)),
-                  if (!_revealed)
+                  if (!_revealed && _inApp)
                     FadeSlideIn(
                       index: 1,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 48),
                         child: Column(
                           children: [
-                            const _Wobble(child: Text('🕵️', style: TextStyle(fontSize: 80))),
+                            const _Wobble(child: IconBadge(Icons.person_search_rounded, size: 96)),
                             const SizedBox(height: 16),
                             Text(
-                              _inApp ? 'Hlasy jsou sečtené.' : 'Máte odhlasováno? Ukažte, kdo to byl.',
+                              'Hlasy jsou sečtené. Kdo to byl?',
                               textAlign: TextAlign.center,
                               style: Theme.of(context).textTheme.titleLarge,
                             ),
@@ -151,6 +158,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Widget _bottom(BuildContext context, AppState state) {
     if (!_revealed) {
+      if (!_inApp) return const SizedBox(height: 60);
       return GradientButton(
         onPressed: _reveal,
         icon: Icons.visibility_rounded,

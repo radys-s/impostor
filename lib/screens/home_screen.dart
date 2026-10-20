@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
+import '../ui/how_to_play.dart';
+import '../ui/icons.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import '../util/text.dart';
@@ -99,16 +101,31 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 18),
+                    FadeSlideIn(
+                      index: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 4, bottom: 10),
+                        child: Text(
+                          missing > 0 ? 'Začni tím, že přidáš hráče' : 'Vše připraveno. Uprav cokoli, nebo rozdej karty.',
+                          style: TextStyle(color: scheme.onSurfaceVariant, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
                     FadeSlideIn(
                       index: 1,
                       child: PartyTile(
-                        leading: const EmojiBadge('👥'),
+                        highlight: missing > 0,
+                        gradient: ctx.gradient,
+                        leading: IconBadge(
+                          Icons.group_rounded,
+                          gradient: missing > 0 ? const LinearGradient(colors: [Colors.white24, Colors.white12]) : null,
+                        ),
                         title: state.players.isEmpty
                             ? 'Přidej hráče'
                             : '${state.players.length} ${plural(state.players.length, 'hráč', 'hráči', 'hráčů')}',
                         subtitle: state.players.isEmpty ? 'Stačí jména, pořadí určí předávání telefonu' : state.players.join(', '),
-                        trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
+                        trailing: _StepState(done: missing <= 0, onAccent: missing > 0),
                         onTap: () => _push(context, const PlayersScreen()),
                       ),
                     ),
@@ -116,10 +133,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     FadeSlideIn(
                       index: 2,
                       child: PartyTile(
-                        leading: EmojiBadge(packs.length == 1 ? packs.first.emoji : '🃏'),
+                        leading: IconBadge(packs.length == 1 ? PackIcons.of(packs.first.emoji) : Icons.style_rounded),
                         title: state.hasManualSelection ? packs.map((p) => p.name).join(', ') : 'Všechna témata · ${ctx.label}',
                         subtitle: '${packs.length} ${plural(packs.length, 'téma', 'témata', 'témat')} · $wordCount slov',
-                        trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
+                        trailing: const _StepState(done: true),
                         onTap: () => _push(context, const PacksScreen()),
                       ),
                     ),
@@ -127,10 +144,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     FadeSlideIn(
                       index: 3,
                       child: PartyTile(
-                        leading: const EmojiBadge('🎭'),
+                        leading: const IconBadge(Icons.tune_rounded),
                         title: 'Impostoři: $impostors',
                         subtitle: modes.isEmpty ? 'Klasika · klepni a přidej varianty' : modes.join(' · '),
-                        trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
+                        trailing: const _StepState(done: true),
                         onTap: () => _push(context, const GameOptionsScreen()),
                       ),
                     ),
@@ -146,6 +163,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
+                    const SizedBox(height: 8),
+                    FadeSlideIn(
+                      index: 5,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: TextButton.icon(
+                          onPressed: () => showHowToPlay(context),
+                          icon: const Icon(Icons.help_outline_rounded, size: 18),
+                          label: const Text('Jak se hraje?'),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -154,11 +183,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: FadeSlideIn(
                   index: 5,
                   child: GradientButton(
-                    icon: Icons.play_arrow_rounded,
+                    icon: missing <= 0 ? Icons.play_arrow_rounded : Icons.person_add_alt_1_rounded,
                     label: missing <= 0
                         ? 'Rozdat karty'
                         : 'Přidej ještě $missing ${plural(missing, 'hráče', 'hráče', 'hráčů')}',
-                    onPressed: missing <= 0 ? () => _start(context) : null,
+                    onPressed: missing <= 0 ? () => _start(context) : () => _push(context, const PlayersScreen()),
                   ),
                 ),
               ),
@@ -177,4 +206,26 @@ class _HomeScreenState extends State<HomeScreen> {
   static void _push(BuildContext context, Widget page) => Navigator.of(context).push(_route(page));
 
   static Route<void> _route(Widget page) => MaterialPageRoute(builder: (_) => page);
+}
+
+
+/// Check when a setup step is ready, chevron otherwise.
+class _StepState extends StatelessWidget {
+  const _StepState({required this.done, this.onAccent = false});
+
+  final bool done;
+  final bool onAccent;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final ctx = AppScope.of(context).playContext;
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 280),
+      transitionBuilder: (child, a) => ScaleTransition(scale: a, child: child),
+      child: done
+          ? Icon(Icons.check_circle_rounded, key: const ValueKey(true), color: ctx.accent)
+          : Icon(Icons.arrow_forward_rounded, key: const ValueKey(false), color: onAccent ? Colors.white : scheme.onSurfaceVariant),
+    );
+  }
 }

@@ -404,11 +404,11 @@ class PartyTile extends StatelessWidget {
   }
 }
 
-/// Round emoji badge on a gradient.
-class EmojiBadge extends StatelessWidget {
-  const EmojiBadge(this.emoji, {super.key, this.gradient, this.size = 48});
+/// Rounded square with a gradient fill and a white line icon.
+class IconBadge extends StatelessWidget {
+  const IconBadge(this.icon, {super.key, this.gradient, this.size = 48});
 
-  final String emoji;
+  final IconData icon;
   final Gradient? gradient;
   final double size;
 
@@ -419,8 +419,12 @@ class EmojiBadge extends StatelessWidget {
       width: size,
       height: size,
       alignment: Alignment.center,
-      decoration: BoxDecoration(gradient: g, borderRadius: BorderRadius.circular(size * 0.34)),
-      child: Text(emoji, style: TextStyle(fontSize: size * 0.48)),
+      decoration: BoxDecoration(
+        gradient: g,
+        borderRadius: BorderRadius.circular(size * 0.32),
+        boxShadow: [BoxShadow(color: g.colors.first.withValues(alpha: 0.25), blurRadius: 12, offset: const Offset(0, 4))],
+      ),
+      child: Icon(icon, color: Colors.white, size: size * 0.5),
     );
   }
 }
@@ -443,7 +447,7 @@ class ContextPill extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(context_.emoji, style: const TextStyle(fontSize: 16)),
+            Icon(context_.icon, color: Colors.white, size: 18),
             const SizedBox(width: 6),
             Text(context_.label, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800)),
             const SizedBox(width: 2),
@@ -542,4 +546,108 @@ class _ConfettiPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_ConfettiPainter old) => old.t != t;
+}
+
+/// Same shape as [IconBadge] but with a short text (initial, rank, order).
+class LetterBadge extends StatelessWidget {
+  const LetterBadge(this.text, {super.key, this.gradient, this.size = 40});
+
+  final String text;
+  final Gradient? gradient;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    final g = gradient ?? AppScope.of(context).playContext.gradient;
+    return Container(
+      width: size,
+      height: size,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(gradient: g, borderRadius: BorderRadius.circular(size * 0.32)),
+      child: Text(
+        text,
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: size * 0.42),
+      ),
+    );
+  }
+}
+
+/// Animated "tap here" cue: a finger icon that taps while rings ripple out.
+/// Static under reduced motion.
+class TapHint extends StatefulWidget {
+  const TapHint({super.key, this.size = 84, this.color = Colors.white});
+
+  final double size;
+  final Color color;
+
+  @override
+  State<TapHint> createState() => _TapHintState();
+}
+
+class _TapHintState extends State<TapHint> with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 1600));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (Motion.reduced(context)) {
+      _c
+        ..stop()
+        ..value = 0;
+    } else if (!_c.isAnimating) {
+      _c.repeat();
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final s = widget.size;
+    return ExcludeSemantics(
+      child: SizedBox(
+        width: s * 1.6,
+        height: s * 1.6,
+        child: AnimatedBuilder(
+          animation: _c,
+          builder: (context, _) {
+            final t = _c.value;
+            // Press happens in the first 30 %, ripple follows.
+            final press = t < 0.15 ? t / 0.15 : (t < 0.3 ? 1 - (t - 0.15) / 0.15 : 0.0);
+            final ripple = t < 0.15 ? 0.0 : ((t - 0.15) / 0.85).clamp(0.0, 1.0);
+            return Stack(
+              alignment: Alignment.center,
+              children: [
+                if (ripple > 0)
+                  Container(
+                    width: s * (0.7 + 0.9 * ripple),
+                    height: s * (0.7 + 0.9 * ripple),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: widget.color.withValues(alpha: 0.6 * (1 - ripple)), width: 2),
+                    ),
+                  ),
+                Container(
+                  width: s,
+                  height: s,
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: widget.color.withValues(alpha: 0.18)),
+                ),
+                Transform.translate(
+                  offset: Offset(0, 4 * press),
+                  child: Transform.scale(
+                    scale: 1 - 0.1 * press,
+                    child: Icon(Icons.touch_app_rounded, size: s * 0.55, color: widget.color),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
 }

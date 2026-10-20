@@ -170,7 +170,7 @@ class _ContextTile extends StatelessWidget {
                   color: selected ? Colors.white.withValues(alpha: 0.22) : null,
                   borderRadius: BorderRadius.circular(18),
                 ),
-                child: Text(value.emoji, style: const TextStyle(fontSize: 28)),
+                child: Icon(value.icon, color: Colors.white, size: 28),
               ),
               const SizedBox(width: 16),
               Expanded(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/app_state.dart';
 import '../models/word_pack.dart';
 import '../store/store.dart';
+import '../ui/icons.dart';
 import '../ui/motion.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
@@ -29,17 +30,35 @@ class PacksScreen extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: PartyTile(
-          leading: EmojiBadge(pack.emoji, size: 44),
+          leading: IconBadge(PackIcons.of(pack.emoji), size: 44),
           title: pack.name,
           subtitle: '${pack.words.length} slov${pack.fromAi ? ' · AI' : ''}${pack.fromStore ? ' · obchod' : ''}',
-          onTap: () => _open(context, PackEditorScreen(pack: pack)),
-          trailing: _SelectDot(
-            on: on,
-            enabled: pack.words.isNotEmpty,
-            onChanged: (v) {
-              tick(state.appSettings.haptics);
-              state.togglePack(pack.id, v);
-            },
+          onTap: pack.words.isEmpty
+              ? () => _open(context, PackEditorScreen(pack: pack))
+              : () {
+                  tick(state.appSettings.haptics);
+                  state.togglePack(pack.id, !on);
+                },
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                tooltip: pack.builtin || pack.fromStore ? 'Zobrazit slova' : 'Upravit',
+                icon: Icon(
+                  pack.builtin || pack.fromStore ? Icons.visibility_outlined : Icons.edit_outlined,
+                  color: scheme.onSurfaceVariant,
+                ),
+                onPressed: () => _open(context, PackEditorScreen(pack: pack)),
+              ),
+              _SelectDot(
+                on: on,
+                enabled: pack.words.isNotEmpty,
+                onChanged: (v) {
+                  tick(state.appSettings.haptics);
+                  state.togglePack(pack.id, v);
+                },
+              ),
+            ],
           ),
         ),
       );
@@ -55,7 +74,7 @@ class PacksScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => aiOn ? _create(context) : _open(context, const PackEditorScreen()),
-        icon: const Icon(Icons.add),
+        icon: const Icon(Icons.add_rounded),
         label: const Text('Nové téma'),
       ),
       body: AmbientBackground(
@@ -67,7 +86,7 @@ class PacksScreen extends StatelessWidget {
               child: Text(
                 state.hasManualSelection
                     ? 'Hraje se jen s označenými tématy.'
-                    : 'Nic neoznačeno = hraje se se všemi tématy pro ${ctx.label.toLowerCase()}.',
+                    : 'Klepnutím vybereš, se kterými tématy hrát. Bez výběru se hraje se všemi (${ctx.label.toLowerCase()}).',
                 style: TextStyle(color: scheme.onSurfaceVariant),
               ),
             ),
@@ -75,14 +94,14 @@ class PacksScreen extends StatelessWidget {
               PartyTile(
                 highlight: true,
                 gradient: ctx.gradient,
-                leading: const EmojiBadge('✨', size: 44, gradient: LinearGradient(colors: [Colors.white24, Colors.white10])),
+                leading: const IconBadge(Icons.auto_awesome_rounded, size: 44, gradient: LinearGradient(colors: [Colors.white24, Colors.white10])),
                 title: 'Vygeneruj téma s AI',
                 subtitle: 'Napiš cokoliv, třeba „filmy od Pixaru“',
                 onTap: () => _open(context, const AiScreen()),
               )
             else
               PartyTile(
-                leading: const EmojiBadge('🧩', size: 44),
+                leading: const IconBadge(Icons.storefront_rounded, size: 44),
                 title: 'Víc témat v obchodě',
                 subtitle: 'Balíčky slov a AI generátor zdarma',
                 trailing: Icon(Icons.chevron_right, color: scheme.onSurfaceVariant),
@@ -119,7 +138,7 @@ class PacksScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               PartyTile(
-                leading: const EmojiBadge('✍️', size: 44),
+                leading: const IconBadge(Icons.edit_note_rounded, size: 44),
                 title: 'Vytvořit ručně',
                 subtitle: 'Napíšeš si vlastní slova',
                 onTap: () {
@@ -129,7 +148,7 @@ class PacksScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               PartyTile(
-                leading: const EmojiBadge('✨', size: 44),
+                leading: const IconBadge(Icons.auto_awesome_rounded, size: 44),
                 title: 'Vygenerovat s AI',
                 subtitle: 'Zadáš téma, AI doplní slova',
                 onTap: () {

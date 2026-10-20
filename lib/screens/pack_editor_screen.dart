@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/app_state.dart';
 import '../models/word_pack.dart';
 import '../store/store.dart';
+import '../ui/icons.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import '../util/text.dart';
@@ -28,7 +29,7 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
 
   bool get _readOnly => widget.pack?.readOnly ?? false;
 
-  static const _emojis = ['🎲', '🍕', '🐶', '🎬', '⚽', '🎵', '🌍', '🏠', '💼', '🚗', '🎮', '🎉', '🌲', '🧪', '📚', '❤️'];
+  static const _emojis = PackIcons.editorChoices;
 
   @override
   void initState() {
@@ -204,7 +205,8 @@ class _PackEditorScreenState extends State<PackEditorScreen> {
                       Padding(
                         padding: const EdgeInsets.only(right: 6),
                         child: ChoiceChip(
-                          label: Text(e, style: const TextStyle(fontSize: 20)),
+                          label: Icon(PackIcons.of(e), size: 22, semanticLabel: 'Ikona ${PackIcons.editorChoices.indexOf(e) + 1}'),
+                          showCheckmark: false,
                           selected: _emoji == e,
                           onSelected: (_) => _changed(() => _emoji = e),
                         ),
