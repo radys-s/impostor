@@ -31,7 +31,7 @@ class _ContextScreenState extends State<ContextScreen> {
         builder: (context) => AlertDialog(
           title: const Text('Jen pro dospělé'),
           content: Text(
-            '${c.label} obsahuje 18+ témata: rande, párty, alkohol a trochu pikantní slova. '
+            '${c.label} obsahuje 18+ témata: ložnice, dvojsmysly, fantazie, alkohol a pikantní eventy. '
             'Potvrď, že všem hráčům je aspoň 18 let.',
           ),
           actions: [

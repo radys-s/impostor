@@ -1,3 +1,5 @@
+import '../logic/events.dart';
+
 /// Per-game options chosen on the setup screen.
 class GameSettings {
   const GameSettings({
@@ -8,6 +10,10 @@ class GameSettings {
     this.undercover = false,
     this.chaos = false,
     this.timerSeconds = 0,
+    this.eventRate = EventRate.often,
+    this.detective = false,
+    this.jester = false,
+    this.allies = false,
   });
 
   final Set<String> packIds;
@@ -24,6 +30,18 @@ class GameSettings {
   /// 0 = no timer.
   final int timerSeconds;
 
+  /// How often a round gets a twist (see roundEvents).
+  final EventRate eventRate;
+
+  /// One civilian also sees who the impostors are.
+  final bool detective;
+
+  /// One player knows the word and wins alone when voted out.
+  final bool jester;
+
+  /// Impostors see each other's names.
+  final bool allies;
+
   bool get randomImpostors => impostorMax > impostorMin;
 
   GameSettings copyWith({
@@ -34,6 +52,10 @@ class GameSettings {
     bool? undercover,
     bool? chaos,
     int? timerSeconds,
+    EventRate? eventRate,
+    bool? detective,
+    bool? jester,
+    bool? allies,
   }) =>
       GameSettings(
         packIds: packIds ?? this.packIds,
@@ -43,6 +65,10 @@ class GameSettings {
         undercover: undercover ?? this.undercover,
         chaos: chaos ?? this.chaos,
         timerSeconds: timerSeconds ?? this.timerSeconds,
+        eventRate: eventRate ?? this.eventRate,
+        detective: detective ?? this.detective,
+        jester: jester ?? this.jester,
+        allies: allies ?? this.allies,
       );
 
   /// Clamps impostor counts to what the player count allows (1..n-1).
@@ -61,6 +87,10 @@ class GameSettings {
         undercover: json['undercover'] as bool? ?? false,
         chaos: json['chaos'] as bool? ?? false,
         timerSeconds: json['timerSeconds'] as int? ?? 0,
+        eventRate: EventRate.parse(json['eventRate']),
+        detective: json['detective'] as bool? ?? false,
+        jester: json['jester'] as bool? ?? false,
+        allies: json['allies'] as bool? ?? false,
       );
 
   Map<String, dynamic> toJson() => {
@@ -71,6 +101,10 @@ class GameSettings {
         'undercover': undercover,
         'chaos': chaos,
         'timerSeconds': timerSeconds,
+        'eventRate': eventRate.name,
+        'detective': detective,
+        'jester': jester,
+        'allies': allies,
       };
 }
 

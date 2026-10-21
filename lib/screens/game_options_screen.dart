@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
+import '../logic/events.dart';
+import '../models/presets.dart';
 import '../models/settings.dart';
 import '../ui/motion.dart';
 import '../ui/theme.dart';
@@ -24,6 +26,26 @@ class GameOptionsScreen extends StatelessWidget {
       body: AmbientBackground(
         child: PageBody(
         children: [
+          const SectionLabel('Režim'),
+          GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            childAspectRatio: 1.35,
+            children: [
+              for (final p in GamePreset.values)
+                _PresetCard(
+                  preset: p,
+                  selected: p.matches(s, playerCount),
+                  onTap: () {
+                    tick(state.appSettings.haptics);
+                    update(p.apply(s, playerCount));
+                  },
+                ),
+            ],
+          ),
           const SectionLabel('Impostoři'),
           Card(
             child: Column(
@@ -86,6 +108,63 @@ class GameOptionsScreen extends StatelessWidget {
                   onChanged: (v) => update(s.copyWith(chaos: v)),
                 ),
               ],
+            ),
+          ),
+          const SectionLabel('Speciální role'),
+          Card(
+            child: Column(
+              children: [
+                SwitchListTile(
+                  secondary: const Icon(Icons.manage_search_rounded),
+                  title: const Text('Detektiv'),
+                  subtitle: const Text('Jeden hráč zná slovo i impostory. Musí je nenápadně prozradit.'),
+                  value: s.detective,
+                  onChanged: (v) => update(s.copyWith(detective: v)),
+                ),
+                SwitchListTile(
+                  secondary: const Icon(Icons.sentiment_very_satisfied_rounded),
+                  title: const Text('Šašek'),
+                  subtitle: const Text('Zná slovo, ale vyhraje sám, když ho vyhlasujete. +3 body'),
+                  value: s.jester,
+                  onChanged: (v) => update(s.copyWith(jester: v)),
+                ),
+                SwitchListTile(
+                  secondary: const Icon(Icons.handshake_rounded),
+                  title: const Text('Spolčení impostoři'),
+                  subtitle: const Text('Víc impostorů o sobě ví a může se krýt'),
+                  value: s.allies,
+                  onChanged: (v) => update(s.copyWith(allies: v)),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 8, 4, 0),
+            child: Text(
+              'Speciální role se rozdají, jen když zbudou aspoň 2 obyčejní hráči.',
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant, fontSize: 13),
+            ),
+          ),
+          const SectionLabel('Eventy kola'),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final r in EventRate.values)
+                ChoiceChip(
+                  label: Text(r.label),
+                  selected: s.eventRate == r,
+                  onSelected: (_) => update(s.copyWith(eventRate: r)),
+                ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4, 8, 4, 0),
+            child: Text(
+              state.playContext.adult
+                  ? 'Twist do kola: pantomima, šeptanda, svůdný hlas, hot seat, panák…'
+                  : 'Twist do kola: pantomima, šeptanda, rychlovka, roboti…',
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant, fontSize: 13),
             ),
           ),
           const SectionLabel('Časovač diskuze'),
@@ -154,6 +233,67 @@ class _Stepper extends StatelessWidget {
             icon: const Icon(Icons.add),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _PresetCard extends StatelessWidget {
+  const _PresetCard({required this.preset, required this.selected, required this.onTap});
+
+  final GamePreset preset;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final ctx = AppScope.of(context).playContext;
+    return Semantics(
+      button: true,
+      selected: selected,
+      child: Pressable(
+        onTap: onTap,
+        child: AnimatedContainer(
+          duration: Motion.of(context, Motion.quick),
+          curve: Motion.ease,
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            gradient: selected ? ctx.gradient : null,
+            color: selected ? null : scheme.surfaceContainerHighest,
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(color: selected ? Colors.transparent : scheme.outlineVariant),
+            boxShadow: selected
+                ? [BoxShadow(color: ctx.accent.withValues(alpha: 0.3), blurRadius: 18, offset: const Offset(0, 8))]
+                : null,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(preset.icon, color: selected ? Colors.white : ctx.accent, size: 28),
+              const Spacer(),
+              Text(
+                preset.label,
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 17,
+                  color: selected ? Colors.white : scheme.onSurface,
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                preset.subtitle,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 12,
+                  height: 1.25,
+                  color: selected ? Colors.white.withValues(alpha: 0.9) : scheme.onSurfaceVariant,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

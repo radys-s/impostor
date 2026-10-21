@@ -239,6 +239,7 @@ class AppState extends ChangeNotifier {
       pool: engine.buildPool(selectedPacks),
       settings: gameSettings.clampedFor(players.length),
       recent: _recent.toSet(),
+      audiences: playContext.audiences,
     );
     _recent.add(normalizeWord(round.entry.word));
     if (_recent.length > _recentLimit) _recent.removeRange(0, _recent.length - _recentLimit);

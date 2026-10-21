@@ -2,16 +2,21 @@ import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor/data/storage.dart';
+import 'package:impostor/logic/events.dart';
 import 'package:impostor/logic/game_engine.dart';
+import 'package:impostor/models/play_context.dart';
 import 'package:impostor/models/settings.dart';
 import 'package:impostor/models/word_pack.dart';
 import 'package:impostor/util/text.dart';
 
 const players = ['Ana', 'Bob', 'Cyril', 'Dana', 'Eva', 'Filip'];
 
-Round round(GameSettings s, {int seed = 1, List<String> who = players}) {
+Round round(GameSettings s, {int seed = 1, List<String> who = players, Set<Audience>? audiences}) {
   final engine = GameEngine(Random(seed));
-  return engine.createRound(players: who, pool: engine.buildPool([fallbackPack]), settings: s);
+  final pool = engine.buildPool([fallbackPack]);
+  return audiences == null
+      ? engine.createRound(players: who, pool: pool, settings: s)
+      : engine.createRound(players: who, pool: pool, settings: s, audiences: audiences);
 }
 
 void main() {
@@ -169,5 +174,114 @@ void main() {
   test('normalizeWord strips diacritics and case', () {
     expect(normalizeWord('  Řízek  Šťávy '), 'rizek stavy');
     expect(dedupeWords(const [WordEntry(word: 'Kůň'), WordEntry(word: 'kun'), WordEntry(word: '')]), hasLength(1));
+  });
+  group('events', () {
+    test('rate off never gives an event, always always does', () {
+      for (var seed = 0; seed < 200; seed++) {
+        expect(round(const GameSettings(eventRate: EventRate.off), seed: seed).event, isNull);
+        expect(round(const GameSettings(eventRate: EventRate.always), seed: seed).event, isNotNull);
+      }
+    });
+
+    test('often is roughly 60 %', () {
+      var hits = 0;
+      for (var seed = 0; seed < 2000; seed++) {
+        if (round(const GameSettings(), seed: seed).event != null) hits++;
+      }
+      expect(hits, inInclusiveRange(1050, 1350));
+    });
+
+    test('family games never get adult or teen events', () {
+      for (var seed = 0; seed < 500; seed++) {
+        final e = round(const GameSettings(eventRate: EventRate.always), seed: seed, audiences: {Audience.family})
+            .event!;
+        expect(e.audiences, contains(Audience.family));
+      }
+    });
+
+    test('freaky games get adult events often', () {
+      var adult = 0;
+      for (var seed = 0; seed < 500; seed++) {
+        final e = round(const GameSettings(eventRate: EventRate.always), seed: seed, audiences: {Audience.adult})
+            .event!;
+        if (!e.audiences.contains(Audience.family)) adult++;
+      }
+      expect(adult, greaterThan(250));
+    });
+
+    test('letter events set a letter; impostor letter reaches the impostor card', () {
+      var seen = 0;
+      for (var seed = 0; seed < 600; seed++) {
+        final r = round(const GameSettings(eventRate: EventRate.always), seed: seed);
+        switch (r.event!.effect) {
+          case EventEffect.letter:
+            expect(eventLetters, contains(r.eventLetter));
+          case EventEffect.impostorLetter:
+            seen++;
+            expect(r.impostors.single.letter, r.entry.word.substring(0, 1).toUpperCase());
+          case EventEffect.reverse:
+          case EventEffect.timer:
+            expect(r.eventTimer, r.event!.effect == EventEffect.timer ? 60 : null);
+          case EventEffect.none:
+            expect(r.eventLetter, isNull);
+        }
+      }
+      expect(seen, greaterThan(0));
+    });
+
+    test('impostor letter is never picked in undercover rounds', () {
+      for (var seed = 0; seed < 500; seed++) {
+        final r = round(const GameSettings(eventRate: EventRate.always, undercover: true), seed: seed);
+        if (r.entry.similar.isEmpty) continue;
+        expect(r.event!.effect, isNot(EventEffect.impostorLetter));
+      }
+    });
+  });
+
+  group('special roles', () {
+    const all = GameSettings(detective: true, jester: true, allies: true, impostorMin: 2, impostorMax: 2);
+
+    test('detective sees impostors, jester knows the word, allies see each other', () {
+      for (var seed = 0; seed < 200; seed++) {
+        final r = round(all, seed: seed);
+        final names = {for (final i in r.impostors) i.player};
+        final detective = r.roleOf(RoleKind.detective)!;
+        expect(detective.intel.toSet(), names);
+        expect(detective.cardText, r.entry.word);
+        expect(r.roleOf(RoleKind.jester)!.cardText, r.entry.word);
+        for (final i in r.impostors) {
+          expect(i.intel, [for (final n in names) if (n != i.player) n]..sort());
+        }
+        expect(r.roles.where((x) => x.kind == RoleKind.civilian).length, 2);
+      }
+    });
+
+    test('special roles need two plain civilians left', () {
+      final r = round(all, who: const ['Ana', 'Bob', 'Cyril', 'Dana']);
+      expect(r.roleOf(RoleKind.jester), isNull);
+      expect(r.roleOf(RoleKind.detective), isNull);
+      final five = round(all, who: const ['Ana', 'Bob', 'Cyril', 'Dana', 'Eva']);
+      expect(five.roleOf(RoleKind.jester), isNotNull);
+      expect(five.roleOf(RoleKind.detective), isNull);
+    });
+
+    test('voting out the jester wins for the jester alone', () {
+      final r = round(all);
+      final jester = r.roleOf(RoleKind.jester)!.player;
+      final vote = tallyVotes({for (final p in players) p: jester});
+      final winner = decideWinner(r, vote);
+      expect(winner, Winner.jester);
+      final points = roundPoints(r, winner);
+      expect(points[jester], 3);
+      expect(points.values.where((v) => v > 0), hasLength(1));
+    });
+
+    test('jester scores with civilians when an impostor is caught', () {
+      final r = round(all);
+      final vote = tallyVotes({for (final p in players) p: r.impostors.first.player});
+      final points = roundPoints(r, decideWinner(r, vote));
+      expect(points[r.roleOf(RoleKind.jester)!.player], 1);
+      expect(points[r.roleOf(RoleKind.detective)!.player], 1);
+    });
   });
 }

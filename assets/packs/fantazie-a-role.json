@@ -1,0 +1,313 @@
+{
+  "id": "fantazie-a-role",
+  "name": "Fantazie a role",
+  "emoji": "🎭",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Sestřička",
+      "hint": "Injekce",
+      "similar": "Doktor"
+    },
+    {
+      "word": "Doktor",
+      "hint": "Prohlídka",
+      "similar": "Sestřička"
+    },
+    {
+      "word": "Policista",
+      "hint": "Zatčení",
+      "similar": "Hasič"
+    },
+    {
+      "word": "Hasič",
+      "hint": "Plameny",
+      "similar": "Policista"
+    },
+    {
+      "word": "Pilot",
+      "hint": "Kokpit",
+      "similar": "Letuška"
+    },
+    {
+      "word": "Letuška",
+      "hint": "Palubní",
+      "similar": "Pilot"
+    },
+    {
+      "word": "Učitelka",
+      "hint": "Známka",
+      "similar": "Ředitel"
+    },
+    {
+      "word": "Ředitel",
+      "hint": "Kabinet",
+      "similar": "Učitelka"
+    },
+    {
+      "word": "Šéf a sekretářka",
+      "hint": "Kancelář",
+      "similar": "Šéfová"
+    },
+    {
+      "word": "Instalatér",
+      "hint": "Trubky",
+      "similar": "Elektrikář"
+    },
+    {
+      "word": "Elektrikář",
+      "hint": "Napětí",
+      "similar": "Instalatér"
+    },
+    {
+      "word": "Pizza kurýr",
+      "hint": "Doručení",
+      "similar": "Pošťák"
+    },
+    {
+      "word": "Pošťák",
+      "hint": "Balíček",
+      "similar": "Pizza kurýr"
+    },
+    {
+      "word": "Masér",
+      "hint": "Olej",
+      "similar": "Fyzioterapeut"
+    },
+    {
+      "word": "Osobní trenér",
+      "hint": "Posilovna",
+      "similar": "Masér"
+    },
+    {
+      "word": "Plavčík",
+      "hint": "Bazén",
+      "similar": "Záchranář"
+    },
+    {
+      "word": "Záchranář",
+      "hint": "Dýchání",
+      "similar": "Plavčík"
+    },
+    {
+      "word": "Kovboj",
+      "hint": "Laso",
+      "similar": "Šerif"
+    },
+    {
+      "word": "Šerif",
+      "hint": "Hvězda",
+      "similar": "Kovboj"
+    },
+    {
+      "word": "Pirát",
+      "hint": "Poklad",
+      "similar": "Kapitán"
+    },
+    {
+      "word": "Kapitán",
+      "hint": "Loď",
+      "similar": "Pirát"
+    },
+    {
+      "word": "Upír",
+      "hint": "Kousnutí",
+      "similar": "Vlkodlak"
+    },
+    {
+      "word": "Vlkodlak",
+      "hint": "Úplněk",
+      "similar": "Upír"
+    },
+    {
+      "word": "Čarodějnice",
+      "hint": "Koště",
+      "similar": "Víla"
+    },
+    {
+      "word": "Víla",
+      "hint": "Křídla",
+      "similar": "Čarodějnice"
+    },
+    {
+      "word": "Anděl",
+      "hint": "Svatozář",
+      "similar": "Ďáblice"
+    },
+    {
+      "word": "Ďáblice",
+      "hint": "Rohy",
+      "similar": "Anděl"
+    },
+    {
+      "word": "Královna",
+      "hint": "Trůn",
+      "similar": "Princ"
+    },
+    {
+      "word": "Princ",
+      "hint": "Kůň",
+      "similar": "Královna"
+    },
+    {
+      "word": "Superhrdina",
+      "hint": "Plášť",
+      "similar": "Padouch"
+    },
+    {
+      "word": "Padouch",
+      "hint": "Plán",
+      "similar": "Superhrdina"
+    },
+    {
+      "word": "Kočičí uši",
+      "hint": "Mňau",
+      "similar": "Zajíček"
+    },
+    {
+      "word": "Zajíček",
+      "hint": "Playboy",
+      "similar": "Kočičí uši"
+    },
+    {
+      "word": "Francouzská služka",
+      "hint": "Prachovka",
+      "similar": "Pokojská"
+    },
+    {
+      "word": "Pokojská",
+      "hint": "Hotel",
+      "similar": "Francouzská služka"
+    },
+    {
+      "word": "Neznámý v baru",
+      "hint": "Drink",
+      "similar": "Rande naslepo"
+    },
+    {
+      "word": "Stopař",
+      "hint": "Palec",
+      "similar": "Taxikář"
+    },
+    {
+      "word": "Taxikář",
+      "hint": "Taxametr",
+      "similar": "Stopař"
+    },
+    {
+      "word": "Tanečnice",
+      "hint": "Pódium",
+      "similar": "Striptér"
+    },
+    {
+      "word": "Striptér",
+      "hint": "Rozlučka",
+      "similar": "Tanečnice"
+    },
+    {
+      "word": "Fotograf",
+      "hint": "Focení",
+      "similar": "Modelka"
+    },
+    {
+      "word": "Modelka",
+      "hint": "Molo",
+      "similar": "Fotograf"
+    },
+    {
+      "word": "Maškarní ples",
+      "hint": "Převlek",
+      "similar": "Halloween"
+    },
+    {
+      "word": "Halloween",
+      "hint": "Kostým",
+      "similar": "Maškarní ples"
+    },
+    {
+      "word": "Vězeň a dozorce",
+      "hint": "Cela",
+      "similar": "Policista"
+    },
+    {
+      "word": "Gladiátor",
+      "hint": "Aréna",
+      "similar": "Voják"
+    },
+    {
+      "word": "Voják",
+      "hint": "Uniforma",
+      "similar": "Gladiátor"
+    },
+    {
+      "word": "Jeptiška",
+      "hint": "Klášter",
+      "similar": "Kněz"
+    },
+    {
+      "word": "Kněz",
+      "hint": "Zpověď",
+      "similar": "Jeptiška"
+    },
+    {
+      "word": "Agent 007",
+      "hint": "Martini",
+      "similar": "Špion"
+    },
+    {
+      "word": "Špion",
+      "hint": "Tajný",
+      "similar": "Agent 007"
+    },
+    {
+      "word": "Mafián",
+      "hint": "Kmotr",
+      "similar": "Agent 007"
+    },
+    {
+      "word": "Milionář",
+      "hint": "Jachta",
+      "similar": "Sugar daddy"
+    },
+    {
+      "word": "Sugar daddy",
+      "hint": "Peníze",
+      "similar": "Milionář"
+    },
+    {
+      "word": "Spolubydlící",
+      "hint": "Byt",
+      "similar": "Soused"
+    },
+    {
+      "word": "Soused",
+      "hint": "Plot",
+      "similar": "Spolubydlící"
+    },
+    {
+      "word": "Improvizace",
+      "hint": "Spontánně",
+      "similar": "Scénář"
+    },
+    {
+      "word": "Scénář",
+      "hint": "Role",
+      "similar": "Improvizace"
+    },
+    {
+      "word": "Lékařská prohlídka",
+      "hint": "Stetoskop",
+      "similar": "Doktor"
+    },
+    {
+      "word": "Uniforma",
+      "hint": "Knoflíky",
+      "similar": "Kostým"
+    },
+    {
+      "word": "Pokojová služba",
+      "hint": "Snídaně",
+      "similar": "Pokojská"
+    }
+  ]
+}

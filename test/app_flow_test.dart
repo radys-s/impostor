@@ -4,6 +4,8 @@ import 'package:impostor/data/app_state.dart';
 import 'package:impostor/data/storage.dart';
 import 'package:impostor/main.dart';
 import 'package:impostor/models/play_context.dart';
+import 'package:impostor/logic/events.dart';
+import 'package:impostor/screens/game_options_screen.dart';
 import 'package:impostor/screens/home_screen.dart';
 import 'package:impostor/screens/players_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -184,5 +186,28 @@ void main() {
     await tester.tap(find.text('Ukončit'));
     await tester.pumpAndSettle();
     expect(find.byType(HomeScreen), findsOneWidget);
+  });
+  testWidgets('party preset: every round shows an event and specials', (tester) async {
+    final state = await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril', 'Dana', 'Eva'],
+    });
+    await tester.tap(find.textContaining('Impostoři:'));
+    await tester.pumpAndSettle();
+    expect(find.byType(GameOptionsScreen), findsOneWidget);
+    await tester.tap(find.text('Párty'));
+    await tester.pumpAndSettle();
+    expect(state.gameSettings.eventRate, EventRate.always);
+    expect(state.gameSettings.jester, isTrue);
+    Navigator.of(tester.element(find.byType(GameOptionsScreen))).pop();
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Párty'), findsOneWidget);
+
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await revealAll(tester, 5);
+    expect(find.text('EVENT KOLA'), findsOneWidget);
+    await tester.tap(find.text('Odhalit impostora'));
+    await tester.pumpAndSettle();
+    expect(find.text('Tajné slovo'), findsOneWidget);
   });
 }

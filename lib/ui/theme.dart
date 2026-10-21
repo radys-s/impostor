@@ -20,7 +20,23 @@ abstract final class Party {
     end: Alignment.bottomRight,
   );
 
-  static const confetti = [red, orange, yellow, green, pink, Color(0xFF2EC5FF)];
+  static const blue = Color(0xFF2EC5FF);
+
+  /// Detective card: cool blue, clearly not the red impostor.
+  static const detective = LinearGradient(
+    colors: [Color(0xFF2EC5FF), Color(0xFF5B3CF5)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  /// Jester card: loud yellow to green.
+  static const jester = LinearGradient(
+    colors: [Color(0xFFFFB800), Color(0xFF16C784)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  static const confetti = [red, orange, yellow, green, pink, blue];
 }
 
 ThemeData buildTheme(Brightness brightness, PlayContext context) {

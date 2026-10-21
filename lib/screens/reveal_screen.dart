@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../data/app_state.dart';
 import '../logic/game_engine.dart';
 import '../ui/motion.dart';
+import '../ui/roles.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import 'round_screen.dart';
@@ -145,7 +146,12 @@ class _RevealScreenState extends State<RevealScreen> {
                       child: Column(
                         key: ValueKey('$_index-$_revealed-$_done'),
                         children: [
-                          Text(over, maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant)),
+                          Text(
+                            over,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(color: scheme.onSurfaceVariant),
+                          ),
                           const SizedBox(height: 4),
                           Text(
                             headline,
@@ -179,7 +185,11 @@ class _RevealScreenState extends State<RevealScreen> {
                                   key: ValueKey(_index),
                                   flipped: _revealed,
                                   front: _CardFront(first: _index == 0),
-                                  back: _CardBack(role: _role, packName: widget.round.packName, nextPlayer: _nextPlayer),
+                                  back: _CardBack(
+                                    role: _role,
+                                    packName: widget.round.packName,
+                                    nextPlayer: _nextPlayer,
+                                  ),
                                 ),
                         ),
                       ),
@@ -306,7 +316,9 @@ class _CardFront extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
-                    first ? 'Ostatní se nedívají. Uvidíš tajné slovo, nebo zjistíš, že jsi impostor.' : 'Ostatní se nedívají!',
+                    first
+                        ? 'Ostatní se nedívají. Uvidíš tajné slovo, nebo zjistíš, že jsi impostor.'
+                        : 'Ostatní se nedívají!',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white.withValues(alpha: 0.88), height: 1.35),
                   ),
@@ -329,62 +341,83 @@ class _CardBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final impostor = role.kind == RoleKind.impostor;
     final ctx = AppScope.of(context).playContext;
-    final fg = impostor ? Colors.white : scheme.onSurface;
+    final special = role.gradient;
+    final impostor = role.kind == RoleKind.impostor;
+    final fg = special != null ? Colors.white : scheme.onSurface;
+    final sub = special != null ? Colors.white.withValues(alpha: 0.92) : scheme.onSurfaceVariant;
     final card = Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        color: impostor ? null : scheme.surfaceContainerHighest,
-        gradient: impostor ? Party.impostor : null,
+        color: special == null ? scheme.surfaceContainerHighest : null,
+        gradient: special,
         borderRadius: BorderRadius.circular(32),
-        border: impostor ? null : Border.all(color: ctx.accent.withValues(alpha: 0.6), width: 2),
+        border: special == null ? Border.all(color: ctx.accent.withValues(alpha: 0.6), width: 2) : null,
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (impostor) ...[
-            const Icon(Icons.theater_comedy_rounded, size: 64, color: Colors.white),
-            const SizedBox(height: 12),
-            const FittedBox(
-              child: Text('IMPOSTOR',
-                  style: TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900, letterSpacing: 2)),
-            ),
-            const SizedBox(height: 12),
-            Text(
-              role.hint != null ? 'Nápověda: ${role.hint}' : ctx.impostorLine,
-              textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ] else ...[
-            Text('Tajné slovo', style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 16)),
-            const SizedBox(height: 12),
-            FittedBox(
-              child: Text(role.cardText,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: fg, fontSize: 44, fontWeight: FontWeight.w900)),
-            ),
-            const SizedBox(height: 12),
-            // Undercover players must look exactly like civilians, so the category
-            // line is shown to everyone who has a word.
-            Text('Téma: $packName', style: TextStyle(color: scheme.onSurfaceVariant)),
-          ],
-          const SizedBox(height: 28),
-          Row(
+      // Scrolls instead of overflowing when a special card has many lines.
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.touch_app_rounded, size: 16, color: fg.withValues(alpha: 0.7)),
-              const SizedBox(width: 6),
-              Flexible(
-                child: Text(
-                  nextPlayer == null ? 'Klepni a skryj kartu' : 'Klepni, skryj a podej: $nextPlayer',
-                  style: TextStyle(color: fg.withValues(alpha: 0.7), fontWeight: FontWeight.w600),
+              if (special != null) ...[
+                Icon(role.icon, size: impostor ? 64 : 48, color: Colors.white),
+                const SizedBox(height: 10),
+                FittedBox(
+                  child: Text(
+                    role.badge!,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: impostor ? 44 : 30,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 2,
+                    ),
+                  ),
                 ),
+              ] else
+                Text('Tajné slovo', style: TextStyle(color: sub, fontSize: 16)),
+              if (role.knowsWord) ...[
+                SizedBox(height: special != null ? 6 : 12),
+                FittedBox(
+                  child: Text(
+                    role.cardText,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: fg, fontSize: special != null ? 36 : 44, fontWeight: FontWeight.w900),
+                  ),
+                ),
+              ],
+              const SizedBox(height: 12),
+              for (final line in role.secretLines(ctx, packName))
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    line,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: special != null ? Colors.white : sub,
+                      fontSize: special != null ? 17 : 15,
+                      height: 1.3,
+                    ),
+                  ),
+                ),
+              const SizedBox(height: 24),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.touch_app_rounded, size: 16, color: fg.withValues(alpha: 0.7)),
+                  const SizedBox(width: 6),
+                  Flexible(
+                    child: Text(
+                      nextPlayer == null ? 'Klepni a skryj kartu' : 'Klepni, skryj a podej: $nextPlayer',
+                      style: TextStyle(color: fg.withValues(alpha: 0.7), fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
     return impostor ? _Pulse(child: card) : card;
@@ -410,7 +443,10 @@ class _CardDone extends StatelessWidget {
         children: [
           const Icon(Icons.check_circle_rounded, size: 84, color: Colors.white),
           const SizedBox(height: 16),
-          const Text('Můžete začít', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
+          const Text(
+            'Můžete začít',
+            style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
+          ),
           const SizedBox(height: 6),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 28),

@@ -47,6 +47,9 @@ abstract final class PackIcons {
     '💔': Icons.heart_broken_rounded,
     '🤫': Icons.lock_rounded,
     '🛏️': Icons.bed_rounded,
+    '🍑': Icons.sentiment_very_satisfied_rounded,
+    '🎭': Icons.theater_comedy_rounded,
+    '🔥': Icons.local_fire_department_rounded,
     '🎞️': Icons.theaters_rounded,
     '🎤': Icons.mic_rounded,
     '🧚': Icons.auto_awesome_rounded,
@@ -60,6 +63,39 @@ abstract final class PackIcons {
 
   /// Choices offered in the pack editor (emoji keys, shown as icons).
   static const editorChoices = ['🎲', '🍕', '🐾', '🎬', '⚽', '🎵', '🌍', '🏠', '💼', '🚗', '🎮', '🎉', '🌲', '🧪', '📚', '❤️'];
+}
+
+/// Icons for round events (keys from roundEvents).
+abstract final class EventIcons {
+  static const Map<String, IconData> _byKey = {
+    'bolt': Icons.bolt_rounded,
+    'reverse': Icons.swap_vert_rounded,
+    'letter': Icons.abc_rounded,
+    'spy': Icons.visibility_rounded,
+    'repeat': Icons.repeat_rounded,
+    'gesture': Icons.front_hand_rounded,
+    'whisper': Icons.hearing_rounded,
+    'question': Icons.question_mark_rounded,
+    'sound': Icons.graphic_eq_rounded,
+    'robot': Icons.smart_toy_rounded,
+    'point': Icons.ads_click_rounded,
+    'mute': Icons.mic_off_rounded,
+    'drama': Icons.theater_comedy_rounded,
+    'serious': Icons.sentiment_neutral_rounded,
+    'gavel': Icons.gavel_rounded,
+    'accent': Icons.record_voice_over_rounded,
+    'fire': Icons.local_fire_department_rounded,
+    'lips': Icons.mic_external_on_rounded,
+    'eyes': Icons.remove_red_eye_rounded,
+    'heart': Icons.favorite_rounded,
+    'wink': Icons.sentiment_very_satisfied_rounded,
+    'drink': Icons.local_bar_rounded,
+    'camera': Icons.photo_camera_rounded,
+    'shirt': Icons.checkroom_rounded,
+    'gift': Icons.redeem_rounded,
+  };
+
+  static IconData of(String key) => _byKey[key] ?? Icons.auto_awesome_rounded;
 }
 
 extension FeatureIcon on FeaturePlugin {

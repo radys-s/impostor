@@ -1,0 +1,323 @@
+{
+  "id": "dvojsmysly",
+  "name": "Dvojsmysly",
+  "emoji": "🍑",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Banán",
+      "hint": "Žlutý",
+      "similar": "Okurka"
+    },
+    {
+      "word": "Okurka",
+      "hint": "Zelenina",
+      "similar": "Cuketa"
+    },
+    {
+      "word": "Cuketa",
+      "hint": "Zahrada",
+      "similar": "Lilek"
+    },
+    {
+      "word": "Lilek",
+      "hint": "Fialový",
+      "similar": "Banán"
+    },
+    {
+      "word": "Broskev",
+      "hint": "Chloupky",
+      "similar": "Meloun"
+    },
+    {
+      "word": "Meloun",
+      "hint": "Šťavnatý",
+      "similar": "Broskev"
+    },
+    {
+      "word": "Kokos",
+      "hint": "Tvrdý",
+      "similar": "Meloun"
+    },
+    {
+      "word": "Třešničky",
+      "hint": "Pár",
+      "similar": "Jahody"
+    },
+    {
+      "word": "Šlehačka",
+      "hint": "Sprej",
+      "similar": "Med"
+    },
+    {
+      "word": "Med",
+      "hint": "Lepkavý",
+      "similar": "Čokoládová poleva"
+    },
+    {
+      "word": "Čokoládová poleva",
+      "hint": "Sladká",
+      "similar": "Šlehačka"
+    },
+    {
+      "word": "Lízátko",
+      "hint": "Cucání",
+      "similar": "Nanuk"
+    },
+    {
+      "word": "Nanuk",
+      "hint": "Mražený",
+      "similar": "Lízátko"
+    },
+    {
+      "word": "Párek v rohlíku",
+      "hint": "Stánek",
+      "similar": "Klobása"
+    },
+    {
+      "word": "Klobása",
+      "hint": "Uzená",
+      "similar": "Párek v rohlíku"
+    },
+    {
+      "word": "Bageta",
+      "hint": "Dlouhá",
+      "similar": "Rohlík"
+    },
+    {
+      "word": "Rohlík",
+      "hint": "Pekárna",
+      "similar": "Bageta"
+    },
+    {
+      "word": "Koblih",
+      "hint": "Plněný",
+      "similar": "Knedlík"
+    },
+    {
+      "word": "Knedlík",
+      "hint": "Omáčka",
+      "similar": "Koblih"
+    },
+    {
+      "word": "Kohout",
+      "hint": "Ráno",
+      "similar": "Pták"
+    },
+    {
+      "word": "Kočička",
+      "hint": "Mazlit",
+      "similar": "Bobr"
+    },
+    {
+      "word": "Bobr",
+      "hint": "Chlupatý",
+      "similar": "Kočička"
+    },
+    {
+      "word": "Šnek",
+      "hint": "Pomalu",
+      "similar": "Žížala"
+    },
+    {
+      "word": "Vrtačka",
+      "hint": "Díra",
+      "similar": "Šroubovák"
+    },
+    {
+      "word": "Šroubovák",
+      "hint": "Křížový",
+      "similar": "Vrtačka"
+    },
+    {
+      "word": "Hadice",
+      "hint": "Stříkat",
+      "similar": "Konev"
+    },
+    {
+      "word": "Pumpa",
+      "hint": "Nafouknout",
+      "similar": "Hustilka"
+    },
+    {
+      "word": "Vývrtka",
+      "hint": "Víno",
+      "similar": "Otvírák"
+    },
+    {
+      "word": "Klíč a zámek",
+      "hint": "Odemknout",
+      "similar": "Visací zámek"
+    },
+    {
+      "word": "Rodeo",
+      "hint": "Býk",
+      "similar": "Jízda na koni"
+    },
+    {
+      "word": "Jízda na koni",
+      "hint": "Sedlo",
+      "similar": "Rodeo"
+    },
+    {
+      "word": "Houpačka",
+      "hint": "Rytmus",
+      "similar": "Trampolína"
+    },
+    {
+      "word": "Trampolína",
+      "hint": "Skákání",
+      "similar": "Houpačka"
+    },
+    {
+      "word": "Hasičská tyč",
+      "hint": "Klouzat",
+      "similar": "Skluzavka"
+    },
+    {
+      "word": "Joystick",
+      "hint": "Ovládání",
+      "similar": "Řadicí páka"
+    },
+    {
+      "word": "Řadicí páka",
+      "hint": "Rychlost",
+      "similar": "Ruční brzda"
+    },
+    {
+      "word": "Ruční brzda",
+      "hint": "Zatáhnout",
+      "similar": "Řadicí páka"
+    },
+    {
+      "word": "Couvání",
+      "hint": "Zezadu",
+      "similar": "Parkování"
+    },
+    {
+      "word": "Parkování",
+      "hint": "Mezera",
+      "similar": "Couvání"
+    },
+    {
+      "word": "Bowlingové koule",
+      "hint": "Kuželky",
+      "similar": "Kulečník"
+    },
+    {
+      "word": "Kulečník",
+      "hint": "Tágo",
+      "similar": "Golf"
+    },
+    {
+      "word": "Golf",
+      "hint": "Jamka",
+      "similar": "Minigolf"
+    },
+    {
+      "word": "Ping pong",
+      "hint": "Pálka",
+      "similar": "Tenis"
+    },
+    {
+      "word": "Píšťalka",
+      "hint": "Foukat",
+      "similar": "Flétna"
+    },
+    {
+      "word": "Flétna",
+      "hint": "Prstoklad",
+      "similar": "Saxofon"
+    },
+    {
+      "word": "Saxofon",
+      "hint": "Jazz",
+      "similar": "Trubka"
+    },
+    {
+      "word": "Trubka",
+      "hint": "Troubit",
+      "similar": "Saxofon"
+    },
+    {
+      "word": "Sprcha",
+      "hint": "Mokro",
+      "similar": "Vana"
+    },
+    {
+      "word": "Vana",
+      "hint": "Pěna",
+      "similar": "Jacuzzi"
+    },
+    {
+      "word": "Jacuzzi",
+      "hint": "Bublinky",
+      "similar": "Vana"
+    },
+    {
+      "word": "Mýdlo na zemi",
+      "hint": "Sehnout",
+      "similar": "Sprcha"
+    },
+    {
+      "word": "Šampaňské",
+      "hint": "Bouchnout",
+      "similar": "Prosecco"
+    },
+    {
+      "word": "Kaktus",
+      "hint": "Pichlavý",
+      "similar": "Aloe"
+    },
+    {
+      "word": "Mrkev",
+      "hint": "Králík",
+      "similar": "Okurka"
+    },
+    {
+      "word": "Hrušky",
+      "hint": "Tvar",
+      "similar": "Jablka"
+    },
+    {
+      "word": "Fíky",
+      "hint": "Středomoří",
+      "similar": "Datle"
+    },
+    {
+      "word": "Ořechy",
+      "hint": "Louskat",
+      "similar": "Kokos"
+    },
+    {
+      "word": "Kladivo",
+      "hint": "Bušit",
+      "similar": "Vrtačka"
+    },
+    {
+      "word": "Hřebík",
+      "hint": "Zatlouct",
+      "similar": "Šroub"
+    },
+    {
+      "word": "Zip",
+      "hint": "Rozepnout",
+      "similar": "Knoflík"
+    },
+    {
+      "word": "Knoflík",
+      "hint": "Dírka",
+      "similar": "Zip"
+    },
+    {
+      "word": "Tuba krému",
+      "hint": "Mazání",
+      "similar": "Zubní pasta"
+    },
+    {
+      "word": "Zubní pasta",
+      "hint": "Vymáčknout",
+      "similar": "Tuba krému"
+    }
+  ]
+}

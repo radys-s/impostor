@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
+import '../logic/events.dart';
+import '../models/presets.dart';
 import '../ui/how_to_play.dart';
 import '../ui/icons.dart';
 import '../ui/theme.dart';
@@ -32,6 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
     'Chaos občas rozdá impostora všem. Nebo nikomu.',
     'Vlastní téma vytvoříš v sekci Témata za pár vteřin.',
     'Časovač drží diskuzi v tempu. Zapneš ho v Možnostech.',
+    'Režim Párty: event každé kolo a šašek, který chce být chycen.',
+    'Detektiv zná impostory. Když ho prokouknou, je po něm.',
+    'Spolčení impostoři o sobě ví. Kryjte se navzájem.',
   ];
   final _tip = _tips[Random().nextInt(_tips.length)];
 
@@ -45,11 +50,16 @@ class _HomeScreenState extends State<HomeScreen> {
     final wordCount = packs.fold<int>(0, (sum, p) => sum + p.words.length);
     final missing = AppState.minPlayers - state.players.length;
 
+    final preset = GamePreset.values.where((p) => p.matches(s, max(state.players.length, 3))).firstOrNull;
     final modes = [
-      if (s.hint) 'nápověda',
-      if (s.undercover) 'undercover',
-      if (s.chaos) 'chaos',
-      if (s.timerSeconds > 0) 'časovač ${s.timerSeconds ~/ 60} min',
+      if (preset != null) preset.label,
+      if (preset == null && s.eventRate != EventRate.off) 'eventy: ${s.eventRate.label.toLowerCase()}',
+      if (preset == null && s.detective) 'detektiv',
+      if (preset == null && s.jester) 'šašek',
+      if (preset == null && s.hint) 'nápověda',
+      if (preset == null && s.undercover) 'undercover',
+      if (preset == null && s.chaos) 'chaos',
+      if (preset == null && s.timerSeconds > 0) 'časovač ${s.timerSeconds ~/ 60} min',
     ];
     final impostors = s.randomImpostors ? '${s.impostorMin}–${s.impostorMax}' : '${s.impostorMin}';
 

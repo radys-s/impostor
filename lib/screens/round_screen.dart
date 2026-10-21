@@ -4,8 +4,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
+import '../logic/events.dart';
 import '../logic/game_engine.dart';
+import '../models/play_context.dart';
+import '../ui/icons.dart';
 import '../ui/motion.dart';
+import '../ui/roles.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
 import 'result_screen.dart';
@@ -30,7 +34,7 @@ class _RoundScreenState extends State<RoundScreen> {
   @override
   void initState() {
     super.initState();
-    _total = AppScope.read(context).gameSettings.timerSeconds;
+    _total = widget.round.eventTimer ?? AppScope.read(context).gameSettings.timerSeconds;
     _remaining = _total;
   }
 
@@ -108,18 +112,16 @@ class _RoundScreenState extends State<RoundScreen> {
       ),
     );
     if (role == null || !mounted) return;
-    final impostor = role.kind == RoleKind.impostor;
+    final ctx = AppScope.read(context).playContext;
     await showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(
-        icon: Icon(impostor ? Icons.theater_comedy_rounded : Icons.key_rounded, size: 40),
-        title: Text(impostor ? 'Jsi IMPOSTOR' : role.cardText, textAlign: TextAlign.center),
-        content: Text(
-          impostor
-              ? (role.hint != null ? 'Nápověda: ${role.hint}' : 'Neznáš slovo. Blafuj dál.')
-              : 'Téma: ${widget.round.packName}',
+        icon: Icon(role.icon, size: 40),
+        title: Text(
+          [if (role.badge != null) role.badge!, if (role.knowsWord) role.cardText].join(' · '),
           textAlign: TextAlign.center,
         ),
+        content: Text(role.secretLines(ctx, widget.round.packName).join('\n'), textAlign: TextAlign.center),
         actions: [FilledButton(onPressed: () => Navigator.pop(context), child: const Text('Skrýt'))],
       ),
     );
@@ -189,6 +191,10 @@ class _RoundScreenState extends State<RoundScreen> {
                   ],
                 ),
               ),
+              if (round.event != null) ...[
+                const SizedBox(height: 16),
+                _EventCard(event: round.event!, letter: round.eventLetter),
+              ],
               const SizedBox(height: 16),
               _Phases(voting: state.votingOn),
               if (hasTimer) ...[
@@ -350,6 +356,69 @@ class _Phases extends StatelessWidget {
           ),
         ],
       ],
+    );
+  }
+}
+
+/// The round's twist: drops in with a bounce and keeps a soft glow.
+class _EventCard extends StatelessWidget {
+  const _EventCard({required this.event, this.letter});
+
+  final RoundEvent event;
+  final String? letter;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final adult = !event.audiences.contains(Audience.family) && !event.audiences.contains(Audience.friends);
+    final colors = adult ? const [Party.pink, Party.violet] : const [Party.yellow, Party.orange];
+    final card = Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: scheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: colors.first.withValues(alpha: 0.7), width: 2),
+        boxShadow: [BoxShadow(color: colors.first.withValues(alpha: 0.25), blurRadius: 24, offset: const Offset(0, 10))],
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          IconBadge(EventIcons.of(event.icon), gradient: LinearGradient(colors: colors), size: 48),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'EVENT KOLA',
+                  style: TextStyle(fontSize: 11, letterSpacing: 2, fontWeight: FontWeight.w800, color: colors.first),
+                ),
+                const SizedBox(height: 2),
+                Text(event.title, style: Theme.of(context).textTheme.titleLarge),
+                const SizedBox(height: 4),
+                Text(event.textWith(letter), style: TextStyle(height: 1.35, color: scheme.onSurfaceVariant)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+    return Semantics(
+      container: true,
+      label: 'Event kola: ${event.title}',
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: Motion.reduced(context) ? 1 : 0.0, end: 1),
+        duration: Motion.of(context, Motion.cinematic),
+        curve: Motion.pop,
+        child: card,
+        builder: (context, t, child) => Opacity(
+          opacity: t.clamp(0.0, 1.0),
+          child: Transform.translate(
+            offset: Offset(0, -24 * (1 - t)),
+            child: Transform.rotate(angle: 0.04 * (1 - t), child: child),
+          ),
+        ),
+      ),
     );
   }
 }

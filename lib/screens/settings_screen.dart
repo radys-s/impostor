@@ -75,7 +75,10 @@ class SettingsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(18),
                 child: Text(
                   'Undercover: impostor dostane podobné slovo a neví, že je impostor.\n'
-                  'Chaos: občas není impostor nikdo, nebo jsou to všichni.',
+                  'Chaos: občas není impostor nikdo, nebo jsou to všichni.\n'
+                  'Detektiv: zná slovo i impostory, musí je nenápadně prozradit.\n'
+                  'Šašek: zná slovo, ale vyhraje sám, když ho vyhlasujete.\n'
+                  'Eventy: twist do kola, třeba pantomima nebo šeptanda. V 18+ i pikantní.',
                   style: TextStyle(height: 1.45, color: scheme.onSurfaceVariant),
                 ),
               ),

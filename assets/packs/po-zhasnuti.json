@@ -1,0 +1,318 @@
+{
+  "id": "po-zhasnuti",
+  "name": "Po zhasnutí",
+  "emoji": "🔥",
+  "audience": "adult",
+  "words": [
+    {
+      "word": "Šátek",
+      "hint": "Zavázat",
+      "similar": "Maska na oči"
+    },
+    {
+      "word": "Maska na oči",
+      "hint": "Tma",
+      "similar": "Šátek"
+    },
+    {
+      "word": "Pouta z kožešiny",
+      "hint": "Chlupatá",
+      "similar": "Šátek"
+    },
+    {
+      "word": "Peříčko",
+      "hint": "Lechtání",
+      "similar": "Kostka ledu"
+    },
+    {
+      "word": "Kostka ledu",
+      "hint": "Studená",
+      "similar": "Peříčko"
+    },
+    {
+      "word": "Horký vosk",
+      "hint": "Svíčka",
+      "similar": "Masážní olej"
+    },
+    {
+      "word": "Masážní olej",
+      "hint": "Kluzký",
+      "similar": "Horký vosk"
+    },
+    {
+      "word": "Bič",
+      "hint": "Plesk",
+      "similar": "Plácačka"
+    },
+    {
+      "word": "Plácačka",
+      "hint": "Zadek",
+      "similar": "Bič"
+    },
+    {
+      "word": "Obojek",
+      "hint": "Vodítko",
+      "similar": "Řetízek"
+    },
+    {
+      "word": "Latex",
+      "hint": "Lesklý",
+      "similar": "Kožený korzet"
+    },
+    {
+      "word": "Kožený korzet",
+      "hint": "Šněrování",
+      "similar": "Latex"
+    },
+    {
+      "word": "Podvazky",
+      "hint": "Punčochy",
+      "similar": "Krajkové body"
+    },
+    {
+      "word": "Krajkové body",
+      "hint": "Průsvitné",
+      "similar": "Podvazky"
+    },
+    {
+      "word": "Hedvábný župan",
+      "hint": "Hebký",
+      "similar": "Pyžamo"
+    },
+    {
+      "word": "Odvážná fotka",
+      "hint": "Selfie",
+      "similar": "Sexting"
+    },
+    {
+      "word": "Sexting",
+      "hint": "Zprávy",
+      "similar": "Odvážná fotka"
+    },
+    {
+      "word": "Noční hovor",
+      "hint": "Šeptání",
+      "similar": "Sexting"
+    },
+    {
+      "word": "Sexy hlasovka",
+      "hint": "Mikrofon",
+      "similar": "Noční hovor"
+    },
+    {
+      "word": "Svlékací poker",
+      "hint": "Karty",
+      "similar": "Flaška"
+    },
+    {
+      "word": "Flaška",
+      "hint": "Točit",
+      "similar": "Pravda nebo úkol"
+    },
+    {
+      "word": "Pravda nebo úkol",
+      "hint": "Odvaha",
+      "similar": "Flaška"
+    },
+    {
+      "word": "Sedm minut",
+      "hint": "Skříň",
+      "similar": "Flaška"
+    },
+    {
+      "word": "Ochutnávka naslepo",
+      "hint": "Jídlo",
+      "similar": "Kostka ledu"
+    },
+    {
+      "word": "Masáž nohou",
+      "hint": "Chodidla",
+      "similar": "Masáž zad"
+    },
+    {
+      "word": "Šimrání",
+      "hint": "Smích",
+      "similar": "Peříčko"
+    },
+    {
+      "word": "Kousání",
+      "hint": "Zuby",
+      "similar": "Cucflek"
+    },
+    {
+      "word": "Cucflek",
+      "hint": "Krk",
+      "similar": "Kousání"
+    },
+    {
+      "word": "Rychlovka",
+      "hint": "Spěch",
+      "similar": "Ranní mazlení"
+    },
+    {
+      "word": "Ranní mazlení",
+      "hint": "Budík",
+      "similar": "Rychlovka"
+    },
+    {
+      "word": "Zadní sedadlo",
+      "hint": "Zamlžené",
+      "similar": "Autokino"
+    },
+    {
+      "word": "Autokino",
+      "hint": "Plátno",
+      "similar": "Zadní sedadlo"
+    },
+    {
+      "word": "Sauna",
+      "hint": "Pára",
+      "similar": "Vířivka"
+    },
+    {
+      "word": "Vířivka",
+      "hint": "Bubliny",
+      "similar": "Sauna"
+    },
+    {
+      "word": "Nudistická pláž",
+      "hint": "Opalování",
+      "similar": "Sauna"
+    },
+    {
+      "word": "Koupání nahatý",
+      "hint": "Noc",
+      "similar": "Nudistická pláž"
+    },
+    {
+      "word": "Výtah",
+      "hint": "Patro",
+      "similar": "Zkušební kabinka"
+    },
+    {
+      "word": "Zkušební kabinka",
+      "hint": "Obchod",
+      "similar": "Výtah"
+    },
+    {
+      "word": "Kancelář po zavíračce",
+      "hint": "Stůl",
+      "similar": "Výtah"
+    },
+    {
+      "word": "Toaleta v letadle",
+      "hint": "Turbulence",
+      "similar": "Zkušební kabinka"
+    },
+    {
+      "word": "Výměna partnerů",
+      "hint": "Swingeři",
+      "similar": "Trojka"
+    },
+    {
+      "word": "Trojka",
+      "hint": "Tři",
+      "similar": "Výměna partnerů"
+    },
+    {
+      "word": "Otevřený vztah",
+      "hint": "Pravidla",
+      "similar": "Polyamorie"
+    },
+    {
+      "word": "Polyamorie",
+      "hint": "Láska",
+      "similar": "Otevřený vztah"
+    },
+    {
+      "word": "Svlékací hra",
+      "hint": "Oblečení",
+      "similar": "Svlékací poker"
+    },
+    {
+      "word": "Erotická povídka",
+      "hint": "Čtení",
+      "similar": "Pan Grey"
+    },
+    {
+      "word": "Pan Grey",
+      "hint": "Kniha",
+      "similar": "Erotická povídka"
+    },
+    {
+      "word": "Hračka na dálku",
+      "hint": "Ovladač",
+      "similar": "Vibrátor"
+    },
+    {
+      "word": "Erotický veletrh",
+      "hint": "Výstava",
+      "similar": "Sexshop"
+    },
+    {
+      "word": "Afrodiziakum",
+      "hint": "Ústřice",
+      "similar": "Šampaňské"
+    },
+    {
+      "word": "Ústřice",
+      "hint": "Moře",
+      "similar": "Afrodiziakum"
+    },
+    {
+      "word": "Jahody s čokoládou",
+      "hint": "Fondue",
+      "similar": "Šlehačka"
+    },
+    {
+      "word": "Tanec na klíně",
+      "hint": "Židle",
+      "similar": "Svlékací poker"
+    },
+    {
+      "word": "Hotelový pokoj",
+      "hint": "Recepce",
+      "similar": "Motel"
+    },
+    {
+      "word": "Motel",
+      "hint": "Hodinovka",
+      "similar": "Hotelový pokoj"
+    },
+    {
+      "word": "Zamčené dveře",
+      "hint": "Klíč",
+      "similar": "Hotelový pokoj"
+    },
+    {
+      "word": "Tantra",
+      "hint": "Dech",
+      "similar": "Jóga"
+    },
+    {
+      "word": "Jóga ve dvou",
+      "hint": "Protahování",
+      "similar": "Tantra"
+    },
+    {
+      "word": "Kamasutra",
+      "hint": "Pozice",
+      "similar": "Tantra"
+    },
+    {
+      "word": "Svádění",
+      "hint": "Pohled",
+      "similar": "Flirt"
+    },
+    {
+      "word": "Flirt",
+      "hint": "Mrkání",
+      "similar": "Svádění"
+    },
+    {
+      "word": "Polibek na krk",
+      "hint": "Mrazení",
+      "similar": "Cucflek"
+    }
+  ]
+}

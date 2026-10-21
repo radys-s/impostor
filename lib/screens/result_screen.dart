@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/app_state.dart';
 import '../logic/game_engine.dart';
+import '../ui/icons.dart';
 import '../ui/motion.dart';
 import '../ui/theme.dart';
 import '../ui/widgets.dart';
@@ -67,7 +68,7 @@ class _ResultScreenState extends State<ResultScreen> {
     setState(() {
       _winner = winner;
       _stage = _Stage.done;
-      if (winner == Winner.civilians) _confetti++;
+      if (winner == Winner.civilians || winner == Winner.jester) _confetti++;
     });
     if (winner != null && !_scored) {
       _scored = true;
@@ -141,6 +142,10 @@ class _ResultScreenState extends State<ResultScreen> {
                       const SizedBox(height: 16),
                       _PopIn(child: _WinnerBanner(winner: _winner!, round: _round, points: state.scoresOn)),
                     ],
+                    if (_stage == _Stage.done && _round.event?.payoff == true) ...[
+                      const SizedBox(height: 16),
+                      FadeSlideIn(index: 2, child: _PayoffCard(round: _round)),
+                    ],
                     if (_stage == _Stage.done && state.scoresOn && state.scores.isNotEmpty) ...[
                       const SectionLabel('Skóre'),
                       _ScoreList(scores: state.scores, players: state.players),
@@ -188,6 +193,7 @@ class _ResultScreenState extends State<ResultScreen> {
     if (_stage == _Stage.verdict) {
       // Only reached with the scores plugin in verbal mode.
       final noImpostor = _round.impostors.isEmpty;
+      final jester = _round.roleOf(RoleKind.jester);
       return Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -210,6 +216,18 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
             ],
           ),
+          if (jester != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: () => _finish(Winner.jester),
+                  icon: const Icon(Icons.sentiment_very_satisfied_rounded),
+                  label: Text('Vyhlasovali šaška (${jester.player})'),
+                ),
+              ),
+            ),
           TextButton(onPressed: () => _finish(null), child: const Text('Nepočítat')),
         ],
       );
@@ -306,6 +324,10 @@ class _RevealCard extends StatelessWidget {
       title = plural(impostors.length, 'Impostor', 'Impostoři', 'Impostoři');
     }
     final undercover = impostors.any((r) => r.kind == RoleKind.undercover);
+    final specials = [
+      if (round.roleOf(RoleKind.detective) case final d?) 'Detektiv: ${d.player}',
+      if (round.roleOf(RoleKind.jester) case final j?) 'Šašek: ${j.player}',
+    ];
 
     return Container(
       decoration: BoxDecoration(
@@ -333,6 +355,14 @@ class _RevealCard extends StatelessWidget {
               impostors.map((r) => r.player).join(', '),
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 36, fontWeight: FontWeight.w900, color: Colors.white, height: 1.1),
+            ),
+          ],
+          if (specials.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Text(
+              specials.join('  ·  '),
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
             ),
           ],
           const SizedBox(height: 20),
@@ -428,7 +458,9 @@ class _WinnerBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String text;
-    if (round.impostors.length == round.roles.length) {
+    if (winner == Winner.jester) {
+      text = 'Šašek ${round.roleOf(RoleKind.jester)?.player ?? ''} vás napálil!${points ? ' +3 body' : ''}';
+    } else if (round.impostors.length == round.roles.length) {
       text = 'Tohle kolo se nepočítá 😄';
     } else if (round.impostors.isEmpty) {
       text = winner == Winner.civilians
@@ -440,9 +472,11 @@ class _WinnerBanner extends StatelessWidget {
       text = '${plural(round.impostors.length, 'Vyhrál impostor', 'Vyhráli impostoři', 'Vyhráli impostoři')}!'
           '${points ? ' +2 body' : ''}';
     }
-    final g = winner == Winner.civilians
-        ? const LinearGradient(colors: [Party.green, Party.yellow])
-        : const LinearGradient(colors: [Party.pink, Party.violet]);
+    final g = switch (winner) {
+      Winner.civilians => const LinearGradient(colors: [Party.green, Party.yellow]),
+      Winner.jester => Party.jester,
+      Winner.impostors => const LinearGradient(colors: [Party.pink, Party.violet]),
+    };
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(gradient: g, borderRadius: BorderRadius.circular(24)),
@@ -473,6 +507,26 @@ class _ScoreList extends StatelessWidget {
               trailing: Text('${scores[p] ?? 0}', style: Theme.of(context).textTheme.titleMedium),
             ),
         ],
+      ),
+    );
+  }
+}
+
+/// Repeats an event rule that is settled after the vote (drink, dare...).
+class _PayoffCard extends StatelessWidget {
+  const _PayoffCard({required this.round});
+  final Round round;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final event = round.event!;
+    return Card(
+      child: ListTile(
+        contentPadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+        leading: IconBadge(EventIcons.of(event.icon), size: 44),
+        title: Text('Nezapomeňte: ${event.title}', style: const TextStyle(fontWeight: FontWeight.w800)),
+        subtitle: Text(event.textWith(round.eventLetter), style: TextStyle(color: scheme.onSurfaceVariant, height: 1.3)),
       ),
     );
   }
