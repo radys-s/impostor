@@ -200,7 +200,7 @@ void main() {
     expect(state.gameSettings.jester, isTrue);
     Navigator.of(tester.element(find.byType(GameOptionsScreen))).pop();
     await tester.pumpAndSettle();
-    expect(find.textContaining('Párty'), findsOneWidget);
+    expect(find.text('Párty'), findsOneWidget);
 
     await tester.tap(find.text('Rozdat karty'));
     await tester.pumpAndSettle();
