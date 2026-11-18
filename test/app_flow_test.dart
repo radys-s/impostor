@@ -69,6 +69,37 @@ void main() {
     expect(find.text('Rozdat karty'), findsOneWidget);
   });
 
+  testWidgets('players screen: ready to type, and a removed player can be restored', (tester) async {
+    final state = await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob'],
+    });
+    await tester.tap(find.text('2 hráči'));
+    await tester.pumpAndSettle();
+    // Players are still missing, so the name field is focused on arrival.
+    expect(tester.testTextInput.hasAnyClients, isTrue);
+
+    await tester.tap(find.byTooltip('Odebrat').first);
+    await tester.pumpAndSettle();
+    expect(state.players, ['Bob']);
+    expect(find.text('Ana už nehraje'), findsOneWidget);
+    await tester.tap(find.text('Vrátit'));
+    await tester.pumpAndSettle();
+    expect(state.players, ['Ana', 'Bob']);
+
+    // The undo offer times out, and it does not follow the players into the game.
+    await tester.tap(find.byTooltip('Odebrat').first);
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 6));
+    await tester.pumpAndSettle();
+    expect(find.text('Ana už nehraje'), findsNothing);
+    await tester.tap(find.byTooltip('Odebrat').first);
+    await tester.pumpAndSettle();
+    expect(find.text('Bob už nehraje'), findsOneWidget);
+    Navigator.of(tester.element(find.byType(PlayersScreen))).pop();
+    await tester.pumpAndSettle();
+    expect(find.text('Bob už nehraje'), findsNothing);
+  });
+
   testWidgets('adult context asks for 18+ confirmation once', (tester) async {
     final state = await pumpApp(tester, context: 'Rodina');
     expect(state.playContext, PlayContext.family);

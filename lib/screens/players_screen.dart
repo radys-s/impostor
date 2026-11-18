@@ -17,8 +17,18 @@ class _PlayersScreenState extends State<PlayersScreen> {
   final _focus = FocusNode();
   String? _error;
 
+  ScaffoldMessengerState? _messenger;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _messenger = ScaffoldMessenger.of(context);
+  }
+
   @override
   void dispose() {
+    // The undo offer belongs to this screen; it must not follow players into a round.
+    _messenger?.hideCurrentSnackBar();
     _controller.dispose();
     _focus.dispose();
     super.dispose();
@@ -29,6 +39,30 @@ class _PlayersScreenState extends State<PlayersScreen> {
     setState(() => _error = error);
     if (error == null) _controller.clear();
     _focus.requestFocus();
+  }
+
+  void _remove(int index) {
+    final state = AppScope.read(context);
+    final name = state.players[index];
+    state.removePlayer(index);
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(
+        content: Text('$name už nehraje'),
+        action: SnackBarAction(
+          label: 'Vrátit',
+          onPressed: () {
+            final error = state.insertPlayer(index, name);
+            if (error != null && mounted) showSnack(context, error);
+          },
+        ),
+        // A snackbar with an action would otherwise stay until pressed.
+        persist: false,
+        duration: const Duration(seconds: 5),
+        // Floats above the pinned Hotovo button instead of covering it.
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 96),
+      ));
   }
 
   Future<void> _rename(int index, String current) async {
@@ -75,6 +109,8 @@ class _PlayersScreenState extends State<PlayersScreen> {
                     child: TextField(
                       controller: _controller,
                       focusNode: _focus,
+                      // Ready to type while the game still needs players.
+                      autofocus: missing > 0,
                       enabled: !full,
                       textCapitalization: TextCapitalization.words,
                       textInputAction: TextInputAction.done,
@@ -134,7 +170,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
                                   IconButton(
                                     tooltip: 'Odebrat',
                                     icon: const Icon(Icons.close_rounded),
-                                    onPressed: () => state.removePlayer(i),
+                                    onPressed: () => _remove(i),
                                   ),
                                   ReorderableDragStartListener(index: i, child: const Icon(Icons.drag_indicator_rounded)),
                                 ],
