@@ -204,11 +204,14 @@ class AppState extends ChangeNotifier {
     _savePlayers();
   }
 
-  /// Puts a removed player back at their seat (undo).
-  void insertPlayer(int index, String name) {
-    if (players.length >= maxPlayers || players.any((p) => normalizeWord(p) == normalizeWord(name))) return;
+  /// Puts a removed player back at their seat (undo). Returns an error to
+  /// show when that is no longer possible.
+  String? insertPlayer(int index, String name) {
+    if (players.length >= maxPlayers) return 'Maximálně $maxPlayers hráčů';
+    if (players.any((p) => normalizeWord(p) == normalizeWord(name))) return 'Tohle jméno už ve hře je';
     players = [...players]..insert(index.clamp(0, players.length), name);
     _savePlayers();
+    return null;
   }
 
   /// [newIndex] is already adjusted for the removed item (onReorderItem).

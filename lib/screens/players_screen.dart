@@ -17,8 +17,18 @@ class _PlayersScreenState extends State<PlayersScreen> {
   final _focus = FocusNode();
   String? _error;
 
+  ScaffoldMessengerState? _messenger;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _messenger = ScaffoldMessenger.of(context);
+  }
+
   @override
   void dispose() {
+    // The undo offer belongs to this screen; it must not follow players into a round.
+    _messenger?.hideCurrentSnackBar();
     _controller.dispose();
     _focus.dispose();
     super.dispose();
@@ -39,7 +49,16 @@ class _PlayersScreenState extends State<PlayersScreen> {
       ..hideCurrentSnackBar()
       ..showSnackBar(SnackBar(
         content: Text('$name už nehraje'),
-        action: SnackBarAction(label: 'Vrátit', onPressed: () => state.insertPlayer(index, name)),
+        action: SnackBarAction(
+          label: 'Vrátit',
+          onPressed: () {
+            final error = state.insertPlayer(index, name);
+            if (error != null && mounted) showSnack(context, error);
+          },
+        ),
+        // A snackbar with an action would otherwise stay until pressed.
+        persist: false,
+        duration: const Duration(seconds: 5),
         // Floats above the pinned Hotovo button instead of covering it.
         behavior: SnackBarBehavior.floating,
         margin: const EdgeInsets.fromLTRB(16, 0, 16, 96),

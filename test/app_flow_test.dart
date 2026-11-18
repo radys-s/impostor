@@ -85,6 +85,19 @@ void main() {
     await tester.tap(find.text('Vrátit'));
     await tester.pumpAndSettle();
     expect(state.players, ['Ana', 'Bob']);
+
+    // The undo offer times out, and it does not follow the players into the game.
+    await tester.tap(find.byTooltip('Odebrat').first);
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 6));
+    await tester.pumpAndSettle();
+    expect(find.text('Ana už nehraje'), findsNothing);
+    await tester.tap(find.byTooltip('Odebrat').first);
+    await tester.pumpAndSettle();
+    expect(find.text('Bob už nehraje'), findsOneWidget);
+    Navigator.of(tester.element(find.byType(PlayersScreen))).pop();
+    await tester.pumpAndSettle();
+    expect(find.text('Bob už nehraje'), findsNothing);
   });
 
   testWidgets('adult context asks for 18+ confirmation once', (tester) async {
