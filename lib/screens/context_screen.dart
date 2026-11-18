@@ -142,6 +142,7 @@ class _ContextTile extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return Pressable(
       onTap: onTap,
+      radius: 26,
       child: AnimatedScale(
         scale: selected ? 1.0 : 0.97,
         duration: Motion.base,

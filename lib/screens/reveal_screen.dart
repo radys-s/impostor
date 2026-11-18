@@ -172,6 +172,7 @@ class _RevealScreenState extends State<RevealScreen> {
                       excludeSemantics: true,
                       child: Pressable(
                         onTap: _tapCard,
+                        radius: 32,
                         scale: 0.98,
                         child: AnimatedSwitcher(
                           duration: Motion.of(context, Motion.base),

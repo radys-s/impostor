@@ -251,6 +251,7 @@ class _TimerRing extends StatelessWidget {
       label: 'Časovač $minutes:$seconds',
       child: Pressable(
         onTap: onTap,
+        radius: 110,
         child: SizedBox(
           width: 220,
           height: 220,

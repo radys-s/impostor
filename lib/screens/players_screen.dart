@@ -92,6 +92,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
                       message: 'Přidat',
                       child: Pressable(
                         onTap: full ? null : _add,
+                        radius: 18,
                         child: Container(
                           height: 56,
                           decoration: BoxDecoration(

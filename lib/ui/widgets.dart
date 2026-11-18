@@ -94,12 +94,18 @@ class _FadeSlideInState extends State<FadeSlideIn> with SingleTickerProviderStat
 }
 
 /// Scales down slightly while pressed. Wrap any tappable.
+///
+/// Also a real button for keyboards and screen readers: it takes focus with
+/// Tab, shows a focus ring of [radius], and Enter or Space activates it.
 class Pressable extends StatefulWidget {
-  const Pressable({super.key, required this.child, required this.onTap, this.scale = 0.96});
+  const Pressable({super.key, required this.child, required this.onTap, this.scale = 0.96, this.radius = 24});
 
   final Widget child;
   final VoidCallback? onTap;
   final double scale;
+
+  /// Corner radius of the focus ring; match the child's shape.
+  final double radius;
 
   @override
   State<Pressable> createState() => _PressableState();
@@ -107,14 +113,21 @@ class Pressable extends StatefulWidget {
 
 class _PressableState extends State<Pressable> {
   bool _down = false;
+  bool _focused = false;
 
   void _set(bool v) {
     if (widget.onTap != null && _down != v) setState(() => _down = v);
   }
 
+  late final Map<Type, Action<Intent>> _actions = {
+    ActivateIntent: CallbackAction<ActivateIntent>(onInvoke: (_) => widget.onTap?.call()),
+    ButtonActivateIntent: CallbackAction<ButtonActivateIntent>(onInvoke: (_) => widget.onTap?.call()),
+  };
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    final enabled = widget.onTap != null;
+    Widget child = GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTapDown: (_) => _set(true),
       onTapUp: (_) => _set(false),
@@ -124,9 +137,25 @@ class _PressableState extends State<Pressable> {
         scale: _down ? widget.scale : 1,
         duration: Motion.instant,
         curve: Curves.easeOut,
-        child: widget.child,
+        child: _focused
+            ? Container(
+                foregroundDecoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(widget.radius),
+                  border: Border.all(color: Theme.of(context).colorScheme.onSurface, width: 3),
+                ),
+                child: widget.child,
+              )
+            : widget.child,
       ),
     );
+    child = FocusableActionDetector(
+      enabled: enabled,
+      actions: _actions,
+      mouseCursor: enabled ? SystemMouseCursors.click : MouseCursor.defer,
+      onShowFocusHighlight: (v) => setState(() => _focused = v),
+      child: child,
+    );
+    return enabled ? Semantics(button: true, child: child) : child;
   }
 }
 
@@ -150,6 +179,7 @@ class GradientButton extends StatelessWidget {
       enabled: enabled,
       label: label,
       child: Pressable(
+        radius: 22,
         onTap: enabled
             ? () {
                 tick(state.appSettings.haptics);
@@ -440,6 +470,7 @@ class ContextPill extends StatelessWidget {
   Widget build(BuildContext context) {
     return Pressable(
       onTap: onTap,
+      radius: 40,
       child: AnimatedContainer(
         duration: Motion.quick,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
