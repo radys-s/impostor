@@ -342,18 +342,20 @@ class _CardBack extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final ctx = AppScope.of(context).playContext;
-    final special = role.gradient;
+    // Every role gets the same card surface. A bright red impostor card would
+    // light up the holder's face in a dark room and give them away; the role
+    // shows only in the text.
+    final special = role.badge != null;
     final impostor = role.kind == RoleKind.impostor;
-    final fg = special != null ? Colors.white : scheme.onSurface;
-    final sub = special != null ? Colors.white.withValues(alpha: 0.92) : scheme.onSurfaceVariant;
-    final card = Container(
+    final fg = scheme.onSurface;
+    final sub = scheme.onSurfaceVariant;
+    return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        color: special == null ? scheme.surfaceContainerHighest : null,
-        gradient: special,
+        color: scheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(32),
-        border: special == null ? Border.all(color: ctx.accent.withValues(alpha: 0.6), width: 2) : null,
+        border: Border.all(color: ctx.accent.withValues(alpha: 0.6), width: 2),
       ),
       // Scrolls instead of overflowing when a special card has many lines.
       child: Center(
@@ -361,14 +363,16 @@ class _CardBack extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              if (special != null) ...[
-                Icon(role.icon, size: impostor ? 64 : 48, color: Colors.white),
-                const SizedBox(height: 10),
+              // Every role has an icon of the same size and colour, so not even
+              // a coloured blob tells the roles apart from the side.
+              Icon(role.icon, size: 56, color: ctx.accent),
+              const SizedBox(height: 10),
+              if (special) ...[
                 FittedBox(
                   child: Text(
                     role.badge!,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: fg,
                       fontSize: impostor ? 44 : 30,
                       fontWeight: FontWeight.w900,
                       letterSpacing: 2,
@@ -378,12 +382,12 @@ class _CardBack extends StatelessWidget {
               ] else
                 Text('Tajné slovo', style: TextStyle(color: sub, fontSize: 16)),
               if (role.knowsWord) ...[
-                SizedBox(height: special != null ? 6 : 12),
+                SizedBox(height: special ? 6 : 12),
                 FittedBox(
                   child: Text(
                     role.cardText,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: fg, fontSize: special != null ? 36 : 44, fontWeight: FontWeight.w900),
+                    style: TextStyle(color: fg, fontSize: special ? 36 : 44, fontWeight: FontWeight.w900),
                   ),
                 ),
               ],
@@ -394,11 +398,7 @@ class _CardBack extends StatelessWidget {
                   child: Text(
                     line,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: special != null ? Colors.white : sub,
-                      fontSize: special != null ? 17 : 15,
-                      height: 1.3,
-                    ),
+                    style: TextStyle(color: sub, fontSize: 15, height: 1.3),
                   ),
                 ),
               const SizedBox(height: 24),
@@ -420,7 +420,6 @@ class _CardBack extends StatelessWidget {
         ),
       ),
     );
-    return impostor ? _Pulse(child: card) : card;
   }
 }
 
@@ -457,56 +456,6 @@ class _CardDone extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-/// Breathing red glow around the impostor card.
-class _Pulse extends StatefulWidget {
-  const _Pulse({required this.child});
-  final Widget child;
-
-  @override
-  State<_Pulse> createState() => _PulseState();
-}
-
-class _PulseState extends State<_Pulse> with SingleTickerProviderStateMixin {
-  late final AnimationController _c = AnimationController(vsync: this, duration: const Duration(milliseconds: 1400));
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (Motion.reduced(context)) {
-      _c.value = 0.5;
-    } else if (!_c.isAnimating) {
-      _c.repeat(reverse: true);
-    }
-  }
-
-  @override
-  void dispose() {
-    _c.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _c,
-      child: widget.child,
-      builder: (context, child) => DecoratedBox(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(32),
-          boxShadow: [
-            BoxShadow(
-              color: Party.red.withValues(alpha: 0.25 + 0.3 * _c.value),
-              blurRadius: 24 + 24 * _c.value,
-              spreadRadius: 2 * _c.value,
-            ),
-          ],
-        ),
-        child: child,
       ),
     );
   }
