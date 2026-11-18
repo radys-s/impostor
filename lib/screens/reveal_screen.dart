@@ -25,9 +25,6 @@ class _RevealScreenState extends State<RevealScreen> {
   int _index = 0;
   bool _revealed = false;
 
-  /// Everyone has seen their card; waiting to start the round.
-  bool _done = false;
-
   /// Swallows a quick second tap right after hiding, so the previous player
   /// cannot accidentally open the next player's card.
   bool _locked = false;
@@ -44,7 +41,6 @@ class _RevealScreenState extends State<RevealScreen> {
   String? get _nextPlayer => _last ? null : widget.round.roles[_index + 1].player;
 
   void _tapCard() {
-    if (_done) return _start();
     if (_locked) return;
     tick(AppScope.read(context).appSettings.haptics);
     if (!_revealed) {
@@ -54,14 +50,15 @@ class _RevealScreenState extends State<RevealScreen> {
     // Hide and hand over in one step.
     _locked = true;
     _unlock = Timer(const Duration(milliseconds: 700), () => _locked = false);
+    final last = _last;
     setState(() {
       _revealed = false;
-      if (_last) {
-        _done = true;
-      } else {
-        _index++;
-      }
+      if (!last) _index++;
     });
+    // After the last card the round starts straight away; the round screen
+    // says who begins. Its reveal button needs a hold, so a leftover double
+    // tap cannot spoil anything.
+    if (last) _start();
   }
 
   bool _starting = false;
@@ -91,10 +88,11 @@ class _RevealScreenState extends State<RevealScreen> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final total = widget.round.roles.length;
-    final progress = _done ? 1.0 : (_index + (_revealed ? 1 : 0)) / total;
+    // While the round screen slides in, show the finished state.
+    final progress = _starting ? 1.0 : (_index + (_revealed ? 1 : 0)) / total;
     final String over;
     final String headline;
-    if (_done) {
+    if (_starting) {
       over = 'Hotovo';
       headline = 'Všichni mají kartu';
     } else if (_revealed) {
@@ -112,7 +110,7 @@ class _RevealScreenState extends State<RevealScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(_done ? 'Karty rozdané' : 'Karta ${_index + 1} z $total'),
+          title: Text('Karta ${_index + 1} z $total'),
           leading: IconButton(
             icon: const Icon(Icons.close),
             tooltip: 'Ukončit kolo',
@@ -144,7 +142,7 @@ class _RevealScreenState extends State<RevealScreen> {
                         ),
                       ),
                       child: Column(
-                        key: ValueKey('$_index-$_revealed-$_done'),
+                        key: ValueKey('$_index-$_revealed'),
                         children: [
                           Text(
                             over,
@@ -168,7 +166,7 @@ class _RevealScreenState extends State<RevealScreen> {
                   Expanded(
                     child: Semantics(
                       button: true,
-                      label: _done ? 'Začít kolo' : (_revealed ? 'Skrýt kartu a předat dál' : 'Ukázat kartu'),
+                      label: _revealed ? (_last ? 'Skrýt kartu a začít kolo' : 'Skrýt kartu a předat dál') : 'Ukázat kartu',
                       excludeSemantics: true,
                       child: Pressable(
                         onTap: _tapCard,
@@ -180,31 +178,25 @@ class _RevealScreenState extends State<RevealScreen> {
                             opacity: a,
                             child: ScaleTransition(scale: Tween(begin: 0.92, end: 1.0).animate(a), child: child),
                           ),
-                          child: _done
-                              ? const _CardDone(key: ValueKey('done'))
-                              : FlipCard(
-                                  key: ValueKey(_index),
-                                  flipped: _revealed,
-                                  front: _CardFront(first: _index == 0),
-                                  back: _CardBack(
-                                    role: _role,
-                                    packName: widget.round.packName,
-                                    nextPlayer: _nextPlayer,
-                                  ),
-                                ),
+                          child: FlipCard(
+                            key: ValueKey(_index),
+                            flipped: _revealed,
+                            front: _CardFront(first: _index == 0),
+                            back: _CardBack(
+                              role: _role,
+                              packName: widget.round.packName,
+                              nextPlayer: _nextPlayer,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
                   const SizedBox(height: 20),
                   GradientButton(
-                    icon: _done
-                        ? Icons.play_arrow_rounded
-                        : (_revealed ? Icons.visibility_off_rounded : Icons.visibility_rounded),
+                    icon: _revealed ? Icons.visibility_off_rounded : Icons.visibility_rounded,
                     onPressed: _tapCard,
-                    label: _done
-                        ? 'Začít kolo'
-                        : (_revealed ? (_last ? 'Mám to, skrýt' : 'Mám to, skrýt a předat') : 'Ukázat kartu'),
+                    label: _revealed ? (_last ? 'Mám to, skrýt a začít kolo' : 'Mám to, skrýt a předat') : 'Ukázat kartu',
                   ),
                 ],
               ),
@@ -410,7 +402,7 @@ class _CardBack extends StatelessWidget {
                   const SizedBox(width: 6),
                   Flexible(
                     child: Text(
-                      nextPlayer == null ? 'Klepni a skryj kartu' : 'Klepni, skryj a podej: $nextPlayer',
+                      nextPlayer == null ? 'Klepni, skryj a začni kolo' : 'Klepni, skryj a podej: $nextPlayer',
                       style: TextStyle(color: fg.withValues(alpha: 0.7), fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -419,44 +411,6 @@ class _CardBack extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-/// Shown after the last card: everybody knows their role.
-class _CardDone extends StatelessWidget {
-  const _CardDone({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final ctx = AppScope.of(context).playContext;
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(32),
-        gradient: ctx.gradient,
-        boxShadow: [BoxShadow(color: ctx.accent.withValues(alpha: 0.35), blurRadius: 32, offset: const Offset(0, 14))],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(Icons.check_circle_rounded, size: 84, color: Colors.white),
-          const SizedBox(height: 16),
-          const Text(
-            'Můžete začít',
-            style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
-          ),
-          const SizedBox(height: 6),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 28),
-            child: Text(
-              'Položte telefon doprostřed. Aplikace řekne, kdo začíná.',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white.withValues(alpha: 0.88), height: 1.35),
-            ),
-          ),
-        ],
       ),
     );
   }

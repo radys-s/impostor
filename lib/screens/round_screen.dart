@@ -187,7 +187,7 @@ class _RoundScreenState extends State<RoundScreen> {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Každý řekne jedno slovo k tajnému slovu. Pak diskutujte a nahlas hlasujte.',
+                      'Položte telefon doprostřed. Každý řekne jedno slovo k tajnému slovu, pak diskutujte a nahlas hlasujte.',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white.withValues(alpha: 0.9)),
                     ),

@@ -42,9 +42,8 @@ Future<void> revealAll(WidgetTester tester, int players) async {
     // Let the accidental double-tap lock expire before the next player.
     await tester.pump(const Duration(seconds: 1));
   }
-  expect(find.text('Všichni mají kartu'), findsOneWidget);
-  await tester.tap(find.text('Začít kolo'));
-  await tester.pumpAndSettle();
+  // Hiding the last card starts the round: no extra "start" stop.
+  expect(find.byType(RoundScreen), findsOneWidget);
 }
 
 /// Presses [finder] long enough to trigger a hold-to-confirm button.
@@ -251,6 +250,33 @@ void main() {
     await tester.sendKeyEvent(LogicalKeyboardKey.enter);
     await tester.pumpAndSettle();
     expect(find.text('Tajné slovo'), findsOneWidget);
+  });
+
+  testWidgets("the last player's double tap starts the round but reveals nothing", (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    for (var i = 0; i < 3; i++) {
+      await tester.tap(find.text('Ukázat kartu'));
+      await tester.pumpAndSettle();
+      final hide = tester.getCenter(find.textContaining('Mám to, skrýt'));
+      await tester.tapAt(hide);
+      if (i == 2) {
+        // Second tap of a double tap, same spot, once the round screen is up.
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 100));
+        await tester.tapAt(hide);
+        await tester.pump();
+        // It reached the hold button and only showed its hint.
+        expect(find.text('Drž, dokud se nenaplní'), findsOneWidget);
+      }
+      await tester.pumpAndSettle();
+      await tester.pump(const Duration(seconds: 1));
+    }
+    expect(find.byType(RoundScreen), findsOneWidget);
+    expect(find.text('Tajné slovo'), findsNothing);
   });
 
   testWidgets('round: forgotten word peek and leaving the round', (tester) async {
