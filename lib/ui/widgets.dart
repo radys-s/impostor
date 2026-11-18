@@ -98,7 +98,14 @@ class _FadeSlideInState extends State<FadeSlideIn> with SingleTickerProviderStat
 /// Also a real button for keyboards and screen readers: it takes focus with
 /// Tab, shows a focus ring of [radius], and Enter or Space activates it.
 class Pressable extends StatefulWidget {
-  const Pressable({super.key, required this.child, required this.onTap, this.scale = 0.96, this.radius = 24});
+  const Pressable({
+    super.key,
+    required this.child,
+    required this.onTap,
+    this.scale = 0.96,
+    this.radius = 24,
+    this.semanticButton = true,
+  });
 
   final Widget child;
   final VoidCallback? onTap;
@@ -106,6 +113,9 @@ class Pressable extends StatefulWidget {
 
   /// Corner radius of the focus ring; match the child's shape.
   final double radius;
+
+  /// false when the caller already gives it a role (a checkbox, for example).
+  final bool semanticButton;
 
   @override
   State<Pressable> createState() => _PressableState();
@@ -137,15 +147,15 @@ class _PressableState extends State<Pressable> {
         scale: _down ? widget.scale : 1,
         duration: Motion.instant,
         curve: Curves.easeOut,
-        child: _focused
-            ? Container(
-                foregroundDecoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(widget.radius),
-                  border: Border.all(color: Theme.of(context).colorScheme.onSurface, width: 3),
-                ),
-                child: widget.child,
-              )
-            : widget.child,
+        // Always the same wrapper, so gaining focus does not rebuild the child.
+        child: DecoratedBox(
+          position: DecorationPosition.foreground,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(widget.radius),
+            border: _focused ? Border.all(color: Theme.of(context).colorScheme.onSurface, width: 3) : null,
+          ),
+          child: widget.child,
+        ),
       ),
     );
     child = FocusableActionDetector(
@@ -155,7 +165,7 @@ class _PressableState extends State<Pressable> {
       onShowFocusHighlight: (v) => setState(() => _focused = v),
       child: child,
     );
-    return enabled ? Semantics(button: true, child: child) : child;
+    return enabled && widget.semanticButton ? Semantics(button: true, child: child) : child;
   }
 }
 

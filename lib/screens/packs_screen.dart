@@ -185,6 +185,7 @@ class _SelectDot extends StatelessWidget {
         child: Pressable(
           onTap: enabled ? () => onChanged(!on) : null,
           radius: 17,
+          semanticButton: false,
           scale: 0.85,
           child: AnimatedContainer(
             duration: Motion.quick,
