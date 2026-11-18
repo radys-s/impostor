@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor/data/app_state.dart';
 import 'package:impostor/data/storage.dart';
@@ -8,6 +9,8 @@ import 'package:impostor/logic/events.dart';
 import 'package:impostor/screens/game_options_screen.dart';
 import 'package:impostor/screens/home_screen.dart';
 import 'package:impostor/screens/players_screen.dart';
+import 'package:impostor/screens/round_screen.dart';
+import 'package:impostor/ui/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Starts the app with reduced motion (ambient loops would never settle) and
@@ -41,6 +44,16 @@ Future<void> revealAll(WidgetTester tester, int players) async {
   }
   expect(find.text('Všichni mají kartu'), findsOneWidget);
   await tester.tap(find.text('Začít kolo'));
+  await tester.pumpAndSettle();
+}
+
+/// Presses [finder] long enough to trigger a hold-to-confirm button.
+Future<void> hold(WidgetTester tester, Finder finder) async {
+  final gesture = await tester.startGesture(tester.getCenter(finder));
+  for (var i = 0; i < 12; i++) {
+    await tester.pump(const Duration(milliseconds: 100));
+  }
+  await gesture.up();
   await tester.pumpAndSettle();
 }
 
@@ -125,8 +138,7 @@ void main() {
     await revealAll(tester, 4);
 
     expect(find.text('ZAČÍNÁ'), findsOneWidget);
-    await tester.tap(find.text('Odhalit impostora'));
-    await tester.pumpAndSettle();
+    await hold(tester, find.byType(HoldButton));
     expect(find.text('Tajné slovo'), findsOneWidget);
     expect(find.text('Kdo bere body?'), findsNothing);
     expect(find.text('Další kolo'), findsOneWidget);
@@ -141,8 +153,7 @@ void main() {
     await tester.tap(find.text('Rozdat karty'));
     await tester.pumpAndSettle();
     await revealAll(tester, 4);
-    await tester.tap(find.text('Odhalit impostora'));
-    await tester.pumpAndSettle();
+    await hold(tester, find.byType(HoldButton));
 
     // Chaos is off, so there is exactly one impostor and "Hráči" is offered.
     await tester.tap(find.text('Hráči'));
@@ -160,8 +171,7 @@ void main() {
     await tester.tap(find.text('Rozdat karty'));
     await tester.pumpAndSettle();
     await revealAll(tester, 3);
-    await tester.tap(find.text('Hlasovat'));
-    await tester.pumpAndSettle();
+    await hold(tester, find.byType(HoldButton));
 
     for (var i = 0; i < 3; i++) {
       await tester.tap(find.text('Jsem to já, hlasovat'));
@@ -194,6 +204,53 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Zapamatuj si to'), findsNothing);
     await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('a quick tap on the round screen does not reveal the impostor', (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await revealAll(tester, 3);
+
+    // A normal press (300 ms) is not a hold, even with reduced motion on.
+    final press = await tester.startGesture(tester.getCenter(find.byType(HoldButton)));
+    for (var i = 0; i < 3; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    await press.up();
+    await tester.pumpAndSettle();
+    expect(find.byType(RoundScreen), findsOneWidget);
+    await tester.pump(const Duration(seconds: 3));
+
+    // A stray tap, or the last player's double tap, must not end the round.
+    await tester.tap(find.byType(HoldButton));
+    await tester.pump();
+    await tester.tap(find.byType(HoldButton));
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.byType(RoundScreen), findsOneWidget);
+    expect(find.text('Tajné slovo'), findsNothing);
+    expect(find.text('Drž, dokud se nenaplní'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 3));
+    expect(find.text('Podrž a odhal impostora'), findsOneWidget);
+
+    await hold(tester, find.byType(HoldButton));
+    expect(find.text('Tajné slovo'), findsOneWidget);
+  });
+
+  testWidgets('the hold button also works from the keyboard', (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await revealAll(tester, 3);
+    Focus.of(tester.element(find.text('Podrž a odhal impostora'))).requestFocus();
+    await tester.pump();
+    await tester.sendKeyEvent(LogicalKeyboardKey.enter);
+    await tester.pumpAndSettle();
+    expect(find.text('Tajné slovo'), findsOneWidget);
   });
 
   testWidgets('round: forgotten word peek and leaving the round', (tester) async {
@@ -237,8 +294,7 @@ void main() {
     await tester.pumpAndSettle();
     await revealAll(tester, 5);
     expect(find.text('EVENT KOLA'), findsOneWidget);
-    await tester.tap(find.text('Odhalit impostora'));
-    await tester.pumpAndSettle();
+    await hold(tester, find.byType(HoldButton));
     expect(find.text('Tajné slovo'), findsOneWidget);
   });
 }

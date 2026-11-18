@@ -44,7 +44,7 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   void initState() {
     super.initState();
-    // Verbal mode: the round screen's "Odhalit impostora" already was the reveal tap.
+    // Verbal mode: holding the round screen's reveal button already was the reveal.
     if (!_inApp) WidgetsBinding.instance.addPostFrameCallback((_) => mounted ? _reveal() : null);
   }
 
