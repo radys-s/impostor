@@ -264,9 +264,13 @@ void main() {
       final hide = tester.getCenter(find.textContaining('Mám to, skrýt'));
       await tester.tapAt(hide);
       if (i == 2) {
-        // Second tap of a double tap, same spot, before anything settles.
-        await tester.pump(const Duration(milliseconds: 80));
+        // Second tap of a double tap, same spot, once the round screen is up.
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 100));
         await tester.tapAt(hide);
+        await tester.pump();
+        // It reached the hold button and only showed its hint.
+        expect(find.text('Drž, dokud se nenaplní'), findsOneWidget);
       }
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 1));

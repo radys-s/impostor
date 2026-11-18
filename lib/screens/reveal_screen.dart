@@ -88,10 +88,14 @@ class _RevealScreenState extends State<RevealScreen> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final total = widget.round.roles.length;
-    final progress = (_index + (_revealed ? 1 : 0)) / total;
+    // While the round screen slides in, show the finished state.
+    final progress = _starting ? 1.0 : (_index + (_revealed ? 1 : 0)) / total;
     final String over;
     final String headline;
-    if (_revealed) {
+    if (_starting) {
+      over = 'Hotovo';
+      headline = 'Všichni mají kartu';
+    } else if (_revealed) {
       over = _role.player;
       headline = 'Zapamatuj si to';
     } else {
