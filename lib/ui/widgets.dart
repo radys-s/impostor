@@ -213,13 +213,19 @@ class HoldButton extends StatefulWidget {
 }
 
 class _HoldButtonState extends State<HoldButton> with SingleTickerProviderStateMixin {
-  // Not tied to reduced motion: the fill is the only feedback that the hold counts.
-  late final AnimationController _c = AnimationController(vsync: this, duration: HoldButton.holdDuration)
-    ..addStatusListener((status) {
+  // Not shortened by reduced motion (Flutter would cut it to 5 %, turning a
+  // normal tap into a hold): the duration is the safety, the fill its feedback.
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: HoldButton.holdDuration,
+    animationBehavior: AnimationBehavior.preserve,
+  )..addStatusListener((status) {
       if (status == AnimationStatus.completed) _confirm();
     });
+  /// Fires once: the action always leaves the screen (the round route is replaced).
   bool _fired = false;
   bool _hinting = false;
+  bool _focused = false;
   Timer? _hintTimer;
 
   @override
@@ -264,53 +270,65 @@ class _HoldButtonState extends State<HoldButton> with SingleTickerProviderStateM
     return Semantics(
       button: true,
       label: widget.label,
-      // Screen-reader activation is already deliberate.
+      // Screen-reader and keyboard activation are already deliberate.
       onTap: _confirm,
       excludeSemantics: true,
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTapDown: _down,
-        onTapUp: _up,
-        onTapCancel: _cancel,
-        child: Container(
-          height: 60,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            gradient: g,
-            borderRadius: BorderRadius.circular(22),
-            boxShadow: [BoxShadow(color: g.colors.first.withValues(alpha: 0.35), blurRadius: 24, offset: const Offset(0, 10))],
-          ),
-          child: Stack(
-            children: [
-              Positioned.fill(
-                child: AnimatedBuilder(
-                  animation: _c,
-                  builder: (context, _) => FractionallySizedBox(
-                    alignment: Alignment.centerLeft,
-                    widthFactor: _c.value,
-                    child: ColoredBox(color: Colors.white.withValues(alpha: 0.32)),
+      child: FocusableActionDetector(
+        actions: {
+          ActivateIntent: CallbackAction<ActivateIntent>(onInvoke: (_) => _confirm()),
+          ButtonActivateIntent: CallbackAction<ButtonActivateIntent>(onInvoke: (_) => _confirm()),
+        },
+        mouseCursor: SystemMouseCursors.click,
+        onShowFocusHighlight: (v) => setState(() => _focused = v),
+        child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTapDown: _down,
+          onTapUp: _up,
+          onTapCancel: _cancel,
+          child: Container(
+            height: 60,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              gradient: g,
+              borderRadius: BorderRadius.circular(22),
+              boxShadow: [BoxShadow(color: g.colors.first.withValues(alpha: 0.35), blurRadius: 24, offset: const Offset(0, 10))],
+            ),
+            foregroundDecoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22),
+              border: _focused ? Border.all(color: Theme.of(context).colorScheme.onSurface, width: 3) : null,
+            ),
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: AnimatedBuilder(
+                    animation: _c,
+                    builder: (context, _) => FractionallySizedBox(
+                      alignment: Alignment.centerLeft,
+                      widthFactor: _c.value,
+                      child: ColoredBox(color: Colors.white.withValues(alpha: 0.32)),
+                    ),
                   ),
                 ),
-              ),
-              Center(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    if (widget.icon != null) ...[
-                      Icon(widget.icon, color: Colors.white),
-                      const SizedBox(width: 8),
-                    ],
-                    Flexible(
-                      child: Text(
-                        _hinting ? widget.hint : widget.label,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800),
+                Center(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (widget.icon != null && !_hinting) ...[
+                        Icon(widget.icon, color: Colors.white),
+                        const SizedBox(width: 8),
+                      ],
+                      Flexible(
+                        child: Text(
+                          _hinting ? widget.hint : widget.label,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

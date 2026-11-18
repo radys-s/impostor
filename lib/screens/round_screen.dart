@@ -164,7 +164,7 @@ class _RoundScreenState extends State<RoundScreen> {
             // discussion, and a stray tap here would spoil the round.
             bottom: HoldButton(
               onConfirmed: _finish,
-              hint: 'Podrž, dokud se tlačítko nenaplní',
+              hint: 'Drž, dokud se nenaplní',
               icon: state.votingOn ? Icons.how_to_vote_rounded : Icons.visibility_rounded,
               label: state.votingOn ? 'Podrž a hlasuj' : 'Podrž a odhal impostora',
             ),

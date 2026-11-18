@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:impostor/data/app_state.dart';
 import 'package:impostor/data/storage.dart';
@@ -182,6 +183,16 @@ void main() {
     await tester.pumpAndSettle();
     await revealAll(tester, 3);
 
+    // A normal press (300 ms) is not a hold, even with reduced motion on.
+    final press = await tester.startGesture(tester.getCenter(find.byType(HoldButton)));
+    for (var i = 0; i < 3; i++) {
+      await tester.pump(const Duration(milliseconds: 100));
+    }
+    await press.up();
+    await tester.pumpAndSettle();
+    expect(find.byType(RoundScreen), findsOneWidget);
+    await tester.pump(const Duration(seconds: 3));
+
     // A stray tap, or the last player's double tap, must not end the round.
     await tester.tap(find.byType(HoldButton));
     await tester.pump();
@@ -189,11 +200,25 @@ void main() {
     await tester.pump(const Duration(milliseconds: 500));
     expect(find.byType(RoundScreen), findsOneWidget);
     expect(find.text('Tajné slovo'), findsNothing);
-    expect(find.text('Podrž, dokud se tlačítko nenaplní'), findsOneWidget);
+    expect(find.text('Drž, dokud se nenaplní'), findsOneWidget);
     await tester.pump(const Duration(seconds: 3));
     expect(find.text('Podrž a odhal impostora'), findsOneWidget);
 
     await hold(tester, find.byType(HoldButton));
+    expect(find.text('Tajné slovo'), findsOneWidget);
+  });
+
+  testWidgets('the hold button also works from the keyboard', (tester) async {
+    await pumpApp(tester, prefs: {
+      'players': ['Ana', 'Bob', 'Cyril'],
+    });
+    await tester.tap(find.text('Rozdat karty'));
+    await tester.pumpAndSettle();
+    await revealAll(tester, 3);
+    Focus.of(tester.element(find.text('Podrž a odhal impostora'))).requestFocus();
+    await tester.pump();
+    await tester.sendKeyEvent(LogicalKeyboardKey.enter);
+    await tester.pumpAndSettle();
     expect(find.text('Tajné slovo'), findsOneWidget);
   });
 
