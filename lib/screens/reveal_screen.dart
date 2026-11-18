@@ -344,7 +344,7 @@ class _CardBack extends StatelessWidget {
     final ctx = AppScope.of(context).playContext;
     // Every role gets the same card surface. A bright red impostor card would
     // light up the holder's face in a dark room and give them away; the role
-    // shows only in the icon and the text.
+    // shows only in the text.
     final special = role.badge != null;
     final impostor = role.kind == RoleKind.impostor;
     final fg = scheme.onSurface;
@@ -363,9 +363,11 @@ class _CardBack extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // Every role has an icon of the same size and colour, so not even
+              // a coloured blob tells the roles apart from the side.
+              Icon(role.icon, size: 56, color: ctx.accent),
+              const SizedBox(height: 10),
               if (special) ...[
-                Icon(role.icon, size: impostor ? 64 : 48, color: role.gradient!.colors.first),
-                const SizedBox(height: 10),
                 FittedBox(
                   child: Text(
                     role.badge!,
@@ -396,7 +398,7 @@ class _CardBack extends StatelessWidget {
                   child: Text(
                     line,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: special ? fg : sub, fontSize: special ? 17 : 15, height: 1.3),
+                    style: TextStyle(color: sub, fontSize: 15, height: 1.3),
                   ),
                 ),
               const SizedBox(height: 24),

@@ -14,8 +14,10 @@ const _round = Round(
     PlayerRole(player: 'Ana', kind: RoleKind.impostor, cardText: ''),
     PlayerRole(player: 'Bob', kind: RoleKind.civilian, cardText: 'Lavice'),
     PlayerRole(player: 'Cyril', kind: RoleKind.detective, cardText: 'Lavice', intel: ['Ana']),
+    PlayerRole(player: 'Dana', kind: RoleKind.jester, cardText: 'Lavice'),
+    PlayerRole(player: 'Emil', kind: RoleKind.undercover, cardText: 'Židle'),
   ],
-  order: [0, 1, 2],
+  order: [0, 1, 2, 3, 4],
   chaos: null,
 );
 
@@ -28,6 +30,12 @@ Future<void> _pump(WidgetTester tester) async {
   await tester.pumpAndSettle();
 }
 
+/// Colours of every icon on the revealed card.
+List<Color?> _iconColors(WidgetTester tester) => [
+      for (final icon in tester.widgetList<Icon>(find.descendant(of: find.byType(FlipCard), matching: find.byType(Icon))))
+        icon.color,
+    ];
+
 /// Decoration of the revealed card's surface.
 Decoration? _cardSurface(WidgetTester tester) => tester
     .widget<Container>(find.descendant(of: find.byType(FlipCard), matching: find.byType(Container)).first)
@@ -37,10 +45,12 @@ void main() {
   testWidgets('every role card looks the same from across the table', (tester) async {
     await _pump(tester);
     final surfaces = <Decoration?>[];
+    final icons = <String>{};
     for (var i = 0; i < _round.roles.length; i++) {
       await tester.tap(find.text('Ukázat kartu'));
       await tester.pumpAndSettle();
       surfaces.add(_cardSurface(tester));
+      icons.add(_iconColors(tester).join(','));
       // No glow or pulse around any card: it would light up the holder's face.
       expect(
         find.descendant(
@@ -56,7 +66,8 @@ void main() {
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 1));
     }
-    expect(surfaces.toSet(), hasLength(1), reason: 'impostor, civilian and detective cards differ: $surfaces');
+    expect(surfaces.toSet(), hasLength(1), reason: 'role cards differ: $surfaces');
+    expect(icons, hasLength(1), reason: 'role icons differ in colour: $icons');
     expect(find.text('Všichni mají kartu'), findsOneWidget);
   });
 }

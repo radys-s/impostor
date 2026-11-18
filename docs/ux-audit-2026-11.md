@@ -37,8 +37,8 @@ M ≈ a day, L more).
    (blue) and jester (yellow-green) cards also have their own colours. At a
    table, and above all in a dark room, the colour lights up the holder's face
    and can be seen from the side, so the role leaks without anyone reading the
-   screen. Evidence: `audit-deal-light.png`, `audit-deal-dark.png`.
-   Effort S.
+   screen. Evidence: `audit-deal-light.png`, `audit-deal-dark.png`; after the
+   fix: `role-card-after-light.png`, `role-card-after-dark.png`. Effort S.
 2. **One tap on "Odhalit impostora" ends the round.** The round screen sits in
    the middle of the table for the whole discussion. Its big button is in the
    same spot as "Ukázat kartu" / "Mám to, skrýt" / "Začít kolo", which everyone
@@ -99,15 +99,15 @@ Smaller notes, not ranked:
 
 ## Ranking: impact ÷ effort
 
-| # | Item | Impact | Effort | Do now |
-| --- | --- | --- | --- | --- |
-| 1 | Same card for every role (no colour tell) | High: breaks the game | S | yes |
-| 2 | Deliberate reveal (hold to reveal) | High: spoils a round | S | yes |
-| 3 | Players: autofocus and undo remove | Medium: every setup | S | yes |
-| 4 | Skip the done card, go straight to the round | Medium: every round | S | yes |
-| 5 | Keyboard focus and button semantics in `Pressable` | Medium: desktop and screen readers | S–M | yes |
-| 6 | Timer keeps time while the phone sleeps; clearer time-up | Medium (timer is opt-in) | S | next |
-| 7 | Enter adds a word in the pack editor | Low–medium | S | next |
-| 8 | Hide "Přidat" for AI when no server is set | Low | S | next |
-| 9 | Contrast and minimum text size | Medium | M | next |
-| 10 | Cap content width on desktop | Low | S | next |
+| Rank | Friction item | Fix | Impact | Effort | Do now |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 1 | Same card for every role (no colour tell) | High: breaks the game | S | yes |
+| 2 | 2 | Deliberate reveal (hold to reveal) | High: spoils a round | S | yes |
+| 3 | 4 | Players: autofocus and undo remove | Medium: every setup | S | yes |
+| 4 | 5 | Skip the done card, go straight to the round | Medium: every round | S | yes |
+| 5 | 3 | Keyboard focus and button semantics in `Pressable` | Medium: desktop and screen readers | S–M | yes |
+| 6 | 6 | Timer keeps time while the phone sleeps; clearer time-up | Medium (timer is opt-in) | S (M with wake lock) | next |
+| 7 | 7 | Enter adds a word in the pack editor | Low–medium | S | next |
+| 8 | 8 | Hide "Přidat" for AI when no server is set | Low | S | next |
+| 9 | 9 | Contrast and minimum text size | Medium | M | next |
+| 10 | 10 | Cap content width on desktop | Low | S | next |
