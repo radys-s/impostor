@@ -5,6 +5,7 @@ import 'package:impostor/data/storage.dart';
 import 'package:impostor/logic/game_engine.dart';
 import 'package:impostor/models/word_pack.dart';
 import 'package:impostor/screens/reveal_screen.dart';
+import 'package:impostor/screens/round_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _round = Round(
@@ -68,6 +69,6 @@ void main() {
     }
     expect(surfaces.toSet(), hasLength(1), reason: 'role cards differ: $surfaces');
     expect(icons, hasLength(1), reason: 'role icons differ in colour: $icons');
-    expect(find.text('Všichni mají kartu'), findsOneWidget);
+    expect(find.byType(RoundScreen), findsOneWidget);
   });
 }
