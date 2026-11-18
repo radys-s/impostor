@@ -180,25 +180,29 @@ class _SelectDot extends StatelessWidget {
       checked: on,
       enabled: enabled,
       label: 'Hrát s tímto tématem',
-      child: Pressable(
-        onTap: enabled ? () => onChanged(!on) : null,
-        scale: 0.85,
-        child: AnimatedContainer(
-          duration: Motion.quick,
-          curve: Motion.pop,
-          width: 34,
-          height: 34,
-          margin: const EdgeInsets.only(left: 8),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            gradient: on ? g : null,
-            border: on ? null : Border.all(color: scheme.outline, width: 2),
-          ),
-          child: AnimatedScale(
-            scale: on ? 1 : 0,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8),
+        child: Pressable(
+          onTap: enabled ? () => onChanged(!on) : null,
+          radius: 17,
+          semanticButton: false,
+          scale: 0.85,
+          child: AnimatedContainer(
             duration: Motion.quick,
             curve: Motion.pop,
-            child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
+            width: 34,
+            height: 34,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: on ? g : null,
+              border: on ? null : Border.all(color: scheme.outline, width: 2),
+            ),
+            child: AnimatedScale(
+              scale: on ? 1 : 0,
+              duration: Motion.quick,
+              curve: Motion.pop,
+              child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
+            ),
           ),
         ),
       ),

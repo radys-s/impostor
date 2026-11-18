@@ -254,6 +254,7 @@ class _PresetCard extends StatelessWidget {
       selected: selected,
       child: Pressable(
         onTap: onTap,
+        radius: 22,
         child: AnimatedContainer(
           duration: Motion.of(context, Motion.quick),
           curve: Motion.ease,

@@ -269,6 +269,7 @@ class _InstallButton extends StatelessWidget {
       excludeSemantics: true,
       child: Pressable(
         onTap: busy ? null : onTap,
+        radius: 40,
         child: AnimatedContainer(
           duration: Motion.quick,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
