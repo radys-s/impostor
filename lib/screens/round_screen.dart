@@ -160,10 +160,13 @@ class _RoundScreenState extends State<RoundScreen> {
         ),
         body: AmbientBackground(
           child: PageBody(
-            bottom: GradientButton(
-              onPressed: _finish,
+            // Hold, not tap: the phone lies on the table during the whole
+            // discussion, and a stray tap here would spoil the round.
+            bottom: HoldButton(
+              onConfirmed: _finish,
+              hint: 'Podrž, dokud se tlačítko nenaplní',
               icon: state.votingOn ? Icons.how_to_vote_rounded : Icons.visibility_rounded,
-              label: state.votingOn ? 'Hlasovat' : 'Odhalit impostora',
+              label: state.votingOn ? 'Podrž a hlasuj' : 'Podrž a odhal impostora',
             ),
             children: [
               Container(

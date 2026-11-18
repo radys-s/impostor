@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -183,6 +184,130 @@ class GradientButton extends StatelessWidget {
                     fontSize: 17,
                     fontWeight: FontWeight.w800,
                   ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Primary action for a step that cannot be undone: it fires only after a
+/// deliberate press and hold, while a fill sweeps across the button. A quick
+/// tap (a stray finger, a leftover double tap) only shows [hint] on the button
+/// for a moment.
+class HoldButton extends StatefulWidget {
+  const HoldButton({super.key, required this.label, required this.hint, required this.onConfirmed, this.icon});
+
+  static const holdDuration = Duration(milliseconds: 800);
+
+  final String label;
+  final VoidCallback onConfirmed;
+  final IconData? icon;
+  final String hint;
+
+  @override
+  State<HoldButton> createState() => _HoldButtonState();
+}
+
+class _HoldButtonState extends State<HoldButton> with SingleTickerProviderStateMixin {
+  // Not tied to reduced motion: the fill is the only feedback that the hold counts.
+  late final AnimationController _c = AnimationController(vsync: this, duration: HoldButton.holdDuration)
+    ..addStatusListener((status) {
+      if (status == AnimationStatus.completed) _confirm();
+    });
+  bool _fired = false;
+  bool _hinting = false;
+  Timer? _hintTimer;
+
+  @override
+  void dispose() {
+    _hintTimer?.cancel();
+    _c.dispose();
+    super.dispose();
+  }
+
+  bool get _haptics => AppScope.read(context).appSettings.haptics;
+
+  void _confirm() {
+    if (_fired) return;
+    _fired = true;
+    buzz(_haptics);
+    widget.onConfirmed();
+  }
+
+  void _down(TapDownDetails _) {
+    if (_fired) return;
+    tick(_haptics);
+    _c.forward(from: 0);
+  }
+
+  void _up(TapUpDetails _) {
+    if (_fired) return;
+    _c.reverse();
+    _hintTimer?.cancel();
+    setState(() => _hinting = true);
+    _hintTimer = Timer(const Duration(milliseconds: 2500), () {
+      if (mounted) setState(() => _hinting = false);
+    });
+  }
+
+  void _cancel() {
+    if (!_fired) _c.reverse();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final g = AppScope.of(context).playContext.gradient;
+    return Semantics(
+      button: true,
+      label: widget.label,
+      // Screen-reader activation is already deliberate.
+      onTap: _confirm,
+      excludeSemantics: true,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTapDown: _down,
+        onTapUp: _up,
+        onTapCancel: _cancel,
+        child: Container(
+          height: 60,
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+            gradient: g,
+            borderRadius: BorderRadius.circular(22),
+            boxShadow: [BoxShadow(color: g.colors.first.withValues(alpha: 0.35), blurRadius: 24, offset: const Offset(0, 10))],
+          ),
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: AnimatedBuilder(
+                  animation: _c,
+                  builder: (context, _) => FractionallySizedBox(
+                    alignment: Alignment.centerLeft,
+                    widthFactor: _c.value,
+                    child: ColoredBox(color: Colors.white.withValues(alpha: 0.32)),
+                  ),
+                ),
+              ),
+              Center(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (widget.icon != null) ...[
+                      Icon(widget.icon, color: Colors.white),
+                      const SizedBox(width: 8),
+                    ],
+                    Flexible(
+                      child: Text(
+                        _hinting ? widget.hint : widget.label,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
