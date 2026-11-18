@@ -31,6 +31,21 @@ class _PlayersScreenState extends State<PlayersScreen> {
     _focus.requestFocus();
   }
 
+  void _remove(int index) {
+    final state = AppScope.read(context);
+    final name = state.players[index];
+    state.removePlayer(index);
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(
+        content: Text('$name už nehraje'),
+        action: SnackBarAction(label: 'Vrátit', onPressed: () => state.insertPlayer(index, name)),
+        // Floats above the pinned Hotovo button instead of covering it.
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 96),
+      ));
+  }
+
   Future<void> _rename(int index, String current) async {
     final controller = TextEditingController(text: current);
     final name = await showDialog<String>(
@@ -75,6 +90,8 @@ class _PlayersScreenState extends State<PlayersScreen> {
                     child: TextField(
                       controller: _controller,
                       focusNode: _focus,
+                      // Ready to type while the game still needs players.
+                      autofocus: missing > 0,
                       enabled: !full,
                       textCapitalization: TextCapitalization.words,
                       textInputAction: TextInputAction.done,
@@ -133,7 +150,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
                                   IconButton(
                                     tooltip: 'Odebrat',
                                     icon: const Icon(Icons.close_rounded),
-                                    onPressed: () => state.removePlayer(i),
+                                    onPressed: () => _remove(i),
                                   ),
                                   ReorderableDragStartListener(index: i, child: const Icon(Icons.drag_indicator_rounded)),
                                 ],
